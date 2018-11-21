@@ -1,1 +1,1 @@
-worker: python dnd.py
+worker: python main.py
