@@ -72,8 +72,6 @@ async def about():
 
 @client.command(brief="Roll a certain stat for example: dexterity")
 asynce def stat(ability, modifier=None)
-    if modifier is not None:
-    #mischien moet dit nog worden veranderd afhankelijk van de formating van de input
     if modifier is None:
         rolls = []
         for i in range(4):
@@ -83,8 +81,6 @@ asynce def stat(ability, modifier=None)
         variabel = sum(rolls[-3:])
         await client.say("Your " + abiltity + "is a " + variabel)
         
-        
-    
     async def list_servers():
     await client.wait_until_ready()
     while not client.is_closed:
