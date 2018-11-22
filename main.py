@@ -78,7 +78,7 @@ async def stat(modifier=None):
             rolls.append(randrange(1,6))
         rolls.sort()
         variabel = sum(rolls[-3:])
-        await client.say(variabel)
+        await client.say("after rolling 4 times you got a: " + str(variabel))
 
 
 async def list_servers():
