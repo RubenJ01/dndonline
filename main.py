@@ -84,7 +84,7 @@ async def stat(modifier=None):
         for i in range(4):
             rolls.append(randrange(1,6))
         rolls.sort()
-        variabel = sum(rolls[-3:]) + modifier
+        variabel = sum(rolls[-3:]) + int(modifier)
         await client.say("After rolling 4 times you got a: " + str(variabel))
 
 
