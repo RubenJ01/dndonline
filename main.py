@@ -70,7 +70,7 @@ async def background(*name):
 async def about():
   await client.say("Fan made D&D discord bot!, started working on 18-11-2018") 
 
-@client.command(brief="Roll a certain stat for example: dexterity")
+@client.command(brief="Roll a certain stat for example: dexterityy")
 async def stat():    
         rolls = []
         for i in range(4):
