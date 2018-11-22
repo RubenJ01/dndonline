@@ -70,15 +70,6 @@ async def background(*name):
 async def about():
   await client.say("Fan made D&D discord bot!, started working on 18-11-2018") 
 
-@client.command(brief="Roll a certain stat for example: dexterityy")
-async def stat():    
-        rolls = []
-        for i in range(4):
-            rolls.append(randrange(1,6))
-        rolls.sort()
-        variabel = sum(rolls[-3:])
-        await client.say("Your roll is a " + variabel)
-
 async def list_servers():
     await client.wait_until_ready()
     while not client.is_closed:
