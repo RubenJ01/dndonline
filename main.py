@@ -71,7 +71,7 @@ async def about():
   await client.say("Fan made D&D discord bot!, started working on 18-11-2018")
 
 @client.command(brief="Roll a certain stat for example: dexterity")
-async def stat(ability, modifier=None):
+async def stat(ability, modifier=5):
     if modifier is None:
         rolls = []
         for i in range(4):
