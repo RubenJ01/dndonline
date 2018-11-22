@@ -1,13 +1,12 @@
 import discord
 import os
-import random 
+import random
 import asyncio
 import aiohttp
 import json
 import collections
 from discord import Game
 from discord.ext.commands import Bot 
-from random import randrange
 
 
 BOT_PREFIX = (";", "/")
@@ -68,9 +67,9 @@ async def background(*name):
 
 @client.command(brief="About us")
 async def about():
-  await client.say("Fan made D&D discord bot!, started working on 18-11-2018")
-        
-    async def list_servers():
+  await client.say("Fan made D&D discord bot!, started working on 18-11-2018")    
+
+async def list_servers():
     await client.wait_until_ready()
     while not client.is_closed:
         print("Current servers:")
