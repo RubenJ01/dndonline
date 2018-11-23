@@ -89,7 +89,9 @@ async def stat(modifier=None):
         
 @client.command(brief="Helpfull links for d&d")
 async def links():
-    await client.say("https://www.dndbeyond.com/  d&d beyond")
+    await client.say("https://www.dndbeyond.com/ 
+                     /nhttps://roll20.net/
+                     /nhttps://www.dandwiki.com/wiki/")
                     
         
 async def list_servers():
