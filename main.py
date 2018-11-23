@@ -86,9 +86,13 @@ async def stat(modifier=None):
         rolls.sort()
         variabel = sum(rolls[-3:]) + int(modifier)
         await client.say("After rolling 4 times your roll became a: " + str(variabel))
-
-
-
+        
+@client.command(brief="Helpfull links for d&d")
+async def links():
+    await client.say("https://www.dndbeyond.com/  d&d beyond /n"
+                     "https://roll20.net/         usefull resource/n"
+                    )
+        
 async def list_servers():
     await client.wait_until_ready()
     while not client.is_closed:
