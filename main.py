@@ -154,6 +154,11 @@ async def stat(modifier=None):
         rolls.sort()
         variabel = sum(rolls[-3:]) + int(modifier)
         await client.say("After rolling 4 times your roll became a: " + str(variabel))
+        
+ @client.command(brief=”Een simpele command”)
+async def hoi():
+await client.send(“hoi”)
+       
                     
         
 async def list_servers():
