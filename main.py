@@ -69,7 +69,7 @@ async def npc(race=None):
         # generate random race
         pass
     stats = [sum([randint(2, 6) for _ in range(3)]) for _ in range(6)]
-    await client.say("Currently not finished :sad:")
+    await client.say("Currently not finished :(")
     
 @client.command(
     name="disadvantage",
