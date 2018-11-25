@@ -46,7 +46,7 @@ async def on_ready():
 )
 async def adv(*dice):
     if dice:
-        if len(dice) == 0 and "d" not in dice[0]:
+        if len(dice) == 1 and "d" not in dice[0]:
             await client.say(f"you rolled a {randint(1, int(dice[0]))}")
             return
         sum_ = 0
@@ -68,7 +68,7 @@ async def adv(*dice):
 )        
 async def disadv(*dice):
     if dice:
-        if len(dice) == 0 and "d" not in dice[0]:
+        if len(dice) == 1 and "d" not in dice[0]:
             await client.say(f"you rolled a {randdisadv(1, int(dice[0]))}")
             return
         sum_ = 0
@@ -91,7 +91,7 @@ async def disadv(*dice):
 )
 async def roll(*dice):
     if dice:
-        if len(dice) == 0 and "d" not in dice[0]:
+        if len(dice) == 1 and "d" not in dice[0]:
             await client.say(f"you rolled a {randint(1, int(dice[0]))}")
             return
         sum_ = 0
