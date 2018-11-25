@@ -28,6 +28,8 @@ def randdisadv(bottom, top):
     """
     return min(randint(bottom, top), randint(bottom, top))
 
+
+
 @client.event
 async def on_ready():
     print("I'm in")
@@ -57,6 +59,19 @@ async def adv(*dice):
         await client.say(f"you rolled a total of {sum_}")
     else:
         await client.say(f"you rolled a {randadv(1, 20)}")
+    
+@client.command(
+    name="npc",
+    brief="create a quick npc"
+)
+async def npc(race=None):
+    if race is None or race.lower() == "none":
+        # generate random race
+        pass
+    stats = [sum([randint(2, 6) for _ in range(3)]) for _ in range(6)]
+    
+    
+    
     
 @client.command(
     name="disadvantage",
