@@ -56,7 +56,7 @@ async def adv(*dice):
                 sum_ += randadv(1, int(die[1]))
         await client.say(f"you rolled a total of {sum_}")
     else:
-        await client.say(f"you rolled a {randadv(1, int(die))}")
+        await client.say(f"you rolled a {randadv(1, 20)}")
     
 @client.command(
     name="disadvantage",
