@@ -44,7 +44,7 @@ async def on_ready():
     when rolled every single roll gets an advantage and the total is returned"""
                 
 )
-async def adv(*dice)
+async def adv(*dice):
     if dice:
         if len(dice) == 0 and "d" not in dice[0]:
             await client.say(f"you rolled a {randint(1, int(dice[0]))}")
