@@ -101,7 +101,7 @@ async def roll(*dice):
                 sum_ += randint(1, int(die[1]))
         await client.say(f"you rolled a total of {sum_}")
     else:
-        await client.say(f"you rolled a {randint(1, 20)})
+        await client.say(f"you rolled a {randint(1, 20)}")
 
 @client.command(brief="Generates a random encounter")
 async def encounter():
