@@ -57,7 +57,7 @@ async def adv(*dice):
 			return
 			dice = [die.split("d") for die in dice]
 			if len(dice) == 1 and dice[0][0] == '1':
-				await clien.say(f"you rolled a {randadv(1, int(dice[0][1]))}")
+				await client.say(f"you rolled a {randadv(1, int(dice[0][1]))}")
 		sum_ = 0
 		rolls = []
 		text = [f"thanks to your advantage you managed to roll {dice[0][0]}d{dice[0][1]} "]
@@ -100,17 +100,17 @@ async def npc(race=None):
 async def disadv(*dice):
 	if dice:
 		if len(dice) == 1 and "d" not in dice[0]:
-            roll = randdisadv(1, int(dice[0]))
-            if roll > 15:
-                await client.say(f"despite your disadvantage you managed to roll a {roll}")
-            else:
-                await client.say(f"you rolled a {roll}")
-            return
-        dice = [die.split("d") for die in dice]
-        if len(dice) == 1 and dice[0][0] == '1':
-            await clien.say(f"despite your disadvantage you managed to roll a {randdisadv(1, int(dice[0][1]))}")
-        sum_ = 0
-        rolls = []
+			roll = randdisadv(1, int(dice[0]))
+			if roll > 15:
+				await client.say(f"despite your disadvantage you managed to roll a {roll}")
+			else:
+				await client.say(f"you rolled a {roll}")
+			return
+		dice = [die.split("d") for die in dice]
+		if len(dice) == 1 and dice[0][0] == '1':
+			await client.say(f"despite your disadvantage you managed to roll a {randdisadv(1, int(dice[0][1]))}")
+		sum_ = 0
+		rolls = []
 		text = [f"despite your disadvantage you managed to roll {dice[0][0]}d{dice[0][1]} "]
 		s = 0
 		for die in dice:
@@ -125,13 +125,13 @@ async def disadv(*dice):
 				rolls[-1].append(str(roll))
 			text.append("which became "+'+'.join(rolls[-1]))
 		text.append(f" for a total of {sum_}")
-		await clien.say(''.join(text))
-    else:
-        roll = randdisadv(1, 20)
-        if roll > 15 + randint(-4, 4):
-            await client.say(f"despite your disadvantage you managed to roll a {roll}")
-        else:
-            await client.say(f"you rolled a {roll}")
+		await client.say(''.join(text))
+	else:
+		roll = randdisadv(1, 20)
+		if roll > 15 + randint(-4, 4):
+			await client.say(f"despite your disadvantage you managed to roll a {roll}")
+		else:
+			await client.say(f"you rolled a {roll}")
 
 @client.command(
     name="roll",
@@ -143,15 +143,15 @@ async def disadv(*dice):
     all dice will be rolled and the total will be returned"""
 )
 async def roll(*dice):
-    if dice:
-        if len(dice) == 1 and "d" not in dice[0]:
-            await client.say(f"you rolled a {randint(1, int(dice[0]))}")
-            return
-        dice = [die.split("d") for die in dice]
-        if len(dice) == 1 and dice[0][0] == '1':
-            await clien.say(f"you rolled a {randint(1, int(dice[0][1]))}")
-        sum_ = 0    
-        rolls = []
+	if dice:
+		if len(dice) == 1 and "d" not in dice[0]:
+			await client.say(f"you rolled a {randint(1, int(dice[0]))}")
+			return
+		dice = [die.split("d") for die in dice]
+		if len(dice) == 1 and dice[0][0] == '1':
+			await client.say(f"you rolled a {randint(1, int(dice[0][1]))}")
+		sum_ = 0    
+		rolls = []
 		text = [f"you rolled {dice[0][0]}d{dice[0][1]} "]
 		s = 0
 		for die in dice:
@@ -167,8 +167,8 @@ async def roll(*dice):
 			text.append("which became "+'+'.join(rolls[-1]))
 		text.append(f" for a total of {sum_}")
 		await client.say(''.join(text))
-    else:
-        await client.say(f"you rolled a {randint(1, 20)}")
+	else:
+		await client.say(f"you rolled a {randint(1, 20)}")
 
 @client.command(brief="Generates a random encounter")
 async def encounter():
