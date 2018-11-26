@@ -250,7 +250,7 @@ async def stats():
         rolls.append(randrange(1,6))
         rolls.sort()
         variabel6 = sum(rolls[-3:])    
-	await client.say(variabel1, variabel2, variabel3, variabel4, variabel5, variabel6)
+    await client.say(variabel1, variabel2, variabel3, variabel4, variabel5, variabel6)
         
                                  
 async def list_servers():
