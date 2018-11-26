@@ -60,21 +60,21 @@ async def adv(*dice):
             await clien.say(f"you rolled a {randadv(1, int(dice[0][1]))}")
         sum_ = 0
         rolls = []
-		text = [f"thanks to your advantage you managed to roll {dice[0][0]}d{dice[0][1]} "]
-		s = 0
-		for die in dice:
-			if s:
-				text.append(f", you also managed to roll {die[0]}d{die[1]} ")
-			else:
-				s = 1
-			rolls.append([])
-			for _ in range(int(die[0])):
-				roll = randadv(1, int(die[1]))
-				sum_ += roll
-				rolls[-1].append(str(roll))
-			text.append("which became "+'+'.join(rolls[-1]))
-		text.append(f" for a total of {sum_}")
-		await clien.say(''.join(text))
+	text = [f"thanks to your advantage you managed to roll {dice[0][0]}d{dice[0][1]} "]
+	s = 0
+	for die in dice:
+		if s:
+			text.append(f", you also managed to roll {die[0]}d{die[1]} ")
+		else:
+			s = 1
+		rolls.append([])
+		for _ in range(int(die[0])):
+			roll = randadv(1, int(die[1]))
+			sum_ += roll
+			rolls[-1].append(str(roll))
+		text.append("which became "+'+'.join(rolls[-1]))
+	text.append(f" for a total of {sum_}")
+	await clien.say(''.join(text))
     else:
         await client.say(f"thanks to your advantage you managed to roll a {randadv(1, 20)}")
     
