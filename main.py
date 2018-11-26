@@ -48,11 +48,11 @@ async def on_ready():
 )
 async def adv(*dice):
     if dice:
-        dice = [die.split("d") for die in dice]
         if len(dice) == 1 and "d" not in dice[0]:
             await client.say(f"you rolled a {randint(1, int(dice[0]))}")
             return
         sum_ = 0
+        dice = [die.split("d") for die in dice]
         for die in dice:
             for _ in range(int(die[0])):
                 sum_ += randadv(1, int(die[1]))
@@ -81,11 +81,11 @@ async def npc(race=None):
 )        
 async def disadv(*dice):
     if dice:
-        dice = [die.split("d") for die in dice]
         if len(dice) == 1 and "d" not in dice[0]:
             await client.say(f"you rolled a {randdisadv(1, int(dice[0]))}")
             return
         sum_ = 0
+        dice = [die.split("d") for die in dice]
         for die in dice:
             for _ in range(int(die[0])):
                 sum_ += randdisadv(1, int(die[1]))
@@ -104,10 +104,12 @@ async def disadv(*dice):
 )
 async def roll(*dice):
     if dice:
-        dice = [die.split("d") for die in dice]
-        if len(dice) == 1 and "d" not in dice[0]:
+        if len(dice) == 1:
+            if "d" not in dice[0]:
+                pass
             await client.say(f"you rolled a {randint(1, int(dice[0]))}")
             return
+        dice = [die.split("d") for die in dice]
         sum_ = 0    
         for die in dice:
             for _ in range(int(die[0])):
