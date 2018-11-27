@@ -229,28 +229,28 @@ async def stats():
     for i in range(4):
         rolls.append(randrange(1,6))
         rolls.sort()
-        variabel1 = sum(rolls[-3:])
+        variabele1 = sum(rolls[-3:])
     for i in range(4):
         rolls.append(randrange(1,6))
         rolls.sort()
-        variabel2 = sum(rolls[-3:])
+        variabele2 = sum(rolls[-3:])
     for i in range(4):
         rolls.append(randrange(1,6))
         rolls.sort()
-        variabel3 = sum(rolls[-3:])
+        variabele3 = sum(rolls[-3:])
     for i in range(4):
         rolls.append(randrange(1,6))
         rolls.sort()
-        variabel4 = sum(rolls[-3:])        
+        variabele4 = sum(rolls[-3:])        
     for i in range(4):
         rolls.append(randrange(1,6))
         rolls.sort()
-        variabel5 = sum(rolls[-3:])
+        variabele5 = sum(rolls[-3:])
     for i in range(4):
         rolls.append(randrange(1,6))
         rolls.sort()
-        variabel6 = sum(rolls[-3:])    
-    await client.say("Your ability scores are: " + str(variabel1) + str(variabel2) + str(variabel3) + str(variabel4) + str(variabel5) + str(variabel6))
+        variabele6 = sum(rolls[-3:])    
+    await client.say("Your ability scores are: " + str(variabele1) + str(variabele2) + str(variabele3) + str(variabele4) + str(variabele5) + str(variabele6))
         
                                  
 async def list_servers():
