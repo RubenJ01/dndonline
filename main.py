@@ -174,7 +174,7 @@ async def encounter():
     enemy = random.choice(["ruben", "nathan", "marnix", "Daan the almighty"])
     place = random.choice([ "woods", "desert", "planes"])
     weather = random.choice(["stormy", "clear", "misty"])
-    await client.say("the enemy is " + enemy + ", you are in the " + place + ", and the weather is " + weather)
+    await client.say("Under development!")
 
 @client.command(brief="Get a reference to any spell that is listed in D&D" )
 async def spell(*name):
