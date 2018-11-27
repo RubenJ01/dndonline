@@ -227,6 +227,7 @@ async def stats():
 
     for i in range(3):
         rolls.append(randrange(1,7))
+	rolls.sort()
         variabele1 = sum(rolls[-3:])
     for i in range(3):
         rolls.append(randrange(1,7))
