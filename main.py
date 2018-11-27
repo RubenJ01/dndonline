@@ -223,33 +223,15 @@ async def stat(modifier=None):
       
 @client.command(brief="Roll all your stats")
 async def stats():
-    rolls = []
+	rolls = []
+	variables = []
 
-    for i in range(3):
-        rolls.append(randrange(1,6))
-        rolls.sort()
-        variabele1 = sum(rolls[-3:])
-    for i in range(3):
-        rolls.append(randrange(1,6))
-        rolls.sort()
-        variabele2 = sum(rolls[-3:])
-    for i in range(3):
-        rolls.append(randrange(1,6))
-        rolls.sort()
-        variabele3 = sum(rolls[-3:])
-    for i in range(3):
-        rolls.append(randrange(1,6))
-        rolls.sort()
-        variabele4 = sum(rolls[-3:])        
-    for i in range(3):
-        rolls.append(randrange(1,6))
-        rolls.sort()
-        variabele5 = sum(rolls[-3:])
-    for i in range(3):
-        rolls.append(randrange(1,6))
-        rolls.sort()
-        variabele6 = sum(rolls[-3:])    
-    await client.say("Your ability scores are: " + str(variabele1) + ", " + str(variabele2) + ", " + str(variabele3) + ", " + str(variabele4) + ", " + str(variabele5) + ", "  + str(variabele6))
+    	for i in range(6):
+        	for i in range(3):
+             	rolls.append(randrange(1,7))
+             	rolls.sort()
+        variables.append(str(sum(rolls[-3:])))
+    await client.say("Your ability scores are: " + ', '.join(variables))
         
                                  
 async def list_servers():
