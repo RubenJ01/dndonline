@@ -36,54 +36,114 @@ async def on_ready():
     await client.change_presence(game=discord.Game(name=';help'))
 
 
-@client.command(
-    name="advantage",
-    brief='roll with advantage (format like "4d6 2d8" default is "1d20")',
+def create_roller_function(name, roller, good_roll_text, **command_specifiers):
+	@client.command(name=name, **command_specifiers)
+	def _func(*dice):
+		if dice:
+			if len(dice) == 1 and "d" not in dice[0]:
+				die_type = int(dice[0])
+				die_5 = max(die_type//5, 1)
+				roll  = roller(1, die_type)
+				if roll > die_5*4 + randint(-die_5, die_5):
+					await client.say(f"{good_roll_text} {roll}")
+				else:
+					await client.say(f"you rolled a {roll}")
+				return
+				dice = [die.split("d") for die in dice]
+				if len(dice) == 1 and dice[0][0] == '1':
+					await client.say(f"you rolled a {randadv(1, int(dice[0][1]))}")
+			dice = [die.split("d") for die in dice]
+			if len(dice) == 1 and dice[0][0] == '1':
+				die_type = int(dice[0][1])
+				die_5 = max(1, die_type//5)
+				roll = roller(1, die_type)
+				if roll > die_5*4 + randint(-die_5, die_5):
+					await client.say(f"{good_roll_text} {roll}")
+				else:
+					await client.say(f"you rolled a {roll}")
+				return
+			sum_ = 0
+			rolls = []
+			text = [f"thanks to your advantage you managed to roll {dice[0][0]}d{dice[0][1]} "]
+			s = 0
+			for die in dice:
+				if s:
+					text.append(f", you also managed to roll {die[0]}d{die[1]} ")
+				else:
+					s = 1
+				rolls.append([])
+				for _ in range(int(die[0])):
+					roll = randadv(1, int(die[1]))
+					sum_ += roll
+					rolls[-1].append(str(roll))
+				text.append("which became "+'+'.join(rolls[-1]))
+			text.append(f" for a total of {sum_}")
+			await client.say(''.join(text))
+		else:
+			roll = roller(1, 20)
+			if roll > 16 + randint(-4, 4):
+				await client.say(f"{good_roll_text} {roll}")
+			else:
+				await client.say(f"you rolled a {roll}")
+				
+create_roller_function(
+	"advantage", 
+	lamda x, y: max(randint(x,y), randint(x,y)), 
+	"thanks to your advantage you managed to roll a",
+	brief='roll with advantage (format like "4d6 2d8" default is "1d20")',
     description="""roll dice with disadvantage
     when given no parameters 1d20 is rolled
     parameters can be formatted like so "5d3 4d2 1d21" or "10" the latter only works with single dice
     when rolled every single roll gets an advantage and the total is returned"""
+	
+# @client.command(
+#     name="advantage",
+#     brief='roll with advantage (format like "4d6 2d8" default is "1d20")',
+#     description="""roll dice with disadvantage
+#     when given no parameters 1d20 is rolled
+#     parameters can be formatted like so "5d3 4d2 1d21" or "10" the latter only works with single dice
+#     when rolled every single roll gets an advantage and the total is returned"""
                 
-)
-async def adv(*dice):
-	if dice:
-		if len(dice) == 1 and "d" not in dice[0]:
-			roll  = randadv(1, int(dice[0]))
-			if roll > 15 + randint(-4, 4):
-				await client.say(f"thanks to your advantage you managed to roll a {roll}")
-			else:
-				await client.say(f"you rolled a {roll}")
-			return
-			dice = [die.split("d") for die in dice]
-			if len(dice) == 1 and dice[0][0] == '1':
-				await client.say(f"you rolled a {randadv(1, int(dice[0][1]))}")
-		dice = [die.split("d") for die in dice]
-		if len(dice) == 1 and dice[0][0] == '1':
-			roll = randdisadv(1, int(dice[0][1]))
-			if roll > 15 + randint(-2, 5):
-				await client.say(f"thanks to your advantage you managed to roll a {roll}")
-			else:
-				await client.say(f"you rolled a {roll}")
-			return
-		sum_ = 0
-		rolls = []
-		text = [f"thanks to your advantage you managed to roll {dice[0][0]}d{dice[0][1]} "]
-		s = 0
-		for die in dice:
-			if s:
-				text.append(f", you also managed to roll {die[0]}d{die[1]} ")
-			else:
-				s = 1
-			rolls.append([])
-			for _ in range(int(die[0])):
-				roll = randadv(1, int(die[1]))
-				sum_ += roll
-				rolls[-1].append(str(roll))
-			text.append("which became "+'+'.join(rolls[-1]))
-		text.append(f" for a total of {sum_}")
-		await client.say(''.join(text))
-	else:
-		await client.say(f"thanks to your advantage you managed to roll a {randadv(1, 20)}")
+# )
+# async def adv(*dice):
+# 	if dice:
+# 		if len(dice) == 1 and "d" not in dice[0]:
+# 			roll  = randadv(1, int(dice[0]))
+# 			if roll > 15 + randint(-4, 4):
+# 				await client.say(f"thanks to your advantage you managed to roll a {roll}")
+# 			else:
+# 				await client.say(f"you rolled a {roll}")
+# 			return
+# 			dice = [die.split("d") for die in dice]
+# 			if len(dice) == 1 and dice[0][0] == '1':
+# 				await client.say(f"you rolled a {randadv(1, int(dice[0][1]))}")
+# 		dice = [die.split("d") for die in dice]
+# 		if len(dice) == 1 and dice[0][0] == '1':
+# 			roll = randdisadv(1, int(dice[0][1]))
+# 			if roll > 15 + randint(-2, 5):
+# 				await client.say(f"thanks to your advantage you managed to roll a {roll}")
+# 			else:
+# 				await client.say(f"you rolled a {roll}")
+# 			return
+# 		sum_ = 0
+# 		rolls = []
+# 		text = [f"thanks to your advantage you managed to roll {dice[0][0]}d{dice[0][1]} "]
+# 		s = 0
+# 		for die in dice:
+# 			if s:
+# 				text.append(f", you also managed to roll {die[0]}d{die[1]} ")
+# 			else:
+# 				s = 1
+# 			rolls.append([])
+# 			for _ in range(int(die[0])):
+# 				roll = randadv(1, int(die[1]))
+# 				sum_ += roll
+# 				rolls[-1].append(str(roll))
+# 			text.append("which became "+'+'.join(rolls[-1]))
+# 		text.append(f" for a total of {sum_}")
+# 		await client.say(''.join(text))
+# 	else:
+# 		await client.say(f"thanks to your advantage you managed to roll a {randadv(1, 20)}")
     
 @client.command(
     name="npc",
@@ -196,7 +256,6 @@ def create_call_to_dnd_beyond(name, link, **kwargs):
 		name = " ".join(name)
 		name = name.lower().replace(' ', '-').replace("'", "")
 		await client.say(f"https://www.dndbeyond.com/{link}/{name}") 
-	return _func
 
 create_call_to_dnd_beyond("spell" ,"spells", brief="Get a reference to any spell that is listed in D&D")
 create_call_to_dnd_beyond("race", "characters/races", brief="Get a reference to any race that is listed in D&D")
