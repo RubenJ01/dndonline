@@ -24,7 +24,7 @@ def create_call_to_dnd_beyond(name, link, **kwargs):
 		name = name.lower().replace(' ', '-').replace("'", "")
 		await client.say(f"https://www.dndbeyond.com/{link}/{name}") 
 	
-def create_roller_function(name, roller, good_roll_text="you rolled a", **command_specifiers):
+def create_roller_function(name, roller, good_roll_text="you rolled a(n)", **command_specifiers):
 	@client.command(name=name, **command_specifiers)
 	async def _func(*dice):
 		if dice:
@@ -35,11 +35,11 @@ def create_roller_function(name, roller, good_roll_text="you rolled a", **comman
 				if roll > die_5*4 + randint(-die_5, die_5):
 					await client.say(f"{good_roll_text} {roll}")
 				else:
-					await client.say(f"you rolled a {roll}")
+					await client.say(f"you rolled a(n) {roll}")
 				return
 				dice = [die.split("d") for die in dice]
 				if len(dice) == 1 and dice[0][0] == '1':
-					await client.say(f"you rolled a {roller(1, int(dice[0][1]))}")
+					await client.say(f"you rolled a(n) {roller(1, int(dice[0][1]))}")
 			dice = [die.split("d") for die in dice]
 			if len(dice) == 1 and dice[0][0] == '1':
 				die_type = int(dice[0][1])
@@ -48,11 +48,11 @@ def create_roller_function(name, roller, good_roll_text="you rolled a", **comman
 				if roll > die_5*4 + randint(-die_5, die_5):
 					await client.say(f"{good_roll_text} {roll}")
 				else:
-					await client.say(f"you rolled a {roll}")
+					await client.say(f"you rolled a(n) {roll}")
 				return
 			sum_ = 0
 			rolls = []
-			text = [f"you rolled {dice[0][0]}d{dice[0][1]} "]
+			text = [f"```you rolled {dice[0][0]}d{dice[0][1]} "]
 			s = 0
 			for die in dice:
 				if s:
@@ -65,14 +65,14 @@ def create_roller_function(name, roller, good_roll_text="you rolled a", **comman
 					sum_ += roll
 					rolls[-1].append(str(roll))
 				text.append("which became "+'+'.join(rolls[-1]))
-			text.append(f" for a total of {sum_}")
+			text.append(f"\nfor a total of {sum_}```")
 			await client.say(''.join(text))
 		else:
 			roll = roller(1, 20)
 			if roll > 16 + randint(-4, 4):
 				await client.say(f"{good_roll_text} {roll}")
 			else:
-				await client.say(f"you rolled a {roll}")
+				await client.say(f"you rolled a(n) {roll}")
 		
 create_call_to_dnd_beyond("spell" ,"spells", brief="Get a reference to any spell that is listed in D&D")
 create_call_to_dnd_beyond("race", "characters/races", brief="Get a reference to any race that is listed in D&D")
@@ -91,7 +91,7 @@ create_roller_function(
 create_roller_function(
 	"advantage", 
 	lambda x, y: max(randint(x,y), randint(x,y)), 
-	good_roll_text="thanks to your advantage you managed to roll a",
+	good_roll_text="thanks to your advantage you managed to roll a(n)",
 	brief='roll with advantage (format like "4d6 2d8" default is "1d20")',
     description="""roll dice with disadvantage
 	when given no parameters 1d20 is rolled
@@ -101,7 +101,7 @@ create_roller_function(
 create_roller_function(
 	"disadvantage",
 	lambda x, y: min(randint(x,y), randint(x,y)),
-	good_roll_text="despite your disadvantage you managed to roll",
+	good_roll_text="despite your disadvantage you managed to roll a(n)",
 	brief='roll with disadvantage (format like "4d6 2d8" default is "1d20")',
 	description="""roll dice with disadvantage
 	when given no parameters 1d20 is rolled
@@ -111,13 +111,13 @@ create_roller_function(
 create_roller_function(
 	"super-advantage",
 	lambda x, y: max(randint(x,y), randint(x,y), randint(x,y)), 
-	good_roll_text="with super advantage you were probably expecting something high and you were right because you rolled a",
+	good_roll_text="with super advantage you were probably expecting something high and you were right because you rolled a(n)",
 	brief="pick the best of 3 rolls",
 )
 create_roller_function(
 	"super-disadvantage",
 	lambda x, y: min(randint(x,y), randint(x,y), randint(x,y)), 
-	good_roll_text="despite your super-disadvantage you still managed to roll a",
+	good_roll_text="despite your super-disadvantage you still managed to roll a(n)",
 	brief="pick the worst of 3 rolls"
 )
 
