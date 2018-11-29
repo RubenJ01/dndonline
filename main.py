@@ -24,7 +24,7 @@ def create_call_to_dnd_beyond(name, link, **kwargs):
 		name = name.lower().replace(' ', '-').replace("'", "")
 		await client.say(f"https://www.dndbeyond.com/{link}/{name}") 
 	
-def create_roller_function(name, roller, good_roll_text="you rolled a(n)", **command_specifiers):
+def create_roller_function(name, roller, good_roll_text="you managed to roll a fabulous", **command_specifiers):
 	@client.command(name=name, **command_specifiers)
 	async def _func(*dice):
 		if dice:
@@ -35,11 +35,14 @@ def create_roller_function(name, roller, good_roll_text="you rolled a(n)", **com
 				if roll > die_5*4 + randint(-die_5, die_5):
 					await client.say(f"{good_roll_text} {roll}")
 				else:
-					await client.say(f"you rolled a(n) {roll}")
+					if roll not in [8,11,18]:
+						await client.say(f"you rolled a {roll}")
+					else:
+						await client.say(f"you rolled an {roll}")
 				return
 				dice = [die.split("d") for die in dice]
 				if len(dice) == 1 and dice[0][0] == '1':
-					await client.say(f"you rolled a(n) {roller(1, int(dice[0][1]))}")
+					await client.say(f"you rolled a {roller(1, int(dice[0][1]))}")
 			dice = [die.split("d") for die in dice]
 			if len(dice) == 1 and dice[0][0] == '1':
 				die_type = int(dice[0][1])
@@ -48,7 +51,8 @@ def create_roller_function(name, roller, good_roll_text="you rolled a(n)", **com
 				if roll > die_5*4 + randint(-die_5, die_5):
 					await client.say(f"{good_roll_text} {roll}")
 				else:
-					await client.say(f"you rolled a(n) {roll}")
+					
+					await client.say(f"you rolled a {roll}")
 				return
 			sum_ = 0
 			rolls = []
