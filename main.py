@@ -195,7 +195,7 @@ def call_to_dnd_beyond(link, **kwargs):
 	def _func(*name):
 		name = " ".join(name)
 		name = name.lower().replace(" ", "-").replace("'", "")
-		print(f"https://www.dndbeyond.com/{text}/{name}")
+		await client.say(f"https://www.dndbeyond.com/{link}/{name}")
 	return _func
 
 spell = call_to_dnd_beyond("spells", name="spell" ,brief="Get a reference to any spell that is listed in D&D")
