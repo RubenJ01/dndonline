@@ -116,7 +116,7 @@ create_roller_function(
 )
 create_roller_function(
 	"super-disadvantage",
-	lambda x, y: max(randint(x,y), randint(x,y), randint(x,y)), 
+	lambda x, y: min(randint(x,y), randint(x,y), randint(x,y)), 
 	good_roll_text="despite your super-disadvantage you still managed to roll a",
 	brief="pick the worst of 3 rolls"
 )
