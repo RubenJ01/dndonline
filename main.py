@@ -88,7 +88,7 @@ def create_roller_function(name, roller, good_roll_text, **command_specifiers):
 				
 create_roller_function(
 	"advantage", 
-	lamda x, y: max(randint(x,y), randint(x,y)), 
+	lambda x, y: max(randint(x,y), randint(x,y)), 
 	"thanks to your advantage you managed to roll a",
 	brief='roll with advantage (format like "4d6 2d8" default is "1d20")',
     description="""roll dice with disadvantage
