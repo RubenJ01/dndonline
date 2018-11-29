@@ -160,8 +160,8 @@ async def stat(modifier=0):
       
 @client.command(brief="Roll all your stats")
 async def stats():
-rolls = []
-variabeles = []
+    rolls = []
+    variabeles = []
     for j in range(6):	
         for i in range(3):
 	    rolls.append(randrange(1, 7))
