@@ -198,8 +198,8 @@ def create_call_to_dnd_beyond(name, link, **kwargs):
 		await client.say(f"https://www.dndbeyond.com/{link}/{name}") 
 	return _func
 
-spell = create_call_to_dnd_beyond("spell" ,"spells", brief="Get a reference to any spell that is listed in D&D")
-race = create_call_to_dnd_beyond("race", "characters/races", brief="Get a reference to any race that is listed in D&D")
+create_call_to_dnd_beyond("spell" ,"spells", brief="Get a reference to any spell that is listed in D&D")
+create_call_to_dnd_beyond("race", "characters/races", brief="Get a reference to any race that is listed in D&D")
 # create_call_to_dnd_beyond("class")
 # create_call_to_dnd_beyond()
 
