@@ -39,7 +39,7 @@ def create_roller_function(name, roller, good_roll_text="you rolled a", **comman
 				return
 				dice = [die.split("d") for die in dice]
 				if len(dice) == 1 and dice[0][0] == '1':
-					await client.say(f"you rolled a {randadv(1, int(dice[0][1]))}")
+					await client.say(f"you rolled a {roller(1, int(dice[0][1]))}")
 			dice = [die.split("d") for die in dice]
 			if len(dice) == 1 and dice[0][0] == '1':
 				die_type = int(dice[0][1])
@@ -61,7 +61,7 @@ def create_roller_function(name, roller, good_roll_text="you rolled a", **comman
 					s = 1
 				rolls.append([])
 				for _ in range(int(die[0])):
-					roll = randadv(1, int(die[1]))
+					roll = roller(1, int(die[1]))
 					sum_ += roll
 					rolls[-1].append(str(roll))
 				text.append("which became "+'+'.join(rolls[-1]))
