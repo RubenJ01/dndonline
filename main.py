@@ -31,7 +31,7 @@ async def on_ready():
     await client.change_presence(game=discord.Game(name=';help'))
 
 
-def create_roller_function(name, roller, good_roll_text="you rolled a", extra_roll_text="you also rolled a", **command_specifiers):
+def create_roller_function(name, roller, good_roll_text="you rolled a", **command_specifiers):
 	@client.command(name=name, **command_specifiers)
 	async def _func(*dice):
 		if dice:
@@ -85,18 +85,22 @@ create_roller_function(
 	"advantage", 
 	lambda x, y: max(randint(x,y), randint(x,y)), 
 	good_roll_text="thanks to your advantage you managed to roll a",
-	extra_roll_text="you also managed to roll a
 	brief='roll with advantage (format like "4d6 2d8" default is "1d20")',
     description="""roll dice with disadvantage
     when given no parameters 1d20 is rolled
     parameters can be formatted like so "5d3 4d2 1d21" or "10" the latter only works with single dice
     when rolled every single roll gets an advantage and the total is returned"""
 )
-create_roller_function(
-	"disadvantage",
-	lambda x, y: min(randint(x,y), randint(x,y)),
-	good_roll_text="despite your disadvantage you managed to roll"
-)
+# create_roller_function(
+# 	"disadvantage",
+# 	lambda x, y: min(randint(x,y), randint(x,y)),
+# 	good_roll_text="despite your disadvantage you managed to roll",
+# 	brief='roll with disadvantage (format like "4d6 2d8" default is "1d20")',
+# 	description="""roll dice with disadvantage
+# 	when given no parameters 1d20 is rolled
+# 	parameters can be formatted like so "5d3 4d2 1d21" or simply "10" the latter only works with single dice
+# 	when rolled every single roll gets an disadvantage and the total is returned"""
+# )
 	
 # @client.command(
 #     name="advantage",
@@ -107,45 +111,7 @@ create_roller_function(
 #     when rolled every single roll gets an advantage and the total is returned"""
                 
 # )
-# async def adv(*dice):
-# 	if dice:
-# 		if len(dice) == 1 and "d" not in dice[0]:
-# 			roll  = randadv(1, int(dice[0]))
-# 			if roll > 15 + randint(-4, 4):
-# 				await client.say(f"thanks to your advantage you managed to roll a {roll}")
-# 			else:
-# 				await client.say(f"you rolled a {roll}")
-# 			return
-# 			dice = [die.split("d") for die in dice]
-# 			if len(dice) == 1 and dice[0][0] == '1':
-# 				await client.say(f"you rolled a {randadv(1, int(dice[0][1]))}")
-# 		dice = [die.split("d") for die in dice]
-# 		if len(dice) == 1 and dice[0][0] == '1':
-# 			roll = randdisadv(1, int(dice[0][1]))
-# 			if roll > 15 + randint(-2, 5):
-# 				await client.say(f"thanks to your advantage you managed to roll a {roll}")
-# 			else:
-# 				await client.say(f"you rolled a {roll}")
-# 			return
-# 		sum_ = 0
-# 		rolls = []
-# 		text = [f"thanks to your advantage you managed to roll {dice[0][0]}d{dice[0][1]} "]
-# 		s = 0
-# 		for die in dice:
-# 			if s:
-# 				text.append(f", you also managed to roll {die[0]}d{die[1]} ")
-# 			else:
-# 				s = 1
-# 			rolls.append([])
-# 			for _ in range(int(die[0])):
-# 				roll = randadv(1, int(die[1]))
-# 				sum_ += roll
-# 				rolls[-1].append(str(roll))
-# 			text.append("which became "+'+'.join(rolls[-1]))
-# 		text.append(f" for a total of {sum_}")
-# 		await client.say(''.join(text))
-# 	else:
-# 		await client.say(f"thanks to your advantage you managed to roll a {randadv(1, 20)}")
+ur advantage you managed to roll a {randadv(1, 20)}")
     
 @client.command(
     name="npc",
