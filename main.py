@@ -101,7 +101,15 @@ create_roller_function(
 	parameters can be formatted like so "5d3 4d2 1d21" or simply "10" the latter only works with single dice
 	when rolled every single roll gets an disadvantage and the total is returned"""
 )
-	
+create_roller_function(
+	"roll",
+	randint,
+	brief='~asks our imprisoned fiend to think of a random number~\nroll normally (format like "4d6 2d8" default is "1d20")',
+    description="""roll dice with no advantage or disadvantage
+    when given no parameters 1d20 is rolled
+    parameters can be formatted like so "5d3 4d2 1d21" or simply "10" the latter only works for single dice
+    all dice will be rolled and the total will be returned"""
+)
 
 @client.command(
     name="npc",
@@ -115,57 +123,7 @@ async def npc(race=None):
     await client.say("Currently not finished :(")
     
 @client.command(
-    name="disadvantage",
-    brief='roll with disadvantage (format like "4d6 2d8" default is "1d20")',
-    description="""roll dice with disadvantage
-    when given no parameters 1d20 is rolled
-    parameters can be formatted like so "5d3 4d2 1d21" or simply "10" the latter only works with single dice
-    when rolled every single roll gets an disadvantage and the total is returned"""
-)        
-async def disadv(*dice):
-	if dice:
-		if len(dice) == 1 and "d" not in dice[0]:
-			roll = randdisadv(1, int(dice[0]))
-			if roll > 15:
-				await client.say(f"despite your disadvantage you managed to roll a {roll}")
-			else:
-				await client.say(f"you rolled a {roll}")
-			return
-		dice = [die.split("d") for die in dice]
-		if len(dice) == 1 and dice[0][0] == '1':
-			roll = randdisadv(1, int(dice[0][1]))
-			if roll > 15 + randint(-2, 2):
-				await client.say(f"despite your disadvantage you managed to roll a {roll}")
-			else:
-				await client.say(f"you rolled a {roll}")
-			return
-		sum_ = 0
-		rolls = []
-		text = [f"despite your disadvantage you managed to roll {dice[0][0]}d{dice[0][1]} "]
-		s = 0
-		for die in dice:
-			if s:
-				text.append(f", you also managed to roll {die[0]}d{die[1]} ")
-			else:
-				s = 1
-			rolls.append([])
-			for _ in range(int(die[0])):
-				roll = randdisadv(1, int(die[1]))
-				sum_ += roll
-				rolls[-1].append(str(roll))
-			text.append("which became "+'+'.join(rolls[-1]))
-		text.append(f" for a total of {sum_}")
-		await client.say(''.join(text))
-	else:
-		roll = randdisadv(1, 20)
-		if roll > 15 + randint(-4, 4):
-			await client.say(f"despite your disadvantage you managed to roll a {roll}")
-		else:
-			await client.say(f"you rolled a {roll}")
-
-@client.command(
     name="roll",
-    decription='roll without advantage or disadvantage (format like "4d6 2d8" default is "1d20")',
     brief="Calls to the void to return the sacred numbers",
     description="""roll dice with no advantage or disadvantage
     when given no parameters 1d20 is rolled
