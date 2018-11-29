@@ -200,7 +200,7 @@ def create_call_to_dnd_beyond(name, link, **kwargs):
 
 create_call_to_dnd_beyond("spell" ,"spells", brief="Get a reference to any spell that is listed in D&D")
 create_call_to_dnd_beyond("race", "characters/races", brief="Get a reference to any race that is listed in D&D")
-create_call_to_dnd_beyond("class", "characters/classes", brief="Get a reference to any class that is listed in D&D")
+create_call_to_dnd_beyond("classes", "characters/classes", brief="Get a reference to any class that is listed in D&D")
 create_call_to_dnd_beyond("background", "characters/backgrounds", brief="Get a reference to any background that is listed in D&D")
 
 
