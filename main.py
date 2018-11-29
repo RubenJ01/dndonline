@@ -10,20 +10,6 @@ from random import randrange
 BOT_PREFIX = (";", "/")
 client = Bot(command_prefix=BOT_PREFIX)
 
-def randadv(bottom, top):
-    """
-    this is the randint function but now as if rolled with advantage
-    """
-    return max(randint(bottom, top), randint(bottom, top))
-
-def randdisadv(bottom, top):
-    """
-    this is the randint function but now as if rolled with disadvantage
-    """
-    return min(randint(bottom, top), randint(bottom, top))
-
-
-
 @client.event
 async def on_ready():
     print("I'm in")
@@ -31,6 +17,13 @@ async def on_ready():
     await client.change_presence(game=discord.Game(name=';help'))
 
 
+def create_call_to_dnd_beyond(name, link, **kwargs):
+	@client.command(name=name, **kwargs)
+	async def _func(*name):
+		name = " ".join(name)
+		name = name.lower().replace(' ', '-').replace("'", "")
+		await client.say(f"https://www.dndbeyond.com/{link}/{name}") 
+	
 def create_roller_function(name, roller, good_roll_text="you rolled a", **command_specifiers):
 	@client.command(name=name, **command_specifiers)
 	async def _func(*dice):
@@ -80,16 +73,21 @@ def create_roller_function(name, roller, good_roll_text="you rolled a", **comman
 				await client.say(f"{good_roll_text} {roll}")
 			else:
 				await client.say(f"you rolled a {roll}")
-				
+		
+create_call_to_dnd_beyond("spell" ,"spells", brief="Get a reference to any spell that is listed in D&D")
+create_call_to_dnd_beyond("race", "characters/races", brief="Get a reference to any race that is listed in D&D")
+create_call_to_dnd_beyond("classes", "characters/classes", brief="Get a reference to any class that is listed in D&D")
+create_call_to_dnd_beyond("background", "characters/backgrounds", brief="Get a reference to any background that is listed in D&D")
+
 create_roller_function(
 	"advantage", 
 	lambda x, y: max(randint(x,y), randint(x,y)), 
 	good_roll_text="thanks to your advantage you managed to roll a",
 	brief='roll with advantage (format like "4d6 2d8" default is "1d20")',
     description="""roll dice with disadvantage
-when given no parameters 1d20 is rolled
-parameters can be formatted like so "5d3 4d2 1d21" or "10" the latter only works with single dice
-when rolled every single roll gets an advantage and the total is returned"""
+	when given no parameters 1d20 is rolled
+	parameters can be formatted like so "5d3 4d2 1d21" or "10" the latter only works with single dice
+	when rolled every single roll gets an advantage and the total is returned"""
 )
 create_roller_function(
 	"disadvantage",
@@ -97,33 +95,33 @@ create_roller_function(
 	good_roll_text="despite your disadvantage you managed to roll",
 	brief='roll with disadvantage (format like "4d6 2d8" default is "1d20")',
 	description="""roll dice with disadvantage
-when given no parameters 1d20 is rolled
-parameters can be formatted like so "5d3 4d2 1d21" or simply "10" the latter only works with single dice
-when rolled every single roll gets an disadvantage and the total is returned"""
+	when given no parameters 1d20 is rolled
+	parameters can be formatted like so "5d3 4d2 1d21" or simply "10" the latter only works with single dice
+	when rolled every single roll gets an disadvantage and the total is returned"""
 )
 create_roller_function(
 	"roll",
 	randint,
-	brief='~asks our imprisoned fiend to think of a random number~\nroll normally (format like "4d6 2d8" default is "1d20")',
+	brief='roll normally (format like "4d6 2d8" default is "1d20")',
     description="""roll dice with no advantage or disadvantage
-when given no parameters 1d20 is rolled
-parameters can be formatted like so "5d3 4d2 1d21" or simply "10" the latter only works for single dice
-all dice will be rolled and the total will be returned"""
+	when given no parameters 1d20 is rolled
+	parameters can be formatted like so "5d3 4d2 1d21" or simply "10" the latter only works for single dice
+	all dice will be rolled and the total will be returned"""
 )
 
-@client.command(
-    name="npc",
-    brief="create a quick npc"
-)
-async def npc(race=None):
-    if race is None or race.lower() == "none":
-        # generate random race
-        pass
-    stats = [sum([randint(2, 6) for _ in range(3)]) for _ in range(6)]
-    await client.say("Currently not finished :(")
+
+
+# @client.command(
+#     name="npc",
+#     brief="create a quick npc"
+# )
+# async def npc(race=None):
+#     if race is None or race.lower() == "none":
+#         # generate random race
+#         pass
+#     stats = [sum([randint(2, 6) for _ in range(3)]) for _ in range(6)]
+#     await client.say("Currently not finished :(")
     
-
-
 # @client.command(brief="Generates a random encounter")
 # async def encounter():
 #     enemy = random.choice(["ruben", "nathan", "mighty marnix", "Daan the almighty"])
@@ -131,17 +129,7 @@ async def npc(race=None):
 #     weather = random.choice(["stormy", "clear", "misty"])
 #     await client.say("Under development!")
 
-def create_call_to_dnd_beyond(name, link, **kwargs):
-	@client.command(name=name, **kwargs)
-	async def _func(*name):
-		name = " ".join(name)
-		name = name.lower().replace(' ', '-').replace("'", "")
-		await client.say(f"https://www.dndbeyond.com/{link}/{name}") 
 
-create_call_to_dnd_beyond("spell" ,"spells", brief="Get a reference to any spell that is listed in D&D")
-create_call_to_dnd_beyond("race", "characters/races", brief="Get a reference to any race that is listed in D&D")
-create_call_to_dnd_beyond("classes", "characters/classes", brief="Get a reference to any class that is listed in D&D")
-create_call_to_dnd_beyond("background", "characters/backgrounds", brief="Get a reference to any background that is listed in D&D")
 
 
 @client.command(brief="About us")
@@ -149,21 +137,9 @@ async def about():
     await client.say("Fan made D&D discord bot!, started working on 18-11-2018")
 
 @client.command(brief="Roll a certain stat for example: dexterity")
-async def stat(modifier=None):
-    if modifier is None:
-        rolls = []
-        for i in range(4):
-            rolls.append(randrange(1,7))
-        rolls.sort()
-        variabel = sum(rolls[-3:])
-        await client.say("After rolling 4 times your roll became a: " + str(variabel))
-    else:
-        rolls = []
-        for i in range(4):
-            rolls.append(randrange(1,7))
-        rolls.sort()
-        variabel = sum(rolls[-3:]) + int(modifier)
-        await client.say("After rolling 4 times your roll became a: " + str(variabel))
+async def stat(modifier=0):
+	rolls = [randint(1,6) for _ in range(4)]
+	await client.say(f"the total of the best 3 of your 4 rolls was {sum(rolls)-min(rolls)}")
       
 @client.command(brief="Roll all your stats")
 async def stats():
