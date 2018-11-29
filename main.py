@@ -31,7 +31,7 @@ async def on_ready():
     await client.change_presence(game=discord.Game(name=';help'))
 
 
-def create_roller_function(name, roller, good_roll_text, **command_specifiers):
+def create_roller_function(name, roller, good_roll_text="you rolled a", extra_roll_text="you also rolled a", **command_specifiers):
 	@client.command(name=name, **command_specifiers)
 	async def _func(*dice):
 		if dice:
@@ -59,19 +59,19 @@ def create_roller_function(name, roller, good_roll_text, **command_specifiers):
 				return
 			sum_ = 0
 			rolls = []
-			text = [f"thanks to your advantage you managed to roll {dice[0][0]}d{dice[0][1]} "]
+			text = [f"you rolled {dice[0][0]}d{dice[0][1]} "]
 			s = 0
 			for die in dice:
 				if s:
-					text.append(f", you also managed to roll {die[0]}d{die[1]} ")
+					text.append(f", you also rolled {die[0]}d{die[1]} ")
 				else:
 					s = 1
 				rolls.append([])
 				for _ in range(int(die[0])):
 					roll = randadv(1, int(die[1]))
 					sum_ += roll
-					rolls[-1].append(str(roll))
-				text.append("which became "+'+'.join(rolls[-1]))
+					rolls[-1].append(roll)
+				text.append(f"which became {'+'.join([str(roll) for roll in rolls[-1])}({sum(rolls[-1])})")
 			text.append(f" for a total of {sum_}")
 			await client.say(''.join(text))
 		else:
@@ -84,12 +84,18 @@ def create_roller_function(name, roller, good_roll_text, **command_specifiers):
 create_roller_function(
 	"advantage", 
 	lambda x, y: max(randint(x,y), randint(x,y)), 
-	"thanks to your advantage you managed to roll a",
+	good_roll_text="thanks to your advantage you managed to roll a",
+	extra_roll_text="you also managed to roll a
 	brief='roll with advantage (format like "4d6 2d8" default is "1d20")',
     description="""roll dice with disadvantage
     when given no parameters 1d20 is rolled
     parameters can be formatted like so "5d3 4d2 1d21" or "10" the latter only works with single dice
     when rolled every single roll gets an advantage and the total is returned"""
+)
+create_roller_function(
+	"disadvantage",
+	lambda x, y: min(randint(x,y), randint(x,y)),
+	good_roll_text="despite your disadvantage you managed to roll"
 )
 	
 # @client.command(
