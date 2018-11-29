@@ -190,30 +190,18 @@ async def roll(*dice):
 #     weather = random.choice(["stormy", "clear", "misty"])
 #     await client.say("Under development!")
 
-def call_to_dnd_beyond(link, **kwargs):
-	@client.command(**kwargs)
+def create_call_to_dnd_beyond(name, link, **kwargs):
+	@client.command(name=name, **kwargs)
 	async def _func(*name):
 		name = " ".join(name)
 		name = name.lower().replace(' ', '-').replace("'", "")
 		await client.say(f"https://www.dndbeyond.com/{link}/{name}") 
 	return _func
 
-call_to_dnd_beyond("spells", name="spell" ,brief="Get a reference to any spell that is listed in D&D")
-
-race = call_to_dnd_beyond("characters/races", name="race", brief="Get a reference to any race that is listed in D&D")
-
-
-# @client.command(brief="Get a reference to any spell that is listed in D&D" )
-# async def spell(*name):
-#     name = " ".join(name)
-#     name = name.lower().replace(' ', '-').replace("'", "")
-#     await client.say(f"https://www.dndbeyond.com/spells/{name}")
-  
-@client.command(brief="Get a reference to any race that is listed in D&D" )
-async def race(*name):
-    name = " ".join(name)
-    name = name.lower().replace(' ', '-').replace("'", "")
-    await client.say(f"https://www.dndbeyond.com/characters/races/{name}") 
+spell = create_call_to_dnd_beyond("spell" ,"spells", brief="Get a reference to any spell that is listed in D&D")
+race = create_call_to_dnd_beyond("race", "characters/races", brief="Get a reference to any race that is listed in D&D")
+# create_call_to_dnd_beyond("class")
+# create_call_to_dnd_beyond()
 
 @client.command(brief="Get a reference to any class that is listed in D&D" )
 async def classes(*name):
