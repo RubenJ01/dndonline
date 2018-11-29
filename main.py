@@ -200,20 +200,9 @@ def create_call_to_dnd_beyond(name, link, **kwargs):
 
 create_call_to_dnd_beyond("spell" ,"spells", brief="Get a reference to any spell that is listed in D&D")
 create_call_to_dnd_beyond("race", "characters/races", brief="Get a reference to any race that is listed in D&D")
-# create_call_to_dnd_beyond("class")
-# create_call_to_dnd_beyond()
+create_call_to_dnd_beyond("class", "characters/classes", brief="Get a reference to any class that is listed in D&D")
+create_call_to_dnd_beyond("background", "characters/backgrounds", brief="Get a reference to any background that is listed in D&D")
 
-@client.command(brief="Get a reference to any class that is listed in D&D" )
-async def classes(*name):
-    name = " ".join(name)
-    name = name.lower().replace(' ', '-').replace("'", "")
-    await client.say(f"https://www.dndbeyond.com/characters/classes/{name}")
-
-@client.command(brief="Get a reference to any background that is listed in D&D" )
-async def background(*name):
-    name = " ".join(name)
-    name = name.lower().replace(' ', '-').replace("'", "")
-    await client.say(f"https://www.dndbeyond.com/characters/backgrounds/{name}")
 
 @client.command(brief="About us")
 async def about():
