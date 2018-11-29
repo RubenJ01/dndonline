@@ -38,7 +38,7 @@ async def on_ready():
 
 def create_roller_function(name, roller, good_roll_text, **command_specifiers):
 	@client.command(name=name, **command_specifiers)
-	def _func(*dice):
+	async def _func(*dice):
 		if dice:
 			if len(dice) == 1 and "d" not in dice[0]:
 				die_type = int(dice[0])
