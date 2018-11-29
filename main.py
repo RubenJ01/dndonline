@@ -57,6 +57,14 @@ async def adv(*dice):
 			dice = [die.split("d") for die in dice]
 			if len(dice) == 1 and dice[0][0] == '1':
 				await client.say(f"you rolled a {randadv(1, int(dice[0][1]))}")
+		dice = [die.split("d") for die in dice]
+		if len(dice) == 1 and dice[0][0] == '1':
+			roll = randdisadv(1, int(dice[0][1]))
+			if roll > 15 + randint(-2, 5):
+				await client.say(f"thanks to your advantage you managed to roll a {roll}")
+			else:
+				await client.say(f"you rolled a {roll}")
+			return
 		sum_ = 0
 		rolls = []
 		text = [f"thanks to your advantage you managed to roll {dice[0][0]}d{dice[0][1]} "]
@@ -107,7 +115,12 @@ async def disadv(*dice):
 			return
 		dice = [die.split("d") for die in dice]
 		if len(dice) == 1 and dice[0][0] == '1':
-			await client.say(f"despite your disadvantage you managed to roll a {randdisadv(1, int(dice[0][1]))}")
+			roll = randdisadv(1, int(dice[0][1]))
+			if roll > 15 + randint(-2, 2):
+				await client.say(f"despite your disadvantage you managed to roll a {roll}")
+			else:
+				await client.say(f"you rolled a {roll}")
+			return
 		sum_ = 0
 		rolls = []
 		text = [f"despite your disadvantage you managed to roll {dice[0][0]}d{dice[0][1]} "]
@@ -149,6 +162,7 @@ async def roll(*dice):
 		dice = [die.split("d") for die in dice]
 		if len(dice) == 1 and dice[0][0] == '1':
 			await client.say(f"you rolled a {randint(1, int(dice[0][1]))}")
+			return
 		sum_ = 0    
 		rolls = []
 		text = [f"you rolled {dice[0][0]}d{dice[0][1]} "]
@@ -169,12 +183,12 @@ async def roll(*dice):
 	else:
 		await client.say(f"you rolled a {randint(1, 20)}")
 
-@client.command(brief="Generates a random encounter")
-async def encounter():
-    enemy = random.choice(["ruben", "nathan", "marnix", "Daan the almighty"])
-    place = random.choice([ "woods", "desert", "planes"])
-    weather = random.choice(["stormy", "clear", "misty"])
-    await client.say("Under development!")
+# @client.command(brief="Generates a random encounter")
+# async def encounter():
+#     enemy = random.choice(["ruben", "nathan", "mighty marnix", "Daan the almighty"])
+#     place = random.choice([ "woods", "desert", "planes"])
+#     weather = random.choice(["stormy", "clear", "misty"])
+#     await client.say("Under development!")
 
 @client.command(brief="Get a reference to any spell that is listed in D&D" )
 async def spell(*name):
