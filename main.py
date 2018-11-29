@@ -87,9 +87,9 @@ create_roller_function(
 	good_roll_text="thanks to your advantage you managed to roll a",
 	brief='roll with advantage (format like "4d6 2d8" default is "1d20")',
     description="""roll dice with disadvantage
-    when given no parameters 1d20 is rolled
-    parameters can be formatted like so "5d3 4d2 1d21" or "10" the latter only works with single dice
-    when rolled every single roll gets an advantage and the total is returned"""
+when given no parameters 1d20 is rolled
+parameters can be formatted like so "5d3 4d2 1d21" or "10" the latter only works with single dice
+when rolled every single roll gets an advantage and the total is returned"""
 )
 create_roller_function(
 	"disadvantage",
@@ -97,18 +97,18 @@ create_roller_function(
 	good_roll_text="despite your disadvantage you managed to roll",
 	brief='roll with disadvantage (format like "4d6 2d8" default is "1d20")',
 	description="""roll dice with disadvantage
-	when given no parameters 1d20 is rolled
-	parameters can be formatted like so "5d3 4d2 1d21" or simply "10" the latter only works with single dice
-	when rolled every single roll gets an disadvantage and the total is returned"""
+when given no parameters 1d20 is rolled
+parameters can be formatted like so "5d3 4d2 1d21" or simply "10" the latter only works with single dice
+when rolled every single roll gets an disadvantage and the total is returned"""
 )
 create_roller_function(
 	"roll",
 	randint,
 	brief='~asks our imprisoned fiend to think of a random number~\nroll normally (format like "4d6 2d8" default is "1d20")',
     description="""roll dice with no advantage or disadvantage
-    when given no parameters 1d20 is rolled
-    parameters can be formatted like so "5d3 4d2 1d21" or simply "10" the latter only works for single dice
-    all dice will be rolled and the total will be returned"""
+when given no parameters 1d20 is rolled
+parameters can be formatted like so "5d3 4d2 1d21" or simply "10" the latter only works for single dice
+all dice will be rolled and the total will be returned"""
 )
 
 @client.command(
@@ -122,42 +122,7 @@ async def npc(race=None):
     stats = [sum([randint(2, 6) for _ in range(3)]) for _ in range(6)]
     await client.say("Currently not finished :(")
     
-@client.command(
-    name="roll",
-    brief="Calls to the void to return the sacred numbers",
-    description="""roll dice with no advantage or disadvantage
-    when given no parameters 1d20 is rolled
-    parameters can be formatted like so "5d3 4d2 1d21" or simply "10" the latter only works for single dice
-    all dice will be rolled and the total will be returned"""
-)
-async def roll(*dice):
-	if dice:
-		if len(dice) == 1 and "d" not in dice[0]:
-			await client.say(f"you rolled a {randint(1, int(dice[0]))}")
-			return
-		dice = [die.split("d") for die in dice]
-		if len(dice) == 1 and dice[0][0] == '1':
-			await client.say(f"you rolled a {randint(1, int(dice[0][1]))}")
-			return
-		sum_ = 0    
-		rolls = []
-		text = [f"you rolled {dice[0][0]}d{dice[0][1]} "]
-		s = 0
-		for die in dice:
-			if s:
-				text.append(f", you also rolled {die[0]}d{die[1]} ")
-			else:
-				s = 1
-			rolls.append([])
-			for _ in range(int(die[0])):
-				roll = randint(1, int(die[1]))
-				sum_ += roll
-				rolls[-1].append(str(roll))
-			text.append("which became "+'+'.join(rolls[-1]))
-		text.append(f" for a total of {sum_}")
-		await client.say(''.join(text))
-	else:
-		await client.say(f"you rolled a {randint(1, 20)}")
+
 
 # @client.command(brief="Generates a random encounter")
 # async def encounter():
