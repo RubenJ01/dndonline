@@ -192,10 +192,10 @@ async def roll(*dice):
 
 def call_to_dnd_beyond(link, **kwargs):
 	@client.command(**kwargs)
-	def _func(*name):
+	async def _func(*name):
 		name = " ".join(name)
-		name = name.lower().replace(" ", "-").replace("'", "")
-		await client.say(f"https://www.dndbeyond.com/{link}/{name}")
+		name = name.lower().replace(' ', '-').replace("'", "")
+		await client.say(f"https://www.dndbeyond.com/{link}/{name}") 
 	return _func
 
 spell = call_to_dnd_beyond("spells", name="spell" ,brief="Get a reference to any spell that is listed in D&D")
