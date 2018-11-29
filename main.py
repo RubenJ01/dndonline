@@ -198,7 +198,9 @@ def call_to_dnd_beyond(link, **kwargs):
 		print(f"https://www.dndbeyond.com/{text}/{name}")
 	return _func
 
-spell = call_to_dnd_beyond("spells", name="spell" ,brief="Get a reference to any spell that is listed in D&D")
+call_to_dnd_beyond("spells", name="spell" ,brief="Get a reference to any spell that is listed in D&D")
+
+
 
 # @client.command(brief="Get a reference to any spell that is listed in D&D" )
 # async def spell(*name):
