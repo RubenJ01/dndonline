@@ -102,17 +102,7 @@ create_roller_function(
 # 	when rolled every single roll gets an disadvantage and the total is returned"""
 # )
 	
-# @client.command(
-#     name="advantage",
-#     brief='roll with advantage (format like "4d6 2d8" default is "1d20")',
-#     description="""roll dice with disadvantage
-#     when given no parameters 1d20 is rolled
-#     parameters can be formatted like so "5d3 4d2 1d21" or "10" the latter only works with single dice
-#     when rolled every single roll gets an advantage and the total is returned"""
-                
-# )
-ur advantage you managed to roll a {randadv(1, 20)}")
-    
+
 @client.command(
     name="npc",
     brief="create a quick npc"
