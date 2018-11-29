@@ -70,8 +70,8 @@ def create_roller_function(name, roller, good_roll_text="you rolled a", extra_ro
 				for _ in range(int(die[0])):
 					roll = randadv(1, int(die[1]))
 					sum_ += roll
-					rolls[-1].append(roll)
-				text.append(f"which became {'+'.join([str(roll) for roll in rolls[-1])}({sum(rolls[-1])})")
+					rolls[-1].append(str(roll))
+				text.append("which became "+'+'.join(rolls[-1]))
 			text.append(f" for a total of {sum_}")
 			await client.say(''.join(text))
 		else:
