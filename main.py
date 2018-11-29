@@ -111,7 +111,7 @@ create_roller_function(
 create_roller_function(
 	"super-advantage",
 	lambda x, y: max(randint(x,y), randint(x,y), randint(x,y)), 
-	good_roll_text="thanks to your super-advantage you rolled a",
+	good_roll_text="with super advantage you were probably expecting something high and you were right because you rolled a",
 	brief="pick the best of 3 rolls",
 )
 create_roller_function(
