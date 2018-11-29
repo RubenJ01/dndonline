@@ -148,7 +148,7 @@ create_roller_function(
 
 
 
-
+	
 @client.command(brief="About us")
 async def about():
     await client.say("Fan made D&D discord bot!, started working on 18-11-2018")
@@ -160,35 +160,16 @@ async def stat(modifier=0):
       
 @client.command(brief="Roll all your stats")
 async def stats():
-    rolls = []
+rolls = []
+variabeles = []
+    for j in range(6):	
+        for i in range(3):
+	    rolls.append(randrange(1, 7))
+	    rolls.sort() 	    
+	variabeles.append(sum(rolls[-3:]))
+        rolls =[]	
+    await client.say("your rolls are: " + str(variabeles))                                 
 
-    for i in range(3):
-        rolls.append(randrange(1,7))
-        rolls.sort()
-        variabele1 = sum(rolls[-3:])
-    for i in range(3):
-        rolls.append(randrange(1,7))
-        rolls.sort()
-        variabele2 = sum(rolls[-3:])
-    for i in range(3):
-        rolls.append(randrange(1,7))
-        rolls.sort()
-        variabele3 = sum(rolls[-3:])
-    for i in range(3):
-        rolls.append(randrange(1,7))
-        rolls.sort()
-        variabele4 = sum(rolls[-3:])        
-    for i in range(3):
-        rolls.append(randrange(1,7))
-        rolls.sort()
-        variabele5 = sum(rolls[-3:])
-    for i in range(3):
-        rolls.append(randrange(1,7))
-        rolls.sort()
-        variabele6 = sum(rolls[-3:])    
-    await client.say("Your ability scores are: " + str(variabele1) + ", " + str(variabele2) + ", " + str(variabele3) + ", " + str(variabele4) + ", " + str(variabele5) + ", "  + str(variabele6))
-        
-                                 
 async def list_servers():
     await client.wait_until_ready()
     while not client.is_closed:
