@@ -1,14 +1,9 @@
 import discord
 import os
-import random
 import asyncio
-import aiohttp
-import json
-import collections
 
 from random import randint
 
-from discord import Game
 from discord.ext.commands import Bot 
 from random import randrange
     
