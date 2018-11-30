@@ -158,17 +158,17 @@ async def stat(modifier=0):
 	rolls = [randint(1,6) for _ in range(4)]
 	await client.say(f"the total of the best 3 of your 4 rolls was {sum(rolls)-min(rolls)}")
       
-# @client.command(brief="Roll all your stats")
-# async def stats():
-#   rolls = []
-#    variabeles = []
-#    for j in range(6):	
-#        for i in range(3):
-#	    rolls.append(randrange(1, 7))
-#	    rolls.sort() 	    
-#	variabeles.append(sum(rolls[-3:]))
-#        rolls =[]	
-#   await client.say("your rolls are: " + str(variabeles))                                 
+@client.command(brief="Roll all your stats")
+async def stats():
+	rolls = []
+	variabeles = []
+	for j in range(6):	
+		for i in range(3):
+			rolls.append(randrange(1, 7))
+	   		rolls.sort() 	    
+			variabeles.append(sum(rolls[-3:])))
+		rolls =[]	
+	await client.say("your rolls are: " + str(variabeles))                                 
 
 async def list_servers():
     await client.wait_until_ready()
