@@ -168,7 +168,7 @@ async def stats():
 			rolls.sort() 	    
 		variabeles.append(sum(rolls[-3:]))
 		rolls =[]	
-	await client.say("your rolls are: " + str(variabeles))                                 
+	await client.say("```Your rolls are: " + str(variabeles) + "```")                                 
 
 async def list_servers():
     await client.wait_until_ready()
