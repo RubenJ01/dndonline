@@ -163,7 +163,7 @@ async def stats():
 	rolls = []
 	variabeles = []
 	for j in range(6):	
-		for i in range(3):
+		for i in range(4):
 			rolls.append(randint(1, 6))
 			rolls.sort() 	    
 		variabeles.append(sum(rolls)-min(rolls))
