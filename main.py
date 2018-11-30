@@ -166,7 +166,7 @@ async def stats():
 		for i in range(3):
 			rolls.append(randrange(1, 7))
 			rolls.sort() 	    
-			variabeles.append(sum(rolls[-3:]))
+		variabeles.append(sum(rolls[-3:]))
 		rolls =[]	
 	await client.say("your rolls are: " + str(variabeles))                                 
 
