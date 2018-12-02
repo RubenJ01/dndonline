@@ -170,7 +170,7 @@ async def stats():
 		rolls =[]	
 	await client.say("```Your rolls are: \n" + str(variabeles) + "```")
 	
-@client.command(brief="Calculate your total amount of pp gp sp cp respectively")
+@client.command(brief="Calculate your total amount of pp gp sp cp respectively", aliases= [cur, coins, money, value])
 async def currency(*coins):
     cp = sum([int(coin[:-2]) for coin in coins if coin[-2:] == "cp"])
     sp = sum([int(coin[:-2]) for coin in coins if coin[-2:] == "sp"])
