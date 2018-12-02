@@ -94,40 +94,40 @@ async def spell(spell):
 	except urllib.error.URLError as e:
   		print("that is not a valid spell name")
 	else:
-	"""
-	part of the code is accesed
-	the request was fulfilled without errors
-	"""
-	html = response.read()
-	index = html.index(b"<div id=\"WikiaArticle\" class=\"WikiaArticle\">")
-	spell_type = html[
-		html.index(b"caption", index)+11:
-		html.index(b"</i>", index)].decode("UTF-8")
-	casting_time_index = html.index(b"Casting Time", index)
-	casting_time = html[
-		casting_time_index+22
-		:html.index(b"</td>", casting_time_index)-1].decode("UTF-8")
-	range_index = html.index(b"Range", index)
-	range_ = html[
-		range_index+15
-		:html.index(b"</td>", range_index)-1].decode("UTF-8")
- 	components_index = html.index(b"Components", index)
-  	components = html[
-		components_index+20
-    	:html.index(b"</td>", components_index)-1].decode("UTF-8")
-  	duration_index = html.index(b"Duration", index)
-  	duration = html[
-    	duration_index+18
-    	:html.index(b"</td>", duration_index)-1].decode("UTF-8")
-  	description_index = html.index(b"<p>", index)
-  	description = html[description_index+3:html.index(b"</p", description_index)].decode("UTF-8")
-  	description.replace("</a>", "")
-  	while "<a" in description and ">" in description:
-		link_index1 = description.index("<a")
-		link_index2 = description.index(">")
-    	description = f"{description[:description.index('<a')]} {description[description.index('>')+1:]}"
-  	description = description.replace("</a>", "")
-  	await client.say(f"""{spell_type}
+		"""
+		part of the code is accesed
+		the request was fulfilled without errors
+		"""
+		html = response.read()
+		index = html.index(b"<div id=\"WikiaArticle\" class=\"WikiaArticle\">")
+		spell_type = html[
+			html.index(b"caption", index)+11:
+			html.index(b"</i>", index)].decode("UTF-8")
+		casting_time_index = html.index(b"Casting Time", index)
+		casting_time = html[
+			casting_time_index+22
+			:html.index(b"</td>", casting_time_index)-1].decode("UTF-8")
+		range_index = html.index(b"Range", index)
+		range_ = html[
+			range_index+15
+			:html.index(b"</td>", range_index)-1].decode("UTF-8")
+		components_index = html.index(b"Components", index)
+		components = html[
+			components_index+20
+			:html.index(b"</td>", components_index)-1].decode("UTF-8")
+		duration_index = html.index(b"Duration", index)
+		duration = html[
+			duration_index+18
+			:html.index(b"</td>", duration_index)-1].decode("UTF-8")
+		description_index = html.index(b"<p>", index)
+		description = html[description_index+3:html.index(b"</p", description_index)].decode("UTF-8")
+		description.replace("</a>", "")
+		while "<a" in description and ">" in description:
+			link_index1 = description.index("<a")
+			link_index2 = description.index(">")
+			description = f"{description[:description.index('<a')]} {description[description.index('>')+1:]}"
+		description = description.replace("</a>", "")
+		await client.say(f"""{spell_type}
 <-------------------->
 Casting Time: {casting_time}
 <-------------------->
