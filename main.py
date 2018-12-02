@@ -177,7 +177,7 @@ async def currency(*coins):
     ep = sum([int(coin[:-2]) for coin in coins if coin[-2:] == "ep"])
     gp = sum([int(coin[:-2]) for coin in coins if coin[-2:] == "gp"])
     pp = sum([int(coin[:-2]) for coin in coins if coin[-2:] == "pp"])
-    total = (cp * 1000) + (sp * 100) + (ep * 20) + (gp * 10) + (pp * 1)
+    total = (cp * 1) + (sp * 10) + (ep * 50) + (gp * 100) + (pp * 1000)
     cp = total%10
     total = total//10
     sp = total%10
