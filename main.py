@@ -185,7 +185,12 @@ async def currency(*coins):
     gp = total%10
     total = total//10
     pp = total
-    await client.say("```You have " + str(cp) + "cp "  + str(sp) + "sp " + str(gp) + "gp " + str(pp) + "pp " + "```") 
+    await client.say("```You have " + str(cp) + "cp "  + str(sp) + "sp " + str(gp) + "gp " + str(pp) + "pp " + "```")
+	
+@client.command():
+async def initiative(*names):
+    for i in range(0, len(names), 2):
+        await client.say(f"```{names[i]} rolled {randint(1,20)+eval(names[i+1])}```")	
 	
 async def list_servers():
     await client.wait_until_ready()
