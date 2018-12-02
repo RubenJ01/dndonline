@@ -168,7 +168,8 @@ async def stats():
 			rolls.sort() 	    
 		variabeles.append(sum(rolls)-min(rolls))
 		rolls =[]	
-	await client.say("```Your rolls are: \n" + str(variabeles) + "```")                                 
+	await client.say("```Your rolls are: \n" + str(variabeles) + "```")
+	
 @client.command()
 async def currency(*coins):
     cp = sum([int(coin[:-2]) for coin in coins if coin[-2:] == "cp"])
