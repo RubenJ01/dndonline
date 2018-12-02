@@ -185,7 +185,7 @@ async def currency(*coins):
     gp = total%10
     total = total//10
     pp = total
-    await client.say("You have " + str(cp) + "cp "  + str(sp) + "sp " + str(gp) + "gp " + str(pp) + "pp ") 
+    await client.say("```You have " + str(cp) + "cp "  + str(sp) + "sp " + str(gp) + "gp " + str(pp) + "pp " + "```") 
 	
 async def list_servers():
     await client.wait_until_ready()
