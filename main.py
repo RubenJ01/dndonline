@@ -153,14 +153,12 @@ create_roller_function(
 async def about():
     await client.say("Fan made D&D discord bot!, started working on 18-11-2018")
 
-@client.command(brief="Roll a certain stat for example: dexterity",
-				aliases = ['ability', 'statistic', 'abilityscore'])
+@client.command(brief="Roll a certain stat for example: dexterity)
 async def stat(modifier=0):
 	rolls = [randint(1,6) for _ in range(4)]
 	await client.say(f"the total of the best 3 of your 4 rolls was {sum(rolls)-min(rolls)}")
       
-@client.command(brief="Roll all your stats",
-				aliases = ['ability', 'abilitys', 'scores', 'character'])
+@client.command(brief="Roll all your stats")				
 async def stats():
 	rolls = []
 	variabeles = []
@@ -172,8 +170,7 @@ async def stats():
 		rolls =[]	
 	await client.say("```Your rolls are: \n" + str(variabeles) + "```")
 	
-@client.command(brief="Calculate your total amount of pp gp sp cp respectively",
-				aliases = ['moneys', 'money', 'currencys', 'plentyomoney', 'coins', 'coin'])
+@client.command(brief="Calculate your total amount of pp gp sp cp respectively")
 async def currency(*coins):
     cp = sum([int(coin[:-2]) for coin in coins if coin[-2:] == "cp"])
     sp = sum([int(coin[:-2]) for coin in coins if coin[-2:] == "sp"])
@@ -190,8 +187,7 @@ async def currency(*coins):
     pp = total
     await client.say("```You have " + str(cp) + "cp "  + str(sp) + "sp " + str(gp) + "gp " + str(pp) + "pp " + "```")
 	
-@client.command(brief="Insert a name + modifier respectively and roll initiative multple names can be given",
-				aliases = ['inits', 'init'])
+@client.command(brief="Insert a name + modifier respectively and roll initiative multple names can be given")
 async def initiative(*names):
 	for i in range(0, len(names), 2):
 		init = f"{names[i]} rolled {randint(1,20)+eval(names[i+1])}"
