@@ -189,8 +189,7 @@ async def currency(*coins):
 	
 @client.command(
 	brief="Insert a name + modifier respectively and roll initiative multple names can be given",
-	aliases = ['inits', 'init'],
-	pass_context=True)
+	aliases = ['inits', 'init'])
 async def initiative(*names):
 	for i in range(0, len(names), 2):
 		init = f"{names[i]} rolled {randint(1,20)+eval(names[i+1])}"
