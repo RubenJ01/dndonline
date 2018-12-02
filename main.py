@@ -1,7 +1,8 @@
 import discord
 import os
 import asyncio
-
+immport urllib.request
+import urllib.error
 from random import randint
 
 from discord.ext.commands import Bot 
