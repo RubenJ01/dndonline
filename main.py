@@ -187,7 +187,11 @@ async def currency(*coins):
     pp = total
     await client.say("```You have " + str(cp) + "cp "  + str(sp) + "sp " + str(gp) + "gp " + str(pp) + "pp " + "```")
 	
-@client.command()
+@client.command(
+	brief="Insert a name + modifier respectively and roll initiative multple names can be given",
+	name="Initiative roller",
+	aliases = ['cur', 'money'],
+	pass_context=True)
 async def initiative(*names):
 	for i in range(0, len(names), 2):
 		init = f"{names[i]} rolled {randint(1,20)+eval(names[i+1])}"
