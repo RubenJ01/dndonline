@@ -76,7 +76,7 @@ def create_roller_function(name, roller, good_roll_text="you managed to roll a f
 			if roll > 16 + randint(-4, 4):
 				await client.say(f"```{good_roll_text} {roll}```")
 			else:
-				await client.say(f"```You rolled a(n) {roll}```")
+				await client.say(f"```You rolled a {roll}```")
 		
 create_call_to_dnd_beyond("spell" ,"spells", brief="Get a reference to any spell that is listed in D&D")
 create_call_to_dnd_beyond("race", "characters/races", brief="Get a reference to any race that is listed in D&D")
