@@ -190,7 +190,7 @@ async def currency(*coins):
 @client.command()
 async def initiative(*names):
     for i in range(0, len(names), 2):
-        await client.say(f"```{names[i]} rolled {randint(1,20)+eval(names[i+1])}```")	
+        await client.say(f"```{names[i]} rolled {randint(1,20)+eval(names[i+1])}" + "````")	
 	
 async def list_servers():
     await client.wait_until_ready()
