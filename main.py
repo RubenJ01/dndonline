@@ -169,7 +169,23 @@ async def stats():
 		variabeles.append(sum(rolls)-min(rolls))
 		rolls =[]	
 	await client.say("```Your rolls are: \n" + str(variabeles) + "```")                                 
-
+@client.command()
+async def currency(*coins):
+    cp = sum([int(coin[:-2]) for coin in coins if coin[-2:] == "cp"])
+    sp = sum([int(coin[:-2]) for coin in coins if coin[-2:] == "sp"])
+    ep = sum([int(coin[:-2]) for coin in coins if coin[-2:] == "ep"])
+    gp = sum([int(coin[:-2]) for coin in coins if coin[-2:] == "gp"])
+    pp = sum([int(coin[:-2]) for coin in coins if coin[-2:] == "pp"])
+    total = (cp * 1000) + (sp * 100) + (ep * 20) + (gp * 10) + (pp * 1)
+    cp = total%10
+    total = total//10
+    sp = total%10
+    total = total//10
+    gp = total%10
+    total = total//10
+    pp = total
+    await client.say("You have " + str(cp) + "cp "  + str(sp) + "sp " + str(gp) + "gp " + str(pp) + "pp ") 
+	
 async def list_servers():
     await client.wait_until_ready()
     while not client.is_closed:
