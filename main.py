@@ -140,6 +140,7 @@ Duration: {duration}
 {description}
 """)
 
+
 create_roller_function(
 	"roll",
 	randint,
