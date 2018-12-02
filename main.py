@@ -208,4 +208,3 @@ async def list_servers():
 token = os.environ.get("DISCORD_BOT_SECRET")
 client.loop.create_task(list_servers())
 client.run(token)
-
