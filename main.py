@@ -85,8 +85,8 @@ create_call_to_dnd_beyond("classes", "characters/classes", brief="Get a referenc
 create_call_to_dnd_beyond("background", "characters/backgrounds", brief="Get a reference to any background that is listed in D&D")
 
 @client.command()
-async def spell(spell):
-	url = f"https://dnd5e.fandom.com/wiki/{spell.title()}"
+async def spell(*spell):
+	url = f"https://dnd5e.fandom.com/wiki/{' '.join(spell).title().replace(' ', '%20')}"
 	try:
 		response = urllib.request.urlopen(url)
 	except urllib.error.HTTPError as e:
