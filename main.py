@@ -33,30 +33,30 @@ def create_roller_function(name, roller, good_roll_text="you managed to roll a f
 				die_5 = max(die_type//5, 1)
 				roll  = roller(1, die_type)
 				if roll > die_5*4 + randint(-die_5, die_5):
-					await client.say(f"{good_roll_text} {roll}")
+					await client.say(f"```{good_roll_text} {roll}```")
 				else:
 					if roll not in [8,11,18]:
-						await client.say(f"you rolled a {roll}")
+						await client.say(f"```You rolled a {roll}```")
 					else:
-						await client.say(f"you rolled an {roll}")
+						await client.say(f"```You rolled an {roll}```")
 				return
 				dice = [die.split("d") for die in dice]
 				if len(dice) == 1 and dice[0][0] == '1':
-					await client.say(f"you rolled a {roller(1, int(dice[0][1]))}")
+					await client.say(f"```You rolled a {roller(1, int(dice[0][1]))}```")
 			dice = [die.split("d") for die in dice]
 			if len(dice) == 1 and dice[0][0] == '1':
 				die_type = int(dice[0][1])
 				die_5 = max(1, die_type//5)
 				roll = roller(1, die_type)
 				if roll > die_5*4 + randint(-die_5, die_5):
-					await client.say(f"{good_roll_text} {roll}")
+					await client.say(f"```{good_roll_text} {roll}```")
 				else:
 					
-					await client.say(f"you rolled a {roll}")
+					await client.say(f"```You rolled a {roll}")
 				return
 			sum_ = 0
 			rolls = []
-			text = [f"```you rolled {dice[0][0]}d{dice[0][1]} "]
+			text = [f"```You rolled {dice[0][0]}d{dice[0][1]} "]
 			s = 0
 			for die in dice:
 				if s:
@@ -74,9 +74,9 @@ def create_roller_function(name, roller, good_roll_text="you managed to roll a f
 		else:
 			roll = roller(1, 20)
 			if roll > 16 + randint(-4, 4):
-				await client.say(f"{good_roll_text} {roll}")
+				await client.say(f"```{good_roll_text} {roll}```")
 			else:
-				await client.say(f"you rolled a(n) {roll}")
+				await client.say(f"```You rolled a(n) {roll}```")
 		
 create_call_to_dnd_beyond("spell" ,"spells", brief="Get a reference to any spell that is listed in D&D")
 create_call_to_dnd_beyond("race", "characters/races", brief="Get a reference to any race that is listed in D&D")
