@@ -187,7 +187,7 @@ async def currency(*coins):
     pp = total
     await client.say("```You have " + str(cp) + "cp "  + str(sp) + "sp " + str(gp) + "gp " + str(pp) + "pp " + "```")
 	
-@client.command():
+@client.command()
 async def initiative(*names):
     for i in range(0, len(names), 2):
         await client.say(f"```{names[i]} rolled {randint(1,20)+eval(names[i+1])}```")	
