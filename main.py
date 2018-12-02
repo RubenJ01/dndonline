@@ -86,6 +86,7 @@ create_call_to_dnd_beyond("background", "characters/backgrounds", brief="Get a r
 
 @client.command()
 async def spell(spell):
+	url = f"https://dnd5e.fandom.com/wiki/{spell.title()}"
 	try:
 		response = urllib.request.urlopen(url)
 	except urllib.error.HTTPError as e:
