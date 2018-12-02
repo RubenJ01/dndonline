@@ -153,12 +153,14 @@ create_roller_function(
 async def about():
     await client.say("Fan made D&D discord bot!, started working on 18-11-2018")
 
-@client.command(brief="Roll a certain stat for example: dexterity")
+@client.command(brief="Roll a certain stat for example: dexterity"
+			   aliases = ['ability', 'statistic', 'abilityscore'])
 async def stat(modifier=0):
 	rolls = [randint(1,6) for _ in range(4)]
 	await client.say(f"the total of the best 3 of your 4 rolls was {sum(rolls)-min(rolls)}")
       
-@client.command(brief="Roll all your stats")
+@client.command(brief="Roll all your stats",
+			   aliases = ['ability', 'abilitys', 'scores', 'character'])
 async def stats():
 	rolls = []
 	variabeles = []
