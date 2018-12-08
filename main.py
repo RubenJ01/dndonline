@@ -337,7 +337,7 @@ async def character():
 		"\n" + "Race: " + raceroll + 
 		"\n" + "Proficiency's: " + str(proficiencyroll) + 
 		"\n" + "Class: " + classesroll + 
-		"\n" + "Ability scores: " + str(variabeles)
+		"\n" + "Ability scores: " + str(variabeles) +
 		"\n" + "Equipment packs: " + equipment1roll + ", " + equipment2roll 	
 		)
 	if classesroll == "Wizard":
