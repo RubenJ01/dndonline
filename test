@@ -1,0 +1,36 @@
+import random
+from random import randrange
+from random import randint
+
+alignment = ["Lawfull good", "Neutral good", "Chaotic good", "Lawfull neutral", "Neutral", "Chaotic"]
+alignmentroll = random.choice(alignment)
+
+background = ["Acolyte", "Criminal", "Folk hero", "Noble", "Sage", "Soldier"]
+backgroundroll = random.choice(background)
+
+proficiency = ["Acrobatics", "Animal Handling", "Arcana", "Athletics", "Deception", "History", "Insight", "Intimidation", "Investigation", "Medicine", "Nature", "Perception", "Performance", "Persuasion", "Religion", "Sleight of Hand", "Stealth", "Survival"]
+proficiencyroll = random.choice(proficiency)
+
+classes = ["Cleric", "Fighter", "Rogue", "Wizard"]
+classesroll = random.choice(classes)
+
+rolls = []
+variabeles = []
+for j in range(6):    
+    for i in range(4):
+        rolls.append(randint(1, 6))
+        rolls.sort()         
+    variabeles.append(sum(rolls)-min(rolls))
+    rolls =[]
+if classesroll == "Cleric":    
+    equipment1 = ["Mace", "Scale mail", "Light crossbow and 20 bolts", "Shield", "Holy symbol"]
+    equipment1roll = random.choice(equipment1)
+    equipment2 = ["Backpack, sack, lantern, 2 oil flasks, tinderbox, 12 pitons, hammer, waterskin, rations (4 days), 5 gp", "Backpack, 2 sacks, 6 torches, 3 oil flasks, tinderbox, 10-foot pole, 50 feet of rope, waterskin, rations (4 days), steel mirror", "Backpack, 4 sacks, holy symbol or thieves’ tools, 12 pitons, 50 feet of rope, waterskin, rations (4 days)"]
+    equipment2roll = random.choice(equipment2)
+    print("Alignment: " + alignmentroll + "\n" + "Background: " + backgroundroll + "\n" + "Proficiency's: " + proficiencyroll + "\n" + "Class: " + classesroll + "\n" + "Ability scores: " + str(variabeles) + "\n" + "Equipment pack: " + equipment1roll + "\n" + "Equipment pack: " + equipment2roll)
+if classesroll == "Fighter":    
+    print("Stop")
+if classesroll == "Rogue":
+    print("Stop")
+if classesroll == "Wizard":
+    print("Stop")
