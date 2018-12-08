@@ -273,7 +273,6 @@ async def character():
 
 	classes = ["Cleric", "Fighter", "Rogue", "Wizard"]
 	classesroll = random.choice(classes)
-	classesroll = "Rogue"
 
 	race = ["Hill dwarf", "Mountain dwarf", "High elf", "Wood elf", "Lightfoot halfling", "Stout halfling"]
 	raceroll = random.choice(race)
