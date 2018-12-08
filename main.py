@@ -4,7 +4,7 @@ import asyncio
 import urllib.request
 import urllib.error
 from random import randint
-
+from random import sample
 from discord.ext.commands import Bot 
 from random import randrange
     
