@@ -273,7 +273,21 @@ async def character():
 		cantripsroll = random.sample(cantrips, 2)
 		cantrips = ["Control Flames", "Create Bonfire", "Druidcraft", "Frostbite", "Guidance", "Gust", "Infestation", "Magic Stone", "Mending", "Mold Earth"]    
 		await client.say("```" + "Hit points: 8 + your Constitution modifier" + "\n" + "Alignment: " + alignmentroll + "\n" + "Background: " + backgroundroll + "\n" + "Race: " + raceroll + "\n" + "Proficiency's: " + str(proficiencyroll) + "\n" + "Class: " + classesroll + "\n" + "Ability scores: " + str(variabeles) + "\n" + "Equipment packs: " + equipment1roll + ", " + equipment2roll + "\n" + "Cantrips: " + str(cantripsroll) + "\n" + "Spells: " + str(spellsroll) + "```")
+	if classesroll == "Bard":
+		equipment1 = ["A Rapier", "A longsword", "Any simple weapon"]
+		equipment1roll = random.choice(equipment1)
+		equipment2 = ["A diplomat's pack", "An entertainer's pack"]
+		equipment2roll = random.choice(equipment2)
+		equipment3 = ["A lute", "any other musical instrument Leather Armor, and a Dagger"]
+		equipment3roll = random.choice(equipment3)
+		cantrips = ["Blade Ward", "Dancing Lights", "Friends", "Light", "Mage Hand", "Mending", "Message", "Minor Illusion", "Prestidigation", "Thunderclap", "True Strike", "Vicious Mockery"]
+		cantrips roll = random.sample(cantrips, 2)
+		spells = ["Animal Friendship", "Bane", "Charm Person", "Comprehend Languages", "Cure Wounds", "Detect Magic", "Disguise Self", "Dissonant Whispers", "Earth Tremor", "Fearie Fire", "Feather Fall", "Healing Word", "Heroism", "Identify", "Illusory Script", "Longstrider", "Silent Image", "Sleep", "Speak with Animals", "Tasha's Hideous Laughter", "Thunderwave", "Unseen servant"]
+		spellsroll = random.sample(spells, 2)
+		await client.say("```" + "Hit points: 8 + your Constitution modifier" + "\n" + "Alignment: " + alignmentroll + "\n" + "Background: " + backgroundroll + "\n" + "Race: " + raceroll + "\n" + "Proficiency's: " + str(proficiencyroll) + "\n" + "Class: " + classesroll + "\n" + "Ability scores: " + str(variabeles) + "\n" + "Equipment packs: " + equipment1roll + ", " + equipment2roll + ", " + equipment3roll + "\n" + "Cantrips: " + str(cantripsroll) + "\n" + "Spells: " + str(spellsroll) + "```")
 
+
+		
 @client.command(brief="The definitions of combat conditions")
 async def condition(type):
 	if type == "blinded":
