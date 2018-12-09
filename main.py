@@ -220,8 +220,7 @@ async def character():
 			rolls.append(randint(1, 6))
 			rolls.sort()         
 		variabeles.append(sum(rolls)-min(rolls))
-		rolls =[]
-	await client.say("works")	
+		rolls =[]	
 	if classesroll == "Cleric": 
 		equipment1 = ["Mace", "Scale mail", "Light crossbow and 20 bolts", "Shield", "Holy symbol"]
 		equipment1roll = random.choice(equipment1)
