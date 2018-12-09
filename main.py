@@ -7,7 +7,8 @@ from random import randint
 from random import sample
 from discord.ext.commands import Bot 
 from random import randrange
-    
+import random
+
 BOT_PREFIX = (";", "/")
 client = Bot(command_prefix=BOT_PREFIX)
 
