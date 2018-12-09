@@ -206,7 +206,7 @@ async def character():
 	proficiency = ["Acrobatics", "Animal Handling", "Arcana", "Athletics", "Deception", "History", "Insight", "Intimidation", "Investigation", "Medicine", "Nature", "Perception", "Performance", "Persuasion", "Religion", "Sleight of Hand", "Stealth", "Survival"]
 	proficiencyroll = random.sample(proficiency, 4)
 
-	classes = ["Cleric", "Fighter", "Rogue", "Wizard", "Ranger"]
+	classes = ["Cleric", "Fighter", "Rogue", "Wizard", "Ranger", "Druid"]
 	classesroll = random.choice(classes)
 
 	race = ["Hill dwarf", "Mountain dwarf", "High elf", "Wood elf", "Lightfoot halfling", "Stout halfling"]
@@ -263,6 +263,16 @@ async def character():
 		equipment3 = ["a Dungeoneer's Pack", "An Explorer's Pack, A Longbow and a Quiver of 20 Arrows"]
 		equipment3roll = random.choice(equipment3)
 		await client.say("```" + "Hit points: 6 + your Constitution modifier" + "\n" + "Alignment: " + alignmentroll + "\n" + "Background: " + backgroundroll + "\n" + "Race: " + raceroll + "\n" + "Proficiency's: " + str(proficiencyroll) + "\n" + "Class: " + classesroll + "\n" + "Ability scores: " + str(variabeles) + "\n" + "Equipment packs: " + equipment1roll + ", " + equipment2roll + ", " + equipment3roll + "```")
+	if classesroll == "Druid":
+		equipment1 = ["A wooden schield", "Any simple weapon"]
+		equipment1roll = random.choice(equipment1)
+		equipment2 = ["A Scimitar", "any simple melee weapon, Leather Armor, an Explorer's Pack, and a druidic focus"
+		equipment2roll = random.choice(equipment2)
+		spells = ["Absorb Elements", "Animal Friendship", "Beast bond", "Charm Person", "Create or Destroy water", "Cure wounds", "Detect Magic"]
+		spellsroll = random.sample(spells, 2)
+		cantripsroll = random.sample(cantrips, 2)
+		cantrips = ["Control Flames", "Create Bonfire", "Druidcraft", "Frostbite", "Guidance", "Gust", "Infestation", "Magic Stone", "Mending", "Mold Earth"]    
+		await client.say("```" + "Hit points: 8 + your Constitution modifier" + "\n" + "Alignment: " + alignmentroll + "\n" + "Background: " + backgroundroll + "\n" + "Race: " + raceroll + "\n" + "Proficiency's: " + str(proficiencyroll) + "\n" + "Class: " + classesroll + "\n" + "Ability scores: " + str(variabeles) + "\n" + "Equipment packs: " + equipment1roll + ", " + equipment2roll + "\n" + "Cantrips: " + str(cantripsroll) + "\n" + "Spells: " + str(spellsroll) + "```")
 
 @client.command(brief="The definitions of combat conditions")
 async def condition(type):
