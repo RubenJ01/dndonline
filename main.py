@@ -206,7 +206,7 @@ async def character():
 	proficiency = ["Acrobatics", "Animal Handling", "Arcana", "Athletics", "Deception", "History", "Insight", "Intimidation", "Investigation", "Medicine", "Nature", "Perception", "Performance", "Persuasion", "Religion", "Sleight of Hand", "Stealth", "Survival"]
 	proficiencyroll = random.sample(proficiency, 4)
 
-	classes = ["Cleric", "Fighter", "Rogue", "Wizard", "Ranger", "Druid"]
+	classes = ["Cleric", "Fighter", "Rogue", "Wizard", "Ranger", "Druid", "Bard"]
 	classesroll = random.choice(classes)
 
 	race = ["Hill dwarf", "Mountain dwarf", "High elf", "Wood elf", "Lightfoot halfling", "Stout halfling"]
