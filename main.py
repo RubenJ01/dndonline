@@ -197,7 +197,7 @@ async def initiative(*names):
 
 @client.command(brief="Random level 1 character creator")
 async def character():
-	alignment = ["Lawfull good", "Neutral good", "Chaotic good", "Lawfull neutral", "Neutral", "Chaotic"]
+	alignment = ["Lawfull good", "Neutral good", "Chaotic good", "Lawful neutral", "Neutral", "Chaotic"]
 	alignmentroll = random.choice(alignment)
 
 	background = ["Acolyte", "Criminal", "Folk hero", "Noble", "Sage", "Soldier"]
