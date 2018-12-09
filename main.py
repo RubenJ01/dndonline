@@ -255,7 +255,7 @@ async def character():
 		spells = ["Burning hands", "Charm person", "Comprehend languages", "Detect magic", "Disguise self", "Identify", "Mage armor", "Magic missile", "Shield", "Silent image", "Sleep", "Thunderwave",]
 		spellsroll = random.sample(spells, 6)
 		await client.say("```" + "Hit points: 6 + your Constitution modifier" + "\n" + "Alignment: " + alignmentroll + "\n" + "Background: " + backgroundroll + "\n" + "Race: " + raceroll + "\n" + "Proficiency's: " + str(proficiencyroll) + "\n" + "Class: " + classesroll + "\n" + "Ability scores: " + str(variabeles) + "\n" + "Equipment packs: " + equipment1roll + ", " + equipment2roll + "\n" + "Cantrips: " + str(cantripsroll) + "\n" + "Spells: " + str(spellsroll) + "```")
-	if classesroll == "Ranger"
+	if classesroll == "Ranger":
 		equipment1 = ["Scale Mail", "Leather Armor"]
 		equipment1roll = random.choice(equipment1)
 		equipment2 = ["Two shortswords", "Two simple melee weapons"]
