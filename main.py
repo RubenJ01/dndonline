@@ -274,8 +274,6 @@ async def condition(type):
 		await client.say("```" + "A frightened creature has disadvantage on Ability Checks and Attack rolls while the source of its fear is within line of sight." + "\n" + "The creature can’t willingly move closer to the source of its fear." + "```")
 	if type == "deafened":
 		await client.say("```" + "A deafened creature can’t hear and automatically fails any ability check that requires hearing." + "```")	
-	else:
-		await client.say("```" + "This condition doesnt exist or is not added to yet" + "```")
 		
 		
 		
