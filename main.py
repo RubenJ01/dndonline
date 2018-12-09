@@ -299,7 +299,9 @@ async def character():
 
 @client.command(brief="test")
 async def test():
-	await client.say("text")
+	await client.say("
+	text"
+	)
 
 @client.command(brief="About us")
 async def abouts():
