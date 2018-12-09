@@ -263,7 +263,12 @@ async def character():
 		equipment3 = ["a Dungeoneer's Pack", "An Explorer's Pack, A Longbow and a Quiver of 20 Arrows"]
 		equipment3roll = random.choice(equipment3)
 		await client.say("```" + "Hit points: 6 + your Constitution modifier" + "\n" + "Alignment: " + alignmentroll + "\n" + "Background: " + backgroundroll + "\n" + "Race: " + raceroll + "\n" + "Proficiency's: " + str(proficiencyroll) + "\n" + "Class: " + classesroll + "\n" + "Ability scores: " + str(variabeles) + "\n" + "Equipment packs: " + equipment1roll + ", " + equipment2roll + ", " + equipment3roll + "```")
-				
+
+@client.command(brief="The definitions of combat conditions")
+async def condition(type):
+	if type == "test":
+		await client.say("its working")	
+		
 async def list_servers():
     await client.wait_until_ready()
     while not client.is_closed:
