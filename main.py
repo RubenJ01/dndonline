@@ -266,8 +266,12 @@ async def character():
 
 @client.command(brief="The definitions of combat conditions")
 async def condition(type):
-	if type == "test":
-		await client.say("its working")	
+	if type == "blinded":
+		await client.say("```" + "A blinded creature can’t see and automatically fails any ability check that requires sight." + "\n" + "Attack rolls against the creature have advantage, and the creature’s Attack rolls have disadvantage." + "```")
+	else:
+		await client.say("```" + "This condition doesnt exist or is not added to yet" + "```")
+		
+		
 		
 async def list_servers():
     await client.wait_until_ready()
