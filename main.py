@@ -53,7 +53,7 @@ def create_roller_function(name, roller, good_roll_text="you managed to roll a f
 					await client.say(f"```{good_roll_text} {roll}```")
 				else:
 					
-					await client.say(f"```You rolled a {roll}")
+					await client.say(f"```You rolled a {roll}```")
 				return
 			sum_ = 0
 			rolls = []
