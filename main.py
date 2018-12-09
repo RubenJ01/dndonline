@@ -296,7 +296,11 @@ async def character():
 		"\n" + "Cantrips: " + str(cantripsroll) +
 		"\n" + "Spells: " + str(spellsroll)
 		)
-    		
+
+@client.command(brief="test")
+async def test():
+	await client.say("text")
+		
 async def list_servers():
     await client.wait_until_ready()
     while not client.is_closed:
