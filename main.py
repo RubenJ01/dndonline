@@ -196,7 +196,6 @@ async def initiative(*names):
 
 @client.command(brief="Random level 1 character creator")
 async def character():
-	await client.say("its working")
 	alignment = ["Lawfull good", "Neutral good", "Chaotic good", "Lawfull neutral", "Neutral", "Chaotic"]
 	alignmentroll = random.choice(alignment)
 
@@ -220,10 +219,8 @@ async def character():
 			rolls.append(randint(1, 6))
 			rolls.sort()         
 		variabeles.append(sum(rolls)-min(rolls))
-		rolls =[]
-	await client.say("its working")	
+		rolls =[]	
 	if classesroll == "Cleric": 
-		await client.say("its working")
 		equipment1 = ["Mace", "Scale mail", "Light crossbow and 20 bolts", "Shield", "Holy symbol"]
 		equipment1roll = random.choice(equipment1)
 		equipment2 = ["Backpack, sack, lantern, 2 oil flasks, tinderbox, 12 pitons, hammer, waterskin, rations (4 days), 5 gp", "Backpack, 2 sacks, 6 torches, 3 oil flasks, tinderbox, 10-foot pole, 50 feet of rope, waterskin, rations (4 days), steel mirror", "Backpack, 4 sacks, holy symbol or thieves’ tools, 12 pitons, 50 feet of rope, waterskin, rations (4 days)"]
@@ -234,7 +231,6 @@ async def character():
 		spellsroll = random.sample(spells, 2)
 		await client.say("Hit points: 8 + your Constitution modifier" + "\n" + "Alignment: " + alignmentroll + "\n" + "Background: " + backgroundroll + "\n" + "Race: " + raceroll + "\n" + "Proficiency's: " + str(proficiencyroll) + "\n" + "Class: " + classesroll + "\n" + "Ability scores: " + str(variabeles) + "\n" + "Equipment packs: " + equipment1roll + ", " + equipment2roll + "\n" + "Cantrips: " + str(cantripsroll) + "\n" + "Spells: " + str(spellsroll))
 	if classesroll == "Fighter": 
-		await client.say("its working")
 		fightingstyle = ["Archery (swap light crossbow and 20 bolts for a longbow and 20 arrows; at your option, also swap chain mail for leather armor)", "Defense", "Dueling", "Great Weapon Fighting (swap longsword and shield for a greataxe", "Protection", "Two-Weapon Fighting (swap longsword for two short swords)"]
 		fightingstyleroll = random.choice(fightingstyle)
 		equipment1 = ["Mace", "Scale mail", "Light crossbow and 20 bolts", "Shield", "Holy symbol"]
@@ -243,14 +239,12 @@ async def character():
 		equipment2roll = random.choice(equipment2)
 		await client.say("Hit points: 10 + your Constitution modifier" + "\n" + "Alignment: " + alignmentroll + "\n" + "Background: " + backgroundroll + "\n" + "Race: " + raceroll + "\n" + "Proficiency's: " + str(proficiencyroll) + "\n" + "Class: " + classesroll + "\n" + "Ability scores: " + str(variabeles) + "\n" + "Equipment packs: " + equipment1roll + ", " + equipment2roll +	"\n" + "Fighting style: " + fightingstyleroll)
 	if classesroll == "Rogue":
-		await client.say("its working")
 		equipment1 = ["Mace", "Scale mail", "Light crossbow and 20 bolts", "Shield", "Holy symbol"]
 		equipment1roll = random.choice(equipment1)
 		equipment2 = ["Backpack, sack, lantern, 2 oil flasks, tinderbox, 12 pitons, hammer, waterskin, rations (4 days), 5 gp", "Backpack, 2 sacks, 6 torches, 3 oil flasks, tinderbox, 10-foot pole, 50 feet of rope, waterskin, rations (4 days), steel mirror", "Backpack, 4 sacks, holy symbol or thieves’ tools, 12 pitons, 50 feet of rope, waterskin, rations (4 days)"]
 		equipment2roll = random.choice(equipment2)
 		await client.say("Hit points: 8 + your Constitution modifier" + "\n" + "Alignment: " + alignmentroll + "\n" + "Background: " + backgroundroll +"\n" + "Race: " + raceroll + "\n" + "Proficiency's: " + str(proficiencyroll) + "\n" + "Class: " + classesroll + "\n" + "Ability scores: " + str(variabeles) +"\n" + "Equipment packs: " + equipment1roll + ", " + equipment2roll)
 	if classesroll == "Wizard":
-		await client.say("its working")
 		equipment1 = ["Mace", "Scale mail", "Light crossbow and 20 bolts", "Shield", "Holy symbol"]
 		equipment1roll = random.choice(equipment1)
 		equipment2 = ["Backpack, sack, lantern, 2 oil flasks, tinderbox, 12 pitons, hammer, waterskin, rations (4 days), 5 gp", "Backpack, 2 sacks, 6 torches, 3 oil flasks, tinderbox, 10-foot pole, 50 feet of rope, waterskin, rations (4 days), steel mirror", "Backpack, 4 sacks, holy symbol or thieves’ tools, 12 pitons, 50 feet of rope, waterskin, rations (4 days)"]
