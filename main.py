@@ -266,7 +266,7 @@ async def character():
 	if classesroll == "Druid":
 		equipment1 = ["A wooden schield", "Any simple weapon"]
 		equipment1roll = random.choice(equipment1)
-		equipment2 = ["A Scimitar", "any simple melee weapon, Leather Armor, an Explorer's Pack, and a druidic focus"
+		equipment2 = ["A Scimitar", "any simple melee weapon, Leather Armor, an Explorer's Pack, and a druidic focus"]
 		equipment2roll = random.choice(equipment2)
 		spells = ["Absorb Elements", "Animal Friendship", "Beast bond", "Charm Person", "Create or Destroy water", "Cure wounds", "Detect Magic"]
 		spellsroll = random.sample(spells, 2)
