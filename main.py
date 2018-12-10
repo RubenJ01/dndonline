@@ -281,7 +281,7 @@ async def character():
 		equipment3 = ["A lute", "any other musical instrument Leather Armor, and a Dagger"]
 		equipment3roll = random.choice(equipment3)
 		cantrips = ["Blade Ward", "Dancing Lights", "Friends", "Light", "Mage Hand", "Mending", "Message", "Minor Illusion", "Prestidigation", "Thunderclap", "True Strike", "Vicious Mockery"]
-		cantrips roll = random.sample(cantrips, 2)
+		cantripsroll = random.sample(cantrips, 2)
 		spells = ["Animal Friendship", "Bane", "Charm Person", "Comprehend Languages", "Cure Wounds", "Detect Magic", "Disguise Self", "Dissonant Whispers", "Earth Tremor", "Fearie Fire", "Feather Fall", "Healing Word", "Heroism", "Identify", "Illusory Script", "Longstrider", "Silent Image", "Sleep", "Speak with Animals", "Tasha's Hideous Laughter", "Thunderwave", "Unseen servant"]
 		spellsroll = random.sample(spells, 2)
 		await client.say("```" + "Hit points: 8 + your Constitution modifier" + "\n" + "Alignment: " + alignmentroll + "\n" + "Background: " + backgroundroll + "\n" + "Race: " + raceroll + "\n" + "Proficiency's: " + str(proficiencyroll) + "\n" + "Class: " + classesroll + "\n" + "Ability scores: " + str(variabeles) + "\n" + "Equipment packs: " + equipment1roll + ", " + equipment2roll + ", " + equipment3roll + "\n" + "Cantrips: " + str(cantripsroll) + "\n" + "Spells: " + str(spellsroll) + "```")
