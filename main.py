@@ -298,6 +298,14 @@ async def condition(type):
 		await client.say("```" + "A frightened creature has disadvantage on Ability Checks and Attack rolls while the source of its fear is within line of sight." + "\n" + "The creature can’t willingly move closer to the source of its fear." + "```")
 	if type == "deafened":
 		await client.say("```" + "A deafened creature can’t hear and automatically fails any ability check that requires hearing." + "```")	
+	if type == "grappled":
+		await client.say("```" + "A grappled creature’s speed becomes 0, and it can’t benefit from any bonus to its speed." + "\n" + "The condition ends if the Grappler is incapacitated (see the condition)." + "\n" + "The condition also ends if an effect removes the grappled creature from the reach of the Grappler or Grappling effect, such as when a creature is hurled away by the Thunderwave spell." + "```")
+	if type == "incapacitated":
+		await client.say("```" + "An incapacitated creature can’t take actions or reactions." + "```")
+	if type == "invisible":
+		await client.say("```" + "An invisible creature is impossible to see without the aid of magic or a Special sense. For the purpose of Hiding, the creature is heavily obscured. The creature’s location can be detected by any noise it makes or any tracks it leaves." + "\n" + "Attack rolls against the creature have disadvantage, and the creature’s Attack rolls have advantage." + "```")
+	if type == "paralyzed": 
+		await client.say("```" + "A paralyzed creature is incapacitated (see the condition) and can’t move or speak." + "\n" + "The creature automatically fails Strength and Dexterity Saving Throws." + "\n" + "Attack rolls against the creature have advantage." + "\n" + "Any Attack that hits the creature is a critical hit if the attacker is within 5 feet of the creature." + "```")
 		
 		
 		
