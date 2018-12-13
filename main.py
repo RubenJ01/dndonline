@@ -326,7 +326,7 @@ async def help(ctx):
 	embed.add_field(name=";super-disadvantage", value="Pick the worst of 3 rolls, same format as ;roll", inline=False)
 	embed.add_field(name=";stat", value="Roll 1 ability score (best 3 rolls of a 4d6)", inline=False)
 	embed.add_field(name=";stats", value="Roll all 6 of your ability scores (best of 3 rolls of a 4d6 6 times)", inline=False)
-	embed.add_field(name=";currency", value="Calculate your total amount of pp gp sp cp respectively (format like ;currency 1gp 1pp 20sp etc", inline=False)
+	embed.add_field(name=";currency", value="Calculate your total amount of pp gp sp cp respectively (format like ;currency 1gp 1pp 20sp etc)", inline=False)
 	embed.add_field(name=";initiative", value="Insert a name + modifier respectively and roll initiative multple names can be given", inline=False)
 	embed.add_field(name=";character", value="Generate a quick level 1 character", inline=False)
 
