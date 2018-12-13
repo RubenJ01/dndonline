@@ -293,7 +293,11 @@ async def character():
 @client.command(brief="The definitions of combat conditions")
 async def condition(type):
 	if type == "blinded":
-		await client.say("```" + "A blinded creature can’t see and automatically fails any ability check that requires sight." + "\n" + "Attack rolls against the creature have advantage, and the creature’s Attack rolls have disadvantage." + "```")
+		embed = discord.Embed(
+			colour = discord.Colour.blue()
+		)
+		embed.add_field(name="Condition blinded:", value="A blinded creature can’t see and automatically fails any ability check that requires sight." + "\n" + "Attack rolls against the creature have advantage, and the creature’s Attack rolls have disadvantage.", inline=False)
+		await client.say(embed=embed)
 	if type == "charmed":
 		await client.say("```" + "A charmed creature can’t Attack the charmer or target the charmer with harmful Abilities or magical effects." + "\n" + "The charmer has advantage on any ability check to interact socially with the creature." + "```")
 	if type == "frightened":
@@ -333,19 +337,7 @@ async def help(ctx):
 	
 	await client.send_message(author, embed=embed)
 	await client.say("```Sended you a private message containing the information```")
-	
-@client.command()
-async def test():
-	embed = discord.Embed(
-		colour = discord.Colour.blue()
-	)
-	embed.add_field(name="test", value="Shows this message", inline=False)
-	
-	await client.say(embed=embed)
-
-	
-
-		
+			
 async def list_servers():
     await client.wait_until_ready()
     while not client.is_closed:
