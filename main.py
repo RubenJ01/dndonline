@@ -157,6 +157,9 @@ async def npc():
 	embed = discord.Embed(
 		colour = discord.Colour.blue()
 	)
+	embed.add_field(name="Race:", value=raceroll, inline=False)
+	await client.say(embed=embed)
+
 				    
 # @client.command(brief="Generates a random encounter")
 # async def encounter():
