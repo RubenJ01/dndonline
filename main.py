@@ -299,19 +299,47 @@ async def condition(type):
 		embed.add_field(name="Condition blinded:", value="A blinded creature can’t see and automatically fails any ability check that requires sight." + "\n" + "Attack rolls against the creature have advantage, and the creature’s Attack rolls have disadvantage.", inline=False)
 		await client.say(embed=embed)
 	if type == "charmed":
-		await client.say("```" + "A charmed creature can’t Attack the charmer or target the charmer with harmful Abilities or magical effects." + "\n" + "The charmer has advantage on any ability check to interact socially with the creature." + "```")
+		embed = discord.Embed(
+			colour = discord.Colour.blue()
+		)
+		embed.add_field(name="Condition charmed:", value="A charmed creature can’t Attack the charmer or target the charmer with harmful Abilities or magical effects." + "\n" + "The charmer has advantage on any ability check to interact socially with the creature.", inline=False)
+		await client.say(embed=embed)
 	if type == "frightened":
-		await client.say("```" + "A frightened creature has disadvantage on Ability Checks and Attack rolls while the source of its fear is within line of sight." + "\n" + "The creature can’t willingly move closer to the source of its fear." + "```")
+		embed = discord.Embed(
+			colour = discord.Colour.blue()
+		)
+		embed.add_field(name="Condition frightened:", value="A frightened creature has disadvantage on Ability Checks and Attack rolls while the source of its fear is within line of sight." + "\n" + "The creature can’t willingly move closer to the source of its fear.", inline=False)
+		await client.say(embed=embed)
 	if type == "deafened":
-		await client.say("```" + "A deafened creature can’t hear and automatically fails any ability check that requires hearing." + "```")	
+		embed = discord.Embed(
+			colour = discord.Colour.blue()
+		)
+		embed.add_field(name="Condition deafened:", value="A deafened creature can’t hear and automatically fails any ability check that requires hearing.", inline=False)
+		await client.say(embed=embed)	
 	if type == "grappled":
-		await client.say("```" + "A grappled creature’s speed becomes 0, and it can’t benefit from any bonus to its speed." + "\n" + "The condition ends if the Grappler is incapacitated (see the condition)." + "\n" + "The condition also ends if an effect removes the grappled creature from the reach of the Grappler or Grappling effect, such as when a creature is hurled away by the Thunderwave spell." + "```")
+		embed = discord.Embed(
+			colour = discord.Colour.blue()
+		)
+		embed.add_field(name="Condition grappled:", value="A grappled creature’s speed becomes 0, and it can’t benefit from any bonus to its speed." + "\n" + "The condition ends if the Grappler is incapacitated (see the condition)." + "\n" + "The condition also ends if an effect removes the grappled creature from the reach of the Grappler or Grappling effect, such as when a creature is hurled away by the Thunderwave spell.", inline=False)
+		await client.say(embed=embed)
 	if type == "incapacitated":
-		await client.say("```" + "An incapacitated creature can’t take actions or reactions." + "```")
+		embed = discord.Embed(
+			colour = discord.Colour.blue()
+		)
+		embed.add_field(name="Condition incapacitated:", value="An incapacitated creature can’t take actions or reactions.", inline=False)
+		await client.say(embed=embed)
 	if type == "invisible":
-		await client.say("```" + "An invisible creature is impossible to see without the aid of magic or a Special sense. For the purpose of Hiding, the creature is heavily obscured. The creature’s location can be detected by any noise it makes or any tracks it leaves." + "\n" + "Attack rolls against the creature have disadvantage, and the creature’s Attack rolls have advantage." + "```")
+		embed = discord.Embed(
+			colour = discord.Colour.blue()
+		)
+		embed.add_field(name="Condition invisible:", value="An invisible creature is impossible to see without the aid of magic or a Special sense. For the purpose of Hiding, the creature is heavily obscured. The creature’s location can be detected by any noise it makes or any tracks it leaves." + "\n" + "Attack rolls against the creature have disadvantage, and the creature’s Attack rolls have advantage.", inline=False)
+		await client.say(embed=embed)
 	if type == "paralyzed": 
-		await client.say("```" + "A paralyzed creature is incapacitated (see the condition) and can’t move or speak." + "\n" + "The creature automatically fails Strength and Dexterity Saving Throws." + "\n" + "Attack rolls against the creature have advantage." + "\n" + "Any Attack that hits the creature is a critical hit if the attacker is within 5 feet of the creature." + "```")
+		embed = discord.Embed(
+			colour = discord.Colour.blue()
+		)
+		embed.add_field(name="Condition paralyzed:", value="A paralyzed creature is incapacitated (see the condition) and can’t move or speak." + "\n" + "The creature automatically fails Strength and Dexterity Saving Throws." + "\n" + "Attack rolls against the creature have advantage." + "\n" + "Any Attack that hits the creature is a critical hit if the attacker is within 5 feet of the creature.", inline=False)
+		await client.say(embed=embed)
 		
 @client.command(pass_context=True)
 async def help(ctx):
