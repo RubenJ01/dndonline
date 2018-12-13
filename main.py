@@ -333,6 +333,17 @@ async def help(ctx):
 	
 	await client.send_message(author, embed=embed)
 	await client.say("```Sended you a private message containing the information```")
+	
+@client.command()
+async def test():
+	embed = discord.Embed(
+		colour = discord.Colour.blue()
+	)
+	embed.add_field(name="test", value="Shows this message", inline=False)
+	
+	await client.say(embed=embed)
+
+	
 
 		
 async def list_servers():
