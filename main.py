@@ -321,6 +321,7 @@ async def help(ctx):
 	embed.add_field(name=";help", value="Shows this message", inline=False)	
 	
 	await client.send_message(author, embed=embed)
+	await client.say("```Sended you a private message containing the information```")
 		
 async def list_servers():
     await client.wait_until_ready()
