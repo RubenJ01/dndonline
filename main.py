@@ -332,14 +332,7 @@ async def help(ctx):
 
 	
 	await client.send_message(author, embed=embed)
-	
-	embed2 = discord.Embed(
-		colour = discord.Colour.blue()
-	)
-	
-	embed2.add_field(name="", value="Sended you a private message containing the information", inline=False)
-	
-	await client.say(message.channel, embed=embed2)
+	await client.say("```Sended you a private message containing the information```")
 
 		
 async def list_servers():
