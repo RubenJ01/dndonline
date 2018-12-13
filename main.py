@@ -11,6 +11,8 @@ import random
 
 BOT_PREFIX = (";", "/")
 client = Bot(command_prefix=BOT_PREFIX)
+client.remove_command("help")
+
 
 @client.event
 async def on_ready():
