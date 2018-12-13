@@ -120,13 +120,13 @@ create_roller_function(
 	"super-advantage",
 	lambda x, y: max(randint(x,y), randint(x,y), randint(x,y)), 
 	good_roll_text="with super advantage you were probably expecting something high and you were right because you rolled a(n)",
-	brief="pick the best of 3 rolls",
+	brief="Pick the best of 3 rolls, same format as ;roll",
 )
 create_roller_function(
 	"super-disadvantage",
 	lambda x, y: min(randint(x,y), randint(x,y), randint(x,y)), 
 	good_roll_text="despite your super-disadvantage you still managed to roll a(n)",
-	brief="pick the worst of 3 rolls"
+	brief="Pick the worst of 3 rolls, same format as ;roll"
 )
 
 
@@ -320,8 +320,15 @@ async def help(ctx):
 	embed.set_author(name="Help menu")
 	embed.add_field(name=";help", value="Shows this message", inline=False)
 	embed.add_field(name=";roll", value="roll dice with no advantage or disadvantage when given no parameters 1d20 is rolled parameters can be formatted like so 5d3 4d2 1d21 or simply 10 the latter only works for single dice all dice will be rolled and the total will be returned", inline=False)
-	embed.add_field(name=";advantage", value="roll with advantage (format like 4d6 2d8 default is 1d20", inline=False)
+	embed.add_field(name=";advantage", value="roll with advantage (format like 4d6 2d8 default is 1d20)", inline=False)
 	embed.add_field(name=";disadvantage", value="roll with disadvantage (format like 4d6 2d8 default is 1d20)", inline=False)
+	embed.add_field(name=";super-advantage", value="Pick the best of 3 rolls, same format as ;roll", inline=False)
+	embed.add_field(name=";super-disadvantage", value="Pick the worst of 3 rolls, same format as ;roll", inline=False)
+	embed.add_field(name=";stat", value="Roll 1 ability score (best 3 rolls of a 4d6)", inline=False)
+	embed.add_field(name=";stats", value="Roll all 6 of your ability scores (best of 3 rolls of a 4d6 6 times)", inline=False)
+	embed.add_field(name=";currency", value="Calculate your total amount of pp gp sp cp respectively (format like ;currency 1gp 1pp 20sp etc", inline=False)
+	embed.add_field(name=";initiative", value="Insert a name + modifier respectively and roll initiative multple names can be given", inline=False)
+	embed.add_field(name=";character", value="Generate a quick level 1 character", inline=False)
 
 	
 	await client.send_message(author, embed=embed)
