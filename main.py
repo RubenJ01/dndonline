@@ -129,20 +129,35 @@ create_roller_function(
 	brief="Pick the worst of 3 rolls, same format as ;roll"
 )
 
-
-
-
-# @client.command(
-#     name="npc",
-#     brief="create a quick npc"
-# )
-# async def npc(race=None):
-#     if race is None or race.lower() == "none":
-#         # generate random race
-#         pass
-#     stats = [sum([randint(2, 6) for _ in range(3)]) for _ in range(6)]
-#     await client.say("Currently not finished :(")
-    
+@client.command(name="npc", brief="create a quick npc" )
+async def npc():
+	background = ["Acolyte", "Criminal", "Folk hero", "Noble", "Sage", "Soldier"]
+	backgroundroll = random.choice(background)
+	traits = ["Nervous", "Excited"]
+	traitsroll = random.choice(traits)
+	gender = ["Male", "Female"]
+	genderroll = random.choice(gender)
+	size = [3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7]
+	sizeroll = random.choice(size)
+	hair = ["Long", "Short", "Bald"]
+	hairroll = random.choice(hair)
+	haircolour = ["blonde", "black", "white", "orange"]
+	haircolourroll = random.choice(haircolour)
+	race = ["Hill dwarf", "Mountain dwarf", "High elf", "Wood elf", "Lightfoot halfling", "Stout halfling"]
+	raceroll = random.choice(race)
+	age = random.randint(20, 100)
+	rolls = []
+	variabeles = []
+	for j in range(6):    
+		for i in range(4):
+		    rolls.append(randint(1, 6))
+		    rolls.sort()         
+		    variabeles.append(sum(rolls)-min(rolls))
+		    rolls =[]
+	embed = discord.Embed(
+		colour = discord.Colour.blue()
+	)
+				    
 # @client.command(brief="Generates a random encounter")
 # async def encounter():
 #     enemy = random.choice(["ruben", "nathan", "mighty marnix", "Daan the almighty"])
