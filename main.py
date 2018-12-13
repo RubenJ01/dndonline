@@ -339,7 +339,7 @@ async def help(ctx):
 	
 	embed2.add_field(name="", value="Sended you a private message containing the information", inline=False)
 	
-	await client.send_message(message.channel, embed=embed2)
+	await client.say(message.channel, embed=embed2)
 
 		
 async def list_servers():
