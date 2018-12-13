@@ -309,7 +309,18 @@ async def condition(type):
 	if type == "paralyzed": 
 		await client.say("```" + "A paralyzed creature is incapacitated (see the condition) and can’t move or speak." + "\n" + "The creature automatically fails Strength and Dexterity Saving Throws." + "\n" + "Attack rolls against the creature have advantage." + "\n" + "Any Attack that hits the creature is a critical hit if the attacker is within 5 feet of the creature." + "```")
 		
-		
+@client.command(pass_context=True)
+async def help(ctx):
+	author = ctx.message.author
+	
+	embed = discord.Embed(
+		colour = discord.Colour.blue()
+	)
+	
+	embed.set_author(name="Help menu")
+	embed.add_field(name=";help", value="Shows this message", inline=False)	
+	
+	await client.send_message(author, embed=embed)
 		
 async def list_servers():
     await client.wait_until_ready()
