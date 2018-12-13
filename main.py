@@ -157,7 +157,11 @@ async def npc():
 	embed = discord.Embed(
 		colour = discord.Colour.blue()
 	)
+	embed.set_author(name="Randomly generated NPC:")
 	embed.add_field(name="Race:", value=raceroll, inline=False)
+	embed.add_field(name="Gender:", value=genderroll, inline=False)
+	embed.add_field(name="Age:", value=age, inline=False)
+	embed.add_field(name="Traits:", value=traitsroll, inline=False)
 	await client.say(embed=embed)
 
 				    
