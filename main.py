@@ -308,7 +308,7 @@ async def character():
 		embed.add_field(name="Alignment::", value=alignmentroll, inline=False)
 		embed.add_field(name="Proficiency's:", value=proficiencyroll, inline=False)
 		embed.add_field(name="Equipmentpacks:", value=equipment1roll + ", " + equipment2roll, inline=False)
-		await client.say("```" + "Hit points: 8 + your Constitution modifier" + "\n" + "Alignment: " + alignmentroll + "\n" + "Background: " + backgroundroll +"\n" + "Race: " + raceroll + "\n" + "Proficiency's: " + str(proficiencyroll) + "\n" + "Class: " + classesroll + "\n" + "Ability scores: " + str(variabeles) +"\n" + "Equipment packs: " + equipment1roll + ", " + equipment2roll + "```")
+		await client.say(embed=embed)
 	if classesroll == "Wizard":
 		equipment1 = ["Mace", "Scale mail", "Light crossbow and 20 bolts", "Shield", "Holy symbol"]
 		equipment1roll = random.choice(equipment1)
