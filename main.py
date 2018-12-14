@@ -165,7 +165,7 @@ async def npc():
 	embed.add_field(name="Background:", value=backgroundroll, inline=False)
 	embed.add_field(name="Hair:", value=hairroll + ", " + haircolourroll, inline=False)
 	embed.add_field(name="Size:", value=sizeroll, inline=False)
-	embed.add_field(name="Ability scores:", value=variabeles, inline=False)
+	embed.add_field(name="Ability scores:", value=*variabeles, inline=False)
 	await client.say(embed=embed)
 
 				    
@@ -258,7 +258,20 @@ async def character():
 		cantripsroll = random.sample(cantrips, 3)
 		spells = ["Bless", "Command", "Cure wounds", "Detect magic", "Guiding bolt", "Healing word", "Inflict wounds", "Sanctuary", "Schield of faith"]
 		spellsroll = random.sample(spells, 2)
-		await client.say("```" + "Hit points: 8 + your Constitution modifier" + "\n" + "Alignment: " + alignmentroll + "\n" + "Background: " + backgroundroll + "\n" + "Race: " + raceroll + "\n" + "Proficiency's: " + str(proficiencyroll) + "\n" + "Class: " + classesroll + "\n" + "Ability scores: " + str(variabeles) + "\n" + "Equipment packs: " + equipment1roll + ", " + equipment2roll + "\n" + "Cantrips: " + str(cantripsroll) + "\n" + "Spells: " + str(spellsroll) + "```")
+		embed = discord.Embed(
+		colour = discord.Colour.blue()
+		)
+		embed.set_author(name="Randomly generated character:")
+		embed.add_field(name="Race:", value=raceroll, inline=False)
+		embed.add_field(name="Class:", value=classesroll, inline=False)
+		embed.add_field(name="Hit points:", value="8 + your Constitution modifier", inline=False)
+		embed.add_field(name="Background:", value=backgroundroll, inline=False)
+		embed.add_field(name="Alignment::", value=alignmentroll, inline=False)
+		embed.add_field(name="Proficiency's:", value=proficiencyroll, inline=False)
+		embed.add_field(name="Equipmentpacks:", value=equipment1roll + ", " + equipment2roll, inline=False)
+		embed.add_field(name="Cantrips:", value=cantripsroll, inline=False)
+		embed.add_field(name="Spells:", value=spellsroll, inline=False)
+		await client.say(embed=embed)
 	if classesroll == "Fighter": 
 		fightingstyle = ["Archery (swap light crossbow and 20 bolts for a longbow and 20 arrows; at your option, also swap chain mail for leather armor)", "Defense", "Dueling", "Great Weapon Fighting (swap longsword and shield for a greataxe", "Protection", "Two-Weapon Fighting (swap longsword for two short swords)"]
 		fightingstyleroll = random.choice(fightingstyle)
