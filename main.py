@@ -386,7 +386,7 @@ async def help(ctx):
 	embed.add_field(name=";currency", value="Calculate your total amount of pp gp sp cp respectively (format like ;currency 1gp 1pp 20sp etc)", inline=False)
 	embed.add_field(name=";initiative", value="Insert a name + modifier respectively and roll initiative multple names can be given", inline=False)
 	embed.add_field(name=";character", value="Generate a quick level 1 character", inline=False)
-
+	embed.add_field(name=";npc", value="Generate a quick npc, including traits and appearence.", inline=False)
 	
 	await client.send_message(author, embed=embed)
 	await client.say("```Sended you a private message containing the information```")
