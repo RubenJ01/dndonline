@@ -472,6 +472,7 @@ async def help(ctx):
 	embed.add_field(name=";initiative", value="Insert a name + modifier respectively and roll initiative multple names can be given", inline=False)
 	embed.add_field(name=";character", value="Generate a quick level 1 character", inline=False)
 	embed.add_field(name=";npc", value="Generate a quick npc, including traits and appearence.", inline=False)
+	embed.add_field(name="Help server", value="For help or feedback you can join the bots server: https://discord.gg/jZfjhhu", inline=False)
 	
 	await client.send_message(author, embed=embed)
 	await client.say("```Sended you a private message containing the information```")
