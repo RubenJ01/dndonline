@@ -148,12 +148,12 @@ async def npc():
 	age = random.randint(20, 100)
 	rolls = []
 	variabeles = []
-	for j in range(6):    
+	for j in range(6):	
 		for i in range(4):
-		    rolls.append(randint(1, 6))
-		    rolls.sort()         
-		    variabeles.append(sum(rolls)-min(rolls))
-		    rolls =[]
+			rolls.append(randint(1, 6))
+			rolls.sort() 	    
+		variabeles.append(sum(rolls)-min(rolls))
+		rolls =[]
 	embed = discord.Embed(
 		colour = discord.Colour.blue()
 	)
