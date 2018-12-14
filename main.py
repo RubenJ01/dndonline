@@ -163,7 +163,7 @@ async def npc():
 	embed.add_field(name="Age:", value=age, inline=False)
 	embed.add_field(name="Traits:", value=traitsroll, inline=False)
 	embed.add_field(name="Background:", value=backgroundroll, inline=False)
-	embed.add_field(name="Appearence:", value=hairroll + ", " + haircolourroll, inline=False)
+	embed.add_field(name="Appearence:", value=hairroll + ", " + haircolourroll" + " hair, inline=False)
 	embed.add_field(name="Size:", value=sizeroll, inline=False)
 	await client.say(embed=embed)
 
