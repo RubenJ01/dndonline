@@ -279,12 +279,35 @@ async def character():
 		equipment1roll = random.choice(equipment1)
 		equipment2 = ["Backpack, sack, lantern, 2 oil flasks, tinderbox, 12 pitons, hammer, waterskin, rations (4 days), 5 gp", "Backpack, 2 sacks, 6 torches, 3 oil flasks, tinderbox, 10-foot pole, 50 feet of rope, waterskin, rations (4 days), steel mirror", "Backpack, 4 sacks, holy symbol or thieves’ tools, 12 pitons, 50 feet of rope, waterskin, rations (4 days)"]
 		equipment2roll = random.choice(equipment2)
-		await client.say("```" + "Hit points: 10 + your Constitution modifier" + "\n" + "Alignment: " + alignmentroll + "\n" + "Background: " + backgroundroll + "\n" + "Race: " + raceroll + "\n" + "Proficiency's: " + str(proficiencyroll) + "\n" + "Class: " + classesroll + "\n" + "Ability scores: " + str(variabeles) + "\n" + "Equipment packs: " + equipment1roll + ", " + equipment2roll +	"\n" + "Fighting style: " + fightingstyleroll + "```")
+		embed = discord.Embed(
+			colour = discord.Colour.blue()
+		)
+		embed.set_author(name="Randomly generated character:")
+		embed.add_field(name="Race:", value=raceroll, inline=False)
+		embed.add_field(name="Class:", value=classesroll, inline=False)
+		embed.add_field(name="Hit points:", value="10 + your Constitution modifier", inline=False)
+		embed.add_field(name="Background:", value=backgroundroll, inline=False)
+		embed.add_field(name="Alignment::", value=alignmentroll, inline=False)
+		embed.add_field(name="Proficiency's:", value=proficiencyroll, inline=False)
+		embed.add_field(name="Equipmentpacks:", value=equipment1roll + ", " + equipment2roll, inline=False)
+		embed.add_field(name="Fightingstyle:", value=fightingstyleroll, inline=False)
+		await client.say(embed=embed)
 	if classesroll == "Rogue":
 		equipment1 = ["Mace", "Scale mail", "Light crossbow and 20 bolts", "Shield", "Holy symbol"]
 		equipment1roll = random.choice(equipment1)
 		equipment2 = ["Backpack, sack, lantern, 2 oil flasks, tinderbox, 12 pitons, hammer, waterskin, rations (4 days), 5 gp", "Backpack, 2 sacks, 6 torches, 3 oil flasks, tinderbox, 10-foot pole, 50 feet of rope, waterskin, rations (4 days), steel mirror", "Backpack, 4 sacks, holy symbol or thieves’ tools, 12 pitons, 50 feet of rope, waterskin, rations (4 days)"]
 		equipment2roll = random.choice(equipment2)
+		embed = discord.Embed(
+			colour = discord.Colour.blue()
+		)
+		embed.set_author(name="Randomly generated character:")
+		embed.add_field(name="Race:", value=raceroll, inline=False)
+		embed.add_field(name="Class:", value=classesroll, inline=False)
+		embed.add_field(name="Hit points:", value="8 + your Constitution modifier", inline=False)
+		embed.add_field(name="Background:", value=backgroundroll, inline=False)
+		embed.add_field(name="Alignment::", value=alignmentroll, inline=False)
+		embed.add_field(name="Proficiency's:", value=proficiencyroll, inline=False)
+		embed.add_field(name="Equipmentpacks:", value=equipment1roll + ", " + equipment2roll, inline=False)
 		await client.say("```" + "Hit points: 8 + your Constitution modifier" + "\n" + "Alignment: " + alignmentroll + "\n" + "Background: " + backgroundroll +"\n" + "Race: " + raceroll + "\n" + "Proficiency's: " + str(proficiencyroll) + "\n" + "Class: " + classesroll + "\n" + "Ability scores: " + str(variabeles) +"\n" + "Equipment packs: " + equipment1roll + ", " + equipment2roll + "```")
 	if classesroll == "Wizard":
 		equipment1 = ["Mace", "Scale mail", "Light crossbow and 20 bolts", "Shield", "Holy symbol"]
@@ -295,7 +318,20 @@ async def character():
 		cantripsroll = random.sample(cantrips, 3)
 		spells = ["Burning hands", "Charm person", "Comprehend languages", "Detect magic", "Disguise self", "Identify", "Mage armor", "Magic missile", "Shield", "Silent image", "Sleep", "Thunderwave",]
 		spellsroll = random.sample(spells, 6)
-		await client.say("```" + "Hit points: 6 + your Constitution modifier" + "\n" + "Alignment: " + alignmentroll + "\n" + "Background: " + backgroundroll + "\n" + "Race: " + raceroll + "\n" + "Proficiency's: " + str(proficiencyroll) + "\n" + "Class: " + classesroll + "\n" + "Ability scores: " + str(variabeles) + "\n" + "Equipment packs: " + equipment1roll + ", " + equipment2roll + "\n" + "Cantrips: " + str(cantripsroll) + "\n" + "Spells: " + str(spellsroll) + "```")
+		embed = discord.Embed(
+			colour = discord.Colour.blue()
+		)
+		embed.set_author(name="Randomly generated character:")
+		embed.add_field(name="Race:", value=raceroll, inline=False)
+		embed.add_field(name="Class:", value=classesroll, inline=False)
+		embed.add_field(name="Hit points:", value="6 + your Constitution modifier", inline=False)
+		embed.add_field(name="Background:", value=backgroundroll, inline=False)
+		embed.add_field(name="Alignment::", value=alignmentroll, inline=False)
+		embed.add_field(name="Proficiency's:", value=proficiencyroll, inline=False)
+		embed.add_field(name="Equipmentpacks:", value=equipment1roll + ", " + equipment2roll, inline=False)
+		embed.add_field(name="Cantrips:", value=cantripsroll, inline=False)
+		embed.add_field(name="Spells:", value=spellsroll, inline=False)
+		await client.say(embed=embed)
 	if classesroll == "Ranger":
 		equipment1 = ["Scale Mail", "Leather Armor"]
 		equipment1roll = random.choice(equipment1)
@@ -303,7 +339,18 @@ async def character():
 		equipment2roll = random.choice(equipment2)
 		equipment3 = ["a Dungeoneer's Pack", "An Explorer's Pack, A Longbow and a Quiver of 20 Arrows"]
 		equipment3roll = random.choice(equipment3)
-		await client.say("```" + "Hit points: 6 + your Constitution modifier" + "\n" + "Alignment: " + alignmentroll + "\n" + "Background: " + backgroundroll + "\n" + "Race: " + raceroll + "\n" + "Proficiency's: " + str(proficiencyroll) + "\n" + "Class: " + classesroll + "\n" + "Ability scores: " + str(variabeles) + "\n" + "Equipment packs: " + equipment1roll + ", " + equipment2roll + ", " + equipment3roll + "```")
+		embed = discord.Embed(
+			colour = discord.Colour.blue()
+		)
+		embed.set_author(name="Randomly generated character:")
+		embed.add_field(name="Race:", value=raceroll, inline=False)
+		embed.add_field(name="Class:", value=classesroll, inline=False)
+		embed.add_field(name="Hit points:", value="6 + your Constitution modifier", inline=False)
+		embed.add_field(name="Background:", value=backgroundroll, inline=False)
+		embed.add_field(name="Alignment::", value=alignmentroll, inline=False)
+		embed.add_field(name="Proficiency's:", value=proficiencyroll, inline=False)
+		embed.add_field(name="Equipmentpacks:", value=equipment1roll + ", " + equipment2roll + ", " + equipment3roll, inline=False)
+		await client.say(embed=embed)
 	if classesroll == "Druid":
 		equipment1 = ["A wooden schield", "Any simple weapon"]
 		equipment1roll = random.choice(equipment1)
@@ -312,8 +359,21 @@ async def character():
 		spells = ["Absorb Elements", "Animal Friendship", "Beast bond", "Charm Person", "Create or Destroy water", "Cure wounds", "Detect Magic"]
 		spellsroll = random.sample(spells, 2)
 		cantripsroll = random.sample(cantrips, 2)
-		cantrips = ["Control Flames", "Create Bonfire", "Druidcraft", "Frostbite", "Guidance", "Gust", "Infestation", "Magic Stone", "Mending", "Mold Earth"]    
-		await client.say("```" + "Hit points: 8 + your Constitution modifier" + "\n" + "Alignment: " + alignmentroll + "\n" + "Background: " + backgroundroll + "\n" + "Race: " + raceroll + "\n" + "Proficiency's: " + str(proficiencyroll) + "\n" + "Class: " + classesroll + "\n" + "Ability scores: " + str(variabeles) + "\n" + "Equipment packs: " + equipment1roll + ", " + equipment2roll + "\n" + "Cantrips: " + str(cantripsroll) + "\n" + "Spells: " + str(spellsroll) + "```")
+		cantrips = ["Control Flames", "Create Bonfire", "Druidcraft", "Frostbite", "Guidance", "Gust", "Infestation", "Magic Stone", "Mending", "Mold Earth"]
+		embed = discord.Embed(
+			colour = discord.Colour.blue()
+		)
+		embed.set_author(name="Randomly generated character:")
+		embed.add_field(name="Race:", value=raceroll, inline=False)
+		embed.add_field(name="Class:", value=classesroll, inline=False)
+		embed.add_field(name="Hit points:", value="8 + your Constitution modifier", inline=False)
+		embed.add_field(name="Background:", value=backgroundroll, inline=False)
+		embed.add_field(name="Alignment::", value=alignmentroll, inline=False)
+		embed.add_field(name="Proficiency's:", value=proficiencyroll, inline=False)
+		embed.add_field(name="Equipmentpacks:", value=equipment1roll + ", " + equipment2roll, inline=False)
+		embed.add_field(name="Cantrips:", value=cantripsroll, inline=False)
+		embed.add_field(name="Spells:", value=spellsroll, inline=False)
+		await client.say(embed=embed)
 	if classesroll == "Bard":
 		equipment1 = ["A Rapier", "A longsword", "Any simple weapon"]
 		equipment1roll = random.choice(equipment1)
@@ -325,9 +385,20 @@ async def character():
 		cantripsroll = random.sample(cantrips, 2)
 		spells = ["Animal Friendship", "Bane", "Charm Person", "Comprehend Languages", "Cure Wounds", "Detect Magic", "Disguise Self", "Dissonant Whispers", "Earth Tremor", "Fearie Fire", "Feather Fall", "Healing Word", "Heroism", "Identify", "Illusory Script", "Longstrider", "Silent Image", "Sleep", "Speak with Animals", "Tasha's Hideous Laughter", "Thunderwave", "Unseen servant"]
 		spellsroll = random.sample(spells, 2)
-		await client.say("```" + "Hit points: 8 + your Constitution modifier" + "\n" + "Alignment: " + alignmentroll + "\n" + "Background: " + backgroundroll + "\n" + "Race: " + raceroll + "\n" + "Proficiency's: " + str(proficiencyroll) + "\n" + "Class: " + classesroll + "\n" + "Ability scores: " + str(variabeles) + "\n" + "Equipment packs: " + equipment1roll + ", " + equipment2roll + ", " + equipment3roll + "\n" + "Cantrips: " + str(cantripsroll) + "\n" + "Spells: " + str(spellsroll) + "```")
-
-
+		embed = discord.Embed(
+			colour = discord.Colour.blue()
+		)
+		embed.set_author(name="Randomly generated character:")
+		embed.add_field(name="Race:", value=raceroll, inline=False)
+		embed.add_field(name="Class:", value=classesroll, inline=False)
+		embed.add_field(name="Hit points:", value="8 + your Constitution modifier", inline=False)
+		embed.add_field(name="Background:", value=backgroundroll, inline=False)
+		embed.add_field(name="Alignment::", value=alignmentroll, inline=False)
+		embed.add_field(name="Proficiency's:", value=proficiencyroll, inline=False)
+		embed.add_field(name="Equipmentpacks:", value=equipment1roll + ", " + equipment2roll + ", " + equipment3roll, inline=False)
+		embed.add_field(name="Cantrips:", value=cantripsroll, inline=False)
+		embed.add_field(name="Spells:", value=spellsroll, inline=False)
+		await client.say(embed=embed)
 		
 @client.command(brief="The definitions of combat conditions")
 async def condition(type):
