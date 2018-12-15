@@ -7,6 +7,7 @@ from random import randint
 from random import sample
 from discord.ext.commands import Bot 
 from random import randrange
+from monsterscr import *
 import random
 
 BOT_PREFIX = (";", "/")
@@ -489,6 +490,10 @@ async def help(ctx):
 	)
 	embed.add_field(name="Help", value="Sended you a private message which contains the information", inline=False)
 	await client.say(embed=embed)
+	
+@client.command()
+async def monster():
+	await client.say(crhalf)
 			
 async def list_servers():
     await client.wait_until_ready()
