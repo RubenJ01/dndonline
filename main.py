@@ -484,6 +484,10 @@ async def help(ctx):
 	embed.add_field(name="Help server", value="For help or feedback you can join the bots server: https://discord.gg/jZfjhhu", inline=False)
 	
 	await client.send_message(author, embed=embed)
+	embed = discord.Embed(
+		colour = discord.Colour.blue()
+	)
+	embed.add_field(name="Help", value="Sended you a private message which contains the information", inline=False)
 	await client.say("```Sended you a private message containing the information```")
 			
 async def list_servers():
