@@ -203,7 +203,11 @@ async def stats():
 			rolls.sort() 	    
 		variabeles.append(sum(rolls)-min(rolls))
 		rolls =[]	
-	await client.say("```Your rolls are: \n" + str(variabeles) + "```")
+	embed = discord.Embed(
+		colour = discord.Colour.blue()
+	)
+	embed.add_field(name="Your ability scores:", value="variabeles", inline=False)
+	await client.say(embed=embed)
 	
 @client.command(brief="Calculate your total amount of pp gp sp cp respectively")
 async def currency(*coins):
