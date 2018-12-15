@@ -31,12 +31,16 @@ def create_call_to_dnd_beyond(name, link, **kwargs):
 def create_roller_function(name, roller, good_roll_text="you managed to roll a fabulous", **command_specifiers):
 	@client.command(name=name, **command_specifiers)
 	async def _func(*dice):
+		embed = discord.Embed(
+			colour=discord.Colour.blue()
+		)
 		if dice:
 			if len(dice) == 1 and "d" not in dice[0]:
 				die_type = int(dice[0])
 				die_5 = max(die_type//5, 1)
 				roll  = roller(1, die_type)
 				if roll > die_5*4 + randint(-die_5, die_5):
+					embed.add_field(good_roll_text)
 					await client.say(f"```{good_roll_text} {roll}```")
 				else:
 					if roll not in [8,11,18]:
@@ -55,32 +59,33 @@ def create_roller_function(name, roller, good_roll_text="you managed to roll a f
 				if roll > die_5*4 + randint(-die_5, die_5):
 					await client.say(f"```{good_roll_text} {roll}```")
 				else:
-					
+
 					await client.say(f"```You rolled a {roll}```")
 				return
+			embed.set_author(name="you rolled")
 			sum_ = 0
 			rolls = []
-			text = [f"```You rolled {dice[0][0]}d{dice[0][1]} "]
 			s = 0
 			for die in dice:
-				if s:
-					text.append(f", you also rolled {die[0]}d{die[1]} ")
-				else:
-					s = 1
 				rolls.append([])
 				for _ in range(int(die[0])):
 					roll = roller(1, int(die[1]))
 					sum_ += roll
 					rolls[-1].append(str(roll))
-				text.append("which became "+'+'.join(rolls[-1]))
-			text.append(f"\nfor a total of {sum_}```")
-			await client.say(''.join(text))
+				if s:
+					embed.add_field(name=f", you also rolled {die[0]}d{die[1]}", value="which became "+'+'.join(rolls[-1]))
+				else:
+					embed.add_field(name=f"You rolled {dice[0][0]}d{dice[0][1]}", value="which became "+'+'.join(rolls[-1]))
+					s = 1
+			embed.add_field(name="for a total of", value=str(sum_))
+			await client.say(embed=embed)
 		else:
 			roll = roller(1, 20)
 			if roll > 16 + randint(-4, 4):
 				await client.say(f"```{good_roll_text} {roll}```")
 			else:
 				await client.say(f"```You rolled a {roll}```")
+
 		
 create_call_to_dnd_beyond("spell" ,"spells", brief="Get a reference to any spell that is listed in D&D")
 create_call_to_dnd_beyond("race", "characters/races", brief="Get a reference to any race that is listed in D&D")
