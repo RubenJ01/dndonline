@@ -73,11 +73,11 @@ def create_roller_function(name, roller, good_roll_text="you managed to roll a f
 					sum_ += roll
 					rolls[-1].append(str(roll))
 				if s:
-					embed.add_field(name=f"you also rolled {die[0]}d{die[1]}", value="which became "+'+'.join(rolls[-1]))
+					embed.add_field(name=f"you also rolled {die[0]}d{die[1]}", value="which became "+'+'.join(rolls[-1]), inline=False)
 				else:
-					embed.add_field(name=f"You rolled {dice[0][0]}d{dice[0][1]}", value="which became "+'+'.join(rolls[-1]))
+					embed.add_field(name=f"You rolled {dice[0][0]}d{dice[0][1]}", value="which became "+'+'.join(rolls[-1]), inline=False)
 					s = 1
-			embed.add_field(name="for a total of", value=str(sum_))
+			embed.add_field(name="for a total of", value=str(sum_), inline=False)
 			await client.say(embed=embed)
 		else:
 			roll = roller(1, 20)
