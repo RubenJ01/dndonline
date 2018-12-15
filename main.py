@@ -488,7 +488,7 @@ async def help(ctx):
 		colour = discord.Colour.blue()
 	)
 	embed.add_field(name="Help", value="Sended you a private message which contains the information", inline=False)
-	await client.say("```Sended you a private message containing the information```")
+	await client.say(embed=embed)
 			
 async def list_servers():
     await client.wait_until_ready()
