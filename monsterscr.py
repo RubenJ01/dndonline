@@ -1,3 +1,101 @@
+cr0 = ["Awakened shrub",
+        "Baboon",
+        "Badger",
+        "Bat",
+        "Cat",
+        "Commoner",
+        "Crab",
+        "Crawling claw",
+        "Deer",
+        "Eagle",
+        "Frog",
+        "Giant fire beetle",
+        "Goat",
+        "Hawk",
+        "Homunculus",
+        "Hyena",
+        "Jackal",
+        "Lemure",
+        "Lizard",
+        "Myconid sprout",
+        "Octopus",
+        "Owl",
+        "Quipper",
+        "Rat",
+        "Raven",
+        "Scorpion",
+        "Sea horse",
+        "Shrieker",
+        "Spider",
+        "Vulture",
+        "Weasel"
+       ]
+crminder = ["Bandit",
+            "Blood hawk",
+            "Camel",
+            "Cultist",
+            "Flumph",
+            "Flying snake",
+            "Giant crab",
+            "Giant rat",
+            "Giant weasel",
+            "Guard",
+            "Kobold",
+            "Manes",
+            "Mastiff",
+            "Merfolk",
+            "Monodrone",
+            "Mule",
+            "Noble",
+            "Poisonous snake",
+            "Pony",
+            "Slaad tadpole"
+            ]
+crkwart =  ["Aarakocra",
+            "Acolyte",
+            "Axe beak",
+            "Blink dog",
+            "Boar",
+            "Bullywug",
+            "Constrictor snake",
+            "Draft horse",
+            "Dretch",
+            "Drow",
+            "Duodrone",
+            "Elk",
+            "Flying sword",
+            "Giant badger",
+            "Giant bat",
+            "Giant centipede",
+            "Giant frog",
+            "Giant lizard",
+            "Giant owl",
+            "Giant poisonous snake",
+            "Giant wolf spider",
+            "Goblin",
+            "Grimlock",
+            "Kenku",
+            "Kuo-toa",
+            "Mud mephit",
+            "Needle blight",
+            "Panther",
+            "Pixie",
+            "Pseudodragon",
+            "Pteranodon",
+            "Riding horse",
+            "Skeleton",
+            "Smoke mephit",
+            "Sprite",
+            "Steam mephit",
+            "Swarm of bats",
+            "Swarm of rats",
+            "Swarm of ravens",
+            "Troglodyte",
+            "Violet fungus",
+            "Winged kobold",
+            "Wolf",
+            "Zombie"
+            ]
 crhalf = ["Ape",
           "Black Bear",
           "Cockatrice",
@@ -251,4 +349,119 @@ cr7 = ["Blue slaad",
         "Young black dragon",
         "Young copper dragon"
         "Yuan-ti abomination"
-      ]
+       ]
+cr8 = ["Assassin",
+        "Chain devil",
+        "Cloaker",
+        "Drow priestess of Lolth",
+        "Fomorian",
+        "Frost giant",
+        "Githyanki knight",
+        "Green slaad",
+        "Hezrou",
+        "Hydra",
+        "Mind flayer arcanist",
+        "Spirit naga",
+        "Tyrannosaurus rex",
+        "Young bronze dragon",
+        "Young green dragon"
+       ]
+cr9 = ["Abominable yeti",
+        "Bone devil",
+        "Clay golem",
+        "Cloud giant",
+        "Fire giant",
+        "Glabrezu",
+        "Gray slaad",
+        "Nycaloth",
+        "Treant",
+        "Young blue dragon",
+        "Young silver dragon"
+       ]
+cr10 = ["Aboleth",
+        "Death slaad",
+        "Deva",
+        "Guardian naga",
+        "Stone golem",
+        "Yochlol",
+        "Young gold dragon",
+        "Young red dragon"
+        ]
+cr11 = ["Behir",
+        "Dao",
+        "Djinni",
+        "Efreeti",
+        "Gynosphinx",
+        "Horned devil",
+        "Marid",
+        "Remorha",
+        "Roc"
+        ]
+cr12 = ["Arcanaloth",
+        "Archmage",
+        "Erinyes"
+        ]
+cr13 = ["Adult brass dragon",
+        "Adult white dragon",
+        "Beholder (not in lair)",
+        "Nalfeshnee",
+        "Rakshasa",
+        "Storm giant",
+        "Ultroloth",
+        "Vampire",
+        "Young red shadow dragon"
+        ]
+cr14 = ["Adult black dragon",
+        "Adult copper dragon",
+        "Beholder (in lair)",
+        "Death tyrant (not in lair)",
+        "Ice devil"
+        ]
+cr15 = ["Adult bronze dragon",
+        "Adult green dragon",
+        "Death tyrant (in lair)",
+        "Mummy lord (not in lair)",
+        "Purple worm",
+        "Vampire (spellcaster)",
+        "Vampire (warrior)"
+        ]
+cr16 = ["Adult blue dragon",
+        "Adult silver dragon",
+        "Iron golem",
+        "Marilith",
+        "Mummy lord (in lair)",
+        "Planetar"
+        ]
+cr17 = ["Adult blue dracolich",
+        "Adult gold dragon",
+        "Adult red dragon",
+        "Androsphinx",
+        "Death knight",
+        "Dragon turtle",
+        "Goristro"
+        ]
+cr18 = ["Demilich (not in lair)"]
+cr19 = ["Balor"]
+cr20 = ["Ancient brass dragon",
+        "Ancient white dragon",
+        "Demilich (in lair)",
+        "Pit fiend"
+        ]
+cr21 = ["Ancient black dragon",
+        "Ancient copper dragon",
+        "Lich (not in lair)",
+        "Solar"
+        ]
+cr22 = ["Ancient bronze dragon",
+        "Ancient green dragon",
+        "Lich (in lair)"
+        ]
+cr23 = ["Ancient blue dragon",
+        "Ancient silver dragon",
+        "Empyrean",
+        "Kraken"
+        ]
+cr24 = ["Ancient gold dragon",
+        "Ancient red dragon"
+        ]
+cr30 = ["Tarrasque"]
