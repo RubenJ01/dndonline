@@ -491,18 +491,83 @@ async def help(ctx):
 	embed.add_field(name="Help", value="Sended you a private message which contains the information", inline=False)
 	await client.say(embed=embed)
 	
-@client.command()
-async def monster():
-	await client.say(crhalf)
-			
-async def list_servers():
-    await client.wait_until_ready()
-    while not client.is_closed:
-        print("Current servers:")
-        for server in client.servers:
-            print(server.name)
-        await asyncio.sleep(600)
 
+@client.command()
+async def encounter(level, size):
+	if level == 1:
+	    if size == 2:
+		enc = random.sample(crkwart, 2)
+		print("You encounter: " + str(enc))
+	    if size == 3:
+		enc = random.sample(crkwart, 3)
+		print("You encounter: " + str(enc))
+	    if size == 4:
+		enc = random.sample(crkwart, 4)
+		print("You encounter: " + str(enc))
+	    if size == 5:
+		enc = random.sample(crkwart, 4)
+		enc2 = random.choice(cr1)
+		print("You encounter: " + str(enc) + ", or you encounter: " + str(enc2))
+	    if size == 6:
+		enc = random.sample(crkwart, 1)
+		enc2 = random.choice(cr1)
+		print("You encounter: " + str(enc) + ", " + str(enc2))
+	    if size == 7:
+		enc = random.sample(crkwart, 2)
+		enc2 = random.choice(cr1)
+		print("You encounter: " + str(enc) + ", " + str(enc2))
+	    if size == 8:
+		enc = random.sample(crkwart, 3)
+		enc2 = random.choice(cr1)
+		print("You encounter: " + str(enc) + ", " + str(enc2))
+	if level == 2:
+	    if size == 2:
+		enc = random.sample(crhalf, 2)
+		print("You encounter: " + str(enc))
+	    if size == 3:
+		enc = random.sample(crhalf, 3)
+		enc2 = random.choice(cr1)
+		print("You encounter: " + str(enc) + ", or you encounter: " + str(enc2))
+	    if size == 4:
+		enc = random.sample(crhalf, 1)
+		enc2 = random.choice(cr1)
+		print("You encounter: " + str(enc) + ", " + str(enc2))
+	    if size == 5:
+		enc = random.sample(crhalf, 2)
+		enc2 = random.choice(cr1)
+		print("You encounter: " + str(enc) + ", " + str(enc2))
+	    if size == 6:
+		enc = random.sample(crhalf, 6)
+		enc2 = random.choice(cr2)
+		print("You encounter: " + str(enc) + ", or you encounter: " + str(enc2))
+	    if size == 7:
+		enc = random.sample(crhalf, 1)
+		enc2 = random.choice(cr2)
+		print("You encounter: " + str(enc) + ", " + str(enc2))
+	    if size == 8:
+		enc = random.sample(crhalf, 2)
+		enc2 = random.choice(cr2)
+		print("You encounter: " + str(enc) + ", " + str(enc2))
+	if level == 3:
+	    if size == 2:
+		enc = random.sample(crhalf, 2)
+		print("You encounter: " + str(enc))
+	    if size == 3:
+		enc = random.sample(crhalf, 2)
+		enc2 = random.sample(crkwart, 1)
+		print("You encounter: " + str(enc) + ", " + str(enc2))
+	    if size == 4:
+		enc = random.sample(cr2, 1)
+		print("You encounter: " + str(enc))
+	    if size == 5:
+		enc = random.sample(cr2, 1)
+		enc2 = random.sample(crhalf, 1)
+		print("You encounter: " + str(enc) + ", " + str(enc2))
+	    if size == 6:
+		enc = random.choice(cr3)
+		print("You encounter: " + str(enc))
+	
+			
 token = os.environ.get("DISCORD_BOT_SECRET")
 client.loop.create_task(list_servers())
 client.run(token)
