@@ -482,7 +482,7 @@ async def help(ctx):
 	embed.add_field(name=";initiative", value="Insert a name + modifier respectively and roll initiative multple names can be given", inline=False)
 	embed.add_field(name=";character", value="Generate a quick level 1 character", inline=False)
 	embed.add_field(name=";npc", value="Generate a quick npc, including traits and appearence.", inline=False)
-	embed.add_field(name="Help server", value="For help or feedback you can join the bots server: https://discord.gg/jZfjhhu", inline=False)
+	embed.add_field(name="Official server", value="Please condsider joining ouher official server: https://discord.gg/sYPVXv8", inline=False)
 	
 	await client.send_message(author, embed=embed)
 	embed = discord.Embed(
@@ -491,81 +491,6 @@ async def help(ctx):
 	embed.add_field(name="Help", value="Sended you a private message which contains the information", inline=False)
 	await client.say(embed=embed)
 	
-
-@client.command()
-async def encounter(level, size):
-	if level == 1:
-	    if size == 2:
-		enc = random.sample(crkwart, 2)
-		await client.say("You encounter: " + str(enc))
-	    if size == 3:
-		enc = random.sample(crkwart, 3)
-		await client.say("You encounter: " + str(enc))
-	    if size == 4:
-		enc = random.sample(crkwart, 4)
-		await client.say("You encounter: " + str(enc))
-	    if size == 5:
-		enc = random.sample(crkwart, 4)
-		enc2 = random.choice(cr1)
-		await client.say("You encounter: " + str(enc) + ", or you encounter: " + str(enc2))
-	    if size == 6:
-		enc = random.sample(crkwart, 1)
-		enc2 = random.choice(cr1)
-		await client.say("You encounter: " + str(enc) + ", " + str(enc2))
-	    if size == 7:
-		enc = random.sample(crkwart, 2)
-		enc2 = random.choice(cr1)
-		await client.say("You encounter: " + str(enc) + ", " + str(enc2))
-	    if size == 8:
-		enc = random.sample(crkwart, 3)
-		enc2 = random.choice(cr1)
-		await client.say("You encounter: " + str(enc) + ", " + str(enc2))
-	if level == 2:
-	    if size == 2:
-		enc = random.sample(crhalf, 2)
-		await client.say("You encounter: " + str(enc))
-	    if size == 3:
-		enc = random.sample(crhalf, 3)
-		enc2 = random.choice(cr1)
-		await client.say("You encounter: " + str(enc) + ", or you encounter: " + str(enc2))
-	    if size == 4:
-		enc = random.sample(crhalf, 1)
-		enc2 = random.choice(cr1)
-		await client.say("You encounter: " + str(enc) + ", " + str(enc2))
-	    if size == 5:
-		enc = random.sample(crhalf, 2)
-		enc2 = random.choice(cr1)
-		await client.say("You encounter: " + str(enc) + ", " + str(enc2))
-	    if size == 6:
-		enc = random.sample(crhalf, 6)
-		enc2 = random.choice(cr2)
-		await client.say("You encounter: " + str(enc) + ", or you encounter: " + str(enc2))
-	    if size == 7:
-		enc = random.sample(crhalf, 1)
-		enc2 = random.choice(cr2)
-		await client.say("You encounter: " + str(enc) + ", " + str(enc2))
-	    if size == 8:
-		enc = random.sample(crhalf, 2)
-		enc2 = random.choice(cr2)
-		await client.say("You encounter: " + str(enc) + ", " + str(enc2))
-	if level == 3:
-	    if size == 2:
-		enc = random.sample(crhalf, 2)
-		await client.say("You encounter: " + str(enc))
-	    if size == 3:
-		enc = random.sample(crhalf, 2)
-		enc2 = random.sample(crkwart, 1)
-		await client.say("You encounter: " + str(enc) + ", " + str(enc2))
-	    if size == 4:
-		enc = random.sample(cr2, 1)
-		await client.say("You encounter: " + str(enc))
-	    if size == 5:
-		enc = random.sample(cr2, 1)
-		enc2 = random.sample(crhalf, 1)
-		await client.say("You encounter: " + str(enc) + ", " + str(enc2))
-	    if size == 6:
-		enc = random.choice(cr3)
-		await client.say("You encounter: " + str(enc))
 
 async def list_servers():
     await client.wait_until_ready()
