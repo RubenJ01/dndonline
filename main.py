@@ -491,8 +491,8 @@ async def help(ctx):
 	embed.add_field(name="Help", value="Sended you a private message which contains the information", inline=False)
 	await client.say(embed=embed)
 	
-@client.command()
-async def test(test1, test2):
+@client.command(test1, test2)
+async def test():
 	level1 = test1
 	level2 = test2
 	await client.say(level1)
