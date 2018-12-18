@@ -492,8 +492,11 @@ async def help(ctx):
 	await client.say(embed=embed)
 	
 @client.command()
-async def test():
-	await client.say(cr1)
+async def test(test1, test2):
+	level1 = test1
+	level2 = test2
+	await client.say(level1)
+	await client.say(level2)
 	
 async def list_servers():
     await client.wait_until_ready()
