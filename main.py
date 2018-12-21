@@ -139,7 +139,7 @@ create_roller_function(
 async def npc():
 	background = ["Acolyte", "Criminal", "Folk hero", "Noble", "Sage", "Soldier"]
 	backgroundroll = random.choice(background)
-	traits = ["Nervous", "Excited"]
+	traits = ["Nervous", "Excited", "Clumsy", "Distant", "Friendly", "Caring", "Anxious", "Laid-back", "Quiet", "Enthousiastic", "Mean", "Pridefull"]
 	traitsroll = random.choice(traits)
 	gender = ["Male", "Female"]
 	genderroll = random.choice(gender)
