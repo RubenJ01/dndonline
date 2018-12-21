@@ -493,7 +493,7 @@ async def help(ctx):
 	
 @client.command(brief="A simple test")
 async def testme(level):
-	if level == "one":
+	if level == "1":
 		await client.say("test succesfull!")
 		
 async def list_servers():
