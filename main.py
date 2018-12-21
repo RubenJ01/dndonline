@@ -496,7 +496,12 @@ async def encounter(level, size):
 	if level == "1": 	
 		if size == "2":
 			enc = random.sample(crkwart, 2)
-			await client.say("You encounter: " + str(enc))
+			embed = discord.Embed(
+			colour = discord.Colour.blue()
+			)
+			embed.set_author(name="Encounter for party level: ", level, "and, ", size, " party members"  )
+			embed.add_field(name="", value=enc, inline=False)
+			await client.say(embed=embed)
 		if size == "3":
 			enc = random.sample(crkwart, 3)
 			await client.say("You encounter: " + str(enc))
