@@ -490,6 +490,11 @@ async def help(ctx):
 	)
 	embed.add_field(name="Help", value="Sended you a private message which contains the information", inline=False)
 	await client.say(embed=embed)
+	
+@client.command(brief="A simple test")
+async def testme(level):
+	if level == 1:
+		await client.say("test succesfull!")
 		
 async def list_servers():
     await client.wait_until_ready()
