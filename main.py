@@ -98,7 +98,7 @@ create_roller_function(
 	"roll",
 	randint,
 	brief='roll normally (format like "4d6 2d8" default is "1d20")',
-    description="""roll dice with no advantage or disadvantage
+    	description="""roll dice with no advantage or disadvantage
 	when given no parameters 1d20 is rolled
 	parameters can be formatted like so "5d3 4d2 1d21" or simply "10" the latter only works for single dice
 	all dice will be rolled and the total will be returned"""
