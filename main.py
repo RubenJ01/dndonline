@@ -487,7 +487,7 @@ async def encounter(level, size):
 			colour = discord.Colour.blue()
 			)
 			embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
-			embed.add_field(name="Enemy's:", value=enc, inline=False)
+			embed.add_field(name="Enemy's:", value=', '.join(enc), inline=False)
 			await client.say(embed=embed)
 		if size == "4":
 			enc = random.sample(crkwart, 4)
@@ -495,7 +495,7 @@ async def encounter(level, size):
 			colour = discord.Colour.blue()
 			)
 			embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
-			embed.add_field(name="Enemy's:", value=enc, inline=False)
+			embed.add_field(name="Enemy's:", value=', '.join(enc), inline=False)
 			await client.say(embed=embed)
 		if size == "5":
 			enc = random.sample(crkwart, 4)
@@ -504,20 +504,35 @@ async def encounter(level, size):
 			colour = discord.Colour.blue()
 			)
 			embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
-			embed.add_field(name="Enemy's:", value=str(enc) + str(enc2), inline=False)
+			embed.add_field(name="Enemy's:", value=', '.join(enc) + ", " + ', '.join(enc2), inline=False)
 			await client.say(embed=embed)
 		if size == "6":
 			enc = random.sample(crkwart, 1)
 			enc2 = random.choice(cr1)
-			await client.say("You encounter: " + str(enc) + ", " + str(enc2))
+			embed = discord.Embed(
+			colour = discord.Colour.blue()
+			)
+			embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
+			embed.add_field(name="Enemy's:", value=', '.join(enc) + ", " + ', '.join(enc2), inline=False)
+			await client.say(embed=embed)
 		if size == "7":
 			enc = random.sample(crkwart, 2)
 			enc2 = random.choice(cr1)
-			await client.say("You encounter: " + str(enc) + ", " + str(enc2))
+			embed = discord.Embed(
+			colour = discord.Colour.blue()
+			)
+			embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
+			embed.add_field(name="Enemy's:", value=', '.join(enc) + ", " + ', '.join(enc2), inline=False)
+			await client.say(embed=embed)
 		if size == "8":
 			enc = random.sample(crkwart, 3)
 			enc2 = random.choice(cr1)
-			await client.say("You encounter: " + str(enc) + ", " + str(enc2))
+			embed = discord.Embed(
+			colour = discord.Colour.blue()
+			)
+			embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
+			embed.add_field(name="Enemy's:", value=', '.join(enc) + ", " + ', '.join(enc2), inline=False)
+			await client.say(embed=embed)
 	if level == "2":
 		if size == "2":
 			enc = random.sample(crhalf, 2)
