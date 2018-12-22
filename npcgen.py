@@ -1,5 +1,14 @@
+import discord
+import os
+import asyncio
+from random import randint
+from random import sample
+from discord.ext.commands import Bot 
+from random import randrange
+import random
+
 def npcgen():
-    background = ["Acolyte", "Criminal", "Folk hero", "Noble", "Sage", "Soldier"]
+	background = ["Acolyte", "Criminal", "Folk hero", "Noble", "Sage", "Soldier"]
 	backgroundroll = random.choice(background)
 	traits = ["Nervous", "Excited", "Clumsy", "Distant", "Friendly", "Caring", "Anxious", "Laid-back", "Quiet", "Enthousiastic", "Mean", "Pridefull"]
 	traitsroll = random.choice(traits)
