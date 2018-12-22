@@ -11,27 +11,26 @@ from monsterscr import *
 from npcgen import *
 import random
 
-def npcgen():
-	background = ["Acolyte", "Criminal", "Folk hero", "Noble", "Sage", "Soldier"]
-	backgroundroll = random.choice(background)
-	traits = ["Nervous", "Excited", "Clumsy", "Distant", "Friendly", "Caring", "Anxious", "Laid-back", "Quiet", "Enthousiastic", "Mean", "Pridefull"]
-	traitsroll = random.choice(traits)
-	gender = ["Male", "Female"]
-	genderroll = random.choice(gender)
-	size = [3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7]
-	sizeroll = random.choice(size)
-	hair = ["Long", "Short"]
-	hairroll = random.choice(hair)
-	haircolour = ["blonde", "black", "white", "orange"]
-	haircolourroll = random.choice(haircolour)
-	race = ["Hill dwarf", "Mountain dwarf", "High elf", "Wood elf", "Lightfoot halfling", "Stout halfling"]
-	raceroll = random.choice(race)
-	age = random.randint(20, 100)
-	rolls = []
-	variabeles = []
-	for j in range(6):	
-		for i in range(4):
-			rolls.append(randint(1, 6))
-			rolls.sort() 	    
-		variabeles.append(sum(rolls)-min(rolls))
-		rolls =[]
+background = ["Acolyte", "Criminal", "Folk hero", "Noble", "Sage", "Soldier"]
+backgroundroll = random.choice(background)
+traits = ["Nervous", "Excited", "Clumsy", "Distant", "Friendly", "Caring", "Anxious", "Laid-back", "Quiet", "Enthousiastic", "Mean", "Pridefull"]
+traitsroll = random.choice(traits)
+gender = ["Male", "Female"]
+genderroll = random.choice(gender)
+size = [3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7]
+sizeroll = random.choice(size)
+hair = ["Long", "Short"]
+hairroll = random.choice(hair)
+haircolour = ["blonde", "black", "white", "orange"]
+haircolourroll = random.choice(haircolour)
+race = ["Hill dwarf", "Mountain dwarf", "High elf", "Wood elf", "Lightfoot halfling", "Stout halfling"]
+raceroll = random.choice(race)
+age = random.randint(20, 100)
+rolls = []
+variabeles = []
+for j in range(6):	
+	for i in range(4):
+		rolls.append(randint(1, 6))
+		rolls.sort() 	    
+	variabeles.append(sum(rolls)-min(rolls))
+	rolls =[]
