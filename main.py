@@ -139,6 +139,7 @@ create_roller_function(
 @client.command(name="npc", brief="create a quick npc" )
 async def npc():
 	npcgen()
+	await client.say(embed=embed)
 
 				    
 # @client.command(brief="Generates a random encounter")
