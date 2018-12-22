@@ -166,7 +166,13 @@ async def npc():
 	
 @client.command(brief="About us")
 async def about():
-    await client.say("Fan made D&D discord bot!, started working on 18-11-2018")
+	embed = discord.Embed(
+		colour = discord.Colour.blue()
+	)
+	embed.set_author(name="About d&d online:")
+	embed.add_field(name="Date of creation:", value="18-11-2018", inline=False)
+	embed.add_field(name="Creators:", value="D&D online has been developed by: RubenJ01#0229 and Daan#2049"
+	await client.say(embed=embed)
 
 @client.command(brief="Roll a certain stat for example: dexterity")
 async def stat(modifier=0):
