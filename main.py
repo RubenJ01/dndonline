@@ -171,7 +171,7 @@ async def about():
 	)
 	embed.set_author(name="About d&d online:")
 	embed.add_field(name="Date of creation:", value="18-11-2018", inline=False)
-	embed.add_field(name="Creators:", value="D&D online has been developed by: RubenJ01#0229 and Daan#2049"
+	embed.add_field(name="Creators:", value="D&D online has been developed by: RubenJ01#0229 and Daan#2049")
 	await client.say(embed=embed)
 
 @client.command(brief="Roll a certain stat for example: dexterity")
