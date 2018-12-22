@@ -450,7 +450,6 @@ async def help(ctx):
 	
 	embed.set_author(name="Help menu")
 	embed.add_field(name=";help", value="Shows this message", inline=False)
-	embed.set_author(name="Dice roller:")
 	embed.add_field(name=";roll", value="roll dice with no advantage or disadvantage when given no parameters 1d20 is rolled parameters can be formatted like so 5d3 4d2 1d21 or simply 10 the latter only works for single dice all dice will be rolled and the total will be returned", inline=False)
 	embed.add_field(name=";advantage", value="roll with advantage (format like 4d6 2d8 default is 1d20)", inline=False)
 	embed.add_field(name=";disadvantage", value="roll with disadvantage (format like 4d6 2d8 default is 1d20)", inline=False)
@@ -463,7 +462,7 @@ async def help(ctx):
 	embed.add_field(name=";character", value="Generate a quick level 1 character", inline=False)
 	embed.add_field(name=";npc", value="Generate a quick npc, including traits and appearence.", inline=False)
 	embed.add_field(name="Official server", value="Please condsider joining ouher official server: https://discord.gg/sYPVXv8", inline=False)
-	
+	embed.add_field(name=";about", value="Learn more about the bot", inline=False)
 	await client.send_message(author, embed=embed)
 	embed = discord.Embed(
 		colour = discord.Colour.blue()
