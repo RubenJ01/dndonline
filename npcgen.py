@@ -1,10 +1,14 @@
 import discord
 import os
 import asyncio
+import urllib.request
+import urllib.error
 from random import randint
 from random import sample
 from discord.ext.commands import Bot 
 from random import randrange
+from monsterscr import *
+from npcgen import *
 import random
 
 def npcgen():
@@ -43,4 +47,3 @@ def npcgen():
 	embed.add_field(name="Hair:", value=hairroll + ", " + haircolourroll, inline=False)
 	embed.add_field(name="Size:", value=sizeroll, inline=False)
 	embed.add_field(name="Ability scores:", value=', '.join([str(v) for v in variabeles]), inline=False)
-	await client.say(embed=embed)
