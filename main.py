@@ -264,10 +264,10 @@ async def character():
 		embed.add_field(name="Ability scores:", value=', '.join([str(v) for v in variabeles]), inline=False)
 		embed.add_field(name="Background:", value=backgroundroll, inline=False)
 		embed.add_field(name="Alignment::", value=alignmentroll, inline=False)
-		embed.add_field(name="Proficiency's:", value=proficiencyroll, inline=False)
+		embed.add_field(name="Proficiency's:", value=', '.join(proficiencyroll), inline=False)
 		embed.add_field(name="Equipmentpacks:", value=equipment1roll + ", " + equipment2roll, inline=False)
-		embed.add_field(name="Cantrips:", value=cantripsroll, inline=False)
-		embed.add_field(name="Spells:", value=spellsroll, inline=False)
+		embed.add_field(name="Cantrips:", value=', '.join(cantripsroll), inline=False)
+		embed.add_field(name="Spells:", value=', '.join(spellsroll), inline=False)
 		await client.say(embed=embed)
 	if classesroll == "Fighter": 
 		fightingstyle = ["Archery (swap light crossbow and 20 bolts for a longbow and 20 arrows; at your option, also swap chain mail for leather armor)", "Defense", "Dueling", "Great Weapon Fighting (swap longsword and shield for a greataxe", "Protection", "Two-Weapon Fighting (swap longsword for two short swords)"]
@@ -286,7 +286,7 @@ async def character():
 		embed.add_field(name="Ability scores:", value=', '.join([str(v) for v in variabeles]), inline=False)
 		embed.add_field(name="Background:", value=backgroundroll, inline=False)
 		embed.add_field(name="Alignment::", value=alignmentroll, inline=False)
-		embed.add_field(name="Proficiency's:", value=proficiencyroll, inline=False)
+		embed.add_field(name="Proficiency's:", value=', '.join(proficiencyroll), inline=False)
 		embed.add_field(name="Equipmentpacks:", value=equipment1roll + ", " + equipment2roll, inline=False)
 		embed.add_field(name="Fightingstyle:", value=fightingstyleroll, inline=False)
 		await client.say(embed=embed)
@@ -305,7 +305,7 @@ async def character():
 		embed.add_field(name="Ability scores:", value=', '.join([str(v) for v in variabeles]), inline=False)
 		embed.add_field(name="Background:", value=backgroundroll, inline=False)
 		embed.add_field(name="Alignment::", value=alignmentroll, inline=False)
-		embed.add_field(name="Proficiency's:", value=proficiencyroll, inline=False)
+		embed.add_field(name="Proficiency's:", value=', '.join(proficiencyroll), inline=False)
 		embed.add_field(name="Equipmentpacks:", value=equipment1roll + ", " + equipment2roll, inline=False)
 		await client.say(embed=embed)
 	if classesroll == "Wizard":
@@ -327,10 +327,10 @@ async def character():
 		embed.add_field(name="Ability scores:", value=', '.join([str(v) for v in variabeles]), inline=False)
 		embed.add_field(name="Background:", value=backgroundroll, inline=False)
 		embed.add_field(name="Alignment::", value=alignmentroll, inline=False)
-		embed.add_field(name="Proficiency's:", value=proficiencyroll, inline=False)
+		embed.add_field(name="Proficiency's:", value=', '.join(proficiencyroll), inline=False)
 		embed.add_field(name="Equipmentpacks:", value=equipment1roll + ", " + equipment2roll, inline=False)
-		embed.add_field(name="Cantrips:", value=cantripsroll, inline=False)
-		embed.add_field(name="Spells:", value=spellsroll, inline=False)
+		embed.add_field(name="Cantrips:", value=', '.join(cantripsroll), inline=False)
+		embed.add_field(name="Spells:", value=', '.join(spellsroll), inline=False)
 		await client.say(embed=embed)
 	if classesroll == "Ranger":
 		equipment1 = ["Scale Mail", "Leather Armor"]
@@ -349,7 +349,7 @@ async def character():
 		embed.add_field(name="Ability scores:", value=', '.join([str(v) for v in variabeles]), inline=False)
 		embed.add_field(name="Background:", value=backgroundroll, inline=False)
 		embed.add_field(name="Alignment::", value=alignmentroll, inline=False)
-		embed.add_field(name="Proficiency's:", value=proficiencyroll, inline=False)
+		embed.add_field(name="Proficiency's:", value=', '.join(proficiencyroll), inline=False)
 		embed.add_field(name="Equipmentpacks:", value=equipment1roll + ", " + equipment2roll + ", " + equipment3roll, inline=False)
 		await client.say(embed=embed)
 	if classesroll == "Druid":
