@@ -193,7 +193,7 @@ async def stats():
 	embed = discord.Embed(
 		colour = discord.Colour.blue()
 	)
-	embed.add_field(name="Your ability scores:", value=variabeles, inline=False)
+	embed.add_field(name="Your ability scores:", value=', '.join([str(v) for v in variabeles]), inline=False)
 	await client.say(embed=embed)
 	
 @client.command(brief="Calculate your total amount of pp gp sp cp respectively")
