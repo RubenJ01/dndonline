@@ -211,10 +211,10 @@ async def currency(*coins):
     gp = total%10
     total = total//10
     pp = total
-	embed = discord.Embed(
-		colour = discord.Colour.blue()
-	)
-	embed.add_field(name="Currency", value="You have " + str(cp) + "cp "  + str(sp) + "sp " + str(gp) + "gp " + str(pp) + "pp ", inline=False)
+    embed = discord.Embed(
+    	colour = discord.Colour.blue()
+    )
+    embed.add_field(name="Currency", value="You have " + str(cp) + "cp "  + str(sp) + "sp " + str(gp) + "gp " + str(pp) + "pp ", inline=False)
     await client.say(embed=embed)
 	
 @client.command(brief="Insert a name + modifier respectively and roll initiative multple names can be given")
