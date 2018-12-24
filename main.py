@@ -475,6 +475,7 @@ async def help(ctx):
 	embed.add_field(name=";initiative", value="Insert a name + modifier respectively and roll initiative multple names can be given", inline=False)
 	embed.add_field(name=";character", value="Generate a quick level 1 character", inline=False)
 	embed.add_field(name=";npc", value="Generate a quick npc, including traits and appearence.", inline=False)
+	embed.add_field(name=";encounter", value="Make an encounter for your party (format like ;encounter party level) party size so for example ;encounter 15 6 this will generate an encounter for a party of level 15 with 6 members).", inline=False)
 	embed.add_field(name=";about", value="Learn more about the bot", inline=False)
 	embed.add_field(name="Official server", value="Please condsider joining ouher official server: https://discord.gg/sYPVXv8", inline=False)
 	await client.send_message(author, embed=embed)
@@ -1234,6 +1235,65 @@ async def encounter(level, size):
 			embed.add_field(name="Enemy's:", value=str(enc), inline=False)
 			await client.say(embed=embed)
 		if size == "5":
+			enc = random.choice(cr11)
+			embed = discord.Embed(
+			colour = discord.Colour.blue()
+			)
+			embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
+			embed.add_field(name="Enemy's:", value=str(enc), inline=False)
+			await client.say(embed=embed)
+		if size == "6":
+			enc  = random.choice(cr12)
+			embed = discord.Embed(
+			colour = discord.Colour.blue()
+			)
+			embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
+			embed.add_field(name="Enemy's:", value=str(enc), inline=False)
+			await client.say(embed=embed)
+		if size == "7": 
+			enc = random.choice(cr6)
+			enc2 = random.choice(cr12)
+			embed = discord.Embed(
+			colour = discord.Colour.blue()
+			)
+			embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
+			embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
+			await client.say(embed=embed)
+		if size == "8":
+			enc = random.choice(cr12)
+			enc2 = random.choice(cr7)
+			embed = discord.Embed(
+			colour = discord.Colour.blue()
+			)
+			embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
+			embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
+			await client.say(embed=embed)
+	if level == "13":
+		if size == "2":
+			enc = random.choice(cr7)
+			embed = discord.Embed(
+			colour = discord.Colour.blue()
+			)
+			embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
+			embed.add_field(name="Enemy's:", value=str(enc), inline=False)
+			await client.say(embed=embed)
+		if size == "3":
+			enc = random.choice(cr8)
+			embed = discord.Embed(
+			colour = discord.Colour.blue()
+			)
+			embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
+			embed.add_field(name="Enemy's:", value=str(enc), inline=False)
+			await client.say(embed=embed)
+		if size == "4": 
+			enc = random.choice(cr11)
+			embed = discord.Embed(
+			colour = discord.Colour.blue()
+			)
+			embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
+			embed.add_field(name="Enemy's:", value=str(enc), inline=False)
+			await client.say(embed=embed)
+		if size == "5":
 			enc = random.choice(cr12)
 			embed = discord.Embed(
 			colour = discord.Colour.blue()
@@ -1267,7 +1327,7 @@ async def encounter(level, size):
 			embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 			embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
 			await client.say(embed=embed)
-	if level == "13":
+	if level == "14":
 		if size == "2":
 			enc = random.choice(cr7)
 			embed = discord.Embed(
@@ -1326,7 +1386,7 @@ async def encounter(level, size):
 			embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 			embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
 			await client.say(embed=embed)
-	if level == "14":
+	if level == "15":
 		if size == "2":
 			enc = random.choice(cr7)
 			embed = discord.Embed(
@@ -1336,7 +1396,7 @@ async def encounter(level, size):
 			embed.add_field(name="Enemy's:", value=str(enc), inline=False)
 			await client.say(embed=embed)
 		if size == "3":
-			enc = random.choice(cr8)
+			enc = random.choice(cr9)
 			embed = discord.Embed(
 			colour = discord.Colour.blue()
 			)
@@ -1385,9 +1445,9 @@ async def encounter(level, size):
 			embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 			embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
 			await client.say(embed=embed)
-	if level == "15":
+	if level == "16":
 		if size == "2":
-			enc = random.choice(cr7)
+			enc = random.choice(cr11)
 			embed = discord.Embed(
 			colour = discord.Colour.blue()
 			)
@@ -1395,7 +1455,7 @@ async def encounter(level, size):
 			embed.add_field(name="Enemy's:", value=str(enc), inline=False)
 			await client.say(embed=embed)
 		if size == "3":
-			enc = random.choice(cr9)
+			enc = random.choice(cr12)
 			embed = discord.Embed(
 			colour = discord.Colour.blue()
 			)
@@ -1403,7 +1463,7 @@ async def encounter(level, size):
 			embed.add_field(name="Enemy's:", value=str(enc), inline=False)
 			await client.say(embed=embed)
 		if size == "4": 
-			enc = random.choice(cr14)
+			enc = random.choice(cr15)
 			embed = discord.Embed(
 			colour = discord.Colour.blue()
 			)
@@ -1411,7 +1471,7 @@ async def encounter(level, size):
 			embed.add_field(name="Enemy's:", value=str(enc), inline=False)
 			await client.say(embed=embed)
 		if size == "5":
-			enc = random.choice(cr15)
+			enc = random.choice(cr16)
 			embed = discord.Embed(
 			colour = discord.Colour.blue()
 			)
@@ -1427,7 +1487,7 @@ async def encounter(level, size):
 			embed.add_field(name="Enemy's:", value=str(enc), inline=False)
 			await client.say(embed=embed)
 		if size == "7": 
-			enc = random.choice(cr6)
+			enc = random.choice(cr11)
 			enc2 = random.choice(cr16)
 			embed = discord.Embed(
 			colour = discord.Colour.blue()
@@ -1437,17 +1497,250 @@ async def encounter(level, size):
 			await client.say(embed=embed)
 		if size == "8":
 			enc = random.choice(cr16)
-			enc2 = random.choice(cr7)
+			enc2 = random.choice(cr12)
 			embed = discord.Embed(
 			colour = discord.Colour.blue()
 			)
 			embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 			embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
 			await client.say(embed=embed)
-	
-	
-		
-									
+	if level == "17":
+		if size == "2":
+			enc = random.choice(cr11)
+			embed = discord.Embed(
+			colour = discord.Colour.blue()
+			)
+			embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
+			embed.add_field(name="Enemy's:", value=str(enc), inline=False)
+			await client.say(embed=embed)
+		if size == "3":
+			enc = random.choice(cr13)
+			embed = discord.Embed(
+			colour = discord.Colour.blue()
+			)
+			embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
+			embed.add_field(name="Enemy's:", value=str(enc), inline=False)
+			await client.say(embed=embed)
+		if size == "4": 
+			enc = random.choice(cr14)
+			embed = discord.Embed(
+			colour = discord.Colour.blue()
+			)
+			embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
+			embed.add_field(name="Enemy's:", value=str(enc), inline=False)
+			await client.say(embed=embed)
+		if size == "5":
+			enc = random.choice(cr16)
+			embed = discord.Embed(
+			colour = discord.Colour.blue()
+			)
+			embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
+			embed.add_field(name="Enemy's:", value=str(enc), inline=False)
+			await client.say(embed=embed)
+		if size == "6":
+			enc  = random.choice(cr17)
+			embed = discord.Embed(
+			colour = discord.Colour.blue()
+			)
+			embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
+			embed.add_field(name="Enemy's:", value=str(enc), inline=False)
+			await client.say(embed=embed)
+		if size == "7": 
+			enc = random.choice(cr11)
+			enc2 = random.choice(cr17)
+			embed = discord.Embed(
+			colour = discord.Colour.blue()
+			)
+			embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
+			embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
+			await client.say(embed=embed)
+		if size == "8":
+			enc = random.choice(cr17)
+			enc2 = random.choice(cr12)
+			embed = discord.Embed(
+			colour = discord.Colour.blue()
+			)
+			embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
+			embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
+			await client.say(embed=embed)
+	if level == "18":
+		if size == "2":
+			enc = random.choice(cr11)
+			embed = discord.Embed(
+			colour = discord.Colour.blue()
+			)
+			embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
+			embed.add_field(name="Enemy's:", value=str(enc), inline=False)
+			await client.say(embed=embed)
+		if size == "3":
+			enc = random.choice(cr12)
+			embed = discord.Embed(
+			colour = discord.Colour.blue()
+			)
+			embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
+			embed.add_field(name="Enemy's:", value=str(enc), inline=False)
+			await client.say(embed=embed)
+		if size == "4": 
+			enc = random.choice(cr14)
+			embed = discord.Embed(
+			colour = discord.Colour.blue()
+			)
+			embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
+			embed.add_field(name="Enemy's:", value=str(enc), inline=False)
+			await client.say(embed=embed)
+		if size == "5":
+			enc = random.choice(cr16)
+			embed = discord.Embed(
+			colour = discord.Colour.blue()
+			)
+			embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
+			embed.add_field(name="Enemy's:", value=str(enc), inline=False)
+			await client.say(embed=embed)
+		if size == "6":
+			enc  = random.choice(cr18)
+			embed = discord.Embed(
+			colour = discord.Colour.blue()
+			)
+			embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
+			embed.add_field(name="Enemy's:", value=str(enc), inline=False)
+			await client.say(embed=embed)
+		if size == "7": 
+			enc = random.choice(cr11)
+			enc2 = random.choice(cr18)
+			embed = discord.Embed(
+			colour = discord.Colour.blue()
+			)
+			embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
+			embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
+			await client.say(embed=embed)
+		if size == "8":
+			enc = random.choice(cr18)
+			enc2 = random.choice(cr12)
+			embed = discord.Embed(
+			colour = discord.Colour.blue()
+			)
+			embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
+			embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
+			await client.say(embed=embed)
+	if level == "19":
+		if size == "2":
+			enc = random.choice(cr11)
+			embed = discord.Embed(
+			colour = discord.Colour.blue()
+			)
+			embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
+			embed.add_field(name="Enemy's:", value=str(enc), inline=False)
+			await client.say(embed=embed)
+		if size == "3":
+			enc = random.choice(cr14)
+			embed = discord.Embed(
+			colour = discord.Colour.blue()
+			)
+			embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
+			embed.add_field(name="Enemy's:", value=str(enc), inline=False)
+			await client.say(embed=embed)
+		if size == "4": 
+			enc = random.choice(cr16)
+			embed = discord.Embed(
+			colour = discord.Colour.blue()
+			)
+			embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
+			embed.add_field(name="Enemy's:", value=str(enc), inline=False)
+			await client.say(embed=embed)
+		if size == "5":
+			enc = random.choice(cr17)
+			embed = discord.Embed(
+			colour = discord.Colour.blue()
+			)
+			embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
+			embed.add_field(name="Enemy's:", value=str(enc), inline=False)
+			await client.say(embed=embed)
+		if size == "6":
+			enc  = random.choice(cr19)
+			embed = discord.Embed(
+			colour = discord.Colour.blue()
+			)
+			embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
+			embed.add_field(name="Enemy's:", value=str(enc), inline=False)
+			await client.say(embed=embed)
+		if size == "7": 
+			enc = random.choice(cr11)
+			enc2 = random.choice(cr19)
+			embed = discord.Embed(
+			colour = discord.Colour.blue()
+			)
+			embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
+			embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
+			await client.say(embed=embed)
+		if size == "8":
+			enc = random.choice(cr19)
+			enc2 = random.choice(cr12)
+			embed = discord.Embed(
+			colour = discord.Colour.blue()
+			)
+			embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
+			embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
+			await client.say(embed=embed)
+	if level == "20":
+		if size == "2":
+			enc = random.choice(cr11)
+			embed = discord.Embed(
+			colour = discord.Colour.blue()
+			)
+			embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
+			embed.add_field(name="Enemy's:", value=str(enc), inline=False)
+			await client.say(embed=embed)
+		if size == "3":
+			enc = random.choice(cr15)
+			embed = discord.Embed(
+			colour = discord.Colour.blue()
+			)
+			embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
+			embed.add_field(name="Enemy's:", value=str(enc), inline=False)
+			await client.say(embed=embed)
+		if size == "4": 
+			enc = random.choice(cr16)
+			embed = discord.Embed(
+			colour = discord.Colour.blue()
+			)
+			embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
+			embed.add_field(name="Enemy's:", value=str(enc), inline=False)
+			await client.say(embed=embed)
+		if size == "5":
+			enc = random.choice(cr19)
+			embed = discord.Embed(
+			colour = discord.Colour.blue()
+			)
+			embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
+			embed.add_field(name="Enemy's:", value=str(enc), inline=False)
+			await client.say(embed=embed)
+		if size == "6":
+			enc  = random.choice(cr20)
+			embed = discord.Embed(
+			colour = discord.Colour.blue()
+			)
+			embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
+			embed.add_field(name="Enemy's:", value=str(enc), inline=False)
+			await client.say(embed=embed)
+		if size == "7": 
+			enc = random.choice(cr11)
+			enc2 = random.choice(cr20)
+			embed = discord.Embed(
+			colour = discord.Colour.blue()
+			)
+			embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
+			embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
+			await client.say(embed=embed)
+		if size == "8":
+			enc = random.choice(cr20)
+			enc2 = random.choice(cr12)
+			embed = discord.Embed(
+			colour = discord.Colour.blue()
+			)
+			embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
+			embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
+			await client.say(embed=embed)
+													
 														
 async def list_servers():
     await client.wait_until_ready()
