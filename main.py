@@ -153,7 +153,14 @@ async def npc():
 
 	await client.say(embed=embed)
 
-				    
+@client.command(name="invite", brief="Invite the bot to your discord server")
+async def invite():
+	embed = discord.Embed(
+		colour = discord.Colour.blue()
+	)
+	embed.add_field(name="Invite the bot to your server:", value="https://discordapp.com/api/oauth2/authorize?client_id=506541896630403080&permissions=0&scope=bot", inline=False)
+	await client.say(embed=embed)
+	
 # @client.command(brief="Generates a random encounter")
 # async def encounter():
 #     enemy = random.choice(["ruben", "nathan", "mighty marnix", "Daan the almighty"])
@@ -479,7 +486,7 @@ async def help(ctx):
 	embed.add_field(name=";initiative", value="Insert a name + modifier respectively and roll initiative multple names can be given", inline=False)
 	embed.add_field(name=";character", value="Generate a quick level 1 character", inline=False)
 	embed.add_field(name=";npc", value="Generate a quick npc, including traits and appearence.", inline=False)
-	embed.add_field(name=";encounter", value="Make an encounter for your party (format like ;encounter party level party size so for example ;encounter 15 6 this will generate an encounter for a party of level 15 with 6 members).", inline=False)
+	embed.add_field(name=";encounter", value="Make an encounter for your party (format like ;encounter party level party size so for example ;encounter 15 6 this will generate an encounter for a party of level 15 with 6 members, keep in mind that the minimum party size is 2 and the maximum is 8).", inline=False)
 	embed.add_field(name=";about", value="Learn more about the bot", inline=False)
 	embed.add_field(name="Official server", value="Please condsider joining ouher official server: https://discord.gg/sYPVXv8", inline=False)
 	await client.send_message(author, embed=embed)
