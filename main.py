@@ -240,8 +240,8 @@ async def test(*test, init):
 			rolls.sort() 	    
 		variabeles.append(sum(rolls)-min(rolls))
 		rolls =[]
-	init = init + variabeles
-	await client.say(test + init)
+	total = init + variabeles
+	await client.say(test + total)
 
 @client.command(brief="Random level 1 character creator")
 async def character():
