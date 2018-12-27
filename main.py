@@ -231,8 +231,17 @@ async def initiative(*names):
 		await client.say("```" + str(init) + "```")
 
 @client.command()
-async def test(*test):
-	await client.say(test)
+async def test(*test, *init):
+	rolls = []
+	variabeles = []
+	for j in range(6):	
+		for i in range(4):
+			rolls.append(randint(1, 6))
+			rolls.sort() 	    
+		variabeles.append(sum(rolls)-min(rolls))
+		rolls =[]
+	init = init + variabeles
+	await client.say(test + init)
 
 @client.command(brief="Random level 1 character creator")
 async def character():
