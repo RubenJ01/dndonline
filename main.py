@@ -230,6 +230,10 @@ async def initiative(*names):
 		init = f"{names[i]} rolled {randint(1,20)+eval(names[i+1])}"
 		await client.say("```" + str(init) + "```")
 
+@client.command()
+async def test(*test):
+	await client.say(test)
+
 @client.command(brief="Random level 1 character creator")
 async def character():
 	alignment = ["Lawfull good", "Neutral good", "Chaotic good", "Lawful neutral", "Neutral", "Chaotic"]
