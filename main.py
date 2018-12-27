@@ -231,7 +231,7 @@ async def initiative(*names):
 		await client.say("```" + str(init) + "```")
 
 @client.command()
-async def test(*test, *init):
+async def test(*test, init):
 	rolls = []
 	variabeles = []
 	for j in range(6):	
