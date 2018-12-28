@@ -194,13 +194,13 @@ async def rngstat():
 	)
 	embed.set_author(name="Randomly generated ability scores")
 	for j in range(6):
-    	roll1 = int(random.randint(1,6))
-    	roll2 = int(random.randint(1,6))
+    		roll1 = int(random.randint(1,6))
+    		roll2 = int(random.randint(1,6))
    		roll3 = int(random.randint(1,6))
-    	roll4 = int(random.randint(1,6))
-    	allroles = [roll1, roll2, roll3, roll4]
-    	lowest = min(roll1, roll2, roll3, roll4)
-    	ability = sum(allroles) - lowest
+    		roll4 = int(random.randint(1,6))
+    		allroles = [roll1, roll2, roll3, roll4]
+    		lowest = min(roll1, roll2, roll3, roll4)
+    		ability = sum(allroles) - lowest
 		embed.add_field(name="Rolls", value=str(roll1 ) + ", " + str(roll2) + ", " + str(roll3) + ", " + str(roll4) + " = " + str(ability), inline=False
 	await client.say(embed=embed)			     
 
