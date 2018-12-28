@@ -181,6 +181,38 @@ async def about():
 	embed.add_field(name="Source:", value="Since d&d online is open source you can check ouher repo: https://github.com/RubenJ01/dndonline", inline=False)
 	await client.say(embed=embed)
 
+initiative_roles = []
+
+@client.command()
+async def initiative(*args):
+    global initiative_roles
+    initiative_role = random.randint(1,20)
+    if initiative_role != 1:
+        initiative_role += int(args[1])
+    output = args[0]
+    output += " your initiative is "
+    output += str(initiative_role)
+    temp_val =[args[0],initiative_role]
+    await client.say(output)
+    initiative_roles.append(temp_val)
+    initiative_roles.sort()
+    initiative_roles.reverse()
+    await client.say(initiative_roles)
+
+@client.command()
+async def next():
+    global initiative_roles
+    initiative_roles = initiative_roles + initiative_roles[0]
+    del initiative_roles[0]
+    await client.say(initiative_roles)
+
+
+@client.command()
+async def stop():
+    initiative_roles = [
+    await client.say("initiative clerd")
+	
+	
 @client.command(brief="Roll a certain stat for example: dexterity")
 async def stat(modifier=0):
 	rolls = [randint(1,6) for _ in range(4)]
