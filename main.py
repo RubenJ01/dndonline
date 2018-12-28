@@ -440,7 +440,7 @@ async def rngstat():
 		roll4 = int(random.randint(1, 6))
 		lowest = min(roll1, roll2, roll3, roll4)
 		allrolls = [roll1, roll2, roll3, roll4]
-		ability = sum(allroles) - lowest
+		ability = sum(allrolls) - lowest
 		embed.add_field(name="roll", value=str(roll1) + ", " + str(roll2) + ", " + str(roll3) + ", " + str(roll4) + " = " + str(ability), inline=False)
 	await client.say(embed=embed)
 			
