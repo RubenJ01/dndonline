@@ -196,7 +196,7 @@ async def rngstat():
 	for j in range(6):
     		roll1 = int(random.randint(1,6))
     		roll2 = int(random.randint(1,6))
-   		    roll3 = int(random.randint(1,6))
+   		roll3 = int(random.randint(1,6))
     		roll4 = int(random.randint(1,6))
     		allroles = [roll1, roll2, roll3, roll4]
     		lowest = min(roll1, roll2, roll3, roll4)
