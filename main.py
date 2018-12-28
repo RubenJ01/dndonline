@@ -238,12 +238,6 @@ async def currency(*coins):
     )
     embed.add_field(name="Currency", value="You have " + str(cp) + "cp "  + str(sp) + "sp " + str(gp) + "gp " + str(pp) + "pp ", inline=False)
     await client.say(embed=embed)
-	
-@client.command(brief="Insert a name + modifier respectively and roll initiative multple names can be given")
-async def initiative(*names):
-	for i in range(0, len(names), 2):
-		init = f"{names[i]} rolled {randint(1,20)+eval(names[i+1])}"
-		await client.say("```" + str(init) + "```")
 
 @client.command()
 async def test(*test, init):
