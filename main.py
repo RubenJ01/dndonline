@@ -186,22 +186,6 @@ async def about():
 async def stat(modifier=0):
 	rolls = [randint(1,6) for _ in range(4)]
 	await client.say(f"the total of the best 3 of your 4 rolls was {sum(rolls)-min(rolls)}")			     
-
-@client.command(brief="Roll all your ability scores")				
-async def stats():
-	rolls = []
-	variabeles = []
-	for j in range(6):	
-		for i in range(4):
-			rolls.append(randint(1, 6))
-			rolls.sort() 	    
-		variabeles.append(sum(rolls)-min(rolls))
-		rolls =[]	
-	embed = discord.Embed(
-		colour = discord.Colour.blue()
-	)
-	embed.add_field(name="Your ability scores:", value=', '.join([str(v) for v in variabeles]), inline=False)
-	await client.say(embed=embed)
 	
 @client.command(brief="Calculate your total amount of pp gp sp cp respectively")
 async def currency(*coins):
@@ -441,8 +425,26 @@ async def rngstat():
 		lowest = min(roll1, roll2, roll3, roll4)
 		allrolls = [roll1, roll2, roll3, roll4]
 		ability = sum(allrolls) - lowest
-		embed.add_field(name="roll", value=str(roll1) + ", " + str(roll2) + ", " + str(roll3) + ", " + str(roll4) + " = " + str(ability), inline=False)
+		embed.add_field(name="Roll", value=str(roll1) + ", " + str(roll2) + ", " + str(roll3) + ", " + str(roll4) + " = " + str(ability), inline=False)
 	await client.say(embed=embed)
+
+@client.command()
+async def rngstat3():
+	embed = discord.Embed(
+		colour = discord.Colour.blue()
+	)
+	embed.set_author(name="3 randomly generated ability scores")
+	for j in range(3):
+		roll1 = int(random.randint(1, 6))
+		roll2 = int(random.randint(1, 6))
+		roll3 = int(random.randint(1, 6))
+		roll4 = int(random.randint(1, 6))
+		lowest = min(roll1, roll2, roll3, roll4)
+		allrolls = [roll1, roll2, roll3, roll4]
+		ability = sum(allrolls) - lowest
+		embed.add_field(name="Roll", value=str(roll1) + ", " + str(roll2) + ", " + str(roll3) + ", " + str(roll4) + " = " + str(ability), inline=False)
+	await client.say(embed=embed)
+
 			
 
 @client.command(brief="The definitions of combat conditions")
@@ -511,8 +513,9 @@ async def help(ctx):
 	embed.add_field(name=";disadvantage", value="roll with disadvantage (format like 4d6 2d8 default is 1d20)", inline=False)
 	embed.add_field(name=";super-advantage", value="Pick the best of 3 rolls, same format as ;roll", inline=False)
 	embed.add_field(name=";super-disadvantage", value="Pick the worst of 3 rolls, same format as ;roll", inline=False)
-	embed.add_field(name=";stat", value="Roll 1 ability score (best 3 rolls of a 4d6)", inline=False)
-	embed.add_field(name=";stats", value="Roll all 6 of your ability scores (best of 3 rolls of a 4d6 6 times)", inline=False)
+	embed.add_field(name=";rngstat", value="Roll 1 ability score (best 3 rolls of a 4d6)", inline=False)
+	embed.add_field(name=";rngstat3", value="Roll 1 ability score 3 times so players can use 1 for their definitive roll (best 3 rolls of a 4d6)", inline=False)
+	embed.add_field(name=";rngstat", value="Roll all 6 of your ability scores (best of 3 rolls of a 4d6 6 times)", inline=False)
 	embed.add_field(name=";currency", value="Calculate your total amount of pp gp sp cp respectively (format like ;currency 1gp 1pp 20sp etc)", inline=False)
 	embed.add_field(name=";initiative", value="Insert a name + modifier respectively and roll initiative multple names can be given", inline=False)
 	embed.add_field(name=";character", value="Generate a quick level 1 character", inline=False)
