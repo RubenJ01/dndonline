@@ -15,8 +15,6 @@ BOT_PREFIX = (";", "/")
 client = Bot(command_prefix=BOT_PREFIX)
 client.remove_command("help")
 
-array = []
-
 @client.event
 async def on_ready():
     print("I'm in")
