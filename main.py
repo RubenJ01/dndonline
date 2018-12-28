@@ -209,7 +209,7 @@ async def next():
 
 @client.command()
 async def stop():
-    initiative_roles = [
+    initiative_roles = []
     await client.say("initiative clerd")
 	
 	
