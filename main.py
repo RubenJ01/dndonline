@@ -185,24 +185,7 @@ async def about():
 @client.command(brief="Roll a certain stat for example: dexterity")
 async def stat(modifier=0):
 	rolls = [randint(1,6) for _ in range(4)]
-	await client.say(f"the total of the best 3 of your 4 rolls was {sum(rolls)-min(rolls)}")
-
-@client.command()
-async def rngstat():
-	embed = discord.Embed(
-		colour = discord.Colour.blue()
-	)
-	embed.set_author(name="Randomly generated ability scores")
-	for j in range(6):
-    		roll1 = int(random.randint(1, 6))
-    		roll2 = int(random.randint(1, 6))
-   		roll3 = int(random.randint(1, 6))
-    		roll4 = int(random.randint(1, 6))
-    		allroles = [roll1, roll2, roll3, roll4]
-    		lowest = min(roll1, roll2, roll3, roll4)
-    		ability = sum(allroles) - lowest
-		embed.add_field(name="Rolls", value=str(roll1 ) + ", " + str(roll2) + ", " + str(roll3) + ", " + str(roll4) + " = " + str(ability), inline=False
-	await client.say(embed=embed)			     
+	await client.say(f"the total of the best 3 of your 4 rolls was {sum(rolls)-min(rolls)}")			     
 
 @client.command(brief="Roll all your ability scores")				
 async def stats():
