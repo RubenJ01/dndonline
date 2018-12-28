@@ -432,9 +432,18 @@ async def rngstat():
 	embed = discord.Embed(
 		colour = discord.Colour.blue()
 	)
-	embed.set_author(name="Ability scores")
-	embed.add_field(name="roll", value="Text", inline=False)
+	embed.set_author(name=" Randomly generated ability scores")
+	for j in range(6):
+		roll1 = int(random.randint(1, 6))
+		roll2 = int(random.randint(1, 6))
+		roll3 = int(random.randint(1, 6))
+		roll4 = int(random.randint(1, 6))
+		lowest = min(roll1, roll2, roll3, roll4)
+		allrolls = [roll1, roll2, roll3, roll4]
+		ability = sum(allroles) - lowest
+		embed.add_field(name="roll", value=str(roll1) + ", " + str(roll2) + ", " + str(roll3) + ", " + str(roll4) + " = " + str(ability), inline=False)
 	await client.say(embed=embed)
+			
 
 @client.command(brief="The definitions of combat conditions")
 async def condition(type):
