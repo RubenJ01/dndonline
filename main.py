@@ -433,7 +433,7 @@ async def rngstat():
 		colour = discord.Colour.blue()
 	)
 	embed.set_author(name="Ability scores")
-	embed.add_field(name="", value="Text", inline=False)
+	embed.add_field(name="roll", value="Text", inline=False)
 	await client.say(embed=embed)
 
 @client.command(brief="The definitions of combat conditions")
