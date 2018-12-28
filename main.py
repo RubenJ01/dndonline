@@ -426,7 +426,16 @@ async def character():
 		embed.add_field(name="Cantrips:", value=', '.join(cantripsroll), inline=False)
 		embed.add_field(name="Spells:", value=', '.join(spellsroll), inline=False)
 		await client.say(embed=embed)
-		
+
+@client.command()
+async def rngstat():
+	embed = discord.Embed(
+		colour = discord.Colour.blue()
+	)
+	embed.set_author(name="Ability scores")
+	embed.add_field(name="", value="Text", inline=False)
+	await client.say(embed=embed)
+
 @client.command(brief="The definitions of combat conditions")
 async def condition(type):
 	if type == "blinded":
