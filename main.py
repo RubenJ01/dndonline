@@ -217,6 +217,9 @@ async def next():
     del initiative_roles[0]
     output = "It's the turn of "
     output += str(initiative_roles[0][0])
+    output += ", "
+    output += str(initiative_roles[1][0])
+    output += " is next."
     await client.say(output)
 
 
