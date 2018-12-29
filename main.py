@@ -195,7 +195,7 @@ async def initiative(*args):
     temp_val =[args[0],initiative_role]
     await client.say(output)
     initiative_roles.append(temp_val)
-    int(initiative_roles.sort())
+    initiative_roles.sort()
     initiative_roles.reverse()
     await client.say(initiative_roles)
 
@@ -205,7 +205,8 @@ async def next():
     initiative_roles = initiative_roles + initiative_roles[0]
     del initiative_roles[0]
     await client.say(initiative_roles)
-	
+
+
 @client.command()
 async def stop():
     global initiative_roles
