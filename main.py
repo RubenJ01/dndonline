@@ -9,7 +9,8 @@ from discord.ext.commands import Bot
 from random import randrange
 from monsterscr import *
 from npcgen import *
-import random
+from operator import itemgetter
+
 
 BOT_PREFIX = (";", "/")
 client = Bot(command_prefix=BOT_PREFIX)
