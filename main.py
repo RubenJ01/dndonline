@@ -185,6 +185,7 @@ initiative_roles = []
 
 @client.command()
 async def stop():
+    global initiative_roles
     initiative_roles = []
     await client.say("initiative clerd")
 
