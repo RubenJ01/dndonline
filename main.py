@@ -200,7 +200,7 @@ async def initiative(*args):
     temp_val =[args[0],initiative_role]
     await client.say(output)
     initiative_roles.append(temp_val)
-    initiative_roles.sort()
+    str(initiative_roles.sort())
     initiative_roles.reverse()
     await client.say(initiative_roles)
 
