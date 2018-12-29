@@ -181,28 +181,31 @@ async def about():
 	embed.add_field(name="Source:", value="Since d&d online is open source you can check ouher repo: https://github.com/RubenJ01/dndonline", inline=False)
 	await client.say(embed=embed)
 
-initiative_roles = []
-
 @client.command()
 async def initiative(*args):
     global initiative_roles
-    initiative_role = random.randint(1,20)
-    if initiative_role != 1:
-        initiative_role += int(args[1])
-    output = args[0]
-    output += " your initiative is "
-    output += str(initiative_role)
-    temp_val =[args[0],initiative_role]
-    await client.say(output)
-    initiative_roles.append(temp_val)
-    initiative_roles.sort()
-    initiative_roles.reverse()
+    for x in range(0,len(args),2):
+        initiative_role = random.randint(1,20)
+        if initiative_role != 1:
+            initiative_role += int(args[x+1])
+        output = args[x]
+        output += " your initiative is "
+        output += str(initiative_role)
+        initiative_roles += [[args[x],int(initiative_role)]]
+        await client.say(output)
+        await client.say(initiative_roles)
+    #initiative_roles["WILDCARD"][1].sort()
+    #initiative_roles.reverse()
+    for y in range(0,len(args),2):
+        output = initiative_roles[0][0]
+        output += " you roled "
+        output += str(initiative_roles[1][1])
     await client.say(initiative_roles)
 
 @client.command()
 async def next():
     global initiative_roles
-    initiative_roles = initiative_roles + initiative_roles[0]
+    initiative_roles += [initiative_roles[0]]
     del initiative_roles[0]
     await client.say(initiative_roles)
 
