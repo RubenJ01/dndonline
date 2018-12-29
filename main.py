@@ -200,7 +200,7 @@ async def initiative(*args):
         output = initiative_roles[0][0]
         output += " you roled "
         output += str(initiative_roles[1][1])
-    await client.say(initiative_roles)
+    await client.say(output)
 
 @client.command()
 async def next():
