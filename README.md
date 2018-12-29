@@ -20,27 +20,36 @@ Shows this message
 roll dice with no advantage or disadvantage when given no parameters 1d20 is rolled parameters can be formatted like so 5d3 4d2 1d21 or 
 simply 10 the latter only works for single dice all dice will be rolled and the total will be returned
 
-;advantage
+;advantage 
+
 roll with advantage (format like 4d6 2d8 default is 1d20)
 
 ;disadvantage
+
 roll with disadvantage (format like 4d6 2d8 default is 1d20)
 
 ;super-advantage
+
 Pick the best of 3 rolls, same format as ;roll
 
 ;super-disadvantage
+
 Pick the worst of 3 rolls, same format as ;roll
 
 ;rngstat
+
 Roll 1 ability score (best 3 rolls of a 4d6)
 
 ;rngstat3
+
 Roll 1 ability score 3 times so players can use 1 for their definitive roll (best 3 rolls of a 4d6)
 
 ;rngstat
+
 Roll all 6 of your ability scores (best of 3 rolls of a 4d6 6 times)
+
 ;currency
+
 Calculate your total amount of pp gp sp cp respectively (format like ;currency 1gp 1pp 20sp etc)
 
 ;initiative
@@ -68,4 +77,4 @@ Get an invite link for the discord bot to join your server!
 
 Learn more about the bot
 
-Copying our code is not possible!
+Copying our code is not possible, and wont be tolerated.
