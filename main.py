@@ -184,6 +184,11 @@ async def about():
 initiative_roles = []
 
 @client.command()
+async def stop():
+    initiative_roles = []
+    await client.say("initiative clerd")
+
+@client.command()
 async def initiative(*args):
     global initiative_roles
     initiative_role = random.randint(1,20)
@@ -205,14 +210,7 @@ async def next():
     initiative_roles = initiative_roles + initiative_roles[0]
     del initiative_roles[0]
     await client.say(initiative_roles)
-
-
-@client.command()
-async def stop():
-    initiative_roles = []
-    await client.say("initiative clerd")
-	
-	
+		
 @client.command(brief="Roll a certain stat for example: dexterity")
 async def stat(modifier=0):
 	rolls = [randint(1,6) for _ in range(4)]
