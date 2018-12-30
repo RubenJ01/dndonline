@@ -240,6 +240,38 @@ async def stop():
     )
     embed.add_field(name=";stop", value="Initiative cleared", inline=False)
     await client.say(embed=embed)
+
+@client.command()
+async def restart():
+    global initiative_roles
+    embed = discord.Embed(
+    	colour = discord.Colour.blue()
+    )
+    initiative_roles.sort(key=lambda x: x[1])
+    initiative_roles.reverse()
+    output = "The order of combat is "
+    for y in range(0,len(initiative_roles)):
+        output += initiative_roles[y][0]
+        output +=", "
+    embed.add_field(name=";restart", value=output, inline=False)
+    await client.say(embed=embed)
+
+@client.command()
+async def back():
+    global initiative_roles
+    embed = discord.Embed(
+    	colour = discord.Colour.blue()
+    )
+    initiative_roles =[initiative_roles[-1]] + initiative_roles
+    del initiative_roles[-1]
+    output = "It's the turn of "
+    output += str(initiative_roles[0][0])
+    output += ", "
+    output += str(initiative_roles[1][0])
+    output += " is next."
+    embed.add_field(name=";back", value=output, inline=False)
+    await client.say(embed=embed)
+
 		
 @client.command(brief="Roll a certain stat for example: dexterity")
 async def stat(modifier=0):
