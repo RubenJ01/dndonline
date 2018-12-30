@@ -195,7 +195,11 @@ async def initiative(*args):
         output += " your initiative is "
         output += str(initiative_role)
         initiative_roles += [[args[x],int(initiative_role)]]
-        await client.say(output)
+        embed = discord.Embed(
+            colour = discord.Colour.blue()
+        )
+        embed.add_field(name="Initiative roll", value=output, inline=False)
+        await client.say(embed=embed)
 
     initiative_roles.sort(key=lambda x: x[1])
     initiative_roles.reverse()
@@ -204,11 +208,19 @@ async def initiative(*args):
     for y in range(0,len(initiative_roles)):
         output += initiative_roles[y][0]
         output +=", "
-    await client.say(output)    
+    embed = discord.Embed(
+        colour = discord.Colour.blue()
+    )
+    embed.add_field(name="Combat order", value=output, inline=False)
+    await client.say(embed=embed)    
 
     output = "It's the turn of "
     output += str(initiative_roles[0][0])
-    await client.say(output)
+    embed = discord.Embed(
+        colour = discord.Colour.blue()
+    )
+    embed.add_field(name="Turn", value=Output, inline=False)
+    await client.say(embed=embed)
 
 @client.command()
 async def next():
@@ -220,7 +232,11 @@ async def next():
     output += ", "
     output += str(initiative_roles[1][0])
     output += " is next."
-    await client.say(output)
+    embed = discord.Embed(
+        colour = discord.Colour.blue()
+    )
+    embed.add_field(name=";next", value=output, inline=False)
+    await client.say(embed=embed)
 
 
 @client.command()
