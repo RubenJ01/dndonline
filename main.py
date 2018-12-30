@@ -227,10 +227,9 @@ async def next():
 async def stop():
     global initiative_roles
     initiative_roles = []
-	embed = discord.Embed(
+    embed = discord.Embed(
     	colour = discord.Colour.blue()
-    )
-	embed.add_field(name=";stop", value="Initiative cleared", inline=False)
+    )	
     await client.say(embed=embed)
 		
 @client.command(brief="Roll a certain stat for example: dexterity")
