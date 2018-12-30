@@ -219,7 +219,7 @@ async def initiative(*args):
     embed = discord.Embed(
         colour = discord.Colour.blue()
     )
-    embed.add_field(name="Turn", value=Output, inline=False)
+    embed.add_field(name="Turn", value=output, inline=False)
     await client.say(embed=embed)
 
 @client.command()
