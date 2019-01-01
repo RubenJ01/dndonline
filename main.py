@@ -300,6 +300,12 @@ async def currency(*coins):
     await client.say(embed=embed)
 
 @client.command()
+async def status():
+	servers = len(client.servers)
+	members = len(list(bot.get_all_members()))
+	await client.say("Currently running in: " + ", " + servers + " with:" + ", " + members + ", " + "members")
+
+@client.command()
 async def test(*test, init):
 	rolls = []
 	variabeles = []
