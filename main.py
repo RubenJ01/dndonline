@@ -302,7 +302,7 @@ async def currency(*coins):
 @client.command()
 async def status():
 	servers = len(client.servers)
-	members = len(list(bot.get_all_members()))
+	members = len(list(client.get_all_members()))
 	await client.say("Currently running in: " + ", " + servers + " with:" + ", " + members + ", " + "members")
 
 @client.command()
