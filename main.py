@@ -318,6 +318,51 @@ async def test(*test, init):
 	total = init + variabeles
 	await client.say(test + total)
 
+async def combat(ctx, *players_n_health)
+	players = {}
+	for p in players_n_health:
+		try:
+			players[last_added].append(n)
+		except ValueError:
+			if len(players[last_added]) < 2:
+				await client.say("improper input")
+			players[p] = []
+			last_added = p
+	for player in players:
+		players[player][0] = players[player][0]+randint(1,20)
+		await client.say(f"{player} has rolled {players[player][0]} on initiative")
+	initiative_order = sorted(players.items(), key=operator.itemgetter(0))
+
+	while 1:
+		for p in initiative_order:
+			await client.say(f"it's {p[0]}'s turn")
+			while 1:
+				message = await client.wait_for_message(author=ctx.author)\
+				message = message.split(' ')
+				command = message[0]
+				if command == "endcombat":
+					return
+				elif command == "next":
+					break
+				else:
+					player = message[1]
+					if command == "heal":
+						 players[player][1] += int(message[2])
+					elif command == "damage":
+						dmg = int(message[2]) - players[player][2]
+						if dmg > 0:
+							players[player][1] -= dmg
+						else:
+							players[player][2] -= dmg
+						if players[player][1] <= 0:
+							await client.say(f"```{player} is now unconscious``")
+					elif command == "temp":
+						players[player][2] = max(players[player][2], message[2])
+					if players[player][2] == 0:
+						await client.say(f"```{player} now has {players[player][1]}hp```")
+					else:
+						await client.say(f"```{player} now has {players[player][1]}hp and {players[player][2]} temp hp```")
+	
 @client.command(brief="Random level 1 character creator")
 async def character():
 	alignment = ["Lawfull good", "Neutral good", "Chaotic good", "Lawful neutral", "Neutral", "Chaotic"]
