@@ -338,7 +338,7 @@ async def combat(ctx, *players_n_health):
 		for p in initiative_order:
 			await client.say(f"it's {p[0]}'s turn")
 			while 1:
-				message = await client.wait_for_message(author=ctx.author)\
+				message = await client.wait_for_message(author=ctx.author)
 				message = message.split(' ')
 				command = message[0]
 				if command == "endcombat":
