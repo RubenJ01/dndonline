@@ -325,6 +325,7 @@ async def test(*test, init):
 @client.command()
 async def combat(ctx, *players_n_health):
 	players = {}
+	last_added = players_n_health[0]
 	for p in players_n_health:
 		try:
 			n = int(p)
