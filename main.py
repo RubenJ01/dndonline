@@ -303,7 +303,7 @@ async def currency(*coins):
 async def status():
 	servers = len(client.servers)
 	members = len(list(client.get_all_members()))
-	 	embed = discord.Embed(
+	embed = discord.Embed(
  		colour = discord.Colour.blue()
  	)
  	embed.add_field(name="Bot status", value="Currently running in: " + str(servers) + " servers with: " + str(members) + " members.", inline=False)
