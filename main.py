@@ -325,12 +325,12 @@ async def test(*test, init):
 @client.command()
 async def combat(ctx, *players_n_health):
 	players = {}
-	    for p in players_n_health:
-        try:
-            n = int(p)
-            players[last_added].append(p)
-        except ValueError:
-            last_added = p
+	for p in players_n_health:
+		try:
+			n = int(p)
+			players[last_added].append(p)
+		except ValueError:
+        	last_added = p
             players[last_added] = []
 	for player in players:
 		players[player][0] = players[player][0]+randint(1,20)
