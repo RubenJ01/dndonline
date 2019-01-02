@@ -26,7 +26,6 @@ async def on_ready():
 async def combat(ctx, *players_n_health):
 	players = {}
 	last_added = players_n_health[0]
-	print("players_n_health", players_n_health)
 	for p in players_n_health:
 		try:
 			n = int(p)
@@ -44,8 +43,8 @@ async def combat(ctx, *players_n_health):
 			await client.say(f"it's {p[0]}'s turn")
 			while 1:
 				message = await client.wait_for_message(author=ctx.message.author)
-				print(str(message))
 				message = str(message).split(' ')
+				print(message)
 				command = message[0]
 				if command == "endcombat":
 					return
