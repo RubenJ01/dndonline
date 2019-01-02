@@ -318,6 +318,7 @@ async def test(*test, init):
 	total = init + variabeles
 	await client.say(test + total)
 
+@client.command()
 async def combat(ctx, *players_n_health)
 	players = {}
 	for p in players_n_health:
