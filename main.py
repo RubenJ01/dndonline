@@ -1,15 +1,15 @@
-import discord
+import random
 import os
 import asyncio
-import urllib.request
-import urllib.error
+from operator
+import random
 from random import randint
 from random import sample
+
+import discord
 from discord.ext.commands import Bot 
-from random import randrange
 from monsterscr import *
 from npcgen import *
-from operator import itemgetter
 
 
 BOT_PREFIX = (";", "/")
