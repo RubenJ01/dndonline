@@ -43,7 +43,7 @@ async def combat(ctx, *players_n_health):
 		for p in initiative_order:
 			await client.say(f"it's {p[0]}'s turn")
 			while 1:
-				message = await client.wait_for_message(author=ctx.author)
+				message = await client.wait_for_message(author=ctx.message.author)
 				print(message)
 				message = message.split(' ')
 				command = message[0]
@@ -53,9 +53,9 @@ async def combat(ctx, *players_n_health):
 					break
 				else:
 					player = message[1]
-					if command == "heal" or command == ";heal":
+					if command == "heal":
 						 players[player][1] += int(message[2])
-					elif command == "damage" or command == ";damage":
+					elif command == "damage":
 						dmg = int(message[2]) - players[player][2]
 						if dmg > 0:
 							players[player][1] -= dmg
