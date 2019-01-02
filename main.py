@@ -326,6 +326,7 @@ async def test(*test, init):
 async def combat(ctx, *players_n_health):
 	players = {}
 	last_added = players_n_health[0]
+	print("players_n_health", players_n_health)
 	for p in players_n_health:
 		try:
 			n = int(p)
