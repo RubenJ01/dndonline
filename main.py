@@ -1,7 +1,7 @@
 import random
 import os
 import asyncio
-from operator
+import operator
 import random
 from random import randint
 from random import sample
