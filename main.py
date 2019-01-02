@@ -306,7 +306,7 @@ async def status():
 	embed = discord.Embed(
 		colour = discord.Colour.blue()
 	)
-	embed,add_field(name="Bot status", value="Currently running in: " + str(servers) + " servers with: " + str(members) + " members.", inline=False)
+	embed.add_field(name="Bot status", value="Currently running in: " + str(servers) + " servers with: " + str(members) + " members.", inline=False)
 	await client.say(embed=embed)
 
 @client.command()
