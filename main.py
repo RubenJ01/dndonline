@@ -303,11 +303,11 @@ async def currency(*coins):
 async def status():
 	servers = len(client.servers)
 	members = len(list(client.get_all_members()))
-	embed = discord.Embed(
-		colour = discord.Colour.blue()
-	)
-	embed.add_field(name="Bot status", value="Currently running in: " + str(servers) + " servers with: " + str(members) + " members.", inline=False)
-	await client.say(embed=embed)
+	 	embed = discord.Embed(
+ 		colour = discord.Colour.blue()
+ 	)
+ 	embed.add_field(name="Bot status", value="Currently running in: " + str(servers) + " servers with: " + str(members) + " members.", inline=False)
+ 	await client.say(embed=embed)
 
 @client.command()
 async def test(*test, init):
@@ -325,14 +325,13 @@ async def test(*test, init):
 @client.command()
 async def combat(ctx, *players_n_health):
 	players = {}
-	for p in players_n_health:
-		try:
-			players[last_added].append(n)
-		except ValueError:
-			if len(players[last_added]) < 2:
-				await client.say("improper input")
-			players[p] = []
-			last_added = p
+	    for p in players_n_health:
+        try:
+            n = int(p)
+            players[last_added].append(p)
+        except ValueError:
+            last_added = p
+            players[last_added] = []
 	for player in players:
 		players[player][0] = players[player][0]+randint(1,20)
 		await client.say(f"{player} has rolled {players[player][0]} on initiative")
