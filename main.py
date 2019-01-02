@@ -330,7 +330,7 @@ async def combat(ctx, *players_n_health):
 	for p in players_n_health:
 		try:
 			n = int(p)
-			players[last_added].append(p)
+			players[last_added].append(n)
 		except ValueError:
 			last_added = p
 			players[last_added] = []
