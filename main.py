@@ -22,6 +22,54 @@ async def on_ready():
     print(client.user)
     await client.change_presence(game=discord.Game(name=';help'))
 
+@client.command(pass_context=True)
+async def combat(ctx, *players_n_health):
+	players = {}
+	last_added = players_n_health[0]
+	print("players_n_health", players_n_health)
+	for p in players_n_health:
+		try:
+			n = int(p)
+			players[last_added].append(n)
+		except ValueError:
+			last_added = p
+			players[last_added] = []
+	for player in players:
+		players[player][0] = players[player][0]+randint(1,20)
+		await client.say(f"{player} has rolled {players[player][0]} on initiative")
+	initiative_order = sorted(players.items(), key=operator.itemgetter(0))
+
+	while 1:
+		for p in initiative_order:
+			await client.say(f"it's {p[0]}'s turn")
+			while 1:
+				message = await client.wait_for_message(author=ctx.author)
+				print(message)
+				message = message.split(' ')
+				command = message[0]
+				if command == "endcombat":
+					return
+				elif command == "next":
+					break
+				else:
+					player = message[1]
+					if command == "heal" or command == ";heal":
+						 players[player][1] += int(message[2])
+					elif command == "damage" or command == ";damage":
+						dmg = int(message[2]) - players[player][2]
+						if dmg > 0:
+							players[player][1] -= dmg
+						else:
+							players[player][2] -= dmg
+						if players[player][1] <= 0:
+							await client.say(f"```{player} is now unconscious``")
+					elif command == "temp":
+						players[player][2] = max(players[player][2], message[2])
+					if players[player][2] == 0:
+						await client.say(f"```{player} now has {players[player][1]}hp```")
+					else:
+						await client.say(f"```{player} now has {players[player][1]}hp and {players[player][2]} temp hp```")
+
 
 def create_call_to_dnd_beyond(name, link, **kwargs):
 	@client.command(name=name, **kwargs)
@@ -322,53 +370,7 @@ async def test(*test, init):
 	total = init + variabeles
 	await client.say(test + total)
 
-@client.command(pass_context=True)
-async def combat(ctx, *players_n_health):
-	players = {}
-	last_added = players_n_health[0]
-	print("players_n_health", players_n_health)
-	for p in players_n_health:
-		try:
-			n = int(p)
-			players[last_added].append(n)
-		except ValueError:
-			last_added = p
-			players[last_added] = []
-	for player in players:
-		players[player][0] = players[player][0]+randint(1,20)
-		await client.say(f"{player} has rolled {players[player][0]} on initiative")
-	initiative_order = sorted(players.items(), key=operator.itemgetter(0))
 
-	while 1:
-		for p in initiative_order:
-			await client.say(f"it's {p[0]}'s turn")
-			while 1:
-				message = await client.wait_for_message(author=ctx.author)
-				print(message)
-				message = message.split(' ')
-				command = message[0]
-				if command == "endcombat":
-					return
-				elif command == "next":
-					break
-				else:
-					player = message[1]
-					if command == "heal" command == ";heal":
-						 players[player][1] += int(message[2])
-					elif command == "damage" or command == ";damage":
-						dmg = int(message[2]) - players[player][2]
-						if dmg > 0:
-							players[player][1] -= dmg
-						else:
-							players[player][2] -= dmg
-						if players[player][1] <= 0:
-							await client.say(f"```{player} is now unconscious``")
-					elif command == "temp":
-						players[player][2] = max(players[player][2], message[2])
-					if players[player][2] == 0:
-						await client.say(f"```{player} now has {players[player][1]}hp```")
-					else:
-						await client.say(f"```{player} now has {players[player][1]}hp and {players[player][2]} temp hp```")
 	
 @client.command(brief="Random level 1 character creator")
 async def character():
