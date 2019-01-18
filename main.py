@@ -220,7 +220,10 @@ async def invite():
 
 @client.command(brief="Welcome!")
 async def welcome():
-	await client.say("Welcome to the tavern!")
+	strings = ["Grab a beer and chat away.",
+		   "Anything you are looking for in specific?"]
+	stringspick = random.choice(strings)	   
+	await client.say("Welcome to the tavern!" + ", " + stringspick)
 	
 @client.command(brief="About us")
 async def about():
