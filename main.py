@@ -218,7 +218,9 @@ async def invite():
 #     await client.say("Under development!")
 
 
-
+@client.command(brief="Welcome!")
+async def welcome():
+	await client.say("Welcome to the tavern!")
 	
 @client.command(brief="About us")
 async def about():
