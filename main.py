@@ -12,7 +12,7 @@ from monsterscr import *
 from npcgen import *
 
 
-BOT_PREFIX = (";", "/", "/t", "!t")
+BOT_PREFIX = (";", "/t", "!t")
 client = Bot(command_prefix=BOT_PREFIX)
 client.remove_command("help")
 
