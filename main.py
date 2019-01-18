@@ -223,7 +223,7 @@ async def welcome():
 	strings = ["Grab a beer and chat away.",
 		   "Anything you are looking for in specific?"]
 	stringspick = random.choice(strings)	   
-	await client.say("Welcome to the tavern!" + " " + stringspick)
+	await client.say("Welcome to the tavern! " + stringspick)
 	
 @client.command(brief="About us")
 async def about():
