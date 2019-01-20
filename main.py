@@ -220,10 +220,25 @@ async def invite():
 
 @client.command(brief="Welcome!")
 async def welcome():
-	strings = ["Grab a beer and chat away.",
-		   "Anything you are looking for in specific?"]
+	strings = ["Welcome to the Tavern! Please leave your bears at the Bear Post.",
+		"Welcome to the Tavern! Be advised: otters are considered contraband, unless they are members of Staff.",
+		"Welcome to the Tavern! In the event of a catastrophic temporal or dimensional paradox, please avoid making eye contact with your past, future, or alternate selves.",
+		"Welcome to the Tavern! May the Gods have mercy on your soul.",
+		"Welcome to the Tavern! Have a drink. Or don't. That one might be poisoned.",
+		"Welcome to the Tavern! Remember: don't talk about alignment unless you're prepared to argue about alignment.",
+		"Welcome to the Tavern! Selûne is best girl, but don't tell Shar I said so.",
+		"Welcome to the Tavern! The Lords here all worship Loviatar, so make sure to behave unless you like being punished.",
+		"Welcome to the Tavern! Stasis pod malfunction. Prepare to discontinue hypersleep. You have been in stasis for...nine...million...nine...hundred...thousand...",
+		"Welcome to the Tavern! Necromancers be advised: keep the skeletons in your closet.  Nobody wants to see that.",
+		"Welcome to the Tavern! Keep your wands holstered, your weapons sheathed, and your staves slung.",
+		"Welcome to the Tavern! See that gnome in the corner? No? Well, he sees you, so be nice.",
+		"Welcome to the Tavern! We welcome patrons of all races and walks of life...so it's frowned upon to ask the Tabaxi if they are a furry.",
+		"Welcome to the Tavern! We have a gazebo out back for when the weather's nice. Only mildly damaged!",
+		"Welcome to the Tavern! Greeting procedure complete. Prepare for initiation.",
+		"Welcome to the Tavern! Now roll initiative!",
+		"Welcome to the Tavern! Bodies tend to go missing every once in a while, so try not to die."]
 	stringspick = random.choice(strings)	   
-	await client.say("Welcome to the tavern! " + stringspick)
+	await client.say(stringspick)
 	
 @client.command(brief="About us")
 async def about():
