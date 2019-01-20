@@ -391,7 +391,16 @@ async def test(*test, init):
 	total = init + variabeles
 	await client.say(test + total)
 
-
+@client.command(brief="Reference 1 of the server rules")
+async def rule(number):
+	if number == "1":
+		embed = discord.Embed(
+ 		colour = discord.Colour.blue()
+ 		)
+		embed.add_field(name="Rule 0", value="No Malicious Behaviour" + "\n" + "Do not come in here with the intent to raid, brigade, or troll. Intentionally malicious users will be immediately and permanently banned. Come on, people, it’s common sense.", inline=False)
+		await client.say(embed=embed)
+		
+	
 	
 @client.command(brief="Random level 1 character creator")
 async def character():
