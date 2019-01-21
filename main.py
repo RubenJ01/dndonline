@@ -62,7 +62,7 @@ async def combat(ctx, *players_n_health):
 							players[player][1] -= dmg
 							players[player][2] = 0
 						else:
-							players[player][2] -= dmg
+							players[player][2] = dmg
 						if players[player][1] <= 0:
 							await client.say(f"```{player} is now unconscious``")
 					elif command == "temp":
