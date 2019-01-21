@@ -46,8 +46,9 @@ async def combat(ctx, *players_n_health):
 				message = message.content.split(' ')
 				print(message)
 				command = message[0]
-				if command == "endcombat":
+				if command == "endcombat" or command == "stop":
 					return
+					await client.say("```ended combat```")
 				elif command == "next":
 					break
 				else:
@@ -65,8 +66,10 @@ async def combat(ctx, *players_n_health):
 							players[player][2] = dmg
 						if players[player][1] <= 0:
 							await client.say(f"```{player} is now unconscious``")
+							continue
 					elif command == "temp":
-						players[player][2] = max(players[player][2], message[2])
+						players[player][2] = max(players[player][2], int(message[2]))
+						
 					if players[player][2] == 0:
 						await client.say(f"```{player} now has {players[player][1]}hp```")
 					else:
