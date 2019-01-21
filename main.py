@@ -47,8 +47,8 @@ async def combat(ctx, *players_n_health):
 				print(message)
 				command = message[0]
 				if command == "endcombat" or command == "stop":
-					return
 					await client.say("```ended combat```")
+					return
 				elif command == "next":
 					break
 				else:
