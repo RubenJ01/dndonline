@@ -57,9 +57,10 @@ async def combat(ctx, *players_n_health):
 					if command == "heal":
 						 players[player][1] += int(message[2])
 					elif command == "damage":
-						dmg = int(message[2]) - players[player][1]
+						dmg = int(message[2]) - players[player][2]
 						if dmg > 0:
 							players[player][1] -= dmg
+							players[player][2] = 0
 						else:
 							players[player][2] -= dmg
 						if players[player][1] <= 0:
