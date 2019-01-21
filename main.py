@@ -36,7 +36,7 @@ async def combat(ctx, *players_n_health):
 	for player in players:
 		players[player][0] = players[player][0]+randint(1,20)
 		await client.say(f"{player} has rolled {players[player][0]} on initiative")
-	initiative_order = list(reversed(sorted(players.items(), key=operator.itemgetter(0))))
+	initiative_order = list(reversed(sorted(players.items(), key=lambda x: int(x[0]))))
 
 
 	while 1:
