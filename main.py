@@ -47,7 +47,7 @@ async def combat(ctx, *players_n_health):
 				print(message)
 				command = message[0]
 				if command == "endcombat" or command == "stop":
-					await client.say("ended combat")
+					await client.say("```ended combat```")
 					return
 				elif command == "next":
 					break
@@ -65,15 +65,15 @@ async def combat(ctx, *players_n_health):
 						else:
 							players[player][2] = dmg
 						if players[player][1] <= 0:
-							await client.say(f"{player} is now unconscious")
+							await client.say(f"```{player} is now unconscious``")
 							continue
 					elif command == "temp":
 						players[player][2] = max(players[player][2], int(message[2]))
 						
 					if players[player][2] == 0:
-						await client.say(f"{player} now has {players[player][1]}hp")
+						await client.say(f"```{player} now has {players[player][1]}hp```")
 					else:
-						await client.say(f"{player} now has {players[player][1]}hp and {players[player][2]} temp hp")
+						await client.say(f"```{player} now has {players[player][1]}hp and {players[player][2]} temp hp```")
 
 
 def create_call_to_dnd_beyond(name, link, **kwargs):
