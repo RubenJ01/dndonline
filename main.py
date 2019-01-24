@@ -22,6 +22,12 @@ async def on_ready():
     print(client.user)
     await client.change_presence(game=discord.Game(name=';help'))
 
+@client.event
+async def on_member_join(member):
+	channel = discord.utils.get(member.guild.channels, name="welcome")
+	await channel.send("welcome")
+	
+
 @client.command(pass_context=True)
 async def combat(ctx, *players_n_health):
 	players = {}
