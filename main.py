@@ -42,7 +42,7 @@ async def on_member_join(member):
 		"Now roll initiative!",
 		"Bodies tend to go missing every once in a while, so try not to die."]
 	stringspick = random.choice(strings)	
-	content = "Welcome to the tavern" + member.mention + ", " + stringspick
+	content = "Welcome to the tavern " + member.mention + ". " + stringspick
 	channel = discord.utils.get(member.server.channels, name="general")
 	await client.send_message(channel, content)
 	
