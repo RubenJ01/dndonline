@@ -46,12 +46,6 @@ async def on_member_join(member):
 	channel = discord.utils.get(member.server.channels, name="general")
 	await client.send_message(channel, content)
 
-@client.event(pass_context=True)
-async def on_member_join(ctx):
-	author = ctx.message.author
-	content = "Welcome to the tavern!"
-	await client.send_message(author, content)
-
 @client.command(pass_context=True)
 async def combat(ctx, *players_n_health):
 	players = {}
