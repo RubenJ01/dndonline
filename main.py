@@ -24,8 +24,9 @@ async def on_ready():
 
 @client.event
 async def on_member_join(member):
+	content = "welcome"
 	channel = discord.utils.get(member.server.channels, name="welcome")
-	await channel.send("welcome")
+	await client.send_message(channel, content)
 	
 
 @client.command(pass_context=True)
