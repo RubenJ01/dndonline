@@ -818,6 +818,10 @@ async def condition(type):
 		)
 		embed.add_field(name="Condition paralyzed:", value="A paralyzed creature is incapacitated (see the condition) and can’t move or speak." + "\n" + "The creature automatically fails Strength and Dexterity Saving Throws." + "\n" + "Attack rolls against the creature have advantage." + "\n" + "Any Attack that hits the creature is a critical hit if the attacker is within 5 feet of the creature.", inline=False)
 		await client.say(embed=embed)
+
+@client.command()
+async def basic():
+	await client.say("http://media.wizards.com/2018/dnd/downloads/DnD_BasicRules_2018.pdf")
 		
 @client.command(pass_context=True)
 async def help(ctx):
@@ -844,7 +848,9 @@ async def help(ctx):
 	embed.add_field(name=";encounter", value="Make an encounter for your party (format like ;encounter party level party size so for example ;encounter 15 6 this will generate an encounter for a party of level 15 with 6 members, keep in mind that the minimum party size is 2 and the maximum is 8).", inline=False)
 	embed.add_field(name=";invite", value="Get an invite link for the discord bot to join your server!", inline=False)
 	embed.add_field(name=";welcome", value="Welcome new patrons to the server with a unique welcoming message", inline=False)
+	embed.add_field(name=";faq", value="Get a refernce to any question listed in the faq, format like ;faq 1", inline=False)
 	embed.add_field(name=";rule", value="Get a reference to every single rule listed inn the tavern (format like: rule(number of rule)).", inline=False)
+	embed.add_field(name=";basic", value="Get the basic rules pdf", inline=False)
 	embed.add_field(name=";about", value="Learn more about the bot", inline=False)
 	embed.add_field(name="Official server", value="Please condsider joining ouher official server: https://discord.gg/sYPVXv8", inline=False)
 	await client.send_message(author, embed=embed)
