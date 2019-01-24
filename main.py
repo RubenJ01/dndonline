@@ -24,7 +24,7 @@ async def on_ready():
 
 @client.event
 async def on_member_join(member):
-	channel = discord.utils.get(member.guild.channels, name="welcome")
+	channel = discord.utils.get(member.server.channels, name="welcome")
 	await channel.send("welcome")
 	
 
