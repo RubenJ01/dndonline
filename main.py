@@ -552,7 +552,7 @@ async def rule(number):
 		embed = discord.Embed(
  		colour = discord.Colour.blue()
  		)
-		embed.add_field(name="Rule 3 - #welcome-rules", value="No Spam" + "\n" + " Posting of outside links has been disabled in most channels due to malicious user behaviour.  If you would like to post a link and cannot, ping (@) an online member of Staff and we will be happy to assist.", inline=False)
+		embed.add_field(name="Rule 3 - #welcome-rules", value="No Spam" + "\n" + " Posting large numbers of superfluous messages for the purposes of cluttering a channel or artificially boosting server rank is prohibited. Express yourself with quality, not by volume.", inline=False)
 		await client.say(embed=embed)
 	if number == "4":
 		embed = discord.Embed(
