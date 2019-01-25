@@ -96,6 +96,13 @@ async def rprule(number):
 		)
 		embed.add_field(name="8. Third Time Unlucky - #out-of-character", value="We work on a three warnings system, if you break the rules and have received three warnings from Roleplay DMs then your case will be brought up with server staff and may result in a ban from the roleplay channels or a ban from the server itself depending on the severity of your actions.", inline=False)
 		await client.say(embed=embed)
+	if number == "9":
+		embed = discord.Embed(
+			colour = discord.Colour.blue()
+		)
+		embed.add_field(name="9. RTFM - #out-of-character", value="As the sacred scrolls of the Universe dictate: RTFM. Follow this sacred acronym.", inline=False)
+		await client.say(embed=embed)
+
 	
 @client.command(pass_context=True)
 async def combat(ctx, *players_n_health):
