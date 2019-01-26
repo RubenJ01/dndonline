@@ -117,7 +117,7 @@ async def combat(ctx, *players_n_health):
 							players[player][2] = max(dmg, 0)
 						if players[player][1] <= 0:
 							players[player][1] = 0
-							await client.say(f"```{player} is now unconscious``")
+							await client.say(f"```{player} is now unconscious```")
 							continue
 					elif command == "temp":
 						players[player][2] = max(players[player][2], int(message[2]))
