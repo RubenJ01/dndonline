@@ -91,7 +91,7 @@ async def combat(ctx, *players_n_health):
 
 	while 1:
 		for p in initiative_order:
-			await client.say(f"it's {p[0]}'s turn")
+			await client.say(f"it's {p[0]}'s turn with {p[1][1]} hp {f'and {p[1][2]} temp hp' if int(p[1][2]) > 0 else ''}")
 			while 1:
 				message = await client.wait_for_message(author=ctx.message.author)
 				message = message.content.split(' ')
@@ -114,8 +114,9 @@ async def combat(ctx, *players_n_health):
 							players[player][1] += dmg
 							players[player][2] = 0
 						else:
-							players[player][2] = dmg
+							players[player][2] = max(dmg, 0)
 						if players[player][1] <= 0:
+							players[player][1] = 0
 							await client.say(f"```{player} is now unconscious``")
 							continue
 					elif command == "temp":
