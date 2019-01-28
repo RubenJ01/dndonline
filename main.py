@@ -18,11 +18,9 @@ client.remove_command("help")
 
 @client.event
 async def on_ready():
-    servers = len(client.servers)
-    members = len(list(client.get_all_members()))
     print("I'm in")
     print(client.user)
-    await client.change_presence(game=discord.Game(name=';help | ' + str(members))
+    await client.change_presence(game=discord.Game(name='Check #bd-general for any help'))
 
 @client.event
 async def on_member_join(member):
