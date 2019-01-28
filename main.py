@@ -22,7 +22,7 @@ async def on_ready():
     members = len(list(client.get_all_members()))
     print("I'm in")
     print(client.user)
-    await client.change_presence(game=discord.Game(name=';help | ' + members))
+    await client.change_presence(game=discord.Game(name=';help | ' + str(members))
 
 @client.event
 async def on_member_join(member):
