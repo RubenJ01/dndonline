@@ -301,10 +301,11 @@ async def about():
 	embed = discord.Embed(
 		colour = discord.Colour.blue()
 	)
-	embed.set_author(name="About d&d online:")
+	embed.set_author(name="About The Tavern Bot:")
 	embed.add_field(name="Date of creation:", value="18-11-2018", inline=False)
-	embed.add_field(name="Creators:", value="D&D online has been developed by: RubenJ01#0229 and Daan#2049")
-	embed.add_field(name="Source:", value="Since d&d online is open source you can check ouher repo: https://github.com/RubenJ01/dndonline", inline=False)
+	embed.add_field(name="Creators:", value="The Tavern Bot has been developed by: RubenJ01#0229 and Daan#2049")
+	embed.add_field(name="Contributors:", value="Thanks to: willdda117#2904 for contributing to The Tavern Bot")
+	embed.add_field(name="Source:", value="Since The Tavern Bot is open source you can check ouher repo: https://github.com/RubenJ01/dndonline", inline=False)
 	await client.say(embed=embed)
 
 initiative_roles = []
