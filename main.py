@@ -20,7 +20,7 @@ client.remove_command("help")
 async def on_ready():
     print("I'm in")
     print(client.user)
-    await client.change_presence(game=discord.Game(name='Check #bd-general for any help'))
+    await client.change_presence(game=discord.Game(name='Check #bd-general for help'))
 
 @client.event
 async def on_member_join(member):
