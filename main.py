@@ -762,6 +762,7 @@ async def character():
 
 @client.command()
 async def rngstat():
+	number = 0				 
 	embed = discord.Embed(
 		colour = discord.Colour.blue()
 	)
@@ -774,7 +775,8 @@ async def rngstat():
 		lowest = min(roll1, roll2, roll3, roll4)
 		allrolls = [roll1, roll2, roll3, roll4]
 		ability = sum(allrolls) - lowest
-		embed.add_field(name="Roll", value=str(roll1) + ", " + str(roll2) + ", " + str(roll3) + ", " + str(roll4) + " = " + str(ability), inline=False)
+		number = number + 1			 
+		embed.add_field(name="Roll" + number, value=str(roll1) + ", " + str(roll2) + ", " + str(roll3) + ", " + str(roll4) + " = " + str(ability), inline=False)
 	await client.say(embed=embed)
 
 @client.command()
