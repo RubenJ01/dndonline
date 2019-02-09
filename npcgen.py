@@ -13,7 +13,7 @@ import random
 
 background = ["Acolyte", "Criminal", "Folk hero", "Noble", "Sage", "Soldier"]
 backgroundroll = random.choice(background)
-traits = ["Nervous", "Excited", "Clumsy", "Distant", "Friendly", "Caring", "Anxious", "Laid-back", "Quiet", "Enthousiastic", "Mean", "Pridefull"]
+traits = ["Nervous", "Excited", "Clumsy", "Distant", "Friendly", "Caring", "Anxious", "Laid-back", "Quiet", "Enthousiastic", "Mean", "Pridefull", "Argumentative", "Arrogant", "Blustering", "Rude", "Curious", "Friendly", "Honest", "Hot tempered", "Irritable", "Ponderous", "Suspicous"]
 traitsroll = random.choice(traits)
 gender = ["Male", "Female"]
 genderroll = random.choice(gender)
@@ -26,6 +26,8 @@ haircolourroll = random.choice(haircolour)
 race = ["Hill dwarf", "Mountain dwarf", "High elf", "Wood elf", "Lightfoot halfling", "Stout halfling"]
 raceroll = random.choice(race)
 age = random.randint(20, 100)
+flaws = ["Forbidden love or susceptibility to romance", "Enjoys decadent pleasures", "Arrogance", "Prone to rage", "Has a powerfull enemy", "Specific phobia", "Shameful or scandalous history", "Secret crime or misdeed", "Possession of forbidden lore", "Foolhardy bravery"]
+flawsroll = random.choice(flaws)
 rolls = []
 variabeles = []
 for j in range(6):	
