@@ -251,6 +251,7 @@ async def npc():
 	embed.add_field(name="Gender:", value=genderroll, inline=False)
 	embed.add_field(name="Age:", value=age, inline=False)
 	embed.add_field(name="Traits:", value=traitsroll, inline=False)
+	embed.add_field(name="Flaws & Secrets:", value=flawsroll, inline=False)					 
 	embed.add_field(name="Background:", value=backgroundroll, inline=False)
 	embed.add_field(name="Hair:", value=hairroll + ", " + haircolourroll, inline=False)
 	embed.add_field(name="Size:", value=sizeroll, inline=False)
