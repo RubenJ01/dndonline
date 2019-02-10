@@ -143,21 +143,7 @@ def create_roller_function(name, roller, good_roll_text="you managed to roll a f
 		)
 		if dice:
 			if len(dice) == 1 and "d" not in dice[0]:
-				die_type = int(dice[0])
-				die_5 = max(die_type//5, 1)
-				roll  = roller(1, die_type)
-				if roll > die_5*4 + randint(-die_5, die_5):
-					embed.add_field(good_roll_text)
-					await client.say(f"```{good_roll_text} {roll}```")
-				else:
-					if roll not in [8,11,18]:
-						await client.say(f"```You rolled a {roll}```")
-					else:
-						await client.say(f"```You rolled an {roll}```")
-				return
-				dice = [die.split("d") for die in dice]
-				if len(dice) == 1 and dice[0][0] == '1':
-					await client.say(f"```You rolled a {roller(1, int(dice[0][1]))}```")
+				dice[0] =  '1d'+dice[0]
 			dice = [die.split("d") for die in dice]
 			if len(dice) == 1 and dice[0][0] == '1':
 				die_type = int(dice[0][1])
