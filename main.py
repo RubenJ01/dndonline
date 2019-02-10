@@ -143,6 +143,7 @@ def create_roller_function(name, roller, good_roll_text="you managed to roll a f
 		)
 		if dice:
 			if len(dice) == 1 and "d" not in dice[0]:
+				dice = list(dice)
 				dice[0] =  '1d'+dice[0]
 			dice = [die.split("d") for die in dice]
 			if len(dice) == 1 and dice[0][0] == '1':
