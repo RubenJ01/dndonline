@@ -126,14 +126,6 @@ async def combat(ctx, *players_n_health):
 						await client.say(f"```{player} now has {players[player][1]}hp```")
 					else:
 						await client.say(f"```{player} now has {players[player][1]}hp and {players[player][2]} temp hp```")
-
-
-def create_call_to_dnd_beyond(name, link, **kwargs):
-	@client.command(name=name, **kwargs)
-	async def _func(*name):
-		name = " ".join(name)
-		name = name.lower().replace(' ', '-').replace("'", "")
-		await client.say(f"https://www.dndbeyond.com/{link}/{name}") 
 	
 def create_roller_function(name, roller, good_roll_text="you managed to roll a fabulous", **command_specifiers):
 	@client.command(name=name, **command_specifiers)
@@ -181,7 +173,6 @@ def create_roller_function(name, roller, good_roll_text="you managed to roll a f
 				await client.say(f"```You rolled a {roll}```")
 
 		
-create_call_to_dnd_beyond("spell" ,"spells", brief="Get a reference to any spell that is listed in D&D")
 create_call_to_dnd_beyond("race", "characters/races", brief="Get a reference to any race that is listed in D&D")
 create_call_to_dnd_beyond("classes", "characters/classes", brief="Get a reference to any class that is listed in D&D")
 create_call_to_dnd_beyond("background", "characters/backgrounds", brief="Get a reference to any background that is listed in D&D")
