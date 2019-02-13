@@ -47,6 +47,26 @@ async def on_member_join(member):
 	await client.send_message(channel, content)
 
 @client.command()
+async def spelltest(argument):
+    with open("spells.json", "r") as spells_json:
+        data = json.load(spells_json)
+    spell_data = data[argument]
+    casting_time = spell_data['casting_time']						 
+    components = spell_data['components']						 
+    description = spell_data['description']						 
+    duration = spell_data['duration']						 
+    level = spell_data['level']
+    rangething = spell_data['range']	
+    school = spell_data['school']
+    await client.say(f'Casting time: {casting_time}')
+    await client.say(f'Components: {components}')
+    await client.say(f'Description: {description}')
+    await client.say(f'Duration: {duration}')
+    await client.say(f'Level: {level}')
+    await client.say(f'Range: {rangething}')
+    await client.say(f'Level: {school}')	
+	
+@client.command()
 async def rprule(number):
 	embed = discord.Embed(
 		colour = discord.Colour.blue()
