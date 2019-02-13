@@ -47,7 +47,7 @@ async def on_member_join(member):
 	await client.send_message(channel, content)
 
 @client.command()
-async def spelltest(ctx, argument):
+async def spelltest(argument):
     with open("spells.json", "r") as spells_json:
         data = json.load(spells_json)
     spell_data = data[argument]
