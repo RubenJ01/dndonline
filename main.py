@@ -262,8 +262,20 @@ async def spelltest():
     with open("spells.json", "r") as spells_json:
         data = json.load(spells_json)
     spell_data = data['Acid Splash']
+	casting_time = spell_data['casting_time']						 
+	components = spell_data['components']						 
+	description = spell_data['description']						 
+	duration = spell_data['duration']						 
     level = spell_data['level']
-    await client.say(f'Level: {level}')
+	rangething = spell_data['range']	
+	school = spell_data['school']
+    await client.say(f'Casting time: {casting_time}')
+	await client.say(f'Components: {components}')
+	await client.say(f'Description: {description}')
+	await client.say(f'Duration: {duration}')
+	await client.say(f'Level: {level}')
+	await client.say(f'Range: {rangething}')
+	await client.say(f'Level: {school}')
 					 
 @client.command(brief="Welcome!")
 async def welcome():
