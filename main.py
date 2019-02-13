@@ -72,6 +72,12 @@ async def rprule(number):
 		embed.add_field(name="9. RTFM - #out-of-character", value="As the sacred scrolls of the Universe dictate: RTFM. Follow this sacred acronym.", inline=False)
 	await client.say(embed=embed)
 
+@client.command()
+async def spelltest():
+	with open("spells.json", "r") as spells_json:
+    		data = json.load(spells_json)
+		for p in data['Acid Splash']:
+			print('Level: ' + p['level'])
 	
 @client.command(pass_context=True)
 async def combat(ctx, *players_n_health):
