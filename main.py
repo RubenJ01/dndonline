@@ -250,10 +250,9 @@ async def invite():
 
 @client.command()
 async def spelltest(argument):
-    spellname = argument
     with open("spells.json", "r") as spells_json:
         data = json.load(spells_json)
-    spell_data = data[spellname]
+    spell_data = data[argument]
     casting_time = spell_data['casting_time']						 
     components = spell_data['components']						 
     description = spell_data['description']						 
