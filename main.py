@@ -3,7 +3,6 @@ import os
 import asyncio
 import operator
 import random
-import json
 from random import randint
 from random import sample
 
@@ -71,6 +70,7 @@ async def rprule(number):
 	elif number == "9":
 		embed.add_field(name="9. RTFM - #out-of-character", value="As the sacred scrolls of the Universe dictate: RTFM. Follow this sacred acronym.", inline=False)
 	await client.say(embed=embed)
+
 	
 @client.command(pass_context=True)
 async def combat(ctx, *players_n_health):
@@ -255,28 +255,16 @@ async def invite():
 		colour = discord.Colour.blue()
 	)
 	embed.add_field(name="Invite the bot to your server:", value="https://discordapp.com/api/oauth2/authorize?client_id=506541896630403080&permissions=0&scope=bot", inline=False)
-	await client.say(embed=embed)	
+	await client.say(embed=embed)
+	
+# @client.command(brief="Generates a random encounter")
+# async def encounter():
+#     enemy = random.choice(["ruben", "nathan", "mighty marnix", "Daan the almighty"])
+#     place = random.choice([ "woods", "desert", "planes"])
+#     weather = random.choice(["stormy", "clear", "misty"])
+#     await client.say("Under development!")
 
-@client.command()
-async def spelltest(argument):
-    with open("spells.json", "r") as spells_json:
-        data = json.load(spells_json)
-    spell_data = data[argument]
-    casting_time = spell_data['casting_time']						 
-    components = spell_data['components']						 
-    description = spell_data['description']						 
-    duration = spell_data['duration']						 
-    level = spell_data['level']
-    rangething = spell_data['range']	
-    school = spell_data['school']
-    await client.say(f'Casting time: {casting_time}')
-    await client.say(f'Components: {components}')
-    await client.say(f'Description: {description}')
-    await client.say(f'Duration: {duration}')
-    await client.say(f'Level: {level}')
-    await client.say(f'Range: {rangething}')
-    await client.say(f'Level: {school}')
-					 
+
 @client.command(brief="Welcome!")
 async def welcome():
 	strings = ["Welcome to the Tavern! Please leave your bears at the Bear Post.",
