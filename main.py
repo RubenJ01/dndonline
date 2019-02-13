@@ -76,8 +76,8 @@ async def rprule(number):
 async def spelltest():
 	with open("spells.json", "r") as spells_json:
     		data = json.load(spells_json)
-		for p in data['Acid Splash']:
-			print('Level: ' + p['level'])
+			for p in data['Acid Splash']:
+				await client.say('Level: ' + p['level'])
 	
 @client.command(pass_context=True)
 async def combat(ctx, *players_n_health):
