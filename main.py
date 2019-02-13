@@ -255,16 +255,15 @@ async def invite():
 		colour = discord.Colour.blue()
 	)
 	embed.add_field(name="Invite the bot to your server:", value="https://discordapp.com/api/oauth2/authorize?client_id=506541896630403080&permissions=0&scope=bot", inline=False)
-	await client.say(embed=embed)
-	
-# @client.command(brief="Generates a random encounter")
-# async def encounter():
-#     enemy = random.choice(["ruben", "nathan", "mighty marnix", "Daan the almighty"])
-#     place = random.choice([ "woods", "desert", "planes"])
-#     weather = random.choice(["stormy", "clear", "misty"])
-#     await client.say("Under development!")
+	await client.say(embed=embed)	
 
-
+@client.command()
+async def spelltest():
+	with open("spells.json", "r") as spells_json:
+		data = json.load(spells_json)
+		for p in data['Acid Splash']:
+			await.client.say('Level: ' + p['level'])
+					 
 @client.command(brief="Welcome!")
 async def welcome():
 	strings = ["Welcome to the Tavern! Please leave your bears at the Bear Post.",
