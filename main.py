@@ -262,7 +262,7 @@ async def spelltest():
 	with open("spells.json", "r") as spells_json:
 		data = json.load(spells_json)
 		for p in data['Acid Splash']:
-			await.client.say('Level: ' + p['level'])
+			await client.say('Level: ' + p['level'])
 					 
 @client.command(brief="Welcome!")
 async def welcome():
