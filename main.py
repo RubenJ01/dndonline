@@ -259,10 +259,11 @@ async def invite():
 
 @client.command()
 async def spelltest():
-	with open("spells.json", "r") as spells_json:
-		data = json.load(spells_json)
-		for p in data['Acid Splash']:
-			await client.say('Level: ' + string['level'])
+    with open("spells.json", "r") as spells_json:
+        data = json.load(spells_json)
+    spell_data = data['Acid Splash']
+    level = spell_data['level']
+    await client.say(f'Level: {level}')
 					 
 @client.command(brief="Welcome!")
 async def welcome():
