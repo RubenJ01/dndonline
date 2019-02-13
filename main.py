@@ -172,10 +172,6 @@ def create_roller_function(name, roller, good_roll_text="you managed to roll a f
 			else:
 				await client.say(f"```You rolled a {roll}```")
 
-		
-create_call_to_dnd_beyond("race", "characters/races", brief="Get a reference to any race that is listed in D&D")
-create_call_to_dnd_beyond("classes", "characters/classes", brief="Get a reference to any class that is listed in D&D")
-create_call_to_dnd_beyond("background", "characters/backgrounds", brief="Get a reference to any background that is listed in D&D")
 
 create_roller_function(
 	"roll",
