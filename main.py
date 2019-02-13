@@ -64,7 +64,7 @@ async def spelltest(argument):
     await client.say(f'Duration: {duration}')
     await client.say(f'Level: {level}')
     await client.say(f'Range: {rangething}')
-    await client.say(f'Level: {school}')	
+    await client.say(f'School: {school}')	
 	
 @client.command()
 async def rprule(number):
