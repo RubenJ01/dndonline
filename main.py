@@ -258,10 +258,11 @@ async def invite():
 	await client.say(embed=embed)	
 
 @client.command()
-async def spelltest():
+async def spelltest(argument):
+    spellname = argument
     with open("spells.json", "r") as spells_json:
         data = json.load(spells_json)
-    spell_data = data['Acid Splash']
+    spell_data = data[spellname]
     casting_time = spell_data['casting_time']						 
     components = spell_data['components']						 
     description = spell_data['description']						 
