@@ -49,7 +49,7 @@ async def on_member_join(member):
 @client.command()
 async def spelltest(*argument):
     spellrequest = " ".join(argument)
-    print(spellrequest)
+    await client.say(spellrequest)
     with open("spells.json", "r") as spells_json:
         data = json.load(spells_json)
     if spellrequest in data:
