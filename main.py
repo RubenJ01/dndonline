@@ -50,26 +50,28 @@ async def on_member_join(member):
 async def spelltest(argument):
     with open("spells.json", "r") as spells_json:
         data = json.load(spells_json)
-    spell_data = data[argument]
-    casting_time = spell_data['casting_time']						 
-    components = spell_data['components']						 
-    description = spell_data['description']						 
-    duration = spell_data['duration']						 
-    level = spell_data['level']
-    rangething = spell_data['range']	
-    school = spell_data['school']
-    embed = discord.Embed(
-        colour = discord.Colour.blue()
-    )
-    embed.add_field(name="Casting time:", value=f'{casting_time}', inline=False)
-    embed.add_field(name="Components:", value=f'{components}', inline=False)
-    embed.add_field(name="Duration:", value=f'{duration}', inline=False)
-    embed.add_field(name="Level:", value=f'{level}', inline=False)
-    embed.add_field(name="Range:", value=f'{rangething}', inline=False)
-    embed.add_field(name="School:", value=f'{school}', inline=False)
-    embed.add_field(name="Description:", value=f'{description}', inline=False)	
-    await client.say(embed=embed)
-	
+    if argument in spells_json:
+        spell_data = data[argument]
+        casting_time = spell_data['casting_time']						 
+        components = spell_data['components']						 
+        description = spell_data['description']						 
+        duration = spell_data['duration']						 
+        level = spell_data['level']
+        rangething = spell_data['range']	
+        school = spell_data['school']
+        embed = discord.Embed(
+            colour = discord.Colour.blue()
+        )
+        embed.add_field(name="Casting time:", value=f'{casting_time}', inline=False)
+        embed.add_field(name="Components:", value=f'{components}', inline=False)
+        embed.add_field(name="Duration:", value=f'{duration}', inline=False)
+        embed.add_field(name="Level:", value=f'{level}', inline=False)
+        embed.add_field(name="Range:", value=f'{rangething}', inline=False)
+        embed.add_field(name="School:", value=f'{school}', inline=False)
+        embed.add_field(name="Description:", value=f'{description}', inline=False)	
+        await client.say(embed=embed)
+    else:
+    	await client.say("Spell non-existent or missing")
 @client.command()
 async def rprule(number):
 	embed = discord.Embed(
