@@ -68,7 +68,7 @@ async def spell(*argument):
         embed.add_field(name="Casting time:", value=f'{casting_time}', inline=False)
         embed.add_field(name="Components:", value=f'{components}', inline=False)
         embed.add_field(name="Duration:", value=f'{duration}', inline=False)
-        embed.add_field(name="Level:", value=f'{level}', inline=False)
+        embed.add_field(name="Spell Level:", value=f'{level}', inline=False)
         embed.add_field(name="Range:", value=f'{rangething}', inline=False)
         embed.add_field(name="School:", value=f'{school}', inline=False)
         embed.add_field(name="Description:", value=f'{description}', inline=False)	
