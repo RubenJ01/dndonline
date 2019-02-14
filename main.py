@@ -47,6 +47,17 @@ async def on_member_join(member):
 	await client.send_message(channel, content)
 
 @client.command()
+async def classtest(argument):
+    classfinal = str.casefold(argument)
+    with open("classes.json", "r") as classes_json:
+        data = json.load(classes_json)
+    if classfinal in data:
+	classes_data = data[classes_json]
+    else:
+        await client.say("Heheheh")
+	    
+
+@client.command()
 async def spell(*argument):
     spellrequest = " ".join(argument)
     spellfinal = str.casefold(spellrequest)
