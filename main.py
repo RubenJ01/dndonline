@@ -50,6 +50,7 @@ async def on_member_join(member):
 async def spell(*argument):
     spellrequest = " ".join(argument)
     spellfinal = str.casefold(spellrequest)
+    await client.say(spellfinal)
     with open("spells.json", "r") as spells_json:
         data = json.load(spells_json)
     if spellfinal in data:
