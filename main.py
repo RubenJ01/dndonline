@@ -52,7 +52,7 @@ async def spelltest(*argument):
     with open("spells.json", "r") as spells_json:
         data = json.load(spells_json)
     if spellrequest in data:
-        spell_data = data[argument]
+        spell_data = data[spellrequest]
         casting_time = spell_data['casting_time']						 
         components = spell_data['components']						 
         description = spell_data['description']						 
