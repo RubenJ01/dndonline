@@ -73,7 +73,6 @@ async def spelltest(*argument):
         await client.say(embed=embed)
     else:
     	await client.say("Spell non-existent or missing")
-	await client.say(spellrequest)
 
 @client.command()
 async def rprule(number):
