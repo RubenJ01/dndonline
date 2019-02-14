@@ -1,8 +1,14 @@
 {
-   "Barbarian" : {
-      "Hit Dice" : "1d12 per barbarian level",
-      "Hit Points at 1st level" : "12 + your Constitution modifier",
-      "Hit Points at Higher Levels" : "1d12 (or 7) + your Constitution modifier per barbarian level after 1st",
-   },
-   "aid" : {
-   },
+   "barbarian" : {
+      "hit_dice" : "1d12 per barbarian level",
+      "hit_points_at_1st_level" : "12 + your Constitution modifier",
+      "hit_points_at_higher_levels" : "1d12 (or 7) + your Constitution modifier per barbarian level after 1st",
+      "armor" : "Light armor, medium armor, shields",
+      "weapons" : "Simple weapons, martial weapons",
+      "tools" : "None", 
+      "saving_throws" : "Strength, Constitution",
+      "skills" : "Choose two from Animal Handling, Athletics, Intimidation, Nature, Perception, and Survival",
+      "equipment1" : "(a) a greataxe or (b) any martial melee weapon",
+      "equipment2" : "(a) two handaxes or (b) any simple weapon",
+      "equipment3" : "An explorer’s pack and four javelins"
+   }
