@@ -58,6 +58,10 @@ async def spelltest(argument):
     level = spell_data['level']
     rangething = spell_data['range']	
     school = spell_data['school']
+	embed = discord.Embed(
+		colour = discord.Colour.blue()
+	)
+	embed.add_field(name="Casting time:", value=f'{casting_time}')
     await client.say(f'Casting time: {casting_time}')
     await client.say(f'Components: {components}')
     await client.say(f'Description: {description}')
@@ -65,6 +69,7 @@ async def spelltest(argument):
     await client.say(f'Level: {level}')
     await client.say(f'Range: {rangething}')
     await client.say(f'School: {school}')	
+	await client.say(embed=embed)
 	
 @client.command()
 async def rprule(number):
