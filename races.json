@@ -1,1 +1,8 @@
-test
+{
+   "Barbarian" : {
+      "Hit Dice" : "1d12 per barbarian level",
+      "Hit Points at 1st level" : "12 + your Constitution modifier",
+      "Hit Points at Higher Levels" : "1d12 (or 7) + your Constitution modifier per barbarian level after 1st",
+   },
+   "aid" : {
+   },
