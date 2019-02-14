@@ -49,7 +49,6 @@ async def on_member_join(member):
 @client.command()
 async def spelltest(*argument):
     spellrequest = " ".join(argument)
-    await client.say(spellrequest)
     with open("spells.json", "r") as spells_json:
         data = json.load(spells_json)
     if spellrequest in data:
@@ -74,6 +73,8 @@ async def spelltest(*argument):
         await client.say(embed=embed)
     else:
     	await client.say("Spell non-existent or missing")
+	await client.say(spellrequest)
+
 @client.command()
 async def rprule(number):
 	embed = discord.Embed(
