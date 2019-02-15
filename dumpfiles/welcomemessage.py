@@ -7,6 +7,7 @@ from random import sample
 import json
 import discord
 from discord.ext.commands import Bot 
+from dumpfiles.welcomemessage import *
 
 strings = ["Welcome to the Tavern! Please leave your bears at the Bear Post.",
 		"Be advised: otters are considered contraband, unless they are members of Staff.",
