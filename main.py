@@ -9,6 +9,7 @@ import discord
 from discord.ext.commands import Bot 
 from dumpfiles.monsterscr import *
 from dumpfiles.npcgen import *
+from dumpfiles.welcomemessage import *
 
 
 BOT_PREFIX = (";", "/t", "!t")
