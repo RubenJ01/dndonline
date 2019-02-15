@@ -16,6 +16,8 @@ BOT_PREFIX = (";", "/t", "!t")
 client = Bot(command_prefix=BOT_PREFIX)
 client.remove_command("help")
 
+extensions = ['fun']
+
 @client.event
 async def on_ready():
     print("I'm in")
@@ -74,6 +76,13 @@ async def spell(*argument):
         await client.say(embed=embed)
     else:
     	await client.say("Spell non-existent or missing")
+
+if __name__ == '__main__':
+	for extension in extensions:
+		try:
+			client.load(extension)
+		except Exception as error:
+			print('{} cannot be loaded. [{}]'.format(extension, error))
 
 @client.command()
 async def rprule(number):
