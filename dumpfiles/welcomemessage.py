@@ -1,4 +1,5 @@
 from dumpfiles.welcomemessage import *
+import random
 
 strings = ["Welcome to the Tavern! Please leave your bears at the Bear Post.",
 		"Be advised: otters are considered contraband, unless they are members of Staff.",
