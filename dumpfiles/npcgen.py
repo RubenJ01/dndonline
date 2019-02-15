@@ -7,8 +7,8 @@ from random import randint
 from random import sample
 from discord.ext.commands import Bot 
 from random import randrange
-from monsterscr import *
-from npcgen import *
+from dumpfiles.monsterscr import *
+from dumpfiles.npcgen import *
 import random
 
 background = ["Acolyte", "Criminal", "Folk hero", "Noble", "Sage", "Soldier"]
