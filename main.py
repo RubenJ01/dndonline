@@ -8,8 +8,8 @@ from random import sample
 import json
 import discord
 from discord.ext.commands import Bot 
-from dumpfiles.monsterscr import *
-from dumpfiles.npcgen import *
+from dndonline.dumpfiles.monsterscr import *
+from dndonline.dumpfiles.npcgen import *
 
 
 BOT_PREFIX = (";", "/t", "!t")
