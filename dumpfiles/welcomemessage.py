@@ -27,5 +27,4 @@ strings = ["Welcome to the Tavern! Please leave your bears at the Bear Post.",
 		"Now roll initiative!",
 		"Bodies tend to go missing every once in a while, so try not to die."]
 stringspick = random.choice(strings)	
-content = "Welcome to The Tavern " + member.mention + ". " + stringspick
-channel = discord.utils.get(member.server.channels, name="general")
+
