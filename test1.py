@@ -18,3 +18,6 @@ class RNG():
 @commands.command()
 async def ping(self):
     await client.say("pong")
+
+def setup(bot):
+    bot.add_cog(RNG(bot))
