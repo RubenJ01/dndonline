@@ -19,3 +19,5 @@ class Fun:
     async def ping(self):
         await self.client.say('pong')
 
+def setup(client):
+    client.add_cog(Fun(client))
