@@ -24,6 +24,8 @@ async def on_ready():
 
 @client.event
 async def on_member_join(member):
+	content = "Welcome to The Tavern " + member.mention + ". " + stringspick
+	channel = discord.utils.get(member.server.channels, name="general")
 	await client.send_message(channel, content)
 
 @client.command()
