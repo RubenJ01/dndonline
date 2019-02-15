@@ -1,3 +1,5 @@
+from dumpfiles.welcomemessage import *
+
 strings = ["Welcome to the Tavern! Please leave your bears at the Bear Post.",
 		"Be advised: otters are considered contraband, unless they are members of Staff.",
 		"In the event of a catastrophic temporal or dimensional paradox, please avoid making eye contact with your past, future, or alternate selves.",
