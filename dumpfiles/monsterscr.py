@@ -1,3 +1,6 @@
+from dumpfiles.monsterscr import *
+from dumpfiles.npcgen import *
+
 cr0 = ["Awakened shrub",
         "Baboon",
         "Badger",
