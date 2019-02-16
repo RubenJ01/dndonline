@@ -41,6 +41,20 @@
       "equipment3" : "(a) a lute or (b) any other musical instrument in addition you get Leather armor and a dagger",
       "quickbuild" : "You can make a bard quickly by following these suggestions. First, Charisma should be your highest ability score, followed by Dexterity. Second, choose the entertainer background. Third, choose the dancing lights and vicious mockery cantrips, along with the following 1st-level spells: charm person, detect magic, healing word, and thunderwave."
    },
+   "bloodhunter" : {
+      "hit_dice" : "1d10 per blood hunter level",
+      "hit_points_at_1st_level" : "10 + your Constitution modifier",
+      "hit_points_at_higher_levels" : "1d10 (or 6) + your Constitution modifier per blood hunter level after 1st",
+      "armor" : "Light armor, medium armor, shields",
+      "weapons" : "Simple weapons, martial weapons",
+      "tools" : "Alchemist’s supplies", 
+      "saving_throws" : "Strength, Wisdom",
+      "skills" : "Choose two from Athletics, Acrobatics, Arcana, Insight, Investigation, and Survival",
+      "equipment1" : "(a) a martial weapon or (b) two simple weapons",
+      "equipment2" : "(a) a light crossbow and 20 bolts or (b) hand crossbow and 20 bolts",
+      "equipment3" : "(a) studded leather armor or (b) scale mail armor \r an explorer’s pack",
+      "quickbuild" : "You can make a blood hunter quickly by following these suggestions. First, make Strength or Dexterity your highest ability score, depending on whether you want to focus on melee weapons, or ranged and finesse weapons. Make Wisdom your next highest if you plan to focus on the potency of blood curses and mystical power. Choose a higher Constitution next if you wish to use Crimson Rite on multiple weapons or want to have extra hit points to burn on amplifying blood curses. Then, select the Haunted One or Acolyte background."
+   },
    "cleric" : {
       "hit_dice" : "1d8 per cleric level",
       "hit_points_at_1st_level" : "8 + your Constitution modifier",
