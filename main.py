@@ -84,7 +84,7 @@ async def classtest(*argument):
 		embed.set_author(name=f'The {classfinal} class')
 		embed.add_field(name="Hit points", value=f'Hit dice: {hitdice}' + "\n" + f'Hit points at 1st level: {hitpointslevel1}' + "\n" + f'Hit points at higher levels: {hitpointshigher}', inline=False)
 		embed.add_field(name="Proficiencies", value=f'Armor: {armor}' + "\n" + f'Weapons: {weapons}' + "\n" + f'Tools: {tools}' + "\n" + f'Saving throws: {savingthrows}' + "\n" + f'Skills: {skills}', inline=False)
-		embed.add_field(name="Equipment3", value=f'You start with the following equipment, in addition to the equipment granted by your background:' + "\n" + f'-{equipment1}' + "\n" + f'-{equipment2}' + "\n" + f'-{equipment3}', inline=False}
+		embed.add_field(name="Equipment3", value="You start with the following equipment, in addition to the equipment granted by your background:" + "\n" + f'-{equipment1}' + "\n" + f'-{equipment2}' + "\n" + f'-{equipment3}', inline=False}
 		await client.say(embed=embed)
 	else:
 		await client.say("Class non-existent or missing")
