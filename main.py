@@ -48,6 +48,7 @@ async def spell(*argument):
         embed = discord.Embed(
             colour = discord.Colour.blue()
         )
+	embed.set_author(name=f'{spellfinal})
         embed.add_field(name="Casting time:", value=f'{casting_time}', inline=False)
         embed.add_field(name="Components:", value=f'{components}', inline=False)
         embed.add_field(name="Duration:", value=f'{duration}', inline=False)
@@ -70,11 +71,17 @@ async def classtest(*argument):
 		hitdice = class_data['hit_dice']
 		hitpointslevel1 = class_data['hit_points_at_1st_level']
 		hitpointshigher = class_data['hit_points_at_higher_levels']
+		armor = class_data['armor']
+		weapons = class_data['weapons']
+		tools = class_data['tools']
+		savingthrows = class_data['saving_throws']
+		skills = class_data['skills']
 		embed = discord.Embed(
 			colour = discord.Colour.blue()
 		)
 		embed.set_author(name=f'The {classfinal} class')
 		embed.add_field(name="Hit points", value=f'Hit dice: {hitdice}' + "\n" + f'Hit points at 1st level: {hitpointslevel1}' + "\n" + f'Hit points at higher levels: {hitpointshigher}', inline=False)
+		embed.add_field(name="Proficiencies", value=f'Armor: {armor}' + "\n" + f'Weapons: {weapons}' + "\n" + f'Tools: {tools}' + "\n" + f'Saving throws: {savingthrows}' + "\n" + f'Skills: {skills}', inline=False) 
 		await client.say(embed=embed)
 	else:
 		await client.say("Class non-existent or missing")
