@@ -20,7 +20,7 @@ client.remove_command("help")
 async def on_ready():
     print("I'm in")
     print(client.user)
-    await client.change_presence(game=discord.Game(name=';help | #bd-general'))
+    await client.change_presence(game=discord.Game(name=';help | d&d 5e'))
 
 @client.event
 async def on_member_join(member):
@@ -48,7 +48,7 @@ async def spell(*argument):
         embed = discord.Embed(
             colour = discord.Colour.blue()
         )
-	embed.set_author(name=f'{spellfinal})
+        embed.set_author(name=f'{spellfinal})
         embed.add_field(name="Casting time:", value=f'{casting_time}', inline=False)
         embed.add_field(name="Components:", value=f'{components}', inline=False)
         embed.add_field(name="Duration:", value=f'{duration}', inline=False)
