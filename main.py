@@ -79,6 +79,7 @@ async def class_command(*argument):
 		equipment2 = class_data['equipment2']
 		equipment3 = class_data['equipment3']
 		quickbuild = class_data['quickbuild']
+		leveling = class_data['levelingtable']
 		embed = discord.Embed(
 			colour = discord.Colour.blue()
 		)
@@ -86,6 +87,7 @@ async def class_command(*argument):
 		embed.add_field(name="Hit points", value=f'Hit dice: {hitdice}' + "\n" + f'Hit points at 1st level: {hitpointslevel1}' + "\n" + f'Hit points at higher levels: {hitpointshigher}', inline=False)
 		embed.add_field(name="Proficiencies", value=f'Armor: {armor}' + "\n" + f'Weapons: {weapons}' + "\n" + f'Tools: {tools}' + "\n" + f'Saving throws: {savingthrows}' + "\n" + f'Skills: {skills}', inline=False)
 		embed.add_field(name="Equipment", value="You start with the following equipment, in addition to the equipment granted by your background:" + "\n" + str(equipment1) + "\n" + str(equipment2) + "\n" + str(equipment3), inline=False)
+		embed.add_field(name=f'The {classfinal}', value=leveling, inline=False) 
 		embed.add_field(name="Quick build", value=quickbuild, inline=False)
 		await client.say(embed=embed)
 	else:
