@@ -64,7 +64,7 @@ async def class_command(*argument):
 	classrequest = " ".join(argument)
 	classfinal = str.casefold(classrequest)
 	with open("databases/classes.json", "r") as classes_json:
-		data = json.load(classes_json)
+		data = json.load(classes_json, strict=False)
 	if classfinal in data:
 		class_data = data[classfinal]
 		hitdice = class_data['hit_dice']
