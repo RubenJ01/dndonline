@@ -59,8 +59,8 @@ async def spell(*argument):
     else:
     	await client.say("Spell non-existent or missing")
 
-@client.command()
-async def classtest(*argument):
+@client.command(name='class')
+async def class_command(*argument):
 	classrequest = " ".join(argument)
 	classfinal = str.casefold(classrequest)
 	with open("databases/classes.json", "r") as classes_json:
