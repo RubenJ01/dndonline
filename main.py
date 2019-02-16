@@ -59,6 +59,24 @@ async def spell(*argument):
     else:
     	await client.say("Spell non-existent or missing")
 
+@client.command()
+async def classtest(*argument):
+	classrequest = " ".join(argument)
+	classfinal = str.casefold(classrequest)
+	with open("databases/classes.json", "r") as classes_json:
+		data = json.load(classes_json)
+	if classfinal in data:
+		class_data = data[classfinal]
+		hitdice = class_data['hit_dice']
+		hitpointslevel1 = class_data['hit_points_at_1st_level']
+		hitpointshigher = class_data['hit_points_at_higher_levels']
+		embed = discord.Embed(
+			colour = discord.Colour.blue()
+		)
+		embed.add_field(name="Hit points", value=f'Hit dice: {hitdice}' + "\n" + f'Hit points at 1st level: {hitpointslevel1}' + "\n" + f'Hit points at higher levels: {hitpointshigher}', inline=False)
+		await client.say(embed=embed)
+	else:
+		await client.say("Class non-existent or missing")
 
 @client.command()
 async def rprule(number):
