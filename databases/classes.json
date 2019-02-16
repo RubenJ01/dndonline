@@ -68,5 +68,34 @@
       "equipment2" : "(a) scale mail, (b) leather armor, or (c) chain mail (if proficient)",
       "equipment3" : "(a) a light crossbow and 20 bolts or (b) any simple weapon \r (a) a priest’s pack or (b) an explorer’s pack \r A shield and a holy symbol",
       "quickbuild" : "You can make a cleric quickly by following these suggestions. First, Wisdom should be your highest ability score, followed by Strength or Constitution. Second, choose the acolyte background."
+   },
+   "druid" : {
+      "hit_dice" : "1d8 per druid level",
+      "hit_points_at_1st_level" : "8 + your Constitution modifier",
+      "hit_points_at_higher_levels" : "1d8 (or 5) + your Constitution modifier per druid level after 1st",
+      "armor" : "Light armor, medium armor, shields (druids will not wear armor or use shields made of metal)",
+      "weapons" : "Clubs, daggers, darts, javelins, maces, quarterstaffs, scimitars, sickles, slings, spears",
+      "tools" : "Herbalism kit", 
+      "saving_throws" : "Intelligence, Wisdom",
+      "skills" : "Choose two from Arcana, Animal Handling, Insight, Medicine, Nature, Perception, Religion, and Survival",
+      "equipment1" : "(a) a wooden shield or (b) any simple weapon",
+      "equipment2" : "(a) a scimitar or (b) any simple melee weapon",
+      "equipment3" : "Leather armor, an explorer’s pack, and a druidic focus",
+      "quickbuild" : "You can make a druid quickly by following these suggestions. First, Wisdom should be your highest ability score, followed by Constitution. Second, choose the hermit background."
+   },
+   "fighter" : {
+      "hit_dice" : "1d10 per fighter level",
+      "hit_points_at_1st_level" : "10 + your Constitution modifier",
+      "hit_points_at_higher_levels" : "1d10 (or 6) + your Constitution modifier per fighter level after 1st",
+      "armor" : "All armor, shields",
+      "weapons" : "Simple weapons, martial weapons",
+      "tools" : "None", 
+      "saving_throws" : "Strength, Constitution",
+      "skills" : "Choose two skills from Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Perception, and Survival",
+      "equipment1" : "(a) chain mail or (b) leather armor, longbow, and 20 arrows",
+      "equipment2" : "(a) a martial weapon and a shield or (b) two martial weapons",
+      "equipment3" : "(a) a light crossbow and 20 bolts or (b) two handaxes \r (a) a dungeoneer’s pack or (b) an explorer’s pack",
+      "quickbuild" : "You can make a fighter quickly by following these suggestions. First, make Strength or Dexterity your highest ability score, depending on whether you want to focus on melee weapons or on archery (or finesse weapons). Your next-highest score should be Constitution, or Intelligence if you plan to adopt the Eldritch Knight martial archetype. Second, choose the soldier background."
    }
+   
 }
