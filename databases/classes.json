@@ -10,6 +10,7 @@
       "skills" : "Choose two from Animal Handling, Athletics, Intimidation, Nature, Perception, and Survival",
       "equipment1" : "(a) a greataxe or (b) any martial melee weapon",
       "equipment2" : "(a) two handaxes or (b) any simple weapon",
-      "equipment3" : "An explorer’s pack and four javelins"
+      "equipment3" : "An explorer’s pack and four javelins",
+      "quickbuild" : "You can make a barbarian quickly by following these suggestions. First, put your highest ability score in Strength, followed by Constitution. Second, choose the outlander background."
    }
 }
