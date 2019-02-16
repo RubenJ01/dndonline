@@ -73,6 +73,7 @@ async def classtest(*argument):
 		embed = discord.Embed(
 			colour = discord.Colour.blue()
 		)
+		embed.set_author(name=f'The {classfinal} class')
 		embed.add_field(name="Hit points", value=f'Hit dice: {hitdice}' + "\n" + f'Hit points at 1st level: {hitpointslevel1}' + "\n" + f'Hit points at higher levels: {hitpointshigher}', inline=False)
 		await client.say(embed=embed)
 	else:
