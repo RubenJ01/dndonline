@@ -1,4 +1,18 @@
 {
+   "artificer" : {
+      "hit_dice" : "1d8 per artificer level",
+      "hit_points_at_1st_level" : "8 + your Constitution modifier",
+      "hit_points_at_higher_levels" : "1d8 (or 5) + your Constitution modifier per artificer level after 1st",
+      "armor" : "Light and medium armor",
+      "weapons" : "Simple weapons",
+      "tools" : "Thieves' tools, two other tools of your choice", 
+      "saving_throws" : "Constitution, Intelligence",
+      "skills" : "Choose three from Arcana, Deception, History, Investigation, Medicine, Nature, Religion, and Sleight of Hand",
+      "equipment1" : "(a) a handaxe and a light hammer or (b) any two simple weapons",
+      "equipment2" : "A light crossbow and 20 bolts",
+      "equipment3" : "(a) scale mail or (b) studded leather armor and in addition you get thieves' tools and a dungeoneer's pack",
+      "quickbuild" : "You can make a artificer quickly by following these suggestions. First put your highest ability score in Dexterity, followed by Inteligence and Constitution"
+   },
    "barbarian" : {
       "hit_dice" : "1d12 per barbarian level",
       "hit_points_at_1st_level" : "12 + your Constitution modifier",
@@ -12,5 +26,19 @@
       "equipment2" : "(a) two handaxes or (b) any simple weapon",
       "equipment3" : "An explorer’s pack and four javelins",
       "quickbuild" : "You can make a barbarian quickly by following these suggestions. First, put your highest ability score in Strength, followed by Constitution. Second, choose the outlander background."
+   },
+   "bard" : {
+      "hit_dice" : "1d8 per bard level",
+      "hit_points_at_1st_level" : " 8 + your Constitution modifier",
+      "hit_points_at_higher_levels" : "1d8 (or 5) + your Constitution modifier per bard level after 1st",
+      "armor" : "Light armor",
+      "weapons" : "Simple weapons, hand crossbows, longswords, rapiers, shortswords",
+      "tools" : "Three musical instruments of your choice", 
+      "saving_throws" : "Dexterity, Charisma",
+      "skills" : "Choose any three",
+      "equipment1" : "(a) a rapier, (b) a longsword, or (c) any simple weapon",
+      "equipment2" : "(a) a Diplomat's Pack or (b) an Entertainer's Pack",
+      "equipment3" : "(a) a lute or (b) any other musical instrument in addition you get Leather armor and a dagger",
+      "quickbuild" : "You can make a bard quickly by following these suggestions. First, Charisma should be your highest ability score, followed by Dexterity. Second, choose the entertainer background. Third, choose the dancing lights and vicious mockery cantrips, along with the following 1st-level spells: charm person, detect magic, healing word, and thunderwave."
    }
 }
