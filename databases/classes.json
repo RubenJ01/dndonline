@@ -40,5 +40,19 @@
       "equipment2" : "(a) a Diplomat's Pack or (b) an Entertainer's Pack",
       "equipment3" : "(a) a lute or (b) any other musical instrument in addition you get Leather armor and a dagger",
       "quickbuild" : "You can make a bard quickly by following these suggestions. First, Charisma should be your highest ability score, followed by Dexterity. Second, choose the entertainer background. Third, choose the dancing lights and vicious mockery cantrips, along with the following 1st-level spells: charm person, detect magic, healing word, and thunderwave."
+   },
+   "cleric" : {
+      "hit_dice" : "1d8 per cleric level",
+      "hit_points_at_1st_level" : "8 + your Constitution modifier",
+      "hit_points_at_higher_levels" : "1d8 (or 5) + your Constitution modifier per cleric level after 1st",
+      "armor" : "Light armor, medium armor, shields",
+      "weapons" : "Simple weapons",
+      "tools" : "None", 
+      "saving_throws" : "Wisdom, Charisma",
+      "skills" : "Choose two from History, Insight, Medicine, Persuasion, and Religion",
+      "equipment1" : "(a) a mace or (b) a warhammer (if proficient)",
+      "equipment2" : "(a) scale mail, (b) leather armor, or (c) chain mail (if proficient)",
+      "equipment3" : "(a) a light crossbow and 20 bolts or (b) any simple weapon \r (a) a priest’s pack or (b) an explorer’s pack \r A shield and a holy symbol",
+      "quickbuild" : "You can make a cleric quickly by following these suggestions. First, Wisdom should be your highest ability score, followed by Strength or Constitution. Second, choose the acolyte background."
    }
 }
