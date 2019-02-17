@@ -86,7 +86,8 @@
       "equipment1" : "(a) a wooden shield or (b) any simple weapon",
       "equipment2" : "(a) a scimitar or (b) any simple melee weapon",
       "equipment3" : "Leather armor, an explorer’s pack, and a druidic focus",
-      "quickbuild" : "You can make a druid quickly by following these suggestions. First, Wisdom should be your highest ability score, followed by Constitution. Second, choose the hermit background."
+      "quickbuild" : "You can make a druid quickly by following these suggestions. First, Wisdom should be your highest ability score, followed by Constitution. Second, choose the hermit background.",
+      "levelingtable": "**[1]** Druidic, Spellcasting \r **[2]** Wild Shape, Druid Circle \r **[4]** Wild Shape Improvement, Ability Score Improvement \r **[6]** Druid Circle Feature \r **[8]** Wild Shape Improvement, Ability Score Improvement \r **[10]** Druid Circle Feature \r **[12]** Ability Score Improvement \r **[14]** Druid Circle Feature \r **[16]** Ability Score Improvement \r **[18]** Timeless Body, Beast Spells \r **[19]** Ability Score Improvement \r **[20]** Archdruid"
    },
    "fighter" : {
       "hit_dice" : "1d10 per fighter level",
