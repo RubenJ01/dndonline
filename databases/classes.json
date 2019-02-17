@@ -12,7 +12,7 @@
       "equipment2" : "A light crossbow and 20 bolts",
       "equipment3" : "(a) scale mail or (b) studded leather armor and in addition you get thieves' tools and a dungeoneer's pack",
       "quickbuild" : "You can make a artificer quickly by following these suggestions. First put your highest ability score in Dexterity, followed by Inteligence and Constitution",
-      "levelingtable" : "[1] Artificer Specialist,	Magic Item Analysis \r [2] Tool Expertise, Wondrous Invention \r [3] Artificer Specialist feature, Spellcasting \r [4] Ability Score Improvement, Infuse Magic \r [5] Superior Attunement, Wondrous Invention \r [6] Mechanical Servant \r [8] Ability Score Improvement \r [9] Artificer Specialist Feature \r [10] Wondrous Invention \r [12] Ability Score Improvement \r [14] Artificer Specialist Feature \r [15] Superior Attunement, Wondrous Invention \r [16] Ability Score Improvement \r [17] Artificer Specialist Feature \r [18] Ability Score Improvement \r [20] Soul of Artifice, Wondrous Invention"
+      "levelingtable" : "**[1]** Artificer Specialist,	Magic Item Analysis \r [2] Tool Expertise, Wondrous Invention \r [3] Artificer Specialist feature, Spellcasting \r [4] Ability Score Improvement, Infuse Magic \r [5] Superior Attunement, Wondrous Invention \r [6] Mechanical Servant \r [8] Ability Score Improvement \r [9] Artificer Specialist Feature \r [10] Wondrous Invention \r [12] Ability Score Improvement \r [14] Artificer Specialist Feature \r [15] Superior Attunement, Wondrous Invention \r [16] Ability Score Improvement \r [17] Artificer Specialist Feature \r [18] Ability Score Improvement \r [20] Soul of Artifice, Wondrous Invention"
    },
    "barbarian" : {
       "hit_dice" : "1d12 per barbarian level",
