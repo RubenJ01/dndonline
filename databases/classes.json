@@ -71,7 +71,8 @@
       "equipment1" : "(a) a mace or (b) a warhammer (if proficient)",
       "equipment2" : "(a) scale mail, (b) leather armor, or (c) chain mail (if proficient)",
       "equipment3" : "(a) a light crossbow and 20 bolts or (b) any simple weapon \r (a) a priest’s pack or (b) an explorer’s pack \r A shield and a holy symbol",
-      "quickbuild" : "You can make a cleric quickly by following these suggestions. First, Wisdom should be your highest ability score, followed by Strength or Constitution. Second, choose the acolyte background."
+      "quickbuild" : "You can make a cleric quickly by following these suggestions. First, Wisdom should be your highest ability score, followed by Strength or Constitution. Second, choose the acolyte background.",
+      "levelingtable": "**[1]** Spellcasting, Divine Domain \r **[2]** Channel Divinity (1/rest), Divine Domain Feature \r **[4]** Ability Score Improvement \r **[5]** Destroy Undead (CR 1/2) \r **[6]** Channel Divinity (2/rest), Divine Domain Feature \r **[8]** Ability Score Improvement, Destroy Undead (CR 1), Divine Domain Feature \r **[10]** Divine Intervention \r **[11]** Destroy Undead (CR 2) \r **[12]** Ability Score Improvement \r **[14]** Destroy Undead (CR 3) \r **[16]** Ability Score Improvement \r **[17]** Destroy Undead (CR 4), Divine Domain Feature \r **[18]** Channel Divinity (3/rest) \r **[19]** Ability Score Improvement \r **[20]** Divine Intervention Improvement"
    },
    "druid" : {
       "hit_dice" : "1d8 per druid level",
