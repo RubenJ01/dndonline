@@ -101,7 +101,8 @@
       "equipment1" : "(a) chain mail or (b) leather armor, longbow, and 20 arrows",
       "equipment2" : "(a) a martial weapon and a shield or (b) two martial weapons",
       "equipment3" : "(a) a light crossbow and 20 bolts or (b) two handaxes \r (a) a dungeoneer’s pack or (b) an explorer’s pack",
-      "quickbuild" : "You can make a fighter quickly by following these suggestions. First, make Strength or Dexterity your highest ability score, depending on whether you want to focus on melee weapons or on archery (or finesse weapons). Your next-highest score should be Constitution, or Intelligence if you plan to adopt the Eldritch Knight martial archetype. Second, choose the soldier background."
+      "quickbuild" : "You can make a fighter quickly by following these suggestions. First, make Strength or Dexterity your highest ability score, depending on whether you want to focus on melee weapons or on archery (or finesse weapons). Your next-highest score should be Constitution, or Intelligence if you plan to adopt the Eldritch Knight martial archetype. Second, choose the soldier background.",
+      "levelingtable" : "**[1]** Fighting Style, Second Wind \r **[2]** Action Surge (one use) \r **[3]** Martial Archetype \r **[4]** Ability Score Improvement \r **[5]** Extra Attack \r **[6]** Ability Score Improvement \r **[7]** Martial Archetype Feature \r **[8]** Ability Score Improvement \r **[9]** Ability Score Improvement \r **[10]** Martial Archetype Feature \r **[11]** Extra Attack (2) \r **[12]** Ability Score Improvement \r **[13]** Indomitable (two uses) \r **[14]** Ability Score Improvement \r **[15]** Martial Archetype Feature \r **[16]** Ability Score Improvement \r **[17]** Action Surge (two uses), Indomitable (three uses) \r **[18]** Martial Archetype Feature \r **[19]** Ability Score Improvement \r **[20]** Extra Attack (3)"
    }
    
 }
