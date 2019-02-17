@@ -12,7 +12,7 @@
       "equipment2" : "A light crossbow and 20 bolts",
       "equipment3" : "(a) scale mail or (b) studded leather armor and in addition you get thieves' tools and a dungeoneer's pack",
       "quickbuild" : "You can make a artificer quickly by following these suggestions. First put your highest ability score in Dexterity, followed by Inteligence and Constitution",
-      "levelingtable" : "**[1]** Artificer Specialist,	Magic Item Analysis \r [2] Tool Expertise, Wondrous Invention \r [3] Artificer Specialist feature, Spellcasting \r [4] Ability Score Improvement, Infuse Magic \r [5] Superior Attunement, Wondrous Invention \r [6] Mechanical Servant \r [8] Ability Score Improvement \r [9] Artificer Specialist Feature \r [10] Wondrous Invention \r [12] Ability Score Improvement \r [14] Artificer Specialist Feature \r [15] Superior Attunement, Wondrous Invention \r [16] Ability Score Improvement \r [17] Artificer Specialist Feature \r [18] Ability Score Improvement \r [20] Soul of Artifice, Wondrous Invention"
+      "levelingtable" : "**[1]** Artificer Specialist,	Magic Item Analysis \r **[2]** Tool Expertise, Wondrous Invention \r **[3]** Artificer Specialist feature, Spellcasting \r **[4]** Ability Score Improvement, Infuse Magic \r **[5]** Superior Attunement, Wondrous Invention \r **[6]** Mechanical Servant \r **[8]** Ability Score Improvement \r **[9]** Artificer Specialist Feature \r **[10]** Wondrous Invention \r **[12]** Ability Score Improvement \r **[14]** Artificer Specialist Feature \r **[15]** Superior Attunement, Wondrous Invention \r **[16]** Ability Score Improvement \r **[17]** Artificer Specialist Feature \r **[18]** Ability Score Improvement \r **[20]** Soul of Artifice, Wondrous Invention"
    },
    "barbarian" : {
       "hit_dice" : "1d12 per barbarian level",
@@ -27,7 +27,7 @@
       "equipment2" : "(a) two handaxes or (b) any simple weapon",
       "equipment3" : "An explorer’s pack and four javelins",
       "quickbuild" : "You can make a barbarian quickly by following these suggestions. First, put your highest ability score in Strength, followed by Constitution. Second, choose the outlander background.",
-      "levelingtable" : "[1] Rage, Unarmored Defense \r [2] Reckless Attack, Danger Sense \r [3] Primal Path \r [4] Ability Score Improvement \r [5] Extra Attack, Fast Movement \r [6] Path Feature \r [7] Feral Instinct \r [8] Ability Score Improvement \r [9] Brutal Critical (1 die) \r [10] Path Feature \r [11] Relentless Rage \r [12] Ability Score Improvement \r [13] Brutal Critical (2 dice) \r [14] Path Feature \r [15] Persisent Rage \r [16] Ability Score \r [17] Brutal Critical \r [18] Indomitable Might \r [19] Ability Score Improvement \r [20] Primal Champion"
+      "levelingtable" : "**[1]** Rage, Unarmored Defense \r **[2]** Reckless Attack, Danger Sense \r **[3]** Primal Path \r **[4]** Ability Score Improvement \r **[5]** Extra Attack, Fast Movement \r **[6]** Path Feature \r **[7]** Feral Instinct \r **[8]** Ability Score Improvement \r **[9]** Brutal Critical (1 die) \r **[10]** Path Feature \r **[11]** Relentless Rage \r **[12]** Ability Score Improvement \r **[13]** Brutal Critical (2 dice) \r [14] Path Feature \r **[15]** Persisent Rage \r **[16]** Ability Score \r **[17]** Brutal Critical \r **[18]** Indomitable Might \r **[19]** Ability Score Improvement \r **[20]** Primal Champion"
    },
    "bard" : {
       "hit_dice" : "1d8 per bard level",
