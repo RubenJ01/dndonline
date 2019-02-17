@@ -41,7 +41,8 @@
       "equipment1" : "(a) a rapier, (b) a longsword, or (c) any simple weapon",
       "equipment2" : "(a) a Diplomat's Pack or (b) an Entertainer's Pack",
       "equipment3" : "(a) a lute or (b) any other musical instrument in addition you get Leather armor and a dagger",
-      "quickbuild" : "You can make a bard quickly by following these suggestions. First, Charisma should be your highest ability score, followed by Dexterity. Second, choose the entertainer background. Third, choose the dancing lights and vicious mockery cantrips, along with the following 1st-level spells: charm person, detect magic, healing word, and thunderwave."
+      "quickbuild" : "You can make a bard quickly by following these suggestions. First, Charisma should be your highest ability score, followed by Dexterity. Second, choose the entertainer background. Third, choose the dancing lights and vicious mockery cantrips, along with the following 1st-level spells: charm person, detect magic, healing word, and thunderwave.",
+      "levelingtable" : "**[1]** Spellcasting, Bardic Inspiration (d6) \r **[2]** Jack of All Trades, Song of Rest (d6) \r **[3]** Bard College, Expertise \r **[4]** Ability Score Improvement \r **[5]** Bardic Inspiration (d8), Font of Inspiration \r **[6]** Countercharm, Bard College feature \r **[8]** Ability Score Improvement \r **[9]** Song of rest (d10) \r **[10]** Bardic Inspiration (d10), Expertise, Magical Secrets \r **[12]** Ability Score Improvement \r **[13]** Song of Rest (d10) \r **[14]** Magical Secrets, Bard College feature \r **[15]** Bardic Inspiration (d12) \r **[16]** Ability Score Improvement \r **[17]** Song of Rest (d12) \r **[18]** Magical Secrets \r **[19]** Ability Score Improvement \r **[20]** Superior Inspiration
    },
    "bloodhunter" : {
       "hit_dice" : "1d10 per blood hunter level",
