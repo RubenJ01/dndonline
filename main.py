@@ -898,7 +898,23 @@ async def condition(type):
 @client.command()
 async def basic():
 	await client.say("http://media.wizards.com/2018/dnd/downloads/DnD_BasicRules_2018.pdf")
-		
+
+@client.command()
+async def tavernhelp():
+	embed = discord.Embed(
+		colour = discord.Colour.blue()
+	)
+	
+	embed.set_author(name="Help menu")
+	embed.add_field(name=";faq", value="A list of the faq (format like: ;faq (number))", inline=False)
+	embed.add_field(name=";rule", value="A list of the rules (format like: ;rule (number))", inline=False)
+	embed.add_field(name=";rprule", value="A list of the rprules (format like: ;rprule (number))", inline=False)
+	embed.add_field(name="Support server", value="For any additional support join the official support server: https://discord.gg/GFJMyxu", inline=False)
+	await client.say(embed=embed)
+
+
+					 
+					 
 @client.command(pass_context=True)
 async def help(ctx):
 	author = ctx.message.author
