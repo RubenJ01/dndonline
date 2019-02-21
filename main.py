@@ -16,6 +16,8 @@ BOT_PREFIX = (";", "/t", "!t")
 client = Bot(command_prefix=BOT_PREFIX)
 client.remove_command("help")
 
+startup_extensions = ["command"]
+
 @client.event
 async def on_ready():
     print("I'm in")
@@ -2130,7 +2132,15 @@ async def encounter(level, size):
 			embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
 			await client.say(embed=embed)
 													
-														
+
+if __name__ == "__main__":
+    for extension in startup_extensions:
+        try:
+            bot.load_extension(extension)
+        except Exception as e:
+            exc = '{}: {}'.format(type(e).__name__, e)
+            print('Failed to load extension {}\n{}'.format(extension, exc))					 
+					 
 async def list_servers():
     await client.wait_until_ready()
     while not client.is_closed:
