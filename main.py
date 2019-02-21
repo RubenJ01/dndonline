@@ -17,6 +17,7 @@ client = Bot(command_prefix=BOT_PREFIX)
 client.remove_command("help")
 
 startup_extensions = ["command"]
+bot = commands.Bot(command_prefix=';', description=description)
 
 @client.event
 async def on_ready():
