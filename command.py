@@ -5,7 +5,7 @@ class Command():
     def __init__(self, bot):
         self.bot = bot
     
-    @commands.command()
+    @client.command()
     async def tester():
         await self.bot.say('just a test')
             
