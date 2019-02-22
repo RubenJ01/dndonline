@@ -38,7 +38,7 @@ class HelpCommand:
         # Adds the Aliases field if the command has aliases
         if _command.aliases:
             help_embed.add_field(name='Aliases', value=', '.join(_command.aliases))
-
+        return await self.bot.say(embed=help_embed)
 
 def setup(bot):
     bot.add_cog(HelpCommand(bot))
