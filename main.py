@@ -2157,10 +2157,10 @@ if __name__ == "__main__":
             print('Failed to load extension {}\n{}'.format(extension, exc))					 
 					 
 async def list_servers():
-    await client.wait_until_ready()
-    while not client.is_closed:
+    await bot.wait_until_ready()
+    while not bot.is_closed:
         print("Current servers in which the bot is running:")
-        for server in client.servers:
+        for server in bot.servers:
             print(server.name)
         await asyncio.sleep(600)
 			
