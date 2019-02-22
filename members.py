@@ -12,7 +12,7 @@ class members():
     def __init__(self, bot):
         self.bot = bot
     
-    @bot.command()
+    @commands.command()
     async def tester(self):
         await self.bot.say('just a test')
             
