@@ -79,6 +79,17 @@ async def spell(*argument):
     else:
     	await client.say("Spell non-existent or missing")
 
+@client.command()
+async def special(*argument):
+        specialrequest = " ".join(argument)
+        specialfinal = str.casefold(specialrequest)
+        embed = discord.Embed(
+            colour = discord.Colour.blue()
+        )
+        embed.add_field(name=specialfinal, value=specialrequest, inline=False)
+        await client.say(embed=embed)
+                
+
 @client.command(name='class')
 async def class_command(*argument):
 	classrequest = " ".join(argument)
