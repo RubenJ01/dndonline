@@ -74,6 +74,7 @@ class faqcommand():
     		)
 		embed.add_field(name="10. What does [abbreviation] mean? - #faq", value="See the #faq for a full list of all abbrevations.", inline=False)	
 		await bot.say(embed=embed)
-             
+
+        
 def setup(bot):
     bot.add_cog(thelp(bot))
