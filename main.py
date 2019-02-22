@@ -6,6 +6,7 @@ from random import randint
 from random import sample
 import json
 import discord
+from discord.ext import commands
 from discord.ext.commands import Bot 
 from dumpfiles.monsterscr import *
 from dumpfiles.npcgen import *
