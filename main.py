@@ -22,6 +22,7 @@ client.remove_command("help")
 async def on_ready():
     print("I'm in")
     print(client.user)
+    print(discord.__version__)	
     await client.change_presence(game=discord.Game(name=';help | d&d 5e'))
 
 @client.event
