@@ -13,7 +13,7 @@ class thelp():
         self.bot = bot
     
     @commands.command()
-    async def tester(self):
+    async def tavernhelp(self):
         embed = discord.Embed(
             colour = discord.Colour.blue()
         )
