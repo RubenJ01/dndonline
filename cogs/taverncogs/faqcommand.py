@@ -15,6 +15,7 @@ class faqcommand():
 		@commands.command(pass_context=True)
 		async def help(self, ctx):
 		author = ctx.message.author
+		
 		embed = discord.Embed(
 			colour = discord.Colour.blue()
 		)
