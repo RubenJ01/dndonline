@@ -14,19 +14,18 @@ from dumpfiles.welcomemessage import *
 from dumpfiles.specialcommand import *
 
 startup_extensions = ["members"]
-BOT_PREFIX = (";", "/t", "!t")
-client = Bot(command_prefix=BOT_PREFIX)
+BOT_PREFIX = (";", "/t", "!t"))
 client.remove_command("help")
 bot = commands.Bot(command_prefix=BOT_PREFIX)
 
-@client.event
+@bot.event
 async def on_ready():
     print("I'm in")
     print(client.user)
     print(discord.__version__)	
     await client.change_presence(game=discord.Game(name=';help | d&d 5e'))
 
-@client.event
+@bot.event
 async def on_member_join(member):
     if member.server.id != "362589385117401088":
         return
@@ -52,7 +51,7 @@ async def on_member_join(member):
     channel = discord.utils.get(member.server.channels, name="general")
     await client.send_message(channel, content)
 
-@client.command()
+@bot.command()
 async def spell(*argument):
     spellrequest = " ".join(argument)
     spellfinal = str.casefold(spellrequest)
@@ -81,7 +80,7 @@ async def spell(*argument):
     else:
     	await client.say("Spell non-existent or missing")
 
-@client.command(name='class')
+@bot.command(name='class')
 async def class_command(*argument):
 	classrequest = " ".join(argument)
 	classfinal = str.casefold(classrequest)
@@ -115,7 +114,7 @@ async def class_command(*argument):
 	else:
 		await client.say("Class non-existent or missing")
 
-@client.command()
+@bot.command()
 async def rprule(number):
 	embed = discord.Embed(
 		colour = discord.Colour.blue()
@@ -141,7 +140,7 @@ async def rprule(number):
 	await client.say(embed=embed)
 
 	
-@client.command(pass_context=True)
+@bot.command(pass_context=True)
 async def combat(ctx, *players_n_health):
 	players = {}
 	last_added = players_n_health[0]
@@ -284,7 +283,7 @@ create_roller_function(
 	brief="Pick the worst of 3 rolls, same format as ;roll"
 )
 
-@client.command(name="npc", brief="create a quick npc" )
+@bot.command(name="npc", brief="create a quick npc" )
 async def npc():
 	embed = discord.Embed(
 		colour = discord.Colour.blue()
@@ -305,7 +304,7 @@ async def npc():
 
 	await client.say(embed=embed)
 
-@client.command(name="invite", brief="Invite the bot to your discord server")
+@bot.command(name="invite", brief="Invite the bot to your discord server")
 async def invite():
 	embed = discord.Embed(
 		colour = discord.Colour.blue()
@@ -321,7 +320,7 @@ async def invite():
 #     await client.say("Under development!")
 
 
-@client.command(brief="Welcome!")
+@bot.command(brief="Welcome!")
 async def welcome():
 	strings = ["Welcome to the Tavern! Please leave your bears at the Bear Post.",
 		"Welcome to the Tavern! Be advised: otters are considered contraband, unless they are members of Staff.",
@@ -343,7 +342,7 @@ async def welcome():
 	stringspick = random.choice(strings)	   
 	await client.say(stringspick)
 	
-@client.command(brief="About us")
+@bot.command(brief="About us")
 async def about():
 	embed = discord.Embed(
 		colour = discord.Colour.blue()
@@ -355,9 +354,8 @@ async def about():
 	embed.add_field(name="Source:", value="Since The Tavern Bot is open source you can check ouher repo: https://github.com/RubenJ01/dndonline", inline=False)
 	await client.say(embed=embed)
 
-initiative_roles = []
 
-@client.command()
+@bot.command()
 async def faq(number):
 	if number == "1":
 		embed = discord.Embed(
@@ -420,7 +418,7 @@ async def faq(number):
 		await client.say(embed=embed)
 	
 
-@client.command()
+@bot.command()
 async def initiative(*args):
     global initiative_roles
     embed = discord.Embed(
@@ -450,7 +448,7 @@ async def initiative(*args):
     embed.add_field(name="Turn", value=output, inline=False)
     await client.say(embed=embed)
 
-@client.command()
+@bot.command()
 async def next():
     global initiative_roles
     initiative_roles += [initiative_roles[0]]
@@ -467,7 +465,7 @@ async def next():
     await client.say(embed=embed)
 
 
-@client.command()
+@bot.command()
 async def stop():
     global initiative_roles
     initiative_roles = []
@@ -477,7 +475,7 @@ async def stop():
     embed.add_field(name=";stop", value="Initiative cleared", inline=False)
     await client.say(embed=embed)
 
-@client.command()
+@bot.command()
 async def order():
     global initiative_roles
     embed = discord.Embed(
@@ -492,7 +490,7 @@ async def order():
     embed.add_field(name=";restart", value=output, inline=False)
     await client.say(embed=embed)
 
-@client.command()
+@bot.command()
 async def back():
     global initiative_roles
     embed = discord.Embed(
@@ -509,12 +507,12 @@ async def back():
     await client.say(embed=embed)
 
 		
-@client.command(brief="Roll a certain stat for example: dexterity")
+@bot.command(brief="Roll a certain stat for example: dexterity")
 async def stat(modifier=0):
 	rolls = [randint(1,6) for _ in range(4)]
 	await client.say(f"the total of the best 3 of your 4 rolls was {sum(rolls)-min(rolls)}")			     
 	
-@client.command(brief="Calculate your total amount of pp gp sp cp respectively")
+@bot.command(brief="Calculate your total amount of pp gp sp cp respectively")
 async def currency(*coins):
     cp = sum([int(coin[:-2]) for coin in coins if coin[-2:] == "cp"])
     sp = sum([int(coin[:-2]) for coin in coins if coin[-2:] == "sp"])
@@ -535,7 +533,7 @@ async def currency(*coins):
     embed.add_field(name="Currency", value="You have " + str(cp) + "cp "  + str(sp) + "sp " + str(gp) + "gp " + str(pp) + "pp ", inline=False)
     await client.say(embed=embed)
 
-@client.command()
+@bot.command()
 async def status():
 	servers = len(client.servers)
 	members = len(list(client.get_all_members()))
@@ -545,7 +543,7 @@ async def status():
 	embed.add_field(name="Bot status", value="Currently running in: " + str(servers) + " servers with: " + str(members) + " members.", inline=False)
 	await client.say(embed=embed)
 
-@client.command()
+@bot.command()
 async def test(*test, init):
 	rolls = []
 	variabeles = []
@@ -558,7 +556,7 @@ async def test(*test, init):
 	total = init + variabeles
 	await client.say(test + total)
 
-@client.command(brief="Reference 1 of the server rules")
+@bot.command(brief="Reference 1 of the server rules")
 async def rule(number):
 	if number == "1":
 		embed = discord.Embed(
@@ -623,7 +621,7 @@ async def rule(number):
 		
 		
 	
-@client.command(brief="Random level 1 character creator")
+@bot.command(brief="Random level 1 character creator")
 async def character():
 	alignment = ["Lawfull good", "Neutral good", "Chaotic good", "Lawful neutral", "Neutral", "Chaotic"]
 	alignmentroll = random.choice(alignment)
@@ -807,7 +805,7 @@ async def character():
 		embed.add_field(name="Spells:", value=', '.join(spellsroll), inline=False)
 		await client.say(embed=embed)
 
-@client.command()
+@bot.command()
 async def rngstat():
 	number = 0				 
 	embed = discord.Embed(
@@ -826,7 +824,7 @@ async def rngstat():
 		embed.add_field(name="Roll " + str(number), value=str(roll1) + ", " + str(roll2) + ", " + str(roll3) + ", " + str(roll4) + " = " + str(ability), inline=False)
 	await client.say(embed=embed)
 
-@client.command()
+@bot.command()
 async def rngstat3():
 	number = 0				 
 	embed = discord.Embed(
@@ -847,7 +845,7 @@ async def rngstat3():
 
 			
 
-@client.command(brief="The definitions of combat conditions")
+@bot.command(brief="The definitions of combat conditions")
 async def condition(type):
 	if type == "blinded":
 		embed = discord.Embed(
@@ -898,11 +896,11 @@ async def condition(type):
 		embed.add_field(name="Condition paralyzed:", value="A paralyzed creature is incapacitated (see the condition) and can’t move or speak." + "\n" + "The creature automatically fails Strength and Dexterity Saving Throws." + "\n" + "Attack rolls against the creature have advantage." + "\n" + "Any Attack that hits the creature is a critical hit if the attacker is within 5 feet of the creature.", inline=False)
 		await client.say(embed=embed)
 
-@client.command()
+@bot.command()
 async def basic():
 	await client.say("http://media.wizards.com/2018/dnd/downloads/DnD_BasicRules_2018.pdf")
 
-@client.command()
+@bot.command()
 async def tavernhelp():
 	embed = discord.Embed(
 		colour = discord.Colour.blue()
@@ -918,7 +916,7 @@ async def tavernhelp():
 
 					 
 					 
-@client.command(pass_context=True)
+@bot.command(pass_context=True)
 async def help(ctx):
 	author = ctx.message.author
 	
@@ -953,7 +951,7 @@ async def help(ctx):
 	embed.add_field(name="Help", value="Sended you a private message which contains the information", inline=False)
 	await client.say(embed=embed)
 	
-@client.command(brief="An encounter generator for d&d 5e")
+@bot.command(brief="An encounter generator for d&d 5e")
 async def encounter(level, size):
 	if level == "1": 	
 		if size == "2":
