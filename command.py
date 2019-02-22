@@ -7,7 +7,7 @@ from random import sample
 import json
 import discord
 
-class Command():
+class Member():
     def __init__(self, bot):
         self.bot = bot
     
