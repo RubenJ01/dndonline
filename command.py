@@ -13,7 +13,7 @@ class Members():
         self.bot = bot
     
     @client.command()
-    async def tester():
+    async def tester(self):
         await self.bot.say('just a test')
             
               
