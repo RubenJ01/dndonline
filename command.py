@@ -18,4 +18,4 @@ class members():
             
               
 def setup(bot):
-    bot.add_cog(Members(bot))
+    bot.add_cog(members(bot))
