@@ -34,7 +34,6 @@ class HelpCommand:
 
         help_embed.title = f'**{_command.name}**'
         help_embed.description = _command.description
-        help_embed.add_field(name='Usage', value=_command.usage)
         # Adds the Aliases field if the command has aliases
         if _command.aliases:
             help_embed.add_field(name='Aliases', value=', '.join(_command.aliases))
