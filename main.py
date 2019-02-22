@@ -49,7 +49,7 @@ async def on_member_join(member):
     stringspick = random.choice(strings)	
     content = "Welcome to The Tavern " + member.mention + ". " + stringspick
     channel = discord.utils.get(member.server.channels, name="general")
-    await client.send_message(channel, content)
+    await bot.send_message(channel, content)
 
 @bot.command()
 async def spell(*argument):
