@@ -197,7 +197,7 @@ async def combat(ctx, *players_n_health):
 
 	
 def create_roller_function(name, roller, good_roll_text="you managed to roll a fabulous", **command_specifiers):
-	@client.command(name=name, **command_specifiers)
+	@bot.command(name=name, **command_specifiers)
 	async def _func(*dice):
 		embed = discord.Embed(
 			colour=discord.Colour.blue()
