@@ -14,7 +14,7 @@ class faqcommand():
     
     @commands.command()
     async def faq(self, number):
-			embed = discord.Embed(
+		embed = discord.Embed(
         	    colour = discord.Colour.blue()
     		)
 		if number == "1":
