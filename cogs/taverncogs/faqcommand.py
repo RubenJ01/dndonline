@@ -14,7 +14,7 @@ class faqcommand():
     
     @commands.command()
     async def faq(self, number):
-	embed = discord.Embed(
+        embed = discord.Embed(
        	    colour = discord.Colour.blue()
     	)
 	if number == "1":
@@ -40,7 +40,7 @@ class faqcommand():
 	    await bot.say(embed=embed)
 	if number == "8":
 	    embed.add_field(name="8. How do I apply for Staff? - #faq", value="Currently, new Staff applications are closed.  However, the Staff list does change occasionally. If you would like to signal your interest in being a staff member one day, feel free to fill out the application for the Advisors (trial moderator) role in #announcements." + "\n" + "Remember, we always keep an eye out for users who are regularly active, and who are generally kind, considerate and helpful to their fellow users. When you step up, we notice.", inline=False)
-      await bot.say(embed=embed)
+            await bot.say(embed=embed)
 	if number == "9":
 	    embed.add_field(name="9. What is the Hall of Fame? - #faq", value="The Hall of Fame is reserved for users who have distinguished themselves in some way.  Users who are particularly funny, helpful, knowledgeable, clearheaded, etc. may one day find that the staff have voted to give them a golden hero’s crest.", inline=False)
 	    await bot.say(embed=embed)
