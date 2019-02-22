@@ -15,11 +15,9 @@ class faqcommand():
 		@commands.command(pass_context=True)
 		async def help(self, ctx):
 		author = ctx.message.author
-
 		embed = discord.Embed(
 			colour = discord.Colour.blue()
 		)
-
 		embed.set_author(name="Help menu")
 		embed.add_field(name=";help", value="Shows this message", inline=False)
 		embed.add_field(name=";roll", value="roll dice with no advantage or disadvantage when given no parameters 1d20 is rolled parameters can be formatted like so 5d3 4d2 1d21 or simply 10 the latter only works for single dice all dice will be rolled and the total will be returned", inline=False)
