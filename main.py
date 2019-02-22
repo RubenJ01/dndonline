@@ -535,8 +535,8 @@ async def currency(*coins):
 
 @bot.command()
 async def status():
-	servers = len(client.servers)
-	members = len(list(client.get_all_members()))
+	servers = len(bot.servers)
+	members = len(list(bot.get_all_members()))
 	embed = discord.Embed(
  		colour = discord.Colour.blue()
  	)
