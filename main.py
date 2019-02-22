@@ -2165,5 +2165,5 @@ async def list_servers():
         await asyncio.sleep(600)
 			
 token = os.environ.get("DISCORD_BOT_SECRET")
-client.loop.create_task(list_servers())
+bot.loop.create_task(list_servers())
 bot.run(token)
