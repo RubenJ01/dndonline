@@ -23,7 +23,7 @@ class thelp():
         embed.add_field(name=";rule", value="A list of the rules (format like: ;rule (number))", inline=False)
         embed.add_field(name=";rprule", value="A list of the rprules (format like: ;rprule (number))", inline=False)
         embed.add_field(name="Support server", value="For any additional support join the official support server: https://discord.gg/GFJMyxu", inline=False)
-        await client.say(embed=embed)           
+        await bot.say(embed=embed)           
               
 def setup(bot):
     bot.add_cog(thelp(bot))
