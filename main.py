@@ -23,7 +23,7 @@ async def on_ready():
     print("I'm in")
     print(bot.user)
     print(discord.__version__)	
-    await client.change_presence(game=discord.Game(name=';help | d&d 5e'))
+    await bot.change_presence(game=discord.Game(name=';help | d&d 5e'))
 
 @bot.event
 async def on_member_join(member):
