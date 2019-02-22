@@ -76,9 +76,9 @@ async def spell(*argument):
         embed.add_field(name="Range:", value=f'{rangething}', inline=False)
         embed.add_field(name="School:", value=f'{school}', inline=False)
         embed.add_field(name="Description:", value=f'{description}', inline=False)	
-        await client.say(embed=embed)
+        await bot.say(embed=embed)
     else:
-    	await client.say("Spell non-existent or missing")
+    	await bot.say("Spell non-existent or missing")
 
 @bot.command(name='class')
 async def class_command(*argument):
@@ -110,9 +110,9 @@ async def class_command(*argument):
 		embed.add_field(name="Equipment", value="You start with the following equipment, in addition to the equipment granted by your background:" + "\n" + str(equipment1) + "\n" + str(equipment2) + "\n" + str(equipment3), inline=False)
 		embed.add_field(name=f'The {classfinal}', value=leveling, inline=False) 
 		embed.add_field(name="Quick build", value=quickbuild, inline=False)
-		await client.say(embed=embed)
+		await bot.say(embed=embed)
 	else:
-		await client.say("Class non-existent or missing")
+		await bot.say("Class non-existent or missing")
 
 @bot.command()
 async def rprule(number):
@@ -137,7 +137,7 @@ async def rprule(number):
 		embed.add_field(name="8. Third Time Unlucky - #out-of-character", value="We work on a three warnings system, if you break the rules and have received three warnings from Roleplay DMs then your case will be brought up with server staff and may result in a ban from the roleplay channels or a ban from the server itself depending on the severity of your actions.", inline=False)
 	elif number == "9":
 		embed.add_field(name="9. RTFM - #out-of-character", value="As the sacred scrolls of the Universe dictate: RTFM. Follow this sacred acronym.", inline=False)
-	await client.say(embed=embed)
+	await bot.say(embed=embed)
 
 	
 @bot.command(pass_context=True)
@@ -153,7 +153,7 @@ async def combat(ctx, *players_n_health):
 			players[last_added] = []
 	for player in players:
 		players[player][0] = players[player][0]+randint(1,20)
-		await client.say(f"{player} has rolled {players[player][0]} on initiative")
+		await bot.say(f"{player} has rolled {players[player][0]} on initiative")
 	initiative_order = sorted(players.items(), key=lambda x: -int(x[1][0]))
 
 
@@ -166,7 +166,7 @@ async def combat(ctx, *players_n_health):
 				print(message)
 				command = message[0]
 				if command == "endcombat" or command == "stop":
-					await client.say("```ended combat```")
+					await bot.say("```ended combat```")
 					return
 				elif command == "next":
 					break
@@ -212,10 +212,10 @@ def create_roller_function(name, roller, good_roll_text="you managed to roll a f
 				die_5 = max(1, die_type//5)
 				roll = roller(1, die_type)
 				if roll > die_5*4 + randint(-die_5, die_5):
-					await client.say(f"```{good_roll_text} {roll}```")
+					await bot.say(f"```{good_roll_text} {roll}```")
 				else:
 
-					await client.say(f"```You rolled a {roll}```")
+					await bot.say(f"```You rolled a {roll}```")
 				return
 			embed.set_author(name="Dice roller")
 			sum_ = 0
@@ -233,13 +233,13 @@ def create_roller_function(name, roller, good_roll_text="you managed to roll a f
 					embed.add_field(name=f"You rolled {dice[0][0]}d{dice[0][1]}", value="which became "+'+'.join(rolls[-1]), inline=False)
 					s = 1
 			embed.add_field(name="Result", value=str(sum_), inline=False)
-			await client.say(embed=embed)
+			await bot.say(embed=embed)
 		else:
 			roll = roller(1, 20)
 			if roll > 16 + randint(-4, 4):
-				await client.say(f"```{good_roll_text} {roll}```")
+				await bot.say(f"```{good_roll_text} {roll}```")
 			else:
-				await client.say(f"```You rolled a {roll}```")
+				await bot.say(f"```You rolled a {roll}```")
 
 create_roller_function(
 	"roll",
@@ -302,7 +302,7 @@ async def npc():
 	embed.add_field(name="Size:", value=sizeroll, inline=False)
 	embed.add_field(name="Ability scores:", value=', '.join([str(v) for v in variabeles]), inline=False)
 
-	await client.say(embed=embed)
+	await bot.say(embed=embed)
 
 @bot.command(name="invite", brief="Invite the bot to your discord server")
 async def invite():
@@ -310,7 +310,7 @@ async def invite():
 		colour = discord.Colour.blue()
 	)
 	embed.add_field(name="Invite the bot to your server:", value="https://discordapp.com/api/oauth2/authorize?client_id=506541896630403080&permissions=0&scope=bot", inline=False)
-	await client.say(embed=embed)
+	await bot.say(embed=embed)
 	
 # @client.command(brief="Generates a random encounter")
 # async def encounter():
@@ -340,7 +340,7 @@ async def welcome():
 		"Welcome to the Tavern! Now roll initiative!",
 		"Welcome to the Tavern! Bodies tend to go missing every once in a while, so try not to die."]
 	stringspick = random.choice(strings)	   
-	await client.say(stringspick)
+	await bot.say(stringspick)
 	
 @bot.command(brief="About us")
 async def about():
@@ -352,7 +352,7 @@ async def about():
 	embed.add_field(name="Creators:", value="The Tavern Bot has been developed by: RubenJ01#0229 and Daan#2049")
 	embed.add_field(name="Contributors:", value="Thanks to: willdda117#2904 for contributing to The Tavern Bot")
 	embed.add_field(name="Source:", value="Since The Tavern Bot is open source you can check ouher repo: https://github.com/RubenJ01/dndonline", inline=False)
-	await client.say(embed=embed)
+	await bot.say(embed=embed)
 
 
 @bot.command()
@@ -362,60 +362,61 @@ async def faq(number):
         		colour = discord.Colour.blue()
     		)
 		embed.add_field(name="1. Where do I start? I’m new to D&D. - #faq", value="If you would like a one-on-one tutorial, please post in #player-help. Many users will be reluctant to give you such a tutorial, but luckily, many YouTubers have devoted entire video series to this exact thing! We highly recommend the #resources channel, which you can search for keywords like “tutorial”.  In particular, the Lords recommend the How to Play D&D 5e series from Don’t Stop Thinking: https://www.youtube.com/watch?v=OoW2CDgztKY&list=PLJmFJXf3BXjwXkNFo_-iwtHb24AuJcXqx" + "\n" + "Once you have a firmer grasp of the basics, you will be able to ask for more specific help on the topics you don’t understand. That way, our Staff and users will be able to help you much better!", inline=False)
-		await client.say(embed=embed)
+		await bot.say(embed=embed)
 	if number == "2":
 		embed = discord.Embed(
         		colour = discord.Colour.blue()
     		)
 		embed.add_field(name="2. Where do I find games? When is the next game? How often do we run games? - #faq", value="You can find ads for games under #party-up.  You can also feel free to post your own Looking for Group, Looking for DM or Looking for Players (LFG, LFDM, LFP) ads to find people for your own game.  If you do, please follow the format outlined in the Pinned Messages for that channel." + "\n" + "Currently, the Tavern is in the process of recruiting more official DMs (the Queen's Guard), with the goal of establishing a regular weekly schedule of games.  When this is completed, the schedule will likely be posted in its own channel, and a link will be placed here. If you would like to interview for the Guard, PM a Captain of Queen's Guard to apply.", inline=False)
-		await client.say(embed=embed)
+		await bot.say(embed=embed)
 	if number == "3":
 		embed = discord.Embed(
         		colour = discord.Colour.blue()
     		)
 		embed.add_field(name="3. Do we play/host games other than D&D? - #faq", value="Yes!  All tabletop games are welcome, though the vast majority of our traffic is devoted to 5th Edition D&D.  Right now, we only have one channel, #other-rpgs-talk, as well as a channel for #trading-card-games and #video-gaming." + "\n" + "If you would like to start a channel dedicated to another system, please post in #server-suggestions so we can have users vote, react and gauge how much interest there is.  We are always open to adding new channels based on user demand!", inline=False)
-		await client.say(embed=embed)
+		await bot.say(embed=embed)
 	if number == "4":
 		embed = discord.Embed(
         		colour = discord.Colour.blue()
     		)
 		embed.add_field(name="4. Why can I not post links/images? - #faq", value="Because occasionally, somebody thinks it’s a good idea to post gay furry cuphead porn out of nowhere. Or tries to spread viruses to our users" + "\n" + "Due to malicious user activity, links and images have been heavily restricted in many parts of the server. If you want to post a relevant link, ask a member of Staff and we will be happy to assist you.", inline=False)
-		await client.say(embed=embed)
+		await bot.say(embed=embed)
 	if number == "5":
 		embed = discord.Embed(
         		colour = discord.Colour.blue()
     		)
 		embed.add_field(name="5. Where do I find [thing]? What is [channel] for? - #faq", value="For a list of all the channels and their purpose, go to #tavern-menu.", inline=False)
-		await client.say(embed=embed)
+		await bot.say(embed=embed)
 	if number == "6":
 		embed = discord.Embed(
         		colour = discord.Colour.blue()
     		)
 		embed.add_field(name="6. Can I run a game here? - #faq", value="Yes! However, we ask that any DM who wants to run a game in the Tavern first apply for the Queen's Guard, our approved DMs who run games in the server.  If you would like to interview for the Guard, PM a Captain of Queen's Guard to apply." + "\n" + "However, you don’t need to join the Guard just to advertise a game. Feel free to post in #party-up whenever you like, as long as you follow the format in the Pinned Messages for that channel.", inline=False)
+		await bot.say(embed=embed)
 	if number == "7":
 		embed = discord.Embed(
         		colour = discord.Colour.blue()
     		)
 		embed.add_field(name="7. What do the Staff do? - #faq", value="Queen of the Tavern is the founder of the tavern." + "\n" + "Lords of the Tavern are Admins. In addition to the regular duties of an Innkeeper each Lord brings something unique to the tavern" + "\n" + "Innkeepers have shown they are capable Moderators and are trusted with more responsibilities; given the ability to create channels and roles, they can act more autonomously than Bartenders, and help implement or temper the Lords’ ideas." + "Bartenders are Moderators in the Tavern, and like any good Bartender, they are great with people. They settle disputes that get out of hand, but more generally, they interact with the patrons, providing a good face for the Tavern." + "\n" + "Advisors have no permissions or moderator abilities, they serve to help make decisions on moderation issues, and exist as a step prior to becoming a mod." ,inline=False)
-		await client.say(embed=embed)
+		await bot.say(embed=embed)
 	if number == "8":
 		embed = discord.Embed(
         		colour = discord.Colour.blue()
     		)
 		embed.add_field(name="8. How do I apply for Staff? - #faq", value="Currently, new Staff applications are closed.  However, the Staff list does change occasionally. If you would like to signal your interest in being a staff member one day, feel free to fill out the application for the Advisors (trial moderator) role in #announcements." + "\n" + "Remember, we always keep an eye out for users who are regularly active, and who are generally kind, considerate and helpful to their fellow users. When you step up, we notice.", inline=False)
-		await client.say(embed=embed)
+		await bot.say(embed=embed)
 	if number == "9":
 		embed = discord.Embed(
         		colour = discord.Colour.blue()
     		)
 		embed.add_field(name="9. What is the Hall of Fame? - #faq", value="The Hall of Fame is reserved for users who have distinguished themselves in some way.  Users who are particularly funny, helpful, knowledgeable, clearheaded, etc. may one day find that the staff have voted to give them a golden hero’s crest.", inline=False)
-		await client.say(embed=embed)
+		await bot.say(embed=embed)
 	if number == "10":
 		embed = discord.Embed(
         		colour = discord.Colour.blue()
     		)
 		embed.add_field(name="10. What does [abbreviation] mean? - #faq", value="See the #faq for a full list of all abbrevations.", inline=False)	
-		await client.say(embed=embed)
+		await bot.say(embed=embed)
 	
 
 @bot.command()
@@ -446,7 +447,7 @@ async def initiative(*args):
     output = "It's the turn of "
     output += str(initiative_roles[0][0])
     embed.add_field(name="Turn", value=output, inline=False)
-    await client.say(embed=embed)
+    await bot.say(embed=embed)
 
 @bot.command()
 async def next():
@@ -462,7 +463,7 @@ async def next():
         colour = discord.Colour.blue()
     )
     embed.add_field(name=";next", value=output, inline=False)
-    await client.say(embed=embed)
+    await bot.say(embed=embed)
 
 
 @bot.command()
@@ -473,7 +474,7 @@ async def stop():
     	colour = discord.Colour.blue()
     )
     embed.add_field(name=";stop", value="Initiative cleared", inline=False)
-    await client.say(embed=embed)
+    await bot.say(embed=embed)
 
 @bot.command()
 async def order():
@@ -488,7 +489,7 @@ async def order():
         output += initiative_roles[y][0]
         output +=", "
     embed.add_field(name=";restart", value=output, inline=False)
-    await client.say(embed=embed)
+    await bot.say(embed=embed)
 
 @bot.command()
 async def back():
@@ -504,13 +505,13 @@ async def back():
     output += str(initiative_roles[1][0])
     output += " is next."
     embed.add_field(name=";back", value=output, inline=False)
-    await client.say(embed=embed)
+    await bot.say(embed=embed)
 
 		
 @bot.command(brief="Roll a certain stat for example: dexterity")
 async def stat(modifier=0):
 	rolls = [randint(1,6) for _ in range(4)]
-	await client.say(f"the total of the best 3 of your 4 rolls was {sum(rolls)-min(rolls)}")			     
+	await bot.say(f"the total of the best 3 of your 4 rolls was {sum(rolls)-min(rolls)}")			     
 	
 @bot.command(brief="Calculate your total amount of pp gp sp cp respectively")
 async def currency(*coins):
@@ -531,7 +532,7 @@ async def currency(*coins):
     	colour = discord.Colour.blue()
     )
     embed.add_field(name="Currency", value="You have " + str(cp) + "cp "  + str(sp) + "sp " + str(gp) + "gp " + str(pp) + "pp ", inline=False)
-    await client.say(embed=embed)
+    await bot.say(embed=embed)
 
 @bot.command()
 async def status():
@@ -541,7 +542,7 @@ async def status():
  		colour = discord.Colour.blue()
  	)
 	embed.add_field(name="Bot status", value="Currently running in: " + str(servers) + " servers with: " + str(members) + " members.", inline=False)
-	await client.say(embed=embed)
+	await bot.say(embed=embed)
 
 @bot.command()
 async def test(*test, init):
@@ -554,7 +555,7 @@ async def test(*test, init):
 		variabeles.append(sum(rolls)-min(rolls))
 		rolls =[]
 	total = init + variabeles
-	await client.say(test + total)
+	await bot.say(test + total)
 
 @bot.command(brief="Reference 1 of the server rules")
 async def rule(number):
@@ -563,61 +564,61 @@ async def rule(number):
  		colour = discord.Colour.blue()
  		)
 		embed.add_field(name="Rule 1 - #welcome-rules", value="No Malicious Behaviour" + "\n" + "Do not come in here with the intent to raid, brigade, or troll. Intentionally malicious users will be immediately and permanently banned. Come on, people, it’s common sense.", inline=False)
-		await client.say(embed=embed)
+		await bot.say(embed=embed)
 	if number == "2":
 		embed = discord.Embed(
  		colour = discord.Colour.blue()
  		)
 		embed.add_field(name="Rule 2 - #welcome-rules", value="No Obscene Content" + "\n" + "This is a SFW server. Any form of porn/hentai/etc, including links or pics, is forbidden. Erotic roleplay (ERP) is also strictly prohibited. If you must, take it to PMs and fade to black.", inline=False)
-		await client.say(embed=embed)		
+		await bot.say(embed=embed)		
 	if number == "3":
 		embed = discord.Embed(
  		colour = discord.Colour.blue()
  		)
 		embed.add_field(name="Rule 3 - #welcome-rules", value="No Spam" + "\n" + " Posting large numbers of superfluous messages for the purposes of cluttering a channel or artificially boosting server rank is prohibited. Express yourself with quality, not by volume.", inline=False)
-		await client.say(embed=embed)
+		await bot.say(embed=embed)
 	if number == "4":
 		embed = discord.Embed(
  		colour = discord.Colour.blue()
  		)
 		embed.add_field(name="Rule 4 - #welcome-rules", value="No Links" + "\n" + "Posting of outside links has been disabled in most channels due to malicious user behaviour.  If you would like to post a link and cannot, ping (@) an online member of Staff and we will be happy to assist.", inline=False)
-		await client.say(embed=embed)
+		await bot.say(embed=embed)
 	if number == "5":
 		embed = discord.Embed(
  		colour = discord.Colour.blue()
  		)
 		embed.add_field(name="Rule 5 - #welcome-rules", value="No Advertising" + "\n" + " Refrain from advertising your own content (YouTube, Twitch, Discord, Social Media, etc) in a public channel without written permission from the Staff. Exceptions may be made if it is specifically related to the channel and discussion you are in (e.g.: if you are an artist in #music-arts-crafts; answering a question in #player-help; if you have been approved for #streaming, etc). That said, PMing links to other users who have asked for them is permitted.", inline=False)
-		await client.say(embed=embed)
+		await bot.say(embed=embed)
 	if number == "6":
 		embed = discord.Embed(
  		colour = discord.Colour.blue()
  		)
 		embed.add_field(name="Rule 6 - #welcome-rules", value="Be Civil" + "\n" + "You are free to engage in polite discussions and intellectual debates; in fact, we encourage it - passionate users are the best! However, avoid sliding into angry public arguments; those belong in your PMs.", inline=False)
-		await client.say(embed=embed)
+		await bot.say(embed=embed)
 	if number == "7":
 		embed = discord.Embed(
  		colour = discord.Colour.blue()
  		)
 		embed.add_field(name="Rule 7 - #welcome-rules", value="No Bullying" + "\n" + "Banter and teasing are fine, as long as it’s in good fun. However, discrimination or hate speech based on race, sex, gender, age, or sexuality is unacceptable. Racial slurs are specifically prohibited. If you are being bullied/harassed (even in PMs), feel free to report it to any member of Staff.", inline=False)
-		await client.say(embed=embed)
+		await bot.say(embed=embed)
 	if number == "8":
 		embed = discord.Embed(
  		colour = discord.Colour.blue()
  		)
 		embed.add_field(name="Rule 8 - #welcome-rules", value="Complaints Are Welcome" + "\n" + "If you have a complaint about Staff or user behaviour, you are welcome to PM any online Staff at any level. If your complaint pertains to a member of Staff, take it one level higher to a Bartender, Innkeeper or Lord, as appropriate. If possible bring evidence of misconduct, such as a screenshot, since it will make our job significantly easier! If the evidence is edited/deleted, contact a Lord, who can check the Deleted Messages Archive.", inline=False)
-		await client.say(embed=embed)
+		await bot.say(embed=embed)
 	if number == "9":
 		embed = discord.Embed(
  		colour = discord.Colour.blue()
  		)
 		embed.add_field(name="Rule 9 - #welcome-rules", value="Respect Staff Decisions" + "\n" + "The Staff reserve the right to make decisions at their own discretion. That said, if you are being unfairly treated, please bring it to the attention of a higher Staff member, as per Rule 6. Not even Staff are above the law.", inline=False)
-		await client.say(embed=embed)
+		await bot.say(embed=embed)
 	if number == "10":
 		embed = discord.Embed(
  		colour = discord.Colour.blue()
  		)
 		embed.add_field(name="Rule 10 - #welcome-rules", value="No Impersonation" + "\n" + "Do not attempt to impersonate server Staff. The job is thankless and the Innkeeper pays us in Copper Pieces, if at all. Don’t make our lives harder.", inline=False)
-		await client.say(embed=embed)
+		await bot.say(embed=embed)
 		
 		
 	
@@ -670,7 +671,7 @@ async def character():
 		embed.add_field(name="Equipmentpacks:", value=equipment1roll + ", " + equipment2roll, inline=False)
 		embed.add_field(name="Cantrips:", value=', '.join(cantripsroll), inline=False)
 		embed.add_field(name="Spells:", value=', '.join(spellsroll), inline=False)
-		await client.say(embed=embed)
+		await bot.say(embed=embed)
 	if classesroll == "Fighter": 
 		fightingstyle = ["Archery (swap light crossbow and 20 bolts for a longbow and 20 arrows; at your option, also swap chain mail for leather armor)", "Defense", "Dueling", "Great Weapon Fighting (swap longsword and shield for a greataxe", "Protection", "Two-Weapon Fighting (swap longsword for two short swords)"]
 		fightingstyleroll = random.choice(fightingstyle)
@@ -691,7 +692,7 @@ async def character():
 		embed.add_field(name="Proficiency's:", value=', '.join(proficiencyroll), inline=False)
 		embed.add_field(name="Equipmentpacks:", value=equipment1roll + ", " + equipment2roll, inline=False)
 		embed.add_field(name="Fightingstyle:", value=fightingstyleroll, inline=False)
-		await client.say(embed=embed)
+		await bot.say(embed=embed)
 	if classesroll == "Rogue":
 		equipment1 = ["Mace", "Scale mail", "Light crossbow and 20 bolts", "Shield", "Holy symbol"]
 		equipment1roll = random.choice(equipment1)
@@ -709,7 +710,7 @@ async def character():
 		embed.add_field(name="Alignment::", value=alignmentroll, inline=False)
 		embed.add_field(name="Proficiency's:", value=', '.join(proficiencyroll), inline=False)
 		embed.add_field(name="Equipmentpacks:", value=equipment1roll + ", " + equipment2roll, inline=False)
-		await client.say(embed=embed)
+		await bot.say(embed=embed)
 	if classesroll == "Wizard":
 		equipment1 = ["Mace", "Scale mail", "Light crossbow and 20 bolts", "Shield", "Holy symbol"]
 		equipment1roll = random.choice(equipment1)
@@ -733,7 +734,7 @@ async def character():
 		embed.add_field(name="Equipmentpacks:", value=equipment1roll + ", " + equipment2roll, inline=False)
 		embed.add_field(name="Cantrips:", value=', '.join(cantripsroll), inline=False)
 		embed.add_field(name="Spells:", value=', '.join(spellsroll), inline=False)
-		await client.say(embed=embed)
+		await bot.say(embed=embed)
 	if classesroll == "Ranger":
 		equipment1 = ["Scale Mail", "Leather Armor"]
 		equipment1roll = random.choice(equipment1)
@@ -753,7 +754,7 @@ async def character():
 		embed.add_field(name="Alignment::", value=alignmentroll, inline=False)
 		embed.add_field(name="Proficiency's:", value=', '.join(proficiencyroll), inline=False)
 		embed.add_field(name="Equipmentpacks:", value=equipment1roll + ", " + equipment2roll + ", " + equipment3roll, inline=False)
-		await client.say(embed=embed)
+		await bot.say(embed=embed)
 	if classesroll == "Druid":
 		equipment1 = ["A wooden schield", "Any simple weapon"]
 		equipment1roll = random.choice(equipment1)
@@ -777,7 +778,7 @@ async def character():
 		embed.add_field(name="Equipmentpacks:", value=equipment1roll + ", " + equipment2roll, inline=False)
 		embed.add_field(name="Cantrips:", value=', '.join(cantripsroll), inline=False)
 		embed.add_field(name="Spells:", value=', '.join(spellsroll), inline=False)
-		await client.say(embed=embed)
+		await bot.say(embed=embed)
 	if classesroll == "Bard":
 		equipment1 = ["A Rapier", "A longsword", "Any simple weapon"]
 		equipment1roll = random.choice(equipment1)
@@ -803,7 +804,7 @@ async def character():
 		embed.add_field(name="Equipmentpacks:", value=equipment1roll + ", " + equipment2roll + ", " + equipment3roll, inline=False)
 		embed.add_field(name="Cantrips:", value=', '.join(cantripsroll), inline=False)
 		embed.add_field(name="Spells:", value=', '.join(spellsroll), inline=False)
-		await client.say(embed=embed)
+		await bot.say(embed=embed)
 
 @bot.command()
 async def rngstat():
@@ -822,7 +823,7 @@ async def rngstat():
 		ability = sum(allrolls) - lowest
 		number = number + 1			 
 		embed.add_field(name="Roll " + str(number), value=str(roll1) + ", " + str(roll2) + ", " + str(roll3) + ", " + str(roll4) + " = " + str(ability), inline=False)
-	await client.say(embed=embed)
+	await bot.say(embed=embed)
 
 @bot.command()
 async def rngstat3():
@@ -841,7 +842,7 @@ async def rngstat3():
 		ability = sum(allrolls) - lowest
 		number = number + 1
 		embed.add_field(name="Roll " + str(number), value=str(roll1) + ", " + str(roll2) + ", " + str(roll3) + ", " + str(roll4) + " = " + str(ability), inline=False)
-	await client.say(embed=embed)
+	await client.bot(embed=embed)
 
 			
 
@@ -852,53 +853,53 @@ async def condition(type):
 			colour = discord.Colour.blue()
 		)
 		embed.add_field(name="Condition blinded:", value="A blinded creature can’t see and automatically fails any ability check that requires sight." + "\n" + "Attack rolls against the creature have advantage, and the creature’s Attack rolls have disadvantage.", inline=False)
-		await client.say(embed=embed)
+		await bot.say(embed=embed)
 	if type == "charmed":
 		embed = discord.Embed(
 			colour = discord.Colour.blue()
 		)
 		embed.add_field(name="Condition charmed:", value="A charmed creature can’t Attack the charmer or target the charmer with harmful Abilities or magical effects." + "\n" + "The charmer has advantage on any ability check to interact socially with the creature.", inline=False)
-		await client.say(embed=embed)
+		await bot.say(embed=embed)
 	if type == "frightened":
 		embed = discord.Embed(
 			colour = discord.Colour.blue()
 		)
 		embed.add_field(name="Condition frightened:", value="A frightened creature has disadvantage on Ability Checks and Attack rolls while the source of its fear is within line of sight." + "\n" + "The creature can’t willingly move closer to the source of its fear.", inline=False)
-		await client.say(embed=embed)
+		await bot.say(embed=embed)
 	if type == "deafened":
 		embed = discord.Embed(
 			colour = discord.Colour.blue()
 		)
 		embed.add_field(name="Condition deafened:", value="A deafened creature can’t hear and automatically fails any ability check that requires hearing.", inline=False)
-		await client.say(embed=embed)	
+		await bot.say(embed=embed)	
 	if type == "grappled":
 		embed = discord.Embed(
 			colour = discord.Colour.blue()
 		)
 		embed.add_field(name="Condition grappled:", value="A grappled creature’s speed becomes 0, and it can’t benefit from any bonus to its speed." + "\n" + "The condition ends if the Grappler is incapacitated (see the condition)." + "\n" + "The condition also ends if an effect removes the grappled creature from the reach of the Grappler or Grappling effect, such as when a creature is hurled away by the Thunderwave spell.", inline=False)
-		await client.say(embed=embed)
+		await bot.say(embed=embed)
 	if type == "incapacitated":
 		embed = discord.Embed(
 			colour = discord.Colour.blue()
 		)
 		embed.add_field(name="Condition incapacitated:", value="An incapacitated creature can’t take actions or reactions.", inline=False)
-		await client.say(embed=embed)
+		await bot.say(embed=embed)
 	if type == "invisible":
 		embed = discord.Embed(
 			colour = discord.Colour.blue()
 		)
 		embed.add_field(name="Condition invisible:", value="An invisible creature is impossible to see without the aid of magic or a Special sense. For the purpose of Hiding, the creature is heavily obscured. The creature’s location can be detected by any noise it makes or any tracks it leaves." + "\n" + "Attack rolls against the creature have disadvantage, and the creature’s Attack rolls have advantage.", inline=False)
-		await client.say(embed=embed)
+		await bot.say(embed=embed)
 	if type == "paralyzed": 
 		embed = discord.Embed(
 			colour = discord.Colour.blue()
 		)
 		embed.add_field(name="Condition paralyzed:", value="A paralyzed creature is incapacitated (see the condition) and can’t move or speak." + "\n" + "The creature automatically fails Strength and Dexterity Saving Throws." + "\n" + "Attack rolls against the creature have advantage." + "\n" + "Any Attack that hits the creature is a critical hit if the attacker is within 5 feet of the creature.", inline=False)
-		await client.say(embed=embed)
+		await bot.say(embed=embed)
 
 @bot.command()
 async def basic():
-	await client.say("http://media.wizards.com/2018/dnd/downloads/DnD_BasicRules_2018.pdf")					 
+	await bot.say("http://media.wizards.com/2018/dnd/downloads/DnD_BasicRules_2018.pdf")					 
 					 
 @bot.command(pass_context=True)
 async def help(ctx):
@@ -928,12 +929,12 @@ async def help(ctx):
 	embed.add_field(name=";basic", value="Get the basic rules pdf", inline=False)
 	embed.add_field(name=";about", value="Learn more about the bot", inline=False)
 	embed.add_field(name="Official server", value="Please condsider joining support server: https://discord.gg/GFJMyxu", inline=False)
-	await client.send_message(author, embed=embed)
+	await bot.send_message(author, embed=embed)
 	embed = discord.Embed(
 		colour = discord.Colour.blue()
 	)
 	embed.add_field(name="Help", value="Sended you a private message which contains the information", inline=False)
-	await client.say(embed=embed)
+	await bot.say(embed=embed)
 	
 @bot.command(brief="An encounter generator for d&d 5e")
 async def encounter(level, size):
