@@ -15,7 +15,7 @@ from dumpfiles.specialcommand import *
 
 startup_extensions = ["members"]
 BOT_PREFIX = (";", "/t", "!t")
-client.remove_command("help")
+bot.remove_command("help")
 bot = commands.Bot(command_prefix=BOT_PREFIX)
 
 @bot.event
