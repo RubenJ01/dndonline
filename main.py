@@ -13,7 +13,10 @@ from dumpfiles.npcgen import *
 from dumpfiles.welcomemessage import *
 from dumpfiles.specialcommand import *
 
-startup_extensions = ['cogs.taverncogs.thelp']
+startup_extensions = ['cogs.taverncogs.thelp', 
+		      'cogs.taverncogs.faqcommand',
+		      'cogs.corecogs.normalhelp']
+
 BOT_PREFIX = (";", "/t", "!t")
 bot = commands.Bot(command_prefix=BOT_PREFIX)
 bot.remove_command("help")
