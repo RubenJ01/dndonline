@@ -20,7 +20,7 @@ class encountergen():
 				enc = random.sample(crkwart, 2)
 				embed = discord.Embed(
 					colour = discord.Colour.blue()
-					)
+				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=', '.join(enc), inline=False)
 				await bot.say(embed=embed)
