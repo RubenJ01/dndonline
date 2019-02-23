@@ -27,28 +27,28 @@ class encountergen():
 			if size == "3":
 				enc = random.sample(crkwart, 3)
 				embed = discord.Embed(
-				colour = discord.Colour.blue()
+					colour = discord.Colour.blue()
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=', '.join(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "4":
 				enc = random.sample(crkwart, 4)
 				embed = discord.Embed(
-				colour = discord.Colour.blue()
+					colour = discord.Colour.blue()
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=', '.join(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "5":
 				enc = random.sample(crkwart, 4)
 				enc2 = random.choice(cr1)
 				embed = discord.Embed(
-				colour = discord.Colour.blue()
+					colour = discord.Colour.blue()
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=enc2, inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "6":
 				enc = random.sample(crkwart, 1)
 				enc2 = random.choice(cr1)
@@ -57,7 +57,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=', '.join(enc) + ", " + str(enc2), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "7":
 				enc = random.sample(crkwart, 2)
 				enc2 = random.choice(cr1)
