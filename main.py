@@ -709,8 +709,8 @@ async def rngstat():
 		embed.add_field(name="Roll " + str(number), value=str(roll1) + ", " + str(roll2) + ", " + str(roll3) + ", " + str(roll4) + " = " + str(ability), inline=False)
 	await bot.say(embed=embed)
 
-@bot.command()
-async def rngstat3("roll 3 random ability scores"):
+@bot.command(brief="roll 3 random ability scores")
+async def rngstat3():
 	number = 0				 
 	embed = discord.Embed(
 		colour = discord.Colour.blue()
