@@ -12,7 +12,7 @@ class rprule():
 	def __init__(self, bot):
         	self.bot = bot
 
-	@commands.command(brief="the rules for the rp-section)
+	@commands.command(brief="the rules for the rp-section")
 	async def rprule(self, number):
 		embed = discord.Embed(
 			colour = discord.Colour.blue()
