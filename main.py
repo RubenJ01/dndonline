@@ -14,7 +14,8 @@ from dumpfiles.specialcommand import *
 
 startup_extensions = ['cogs.taverncogs.thelp', 
 		      'cogs.taverncogs.faqcommand',
-		      'cogs.corecogs.normalhelp']
+		      'cogs.corecogs.normalhelp',
+		      'cogs.corecogs.encountergen']
 
 BOT_PREFIX = (";", "/t", "!t")
 bot = commands.Bot(command_prefix=BOT_PREFIX)
