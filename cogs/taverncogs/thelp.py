@@ -12,7 +12,7 @@ class thelp():
     def __init__(self, bot):
         self.bot = bot
     
-    @commands.command()
+    @commands.command(brief="all the special commands used in the tavern")
     async def tavernhelp(self):
         embed = discord.Embed(
             colour = discord.Colour.blue()
