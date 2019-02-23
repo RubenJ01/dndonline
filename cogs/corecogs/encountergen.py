@@ -269,7 +269,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "3":
 				enc = random.choice(cr4)
 				embed = discord.Embed(
@@ -277,7 +277,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "4":
 				enc = random.choice(cr4)
 				enc2 = random.choice(cr2)
@@ -286,7 +286,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "5":
 				enc = random.choice(cr5)
 				embed = discord.Embed(
@@ -294,7 +294,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "6":
 				enc = random.choice(cr6)
 				embed = discord.Embed(
@@ -302,7 +302,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "7":
 				enc = random.choice(cr6)
 				enc2 = random.choice(cr2)
@@ -311,7 +311,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "8":
 				enc = random.choice(cr6)
 				enc2 = random.sample(cr2, 2)
@@ -320,7 +320,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc) + ", " + ', '.join(enc2), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 		if level == "6":
 			if size == "2":
 				enc = random.choice(cr4)
@@ -329,7 +329,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "3":
 				enc = random.choice(cr4)
 				enc2 = random.choice(cr2)
@@ -338,7 +338,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "4":
 				enc = random.choice(cr5)
 				embed = discord.Embed(
@@ -346,7 +346,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "5":
 				enc = random.choice(cr6)
 				embed = discord.Embed(
@@ -354,7 +354,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "6":
 				enc = random.choice(cr7)
 				embed = discord.Embed(
@@ -362,7 +362,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "7":
 				enc = random.choice(cr7)
 				enc2 = random.choice(cr2)
@@ -371,7 +371,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "8":
 				enc = random.choice(cr7)
 				enc2 = random.choice(cr4)
@@ -380,7 +380,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 		if level == "7":
 			if size == "2":
 				enc = random.choice(cr4)
@@ -389,7 +389,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "3":
 				enc = random.choice(cr5)
 				embed = discord.Embed(
@@ -397,7 +397,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "4":
 				enc = random.choice(cr6)
 				embed = discord.Embed(
@@ -405,7 +405,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "5":
 				enc = random.choice(cr7)
 				embed = discord.Embed(
@@ -413,7 +413,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "6":
 				enc = random.choice(cr7)
 				enc2 = random.choice(cr3)
@@ -422,7 +422,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "7":
 				enc = random.choice(cr7)
 				enc2 = random.choice(cr4)
@@ -431,7 +431,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "8":
 				enc = random.choice(cr7)
 				enc2 = random.choice(cr5)
@@ -440,7 +440,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 		if level == "8":
 			if size == "2":
 				enc = random.choice(cr4)
@@ -449,7 +449,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "3":
 				enc = random.choice(cr6)
 				embed = discord.Embed(
@@ -457,7 +457,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "4": 
 				enc = random.choice(cr7)
 				embed = discord.Embed(
@@ -465,7 +465,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "5":
 				enc = random.choice(cr7)
 				enc2 = random.choice(cr3)
@@ -474,7 +474,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "6":
 				enc = random.choice(cr8)
 				embed = discord.Embed(
@@ -482,7 +482,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "7":
 				enc = random.choice(cr8)
 				enc2 = random.choice(cr3)
@@ -491,7 +491,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "8":
 				enc = random.choice(cr8)
 				enc2 = random.choice(cr4)
@@ -500,7 +500,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 		if level == "9":
 			if size == "2":
 				enc = random.choice(cr5)
@@ -509,7 +509,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "3":
 				enc = random.choice(cr6)
 				embed = discord.Embed(
@@ -517,7 +517,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "4":
 				enc = random.choice(cr7)
 				embed = discord.Embed(
@@ -525,7 +525,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "5":
 				enc = random.choice(cr8)
 				embed = discord.Embed(
@@ -533,7 +533,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "6":
 				enc = random.choice(cr9)
 				embed = discord.Embed(
@@ -541,7 +541,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "7": 
 				enc = random.choice(cr4)
 				enc2 = random.choice(cr9)
@@ -550,7 +550,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "8":
 				enc = random.choice(cr9)
 				enc2 = random.choice(cr5)
@@ -559,7 +559,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 		if level == "10":
 			if size == "2":
 				enc = random.choice(cr6)
@@ -568,7 +568,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "3":
 				enc = random.choice(cr7)
 				embed = discord.Embed(
@@ -576,7 +576,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "4": 
 				enc = random.choice(cr8)
 				embed = discord.Embed(
@@ -584,7 +584,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "5":
 				enc = random.choice(cr9)
 				embed = discord.Embed(
@@ -592,7 +592,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "6":
 				enc  = random.choice(cr10)
 				embed = discord.Embed(
@@ -600,7 +600,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "7": 
 				enc = random.choice(cr4)
 				enc2 = random.choice(cr10)
@@ -609,7 +609,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "8":
 				enc = random.choice(cr10)
 				enc2 = random.choice(cr6)
@@ -618,7 +618,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 		if level == "11":
 			if size == "2":
 				enc = random.choice(cr6)
@@ -627,7 +627,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "3":
 				enc = random.choice(cr8)
 				embed = discord.Embed(
@@ -635,7 +635,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "4": 
 				enc = random.choice(cr9)
 				embed = discord.Embed(
@@ -643,7 +643,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "5":
 				enc = random.choice(cr10)
 				embed = discord.Embed(
@@ -651,7 +651,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "6":
 				enc  = random.choice(cr11)
 				embed = discord.Embed(
@@ -659,7 +659,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "7": 
 				enc = random.choice(cr5)
 				enc2 = random.choice(cr11)
@@ -668,7 +668,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "8":
 				enc = random.choice(cr11)
 				enc2 = random.choice(cr7)
@@ -677,7 +677,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 		if level == "12":
 			if size == "2":
 				enc = random.choice(cr6)
@@ -686,7 +686,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "3":
 				enc = random.choice(cr8)
 				embed = discord.Embed(
@@ -694,7 +694,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "4": 
 				enc = random.choice(cr10)
 				embed = discord.Embed(
@@ -702,7 +702,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "5":
 				enc = random.choice(cr11)
 				embed = discord.Embed(
@@ -710,7 +710,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "6":
 				enc  = random.choice(cr12)
 				embed = discord.Embed(
@@ -718,7 +718,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "7": 
 				enc = random.choice(cr6)
 				enc2 = random.choice(cr12)
@@ -727,7 +727,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "8":
 				enc = random.choice(cr12)
 				enc2 = random.choice(cr7)
@@ -736,7 +736,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 		if level == "13":
 			if size == "2":
 				enc = random.choice(cr7)
@@ -745,7 +745,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "3":
 				enc = random.choice(cr8)
 				embed = discord.Embed(
@@ -753,7 +753,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "4": 
 				enc = random.choice(cr11)
 				embed = discord.Embed(
@@ -761,7 +761,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "5":
 				enc = random.choice(cr12)
 				embed = discord.Embed(
@@ -769,7 +769,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "6":
 				enc  = random.choice(cr13)
 				embed = discord.Embed(
@@ -777,7 +777,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "7": 
 				enc = random.choice(cr6)
 				enc2 = random.choice(cr13)
@@ -786,7 +786,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "8":
 				enc = random.choice(cr13)
 				enc2 = random.choice(cr7)
@@ -795,7 +795,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 		if level == "14":
 			if size == "2":
 				enc = random.choice(cr7)
@@ -804,7 +804,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "3":
 				enc = random.choice(cr8)
 				embed = discord.Embed(
@@ -812,7 +812,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "4": 
 				enc = random.choice(cr12)
 				embed = discord.Embed(
@@ -820,7 +820,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "5":
 				enc = random.choice(cr13)
 				embed = discord.Embed(
@@ -828,7 +828,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "6":
 				enc  = random.choice(cr14)
 				embed = discord.Embed(
@@ -836,7 +836,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "7": 
 				enc = random.choice(cr6)
 				enc2 = random.choice(cr14)
@@ -845,7 +845,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "8":
 				enc = random.choice(cr14)
 				enc2 = random.choice(cr7)
@@ -854,7 +854,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 		if level == "15":
 			if size == "2":
 				enc = random.choice(cr7)
@@ -863,7 +863,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "3":
 				enc = random.choice(cr9)
 				embed = discord.Embed(
@@ -871,7 +871,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "4": 
 				enc = random.choice(cr13)
 				embed = discord.Embed(
@@ -879,7 +879,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "5":
 				enc = random.choice(cr14)
 				embed = discord.Embed(
@@ -887,7 +887,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "6":
 				enc  = random.choice(cr15)
 				embed = discord.Embed(
@@ -895,7 +895,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "7": 
 				enc = random.choice(cr6)
 				enc2 = random.choice(cr15)
@@ -904,7 +904,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "8":
 				enc = random.choice(cr15)
 				enc2 = random.choice(cr7)
@@ -913,7 +913,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 		if level == "16":
 			if size == "2":
 				enc = random.choice(cr11)
@@ -922,7 +922,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "3":
 				enc = random.choice(cr12)
 				embed = discord.Embed(
@@ -930,7 +930,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "4": 
 				enc = random.choice(cr15)
 				embed = discord.Embed(
@@ -938,7 +938,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "5":
 				enc = random.choice(cr16)
 				embed = discord.Embed(
@@ -946,7 +946,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "6":
 				enc  = random.choice(cr16)
 				embed = discord.Embed(
@@ -954,7 +954,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "7": 
 				enc = random.choice(cr11)
 				enc2 = random.choice(cr16)
@@ -963,7 +963,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "8":
 				enc = random.choice(cr16)
 				enc2 = random.choice(cr12)
@@ -972,7 +972,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 		if level == "17":
 			if size == "2":
 				enc = random.choice(cr11)
@@ -981,7 +981,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "3":
 				enc = random.choice(cr13)
 				embed = discord.Embed(
@@ -989,7 +989,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "4": 
 				enc = random.choice(cr14)
 				embed = discord.Embed(
@@ -997,7 +997,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "5":
 				enc = random.choice(cr16)
 				embed = discord.Embed(
@@ -1005,7 +1005,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "6":
 				enc  = random.choice(cr17)
 				embed = discord.Embed(
@@ -1013,7 +1013,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "7": 
 				enc = random.choice(cr11)
 				enc2 = random.choice(cr17)
@@ -1022,7 +1022,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "8":
 				enc = random.choice(cr17)
 				enc2 = random.choice(cr12)
@@ -1031,7 +1031,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 		if level == "18":
 			if size == "2":
 				enc = random.choice(cr11)
@@ -1040,7 +1040,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "3":
 				enc = random.choice(cr12)
 				embed = discord.Embed(
@@ -1048,7 +1048,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "4": 
 				enc = random.choice(cr14)
 				embed = discord.Embed(
@@ -1056,7 +1056,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "5":
 				enc = random.choice(cr16)
 				embed = discord.Embed(
@@ -1064,7 +1064,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "6":
 				enc  = random.choice(cr18)
 				embed = discord.Embed(
@@ -1072,7 +1072,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "7": 
 				enc = random.choice(cr11)
 				enc2 = random.choice(cr18)
@@ -1081,7 +1081,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "8":
 				enc = random.choice(cr18)
 				enc2 = random.choice(cr12)
@@ -1090,7 +1090,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 		if level == "19":
 			if size == "2":
 				enc = random.choice(cr11)
@@ -1099,7 +1099,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "3":
 				enc = random.choice(cr14)
 				embed = discord.Embed(
@@ -1107,7 +1107,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "4": 
 				enc = random.choice(cr16)
 				embed = discord.Embed(
@@ -1115,7 +1115,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "5":
 				enc = random.choice(cr17)
 				embed = discord.Embed(
@@ -1123,7 +1123,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "6":
 				enc  = random.choice(cr19)
 				embed = discord.Embed(
@@ -1131,7 +1131,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "7": 
 				enc = random.choice(cr11)
 				enc2 = random.choice(cr19)
@@ -1140,7 +1140,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "8":
 				enc = random.choice(cr19)
 				enc2 = random.choice(cr12)
@@ -1149,7 +1149,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 		if level == "20":
 			if size == "2":
 				enc = random.choice(cr11)
@@ -1158,7 +1158,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "3":
 				enc = random.choice(cr15)
 				embed = discord.Embed(
@@ -1166,7 +1166,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "4": 
 				enc = random.choice(cr16)
 				embed = discord.Embed(
@@ -1174,7 +1174,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "5":
 				enc = random.choice(cr19)
 				embed = discord.Embed(
@@ -1182,7 +1182,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "6":
 				enc  = random.choice(cr20)
 				embed = discord.Embed(
@@ -1190,7 +1190,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "7": 
 				enc = random.choice(cr11)
 				enc2 = random.choice(cr20)
@@ -1199,7 +1199,7 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 			if size == "8":
 				enc = random.choice(cr20)
 				enc2 = random.choice(cr12)
@@ -1208,6 +1208,6 @@ class encountergen():
 				)
 				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 				embed.add_field(name="Enemy's:", value=str(enc) + ", " + str(enc2), inline=False)
-				await bot.say(embed=embed)
+				await self.bot.say(embed=embed)
 def setup(bot):
 	bot.add_cog(encountergen(bot))
