@@ -13,7 +13,7 @@ class encountergen():
 	def __init__(self, bot):
         	self.bot = bot
 
-	@command.command(brief="an encounter generator for d&d 5e")
+	@commands.command(brief="an encounter generator for d&d 5e")
 	async def encounter(self, level, size):
 		if level == "1": 	
 			if size == "2":
