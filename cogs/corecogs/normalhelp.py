@@ -12,7 +12,7 @@ class HelpCommand:
         self.bot = bot
 
     @command(name='help')
-    async def help_group(self, command_name=None):
+    async def help_command(self, command_name=None):
         """Sends a formatted embed in order to help users understand the commands of the bot.
         This command relies on command.brief and command.description in order to provide users
         with an adequate explanation of commands that are registered with the bot.
@@ -26,18 +26,25 @@ class HelpCommand:
         help_embed = Embed(colour=Colour.blue())
         if not command_name or not _command:
             # Command not found or none
+
             description = (f'**{bot_cmd.name}**: {bot_cmd.brief}' for bot_cmd in
                            self.bot.commands.values() if not bot_cmd.hidden)
+            help_embed.title = 'Commands'
             help_embed.description = '\n'.join(description)
             help_embed.set_footer(text='Use ;help {command_name}')
             return await self.bot.say(embed=help_embed)
 
         help_embed.title = f'**{_command.name}**'
-        help_embed.description = _command.description
-        help_embed.add_field(name='Usage', value=_command.usage)
+        if not _command.description and not _command.brief:
+            help_embed.description = 'This command has no description. Please try this command.'
+        else:
+            help_embed.description = _command.description if _command.description else _command.brief
+
         # Adds the Aliases field if the command has aliases
         if _command.aliases:
             help_embed.add_field(name='Aliases', value=', '.join(_command.aliases))
+
+        return await self.bot.say(embed=help_embed)
 
 
 def setup(bot):
