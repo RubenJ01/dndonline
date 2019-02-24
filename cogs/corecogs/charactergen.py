@@ -13,7 +13,7 @@ class charactergen():
         	self.bot = bot
 
 	@commands.command(brief="generate a level 1 character")
-	async def character():
+	async def character(self):
 		alignment = ["Lawfull good", "Neutral good", "Chaotic good", "Lawful neutral", "Neutral", "Chaotic"]
 		alignmentroll = random.choice(alignment)
 
