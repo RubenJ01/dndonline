@@ -15,13 +15,13 @@ class encountergen():
 
 	@commands.command(brief="an encounter generator for d&d 5e")
 	async def encounter(self, level, size):
+		embed = discord.Embed(
+			colour = discord.Colour.blue()
+		)
+		embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
 		if level == "1": 	
 			if size == "2":
-				enc = random.sample(crkwart, 2)
-				embed = discord.Embed(
-					colour = discord.Colour.blue()
-				)
-				embed.set_author(name="Encounter for party level: " + str(level) +  " and, " + str(size) + " party members")
+				enc = random.sample(crkwart, 2)			
 				embed.add_field(name="Enemy's:", value=', '.join(enc), inline=False)
 				await self.bot.say(embed=embed)
 			if size == "3":
