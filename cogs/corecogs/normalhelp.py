@@ -11,7 +11,7 @@ class HelpCommand:
     def __init__(self, bot):
         self.bot = bot
 
-    @command(name='help')
+    @command(name='help', brief="shows this message")
     async def help_command(self, command_name=None):
         """Sends a formatted embed in order to help users understand the commands of the bot.
         This command relies on command.brief and command.description in order to provide users
