@@ -8,7 +8,25 @@
       "range" : "150 feet",
       "school" : "Necromancy"
    },
-   "acid splash" : {
+   "absorb elements" : {
+      "casting_time" : "1 reaction",
+      "components" : "S",
+      "description" : "When you take acid, cold, fire, lightning or thunder damage, the spell captures some of the incoming energy, lessening its effect on you and storing it for your next melee attack. You have resistance to the triggering damage type until the start of your next turn. Also, the first time you hit with a melee attack on your next turn, the target takes an extra 1d6 damage of the triggering type, and the spell ends. At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the extra damage increases by 1d6 for each slot level above 1st.",
+      "duration" : "Instantaneous",
+      "level" : 1,
+      "range" : "Self",
+      "school" : "Abjuration"
+   },
+   "acid arrow" : {
+      "casting_time" : "1 action",
+      "components" : "V, S, M (powdered rhubarb leaf and an adder’s stomach)",
+      "description" : "A shimmering green arrow streaks toward a target within range and bursts in a spray of acid. Make a ranged spell attack against the target. On a hit, the target takes 4d4 acid damage immediately and 2d4 acid damage at the end of its next turn. On a miss, the arrow splashes the target with acid for half as much of the initial damage and no damage at the end of its next turn. At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the damage (both initial and later) increases by 1d4 for each slot level above 2nd.",
+      "duration" : "Instantaneous",
+      "level" : 2,
+      "range" : "90 feet",
+      "school" : "Evocation"
+   },
+  "acid splash" : {
       "casting_time" : "1 action",
       "components" : "V, S",
       "description" : "You hurl a bubble of acid. Choose one creature within range, or choose two creatures within range that are within 5 feet of each other. A target must succeed on a Dexterity saving throw or take 1d6 acid damage. This spell’s damage increases by 1d6 when you reach 5th level (2d6), 11th level (3d6), and 17th level (4d6).",
@@ -17,6 +35,15 @@
       "range" : "60 feet",
       "school" : "Conjuration"
    },
+   "agnazzar's scorcher" : {
+      "casting_time" : "1 action",
+      "components" : "V, S, M (a red dragon's scale)",
+      "description" : "A line of roaring flame 30 feet long and 5 feet wide emanates from you in a direction you choose. Each creature in the line must make a Dexterity saving throw. A creature takes 3d8 fire damage on a failed save, or half as much damage on a successful one. At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d8 for each slot level above 2nd.",
+      "duration" : "Instantaneous",
+      "level" : 2,
+      "range" : "30 feet",
+      "school" : "Evocation"
+   },
    "aid" : {
       "casting_time" : "1 action",
       "components" : "V, S, M (a tiny strip of white cloth)",
@@ -24,6 +51,78 @@
       "duration" : "8 hours",
       "level" : 2,
       "range" : "30 feet",
+      "school" : "Abjuration"
+   },
+   "alarm" : {
+      "casting_time" : "Ritual, 1 minute",
+      "components" : "V, S, M (a red dragon's scale)",
+      "description" : "",
+      "duration" : "8 hours",
+      "level" : 1,
+      "range" : "30 feet",
+      "school" : "Abjuration"
+   },
+   "alter self" : {
+      "casting_time" : "1 action",
+      "components" : "V, S, M (a red dragon's scale)",
+      "description" : "You assume a different form. When you cast the spell, choose one of the following options, the effects of which last for the duration of the spell. While the spell lasts, you can end one option as an action to gain the benefits of a different one. Aquatic Adaptation. You adapt your body to an aquatic environment, sprouting gills and growing webbing between your fingers. You can breathe underwater and gain a swimming speed equal to your walking speed. Change Appearance. You transform your appearance. You decide what you look like, including your height, weight, facial features, sound of your voice, hair length, coloration, and distinguishing characteristics, if any. You can make yourself appear as a member of another race, though none of your statistics change. You also can't appear as a creature of a different size than you, and your basic shape stays the same; if you're bipedal, you can't use this spell to become quadrupedal, for instance. At any time for the duration of the spell, you can use your action to change your appearance in this way again. Natural Weapons. You grow claws, fangs, spines, horns, or a different natural weapon of your choice. Your unarmed strikes deal 1d6 bludgeoning, piercing, or slashing damage, as appropriate to the natural weapon you chose, and you are proficient with your unarmed strikes. Finally, the natural weapon is magic and you have a +1 bonus to the attack and damage rolls you make using it.",
+      "duration" : "Concentration, up to 1 hour",
+      "level" : 2,
+      "range" : "Self",
+      "school" : "Transmutation"
+   },
+   "animal friendship" : {
+      "casting_time" : "1 action",
+      "components" : "V, S, M (a morsel of food)",
+      "description" : "This spell lets you convince a beast that you mean it no harm. Choose a beast that you can see within range. It must see and hear you. If the beast's Intelligence is 4 or higher, the spell fails. Otherwise, the beast must succeed on a Wisdom saving throw or be charmed by you for the spell's duration. If you or one of your companions harms the target, the spell ends. At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, you can affect one additional beast level above 1st.",
+      "duration" : "24 hours",
+      "level" : 1,
+      "range" : "30 feet",
+      "school" : "Enchantment"
+   },
+   "animal messenger" : {
+      "casting_time" : "Ritual, 1 action",
+      "components" : "V, S, M (a morsel of food)",
+      "description" : "By means of this spell, you use an animal to deliver a message. Choose a Tiny beast you can see within range, such as a squirrel, a blue jay, or a bat. You specify a location, which you must have visited, and a recipient who matches a general description, such as "a man or woman dressed in the uniform of the town guard" or "a red-haired dwarf wearing a pointed hat." You also speak a message of up to twenty-five words. The target beast travels for the duration of the spell toward the specified location, covering about 50 miles per 24 hours for a flying messenger, or 25 miles for other animals. When the messenger arrives, it delivers your message to the creature that you described, replicating the sound of your voice. The messenger speaks only to a creature matching the description you gave. If the messenger doesn't reach its destination before the spell ends, the message is lost, and the beast makes its way back to where you cast this spell. At Higher Levels. If you cast this spell using a spell slot of 3rd level or higher, the duration of the spell increases by 48 hours for each slot level above 2nd.",
+      "duration" : "24 hours",
+      "level" : 2,
+      "range" : "30 feet",
+      "school" : "Enchantment"
+   },
+   "animal shapes" : {
+      "casting_time" : "1 action",
+      "components" : "V, S",
+      "description" : "Your magic turns others into beasts. Choose any number of willing creatures that you can see within range. You transform each target into the form of a Large or smaller beast with a challenge rating of 4 or lower. On subsequent turns, you can use your action to transform affected creatures into new forms. The transformation lasts for the duration for each target, or until the target drops to 0 hit points or dies. You can choose a different form for each target. A target's game statistics are replaced by the statistics of the chosen beast, though the target retains its alignment and Intelligence, Wisdom, and Charisma scores. The target assumes the hit points of its new form, and when it reverts to its normal form, it returns to the number of hit points it had before it transformed. If it reverts as a result of dropping to 0 hit points, any excess damage carries over to its normal form. As long as the excess damage doesn't reduce the creature's normal form to 0 hit points, it isn't knocked unconscious. The creature is limited in the actions it can perform by the nature of its new form, and it can't speak or cast spells. The target's gear melds into the new form. The target can't activate, wield, or otherwise benefit from any of its equipment.",
+      "duration" : "Concentration, up to 24 hours",
+      "level" : 8,
+      "range" : "30 feet",
+      "school" : "Transmutation"
+   },
+   "animate dead" : {
+      "casting_time" : "1 minute",
+      "components" : "V, S, M (a drop of blood, a piece of flesh, and a pinch of bone dust)",
+      "description" : "This spell creates an undead servant. Choose a pile of bones or a corpse of a Medium or Small humanoid within range. Your spell imbues the target with a foul mimicry of life, raising it as an undead creature. The target becomes a skeleton if you chose bones or a zombie if you chose a corpse (the GM has the creature's game statistics). On each of your turns, you can use a bonus action to mentally command any creature you made with this spell if the creature is within 60 feet of you (if you control multiple creatures, you can command any or all of them at the same time, issuing the same command to each one). You decide what action the creature will take and where it will move during its next turn, or you can issue a general command, such as to guard a particular chamber or corridor. If you issue no commands, the creature only defends itself against hostile creatures. Once given an order, the creature continues to follow it until its task is complete. The creature is under your control for 24 hours, after which it stops obeying any command you've given it. To maintain control of the creature for another 24 hours, you must cast this spell on the creature again before the current 24-hour period ends. This use of the spell reasserts your control over up to four creatures you have animated with this spell, rather than animating a new one. At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, you animate or reassert control over two additional undead creatures for each slot level above 3rd. Each of the creatures must come from a different corpse or pile of bones.",
+      "duration" : "Instantaneous",
+      "level" : 3,
+      "range" : "10 feet",
+      "school" : "Necromancy"
+   },
+   "animate objects" : {
+      "casting_time" : "1 action",
+      "components" : "V, S",
+      "description" : "Objects come to life at your command. Choose up to ten nonmagical objects within range that are not being worn or carried. Medium targets count as two objects, Large targets count as four objects, Huge targets count as eight objects. You can't animate any object larger than Huge. Each target animates and becomes a creature under your control until the spell ends or until reduced to 0 hit points. As a bonus action, you can mentally command any creature you made with this spell if the creature is within 500 feet of you (if you control multiple creatures, you can command any or all of them at the same time, issuing the same command to each one). You decide what action the creature will take and where it will move during its next turn, or you can issue a general command, such as to guard a particular chamber or corridor. If you issue no commands, the creature only defends itself against hostile creatures. Once given an order, the creature continues to follow it until its task is complete. Animated Object Statistics: https://dnd5e.fandom.com/wiki/Animate_Objects. An animated object is a construct with AC, hit points, attacks, Strength, and Dexterity determined by its size. Its Constitution is 10 and its Intelligence and Wisdom are 3, and its Charisma is 1. Its speed is 30 feet; if the object lacks legs or other appendages it can use for locomotion, it instead has a flying speed of 30 feet and can hover. If the object is securely attached to a surface or a larger object, such as a chain bolted to a wall, its speed is 0. It has blindsight with a radius of 30 feet and is blind beyond that distance. When the animated object drops to 0 hit points, it reverts to its original object form, and any remaining damage carries over to its original object form. If you command an object to attack, it can make a single melee attack against a creature within 5 feet of it. It makes a slam attack with an attack bonus and bludgeoning damage determined by its size. The GM might rule that a specific object inflicts slashing or piercing damage based on its form. At Higher Levels. If you cast this spell using a spell slot of 6th level or higher, you can animate two additional objects for each slot level above 5th.",
+      "duration" : "Concentration, up to 1 minute",
+      "level" : 5,
+      "range" : "120 feet",
+      "school" : "Transmutation"
+   },
+   "antilife shell" : {
+      "casting_time" : "1 action",
+      "components" : "V, S",
+      "description" : "A shimmering barrier extends out from you in a 10- foot radius and moves with you, remaining centered on you and hedging out creatures other than undead and constructs. The barrier lasts for the duration. The barrier prevents an affected creature from passing or reaching through. An affected creature can cast spells or make attacks with ranged or reach weapons through the barrier. If you move so that an affected creature is forced to pass through the barrier, the spell ends.",
+      "duration" : "Concentration, 1 hour",
+      "level" : 5,
+      "range" : "Self (10-foot-radius sphere)",
       "school" : "Abjuration"
    },
    "antimagic field" : {
@@ -35,6 +134,15 @@
       "range" : "Self (10-foot-radius sphere)",
       "school" : "Abjuration"
    },
+   "antipathy/sympathy" : {
+      "casting_time" : "1 hour",
+      "components" : "V, S, M (either a lump of alum soaked in vinegar for the antipathy effect or a drop of honey for the sympathy effect)",
+      "description" : "This spell attracts or repels creatures of your choice. You target something within range, either a Huge or smaller object or creature or an area that is no larger than a 200-foot cube. Then specify a kind of intelligent creature, such as red dragons, goblins, or vampires. You invest the target with an aura that either attracts or repels the specified creatures for the duration. Choose antipathy or sympathy as the aura's effect. Antipathy. The enchantment causes creatures of the kind you designated to feel an intense urge to leave the area and avoid the target. When such a creature can see the target or comes within 60 feet of it, the creature must succeed on a Wisdom saving throw or become frightened. The creature remains frightened while it can see the target or is within 60 feet of it. While frightened by the target, the creature must use its movement to move to the nearest safe spot from which it can't see the target. If the creature moves more than 60 feet from the target and can't see it, the creature is no longer frightened, but the creature becomes frightened again if it regains sight of the target or moves within 60 feet of it. Sympathy. The enchantment causes the specified creatures to feel an intense urge to approach the target while within 60 feet of it or able to see it. When such a creature can see the target or comes within 60 feet of it, the creature must succeed on a Wisdom saving throw or use its movement on each of its turns to enter the area or move within reach of the target. When the creature has done so, it can't willingly move away from the target. If the target damages or otherwise harms an affected creature, the affected creature can make a Wisdom saving throw to end the effect, as described below. Ending the Effect. If an affected creature ends its turn while not within 60 feet of the target or able to see it, the creature makes a Wisdom saving throw. On a successful save, the creature is no longer affected by the target and recognizes the feeling of repugnance or attraction as magical. In addition, a creature affected by the spell is allowed another Wisdom saving throw every 24 hours while the spell persists. A creature that successfully saves against this effect is immune to it for 1 minute, after which time it can be affected again.",
+      "duration" : "Instantaneous",
+      "level" : 8,
+      "range" : "10 days",
+      "school" : "Enchantment"
+   },
    "arcane eye" : {
       "casting_time" : "1 action",
       "components" : "V, S, M (a bit of bat fur)",
@@ -43,6 +151,24 @@
       "level" : 4,
       "range" : "30 feet",
       "school" : "Divination"
+   },
+   "arcane gate" : {
+      "casting_time" : "1 action",
+      "components" : "V, S",
+      "description" : "You create linked teleportation portals that remain open for the duration. Choose two points on the ground that you can see, one point within 10 feet of you and one point within 500 feet of you. A circular portal, 10 feet in diameter, opens over each point. If the portal would open in the space occupied by a creature, the spell fails, and the casting is lost. The portals are two-dimensional glowing rings filled with mist, hovering inches from the ground and perpendicular to it at the points you choose. A ring is visible only from one side (your choice), which is the side that functions as a portal. Any creature or object entering the portal exits from the other portal as if the two were adjacent to each other; passing through a portal from the nonportal side has no effect. The mist that fills each portal is opaque and blocks vision through it. On your turn, you can rotate the rings as a bonus action so that the active side faces in a different direction.",
+      "duration" : "Concentration, up to 10 minutes",
+      "level" : 6,
+      "range" : "500 feet",
+      "school" : "Conjuration"
+   },
+   "arcane hand" : {
+      "casting_time" : "1 action",
+      "components" : "V, S, M (an eggshell and a snakeskin glove)",
+      "description" : "You create a Large hand of shimmering, translucent force in an unoccupied space that you can see within range. The hand lasts for the spell's duration, and it moves at your command, mimicking the movements of your own hand. The hand is an object that has AC 20 and hit points equal to your hit point maximum. If it drops to 0 hit points, the spell ends. It has a Strength of 26 (+8) and a Dexterity of 10 (+0). The hand doesn't fill its space. When you cast the spell and as a bonus action on your subsequent turns, you can move the hand up to 60 feet and then cause one of the following effects with it. Clenched Fist. The hand strikes one creature or object within 5 feet of it. Make a melee spell attack for the hand using your game statistics. On a hit, the target takes 4d8 force damage. Forceful Hand. The hand attempts to push a creature within 5 feet of it in a direction you choose. Make a check with the hand's Strength contested by the Strength (Athletics) check of the target. If the target is Medium or smaller, you have advantage on the check. If you succeed, the hand pushes the target up to 5 feet plus a number of feet equal to five times your spellcasting ability modifier. The hand moves with the target to remain within 5 feet of it. Grasping Hand. The hand attempts to grapple a Huge or smaller creature within 5 feet of it. You use the hand's Strength score to resolve the grapple. If the target is Medium or smaller, you have advantage on the check. While the hand is grappling the target, you can use a bonus action to have the hand crush it. When you do so, the target takes bludgeoning damage equal to 2d6 + your spellcasting ability modifier. Interposing Hand. The hand interposes itself between you and a creature you choose until you give the hand a different command. The hand moves to stay between you and the target, providing you with half cover against the target. The target can't move through the hand's space if its Strength score is less than or equal to the hand's Strength score. If its Strength score is higher than the hand's Strength score, the target can move toward you through the hand's space, but that space is difficult terrain for the target. At Higher Levels. When you cast this spell using a spell slot of 6th level or higher, the damage from the clenched fist option increases by 2d8 and the damage from the grasping hand increases by 2d6 for each slot level above 5th.",
+      "duration" : "Concentration, up to 1 minute",
+      "level" : 5,
+      "range" : "120 feet",
+      "school" : "Evocation"
    },
    "arcane lock" : {
       "casting_time" : "1 action",
@@ -53,11 +179,38 @@
       "range" : "Touch",
       "school" : "Abjuration"
    },
+   "arcanist's magic aura" : {
+      "casting_time" : "1 action",
+      "components" : "V, S, M (a small square of silk)",
+      "description" : "You place an illusion on a creature or an object you touch so that divination spells reveal false information about it. The target can be a willing creature or an object that isn't being carried or worn by another creature. When you cast the spell, choose one or both of the following effects. The effect lasts for the duration. If you cast this spell on the same creature or object every day for 30 days, placing the same effect on it each time, the illusion lasts until it is dispelled. False Aura. You change the way the target appears to spells and magical effects, such as detect magic, that detect magical auras. You can make a nonmagical object appear magical, a magical object appear nonmagical, or change the object's magical aura so that it appears to belong to a specific school of magic that you choose. When you use this effect on an object, you can make the false magic apparent to any creature that handles the item. Mask. You change the way the target appears to spells and magical effects that detect creature types, such as a paladin's Divine Sense or the trigger of a symbol spell. You choose a creature type and other spells and magical effects treat the target as if it were a creature of that type or of that alignment.",
+      "duration" : "24 hours",
+      "level" : 2,
+      "range" : "Touch",
+      "school" : "Illusion"
+   },
+   "armor of agathys" : {
+      "casting_time" : "1 action",
+      "components" : "V, S, M (a cup of water)",
+      "description" : "A protective magical force surrounds you, manifesting as a spectral frost that covers you and your gear. You gain 5 temporary hit points for the duration. If a creature hits you with a melee attack while you have these hit points, the creature takes 5 cold damage. At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, both the temporary hit points and the cold damage increase by 5 for each slot.",
+      "duration" : "1 hour",
+      "level" : 1,
+      "range" : "Self",
+      "school" : "Abjuration"
+   },
+   "arms of hadar" : {
+      "casting_time" : "1 action",
+      "components" : "V, S",
+      "description" : "You invoke the power of Hadar, the Dark Hunger. Tendrils of dark energy erupt from you and batter all creatures within 10 feet of you. Each creature in that area must make a Strength saving throw. On a failed save, a target takes 2d6 necrotic damage and can’t take reactions until its next turn. On a successful save, the creature takes half damage, but suffers no other effect. At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st.",
+      "duration" : "Instantaneous",
+      "level" : 2,
+      "range" : "Self (10-foot-radius sphere)",
+      "school" : "Conjuration"
+   },
    "astral projection" : {
       "casting_time" : "1 hour",
-      "components" : "V, S, M (for each creature you affect with this spell, you must provide one jacinth worth at least",
-      "description" : "at least 100 gp, all of which the spell consumes) Duration: Special You and up to eight willing creatures within range project your astral bodies into the Astral Plane (the spell fails and the casting is wasted if you are already on that plane). The material body you leave behind is unconscious and in a state of suspended animation; it doesn’t need food or air and doesn’t age. Your astral body resembles your mortal form in almost every way, replicating your game statistics and possessions. The principal difference is the addition of a silvery cord that extends from between your shoulder blades and trails behind you, fading to invisibility after 1 foot. This cord is your tether to your material body. As long as the tether remains intact, you can find your way home. If the cord is cut—something that can happen only when an effect specifically states that it does—your soul and body are separated, killing you instantly. Your astral form can freely travel through the Astral Plane and can pass through portals there leading to any other plane. If you enter a new plane or return to the plane you were on when casting this spell, your body and possessions are transported along the silver cord, allowing you to re-enter your body as you enter the new plane. Your astral form is a separate incarnation. Any damage or other effects that apply to it have no effect on your physical body, nor do they persist when you return to it. The spell ends for you and your companions when you use your action to dismiss it. When the spell ends, the affected creature returns to its physical body, and it awakens. The spell might also end early for you or one of your companions. A successful dispel magic spell used against an astral or physical body ends the spell for that creature. If a creature’s original body or its astral form drops to 0 hit points, the spell ends for that creature. If the spell ends and the silver cord is intact, the cord pulls the creature’s astral form back to its body, ending its state of suspended animation. If you are returned to your body prematurely, your companions remain in their astral forms and must find their own way back to their bodies, usually by dropping to 0 hit points.",
-      "duration" : "1,000 gp and one ornately carved bar of silver worth",
+      "components" : "V, S, M (for each creature you affect with this spell, you must provide one jacinth worth at least 1,000 gp and one ornately carved bar of silver worth at least 100 gp, all of which the spell consumes)",
+      "description" : "You and up to eight willing creatures within range project your astral bodies into the Astral Plane (the spell fails and the casting is wasted if you are already on that plane). The material body you leave behind is unconscious and in a state of suspended animation; it doesn’t need food or air and doesn’t age. Your astral body resembles your mortal form in almost every way, replicating your game statistics and possessions. The principal difference is the addition of a silvery cord that extends from between your shoulder blades and trails behind you, fading to invisibility after 1 foot. This cord is your tether to your material body. As long as the tether remains intact, you can find your way home. If the cord is cut—something that can happen only when an effect specifically states that it does—your soul and body are separated, killing you instantly. Your astral form can freely travel through the Astral Plane and can pass through portals there leading to any other plane. If you enter a new plane or return to the plane you were on when casting this spell, your body and possessions are transported along the silver cord, allowing you to re-enter your body as you enter the new plane. Your astral form is a separate incarnation. Any damage or other effects that apply to it have no effect on your physical body, nor do they persist when you return to it. The spell ends for you and your companions when you use your action to dismiss it. When the spell ends, the affected creature returns to its physical body, and it awakens. The spell might also end early for you or one of your companions. A successful dispel magic spell used against an astral or physical body ends the spell for that creature. If a creature’s original body or its astral form drops to 0 hit points, the spell ends for that creature. If the spell ends and the silver cord is intact, the cord pulls the creature’s astral form back to its body, ending its state of suspended animation. If you are returned to your body prematurely, your companions remain in their astral forms and must find their own way back to their bodies, usually by dropping to 0 hit points.",
+      "duration" : "Special",
       "level" : 9,
       "range" : "10 feet",
       "school" : "Necromancy"
@@ -71,6 +224,69 @@
       "range" : "Self",
       "school" : "Divination"
    },
+   "aura of life" : {
+      "casting_time" : "1 action",
+      "components" : "V",
+      "description" : "Life-preserving energy radiates from you in an aura with a 30-foot radius.  Until the spell ends, the aura moves with you, centered on you. Each nonhostile creature in the aura (including you) has resistance to necrotic damage, and its hit point maximum can’t be reduced. In addition, a nonhostile, living creature regains 1 hit point when it starts its turn in the aura with 0 hit points.",
+      "duration" : "Concentration, up to 10 minutes",
+      "level" : 4,
+      "range" : "Self (30-foot-radius sphere)",
+      "school" : "Abjuration"
+   },
+   "aura of purity" : {
+      "casting_time" : "1 action",
+      "components" : "V",
+      "description" : "Purifying energy radiates from you in an aura with a 30-foot radius. Until the spell ends, the aura moves with you, centered on you. Each nonhostile creature in the aura (including you) can’t become diseased, has resistance to poison damage, and has advantage on saving throws against effects that cause any of the following conditions: blinded, charmed, deafened, frightened, paralyzed, poisoned, and stunned.",
+      "duration" : "Concentration, up to 10 minutes",
+      "level" : 4,
+      "range" : "Self (30-foot-radius sphere)",
+      "school" : "Abjuration"
+   },
+   "aura of vitality" : {
+      "casting_time" : "1 action",
+      "components" : "V",
+      "description" : "Healing energy radiates from you in an aura with a 30-foot radius. Until the spell ends, the aura moves with you, centered on you. You can use a bonus action to cause one creature in the aura (including you) to regain 2d6 hit points.",
+      "duration" : "Concentration, up to 1 minute",
+      "level" : 3,
+      "range" : "Self (30-foot-radius sphere)",
+      "school" : "Evocation"
+   },
+   "bane" : {
+      "casting_time" : "1 action",
+      "components" : "V, S, M (a drop of blood)",
+      "description" : "Up to three creatures of your choice that you can see within range must make Charisma saving throws. Whenever a target that fails this saving throw makes an attack roll or a saving throw before the spell ends, the target must roll a d4 and subtract the number rolled from the attack roll or saving throw. At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st.",
+      "duration" : "Concentration, up to 1 minute",
+      "level" : 1,
+      "range" : "30 feet",
+      "school" : "Enchantment"
+   },
+   "banishing smite" : {
+      "casting_time" : "1 bonus action",
+      "components" : "V",
+      "description" : "The next time you hit a creature with a weapon attack before this spell ends, your weapon crackles with force, and the attack deals an extra 5d10 force damage to the target. Additionally, if this attack reduces the target to 50 hit points of fewer, you banish it. If the target is native to a different plane of existence than the on you’re on, the target disappears, returning to its home plane. If the target is native to the plane you’re on, the creature vanishes into a harmless demiplane. While there, the target is incapacitated. It remains there until the spell ends, at which point the target reappears in the space it left or in the nearest unoccupied space if that space is occupied.",
+      "duration" : "Concentration, up to 1 minute",
+      "level" : 5,
+      "range" : "Self",
+      "school" : "Abjuration"
+   },
+   "banishment" : {
+      "casting_time" : "1 action",
+      "components" : "V, S, M (an item distasteful to the target)",
+      "description" : "You attempt to send one creature that you can see within range to another plane of existence. The target must succeed on a Charisma saving throw or be banished. If the target is native to the plane of existence you're on, you banish the target to a harmless demiplane. While there, the target is incapacitated. The target remains there until the spell ends, at which point the target reappears in the space it left or in the nearest unoccupied space if that space is occupied. If the target is native to a different plane of existence than the one you're on, the target is banished with a faint popping noise, returning to its home plane. If the spell ends before 1 minute has passed, the target reappears in the space it left or in the nearest unoccupied space if that space is occupied. Otherwise, the target doesn't return. At Higher Levels. When you cast this spell using a spell slot of 5th level or higher, you can target one additional creature for each slot level above 4th.",
+      "duration" : "Concentration, up to 1 minute",
+      "level" : 4,
+      "range" : "60 feet",
+      "school" : "Abjuration"
+   },
+   "barkskin" : {
+      "casting_time" : "1 action",
+      "components" : "V, S, M (a handful of oak bark)",
+      "description" : "You touch a willing creature. Until the spell ends, the target's skin has a rough, bark-like appearance, and the target's AC can't be less than 16, regardless of what kind of armor it is wearing.",
+      "duration" : "Concentration, up to 1 hour",
+      "level" : 2,
+      "range" : "Touch",
+      "school" : "Transmutation"
+   },
    "beacon of hope" : {
       "casting_time" : "1 action",
       "components" : "V, S",
@@ -79,6 +295,51 @@
       "level" : 3,
       "range" : "30 feet",
       "school" : "Abjuration"
+   },
+   "beast bond" : {
+      "casting_time" : "1 action",
+      "components" : "V, S, M (a bit of fur wrapped in a cloth)",
+      "description" : "You establish a telepathic link with one beast you touch that is friendly to you or charmed by you. The spell fails if the beast’s Intelligence is 4 or higher. Until the spell ends, the link is active while you and the beast are within line of sight of each other. Through the link, the beast can understand your telepathic messages to it, and it can telepathically communicate simple emotions and concepts back to you. While the link is active, the beast gains advantage on attack rolls against any creature within 5 feet of you that you can see.",
+      "duration" : "Concentration, up to 10 minutes",
+      "level" : 1,
+      "range" : "Touch",
+      "school" : "Divination"
+   },
+   "beast sense" : {
+      "casting_time" : "Ritual, 1 action",
+      "components" : "S",
+      "description" : "You touch a willing beast. For the duration of the spell, you can use your action to see through the beast’s eyes and hear what it hears, and continue to do so until you use your action to return to your normal senses.",
+      "duration" : "Concentration, up to 1 hour",
+      "level" : 2,
+      "range" : "Touch",
+      "school" : "Divination"
+   },
+   "bestow curse" : {
+      "casting_time" : "1 action",
+      "components" : "V, S",
+      "description" : "You touch a creature, and that creature must succeed on a Wisdom saving throw or become cursed for the duration of the spell. When you cast this spell, choose the nature of the curse from the following options: Choose one ability score. While cursed, the target has disadvantage on ability checks and saving throws made with that ability score. While cursed, the target has disadvantage on attack rolls against you. While cursed, the target must make a Wisdom saving throw at the start of each of its turns. If it fails, it wastes its action that turn doing nothing. While the target is cursed, your attacks and spells deal an extra 1d8 necrotic damage to the target. A remove curse spell ends this effect. At the GM's option, you may choose an alternative curse effect, but it should be no more powerful than those described above. The GM has final say on such a curse's effect. At Higher Levels. If you cast this spell using a spell slot of 4th level or higher, the duration is concentration, up to 10 minutes. If you use a spell slot of 5th level or higher, the duration is 8 hours. If you use a spell slot of 7th level or higher, the duration is 24 hours. If you use a 9th level spell slot, the spell lasts until it is dispelled. Using a spell slot of 5th level or higher grants a duration that doesn't require concentration.",
+      "duration" : "Concentration, up to 1 minute",
+      "level" : 3,
+      "range" : "Touch",
+      "school" : "Necromancy"
+   },
+   "bigby's hand" : {
+      "casting_time" : "1 action",
+      "components" : "V, S, M (an eggshell and a snakeskin glove)",
+      "description" : "You create a Large hand of shimmering, translucent force in an unoccupied space that you can see within range. The hand lasts for the spell's duration, and it moves at your command, mimicking the movements of your own hand. The hand is an object that has AC 20 and hit points equal to your hit point maximum. If it drops to 0 hit points, the spell ends. It has a Strength of 26 (+8) and a Dexterity of 10 (+0). The hand doesn't fill its space. When you cast the spell and as a bonus action on your subsequent turns, you can move the hand up to 60 feet and then cause one of the following effects with it. Clenched Fist. The hand strikes one creature or object within 5 feet of it. Make a melee spell attack for the hand using your game statistics. On a hit, the target takes 4d8 force damage. Forceful Hand. The hand attempts to push a creature within 5 feet of it in a direction you choose. Make a check with the hand's Strength contested by the Strength (Athletics) check of the target. If the target is Medium or smaller, you have advantage on the check. If you succeed, the hand pushes the target up to 5 feet plus a number of feet equal to five times your spellcasting ability modifier. The hand moves with the target to remain within 5 feet of it. Grasping Hand. The hand attempts to grapple a Huge or smaller creature within 5 feet of it. You use the hand's Strength score to resolve the grapple. If the target is Medium or smaller, you have advantage on the check. While the hand is grappling the target, you can use a bonus action to have the hand crush it. When you do so, the target takes bludgeoning damage equal to 2d6 + your spellcasting ability modifier. Interposing Hand. The hand interposes itself between you and a creature you choose until you give the hand a different command. The hand moves to stay between you and the target, providing you with half cover against the target. The target can't move through the hand's space if its Strength score is less than or equal to the hand's Strength score. If its Strength score is higher than the hand's Strength score, the target can move toward you through the hand's space, but that space is difficult terrain for the target. At Higher Levels. When you cast this spell using a spell slot of 6th level or higher, the damage from the clenched fist option increases by 2d8 and the damage from the grasping hand increases by 2d6 for each slot level above 5th.",
+      "duration" : "Concentration, up to 1 minute",
+      "level" : 5,
+      "range" : "120 feet",
+      "school" : "Evocation"
+   },
+   "black tentacles" : {
+      "casting_time" : "1 action",
+      "components" : "V, S, M (a piece of tentacle from a giant octopus or a giant squid)",
+      "description" : "Squirming, ebony tentacles fill a 20-foot square on ground that you can see within range. For the duration, these tentacles turn the ground in the area into difficult terrain. When a creature enters the affected area for the first time on a turn or starts its turn there, the creature must succeed on a Dexterity saving throw or take 3d6 bludgeoning damage and be restrained by the tentacles until the spell ends. A creature that starts its turn in the area and is already restrained by the tentacles takes 3d6 bludgeoning damage. A creature restrained by the tentacles can use its action to make a Strength or Dexterity check (its choice) against your spell save DC. On a success, it frees itself.",
+      "duration" : "Concentration, up to 1 minute",
+      "level" : 4,
+      "range" : "90 feet",
+      "school" : "Conjuration"
    },
    "blade barrier" : {
       "casting_time" : "1 action",
@@ -89,6 +350,15 @@
       "range" : "90 feet",
       "school" : "Evocation"
    },
+   "blade ward" : {
+      "casting_time" : "1 action",
+      "components" : "V, S",
+      "description" : "You extend your hand and trace a sigil of warding in the air. Until the end of your next turn, you have resistance against bludgeoning, piercing, and slashing damage dealt by weapon attacks.",
+      "duration" : "1 round",
+      "level" : 0,
+      "range" : "Self",
+      "school" : "Abjuration"
+   },
    "bless" : {
       "casting_time" : "1 action",
       "components" : "V, S, M (a sprinkling of holy water)",
@@ -98,6 +368,42 @@
       "range" : "30 feet",
       "school" : "Enchantment"
    },
+   "blight" : {
+      "casting_time" : "1 action",
+      "components" : "V, S",
+      "description" : "Necromantic energy washes over a creature of your choice that you can see within range, draining moisture and vitality from it. The target must make a Constitution saving throw. The target takes 8d8 necrotic damage on a failed save, or half as much damage on a successful one. This spell has no effect on undead or constructs. If you target a plant creature or a magical plant, it makes the saving throw with disadvantage, and the spell deals maximum damage to it. If you target a nonmagical plant that isn't a creature, such as a tree or shrub, it doesn't make a saving throw; it simply withers and dies. At Higher Levels. When you cast this spell using a spell slot of 5th level or higher, the damage increases by 1d8 for each slot level above 4th.",
+      "duration" : "Instantaneous",
+      "level" : 4,
+      "range" : "30 feet",
+      "school" : "Necromancy"
+   },
+   "blinding smite" : {
+      "casting_time" : "1 bonus action",
+      "components" : "V",
+      "description" : "The next time you hit a creature with a melee weapon attack during this spell’s duration, you weapon flares with a bright light, and the attack deals an extra 3d8 radiant damage to the target. Additionally, the target must succeed on a Constitution saving throw or be blinded until the spell ends. A creature blinded by this spell makes another Constitution saving throw at the end of each of its turns. On a successful save, it is no longer blinded.",
+      "duration" : "Concentration, up to 1 minute",
+      "level" : 3,
+      "range" : "Self",
+      "school" : "Evocation"
+   },
+   "blindness/deafness" : {
+      "casting_time" : "1 action",
+      "components" : "V",
+      "description" : "You can blind or deafen a foe. Choose one creature that you can see within range to make a Constitution saving throw. If it fails, the target is either blinded or deafened (your choice) for the duration. At the end of each of its turns, the target can make a Constitution saving throw. On a success, the spell ends. At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd.",
+      "duration" : "1 minute",
+      "level" : 2,
+      "range" : "30 feet",
+      "school" : "Necromancy"
+   },
+   "blink" : {
+      "casting_time" : "1 action",
+      "components" : "V, S",
+      "description" : "Roll a d20 at the end of each of your turns for the duration of the spell. On a roll of 11 or higher, you vanish from your current plane of existence and appear in the Ethereal Plane (the spell fails and the casting is wasted if you were already on that plane). At the start of your next turn, and when the spell ends if you are on the Ethereal Plane, you return to an unoccupied space of your choice that you can see within 10 feet of the space you vanished from. If no unoccupied space is available within that range, you appear in the nearest unoccupied space (chosen at random if more than one space is equally near). You can dismiss this spell as an action. While on the Ethereal Plane, you can see and hear the plane you originated from, which is cast in shades of gray, and you can't see anything there more than 60 feet away. You can only affect and be affected by other creatures on the Ethereal Plane. Creatures that aren't there can't perceive you or interact with you, unless they have the ability to do so.",
+      "duration" : "1 minute",
+      "level" : 3,
+      "range" : "Self",
+      "school" : "Transmutation"
+   },
    "blur" : {
       "casting_time" : "1 action",
       "components" : "V",
@@ -106,6 +412,33 @@
       "level" : 2,
       "range" : "Self",
       "school" : "Illusion"
+   },
+   "bones of the earth" : {
+      "casting_time" : "1 action",
+      "components" : "V, S",
+      "description" : "You cause up to six pillars of stone to burst from places on the ground that you can see within range. Each pillar is a cylinder that has a diameter of 5 feet and a height of up to 30 feet. The ground where a pillar appears must be wide enough for its diameter, and you can target the ground under a creature if that creature is Medium or smaller. Each pillar has AC 5 and 30 hit points. When reduced to 0 hit points, a pillar crumbles into rubble, which creates an area of difficult terrain with a 10-foot radius that lasts until the rubble is cleared. Each 5-foot-diameter portion of the area requires at least 1 minute to clear by hand. If a pillar is created under a creature, that creature must succeed on a Dexterity saving throw or be lifted by the pillar. A creature can choose to fail the save. If a pillar is prevented from reaching its full height because of a ceiling or other obstacle, a creature on the pillar takes 6d6 bludgeoning damage and is restrained, pinched between the pillar and the obstacle. The restrained creature can use an action to make a Strength or Dexterity check (the creature’s choice) against the spell’s save DC. On a success, the creature is no longer restrained and must either move off the pillar or fall off it. At Higher Levels. When you cast this spell using a spell slot of 7th level or higher, you can create two additional pillars for each slot level above 6th.",
+      "duration" : "Instantaneous",
+      "level" : 6,
+      "range" : "120 feet (30-foot-tall cylinder)",
+      "school" : "Transmutation"
+   },
+   "booming blade" : {
+      "casting_time" : "1 action",
+      "components" : "V, M (a weapon)",
+      "description" : "As part of the action used to cast this spell, you must make a melee attack with a weapon against one creature within the spell’s range, otherwise the spell fails. On a hit, the target suffers the attack’s normal effects, and it becomes sheathed in booming energy until the start of your next turn. If the target willingly moves before then, it immediately takes 1d8 thunder damage, and the spell ends. This spell’s damage increases when you reach higher levels. At 5th level, the melee attack deals an extra 1d8 thunder damage to the target, and the damage the target takes for moving increases to 2d8. Both damage rolls increase by 1d8 at 11th level and 17th level.",
+      "duration" : "1 round",
+      "level" : 0,
+      "range" : "5 feet",
+      "school" : "Evocation"
+   },
+   "branding smite" : {
+      "casting_time" : "1 bonus action",
+      "components" : "V,
+      "description" : "The next time you hit a creature with a weapon attack before this spell ends, the weapon gleams with astral radiance as you strike. The attack deals an extra 2d6 radiant damage to the target, which becomes visible if it is invisible, and the target sheds dim light in a 5-foot radius and can’t become invisible until the spell ends. At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the extra damage increases by 1d6 for each slot level above 2nd.",
+      "duration" : "Concentration, up to 1 minute",
+      "level" : 2,
+      "range" : "Self",
+      "school" : "Evocation"
    },
    "burning hands" : {
       "casting_time" : "1 action",
@@ -322,6 +655,15 @@
       "level" : 7,
       "range" : "Self",
       "school" : "Transmutation"
+   },
+   "evard's black tentacles" : {
+      "casting_time" : "1 action",
+      "components" : "V, S, M (a piece of tentacle from a giant octopus or a giant squid)",
+      "description" : "Squirming, ebony tentacles fill a 20-foot square on ground that you can see within range. For the duration, these tentacles turn the ground in the area into difficult terrain. When a creature enters the affected area for the first time on a turn or starts its turn there, the creature must succeed on a Dexterity saving throw or take 3d6 bludgeoning damage and be restrained by the tentacles until the spell ends. A creature that starts its turn in the area and is already restrained by the tentacles takes 3d6 bludgeoning damage. A creature restrained by the tentacles can use its action to make a Strength or Dexterity check (its choice) against your spell save DC. On a success, it frees itself.",
+      "duration" : "Concentration, up to 1 minute",
+      "level" : 4,
+      "range" : "90 feet",
+      "school" : "Conjuration"
    },
    "find the path" : {
       "casting_time" : "1 minute",
@@ -728,6 +1070,15 @@
       "range" : "60 feet",
       "school" : "Conjuration"
    },
+    "melf's acid arrow" : {
+      "casting_time" : "1 action",
+      "components" : "V, S, M (powdered rhubarb leaf and an adder’s stomach)",
+      "description" : "A shimmering green arrow streaks toward a target within range and bursts in a spray of acid. Make a ranged spell attack against the target. On a hit, the target takes 4d4 acid damage immediately and 2d4 acid damage at the end of its next turn. On a miss, the arrow splashes the target with acid for half as much of the initial damage and no damage at the end of its next turn. At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the damage (both initial and later) increases by 1d4 for each slot level above 2nd.",
+      "duration" : "Instantaneous",
+      "level" : 2,
+      "range" : "90 feet",
+      "school" : "Evocation"
+   },
    "meteor swarm" : {
       "casting_time" : "1 action",
       "components" : "V, S",
@@ -763,6 +1114,15 @@
       "level" : 7,
       "range" : "60 feet",
       "school" : "Evocation"
+   },
+   "nystul's magic aura" : {
+      "casting_time" : "1 action",
+      "components" : "V, S, M (a small square of silk)",
+      "description" : "You place an illusion on a creature or an object you touch so that divination spells reveal false information about it. The target can be a willing creature or an object that isn't being carried or worn by another creature. When you cast the spell, choose one or both of the following effects. The effect lasts for the duration. If you cast this spell on the same creature or object every day for 30 days, placing the same effect on it each time, the illusion lasts until it is dispelled. False Aura. You change the way the target appears to spells and magical effects, such as detect magic, that detect magical auras. You can make a nonmagical object appear magical, a magical object appear nonmagical, or change the object's magical aura so that it appears to belong to a specific school of magic that you choose. When you use this effect on an object, you can make the false magic apparent to any creature that handles the item. Mask. You change the way the target appears to spells and magical effects that detect creature types, such as a paladin's Divine Sense or the trigger of a symbol spell. You choose a creature type and other spells and magical effects treat the target as if it were a creature of that type or of that alignment.",
+      "duration" : "24 hours",
+      "level" : 2,
+      "range" : "Touch",
+      "school" : "Illusion"
    },
    "otto’s irresistible dance" : {
       "casting_time" : "1 action",
