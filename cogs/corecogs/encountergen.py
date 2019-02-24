@@ -219,7 +219,6 @@ class encountergen():
 		if level == "7":
 			if size == "2":
 				enc = random.choice(cr4)
-				embed = discord.Embed(
 				embed.add_field(name="Enemy's:", value=str(enc), inline=False)
 				await self.bot.say(embed=embed)
 			if size == "3":
