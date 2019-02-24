@@ -10,7 +10,7 @@ from discord.ext import commands
 
 class spellcommand():
 	def __init__(self, bot):
-        self.bot = bot
+        	self.bot = bot
 
 	@commands.command(brief="get the details of any 5e spell")
 	async def spell(*argument):
