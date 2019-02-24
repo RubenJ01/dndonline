@@ -13,8 +13,8 @@ class spellcommand():
         	self.bot = bot
 
 	@commands.command(brief="get the details of any 5e spell")
-	async def spell(*argument):
-		spellrequest = " ".join(str(argument))
+	async def spell(self, *argument):
+		spellrequest = " ".join(argument)
 		spellfinal = str.casefold(spellrequest)
 		with open("databases/spells.json", "r") as spells_json:
 			data = json.load(spells_json)
