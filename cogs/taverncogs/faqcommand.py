@@ -8,7 +8,7 @@ import json
 import discord
 from discord.ext import commands
 
-class faqcommand():
+class faqcommand(brief="all the faq esutions listed in the tavern"):
     def __init__(self, bot):
         self.bot = bot
     
