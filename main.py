@@ -204,7 +204,7 @@ async def invite():
 	embed = discord.Embed(
 		colour = discord.Colour.blue()
 	)
-	embed.add_field(name="Invite the bot to your server:", value="https://discordapp.com/api/oauth2/authorize?bot_id=506541896630403080&permissions=0&scope=bot", inline=False)
+	embed.add_field(name="Invite the bot to your server:", value="https://discordapp.com/oauth2/authorize?client_id=506541896630403080&scope=bot&permissions=0", inline=False)
 	await bot.say(embed=embed)
 
 	
@@ -225,7 +225,7 @@ async def stat(modifier=0):
 	rolls = [randint(1,6) for _ in range(4)]
 	await bot.say(f"the total of the best 3 of your 4 rolls was {sum(rolls)-min(rolls)}")			     
 	
-@bot.command(brief="Calculate your total amount of pp gp sp cp respectively")
+@bot.command(brief="calculate your total amount of pp gp sp cp respectively")
 async def currency(*coins):
     cp = sum([int(coin[:-2]) for coin in coins if coin[-2:] == "cp"])
     sp = sum([int(coin[:-2]) for coin in coins if coin[-2:] == "sp"])
