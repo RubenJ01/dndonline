@@ -198,4 +198,4 @@ class charactergen():
 
 
 def setup(bot):
-	bot.add_cog(encountergen(bot))
+	bot.add_cog(chargen(bot))
