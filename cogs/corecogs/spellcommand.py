@@ -38,7 +38,7 @@ class spellcommand():
 			embed.add_field(name="School:", value=f'{school}', inline=False)
 			embed.add_field(name="Description:", value=f'{description}', inline=False)	
 			await self.bot.say(embed=embed)
-	    else:
+	   	else:
 			await self.bot.say("Spell non-existent or missing")		
 
 def setup(bot):
