@@ -7,6 +7,7 @@ from random import sample
 import json
 import discord
 from discord.ext import commands
+from discord import Colour, Embed
 
 class rules():
 	def __init__(self, bot):
