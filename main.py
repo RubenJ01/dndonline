@@ -91,12 +91,13 @@ async def class_command(*argument):
 	else:
 		await bot.say("Class non-existent or missing")
 	
-def create_roller_function(name, roller, good_roll_text="you managed to roll a fabulous", **command_specifiers):
+def create_roller_function(name, roller, good_roll_text="a fabulous", **command_specifiers):
 	@bot.command(name=name, **command_specifiers)
 	async def _func(*dice):
 		embed = discord.Embed(
 			colour=discord.Colour.blue()
 		)
+		embed.set_author(name="Dice roller")
 		if dice:
 			if len(dice) == 1 and "d" not in dice[0]:
 				dice = list(dice)
@@ -107,12 +108,12 @@ def create_roller_function(name, roller, good_roll_text="you managed to roll a f
 				die_5 = max(1, die_type//5)
 				roll = roller(1, die_type)
 				if roll > die_5*4 + randint(-die_5, die_5):
-					await bot.say(f"```{good_roll_text} {roll}```")
+					embed.add_field(name=f"You rolled {dice[0][0]}d{die_type}", value=f"which became {good_roll_text} {roll}", inline=False)
 				else:
 
-					await bot.say(f"```You rolled a {roll}```")
+					embed.add_field(name=f"You rolled {dice[0][0]}d{dice[0][1]}", value=f"which became {roll}", inline=False)
 				return
-			embed.set_author(name="Dice roller")
+			
 			sum_ = 0
 			rolls = []
 			s = 0
