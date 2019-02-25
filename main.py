@@ -98,22 +98,22 @@ def create_roller_function(name, roller, good_roll_text="a fabulous", **command_
 			colour=discord.Colour.blue()
 		)
 		embed.set_author(name="Dice roller")
-		if dice:
-			if len(dice) == 1 and "d" not in dice[0]:
-				dice = list(dice)
-				dice[0] =  '1d'+dice[0]
-			dice = [die.split("d") for die in dice]
-			if len(dice) == 1 and dice[0][0] == '1':
-				die_type = int(dice[0][1])
-				die_5 = max(1, die_type//5)
-				roll = roller(1, die_type)
-				if roll > die_5*4 + randint(-die_5, die_5):
-					embed.add_field(name=f"You rolled {dice[0][0]}d{die_type}", value=f"which became {good_roll_text} {roll}", inline=False)
-				else:
+		if not dice:
+			dice = '1d20'
+		if len(dice) == 1 and "d" not in dice[0]:
+			dice = list(dice)
+			dice[0] =  '1d'+dice[0]
+		dice = [die.split("d") for die in dice]
+		if len(dice) == 1 and dice[0][0] == '1':
+			die_type = int(dice[0][1])
+			die_5 = max(1, die_type//5)
+			roll = roller(1, die_type)
+			if roll > die_5*4 + randint(-die_5, die_5):
+				embed.add_field(name=f"You rolled {dice[0][0]}d{die_type}", value=f"which became {good_roll_text} {roll}", inline=False)
+			else:
 
-					embed.add_field(name=f"You rolled {dice[0][0]}d{dice[0][1]}", value=f"which became {roll}", inline=False)
-				return
-			
+				embed.add_field(name=f"You rolled {dice[0][0]}d{dice[0][1]}", value=f"which became {roll}", inline=False)
+		else:
 			sum_ = 0
 			rolls = []
 			s = 0
@@ -129,13 +129,7 @@ def create_roller_function(name, roller, good_roll_text="a fabulous", **command_
 					embed.add_field(name=f"You rolled {dice[0][0]}d{dice[0][1]}", value="which became "+'+'.join(rolls[-1]), inline=False)
 					s = 1
 			embed.add_field(name="Result", value=str(sum_), inline=False)
-			await bot.say(embed=embed)
-		else:
-			roll = roller(1, 20)
-			if roll > 16 + randint(-4, 4):
-				await bot.say(f"```{good_roll_text} {roll}```")
-			else:
-				await bot.say(f"```You rolled a {roll}```")
+		await bot.say(embed=embed)
 
 create_roller_function(
 	"roll",
