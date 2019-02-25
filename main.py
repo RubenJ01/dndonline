@@ -18,7 +18,8 @@ startup_extensions = ['cogs.taverncogs.thelp',
 		      'cogs.corecogs.encountergen',
 		      'cogs.taverncogs.rprule',
 		      'cogs.corecogs.charactergen',
-		      'cogs.corecogs.spellcommand']
+		      'cogs.corecogs.spellcommand',
+		      'cogs.corecogs.classcommand']
 
 BOT_PREFIX = (";", "/t", "!t")
 bot = commands.Bot(command_prefix=BOT_PREFIX)
