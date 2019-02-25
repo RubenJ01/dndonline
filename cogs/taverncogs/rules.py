@@ -15,6 +15,9 @@ class rules():
 	
 	@commands.command(brief="reference 1 of the server rules")
 	async def rule(self, number):
+		embed = discord.Embed(
+			colour = discord.Colour.blue()
+		)
 		if number == "1":
 			embed.add_field(name="Rule 1 - #welcome-rules", value="No Malicious Behaviour" + "\n" + "Do not come in here with the intent to raid, brigade, or troll. Intentionally malicious users will be immediately and permanently banned. Come on, people, it’s common sense.", inline=False)
 			await self.bot.say(embed=embed)
