@@ -99,7 +99,7 @@ def create_roller_function(name, roller, good_roll_text="a fabulous", **command_
 		)
 		embed.set_author(name="Dice roller")
 		if not dice:
-			dice = '1d20'
+			dice = ['1d20']
 		if len(dice) == 1 and "d" not in dice[0]:
 			dice = list(dice)
 			dice[0] =  '1d'+dice[0]
