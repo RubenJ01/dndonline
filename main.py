@@ -22,7 +22,8 @@ startup_extensions = ['cogs.taverncogs.thelp',
 		      'cogs.taverncogs.rules',
 		      'cogs.corecogs.conditions',
 		      'cogs.corecogs.npcgen',
-		      'cogs.corecogs.currency']
+		      'cogs.corecogs.currency',
+		      'cogs.corecogs.status']
 
 BOT_PREFIX = (";", "/t", "!t")
 bot = commands.Bot(command_prefix=BOT_PREFIX)
@@ -169,16 +170,6 @@ async def stat(modifier=0):
 	rolls = [randint(1,6) for _ in range(4)]
 	await bot.say(f"the total of the best 3 of your 4 rolls was {sum(rolls)-min(rolls)}")			     
 	
-
-@bot.command(brief="displays the amount of servers the bot is currently running in")
-async def status():
-	servers = len(bot.servers)
-	members = len(list(bot.get_all_members()))
-	embed = discord.Embed(
- 		colour = discord.Colour.blue()
- 	)
-	embed.add_field(name="Bot status", value="Currently running in: " + str(servers) + " servers with: " + str(members) + " members.", inline=False)
-	await bot.say(embed=embed)
 
 @bot.command(brief="roll 6 random ability scores")
 async def rngstat():
