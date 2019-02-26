@@ -8,7 +8,6 @@ import json
 import discord
 from discord.ext import commands
 from discord.ext.commands import Bot 
-from dumpfiles.npcgen import *
 from dumpfiles.welcomemessage import *
 from dumpfiles.specialcommand import *
 
@@ -141,27 +140,6 @@ create_roller_function(
 	good_roll_text="despite your super-disadvantage you still managed to roll a(n)",
 	brief="Pick the worst of 3 rolls, same format as ;roll"
 )
-
-@bot.command(name="npc", brief="generate an npc that includes appearance, stats and traits" )
-async def npc():
-	embed = discord.Embed(
-		colour = discord.Colour.blue()
-	)
-	embed.set_author(name="Randomly generated NPC:")
-	embed.add_field(name="Race:", value=raceroll, inline=False)
-	embed.add_field(name="Gender:", value=genderroll, inline=False)
-	embed.add_field(name="Age:", value=age, inline=False)
-	embed.add_field(name="Traits:", value=traitsroll, inline=False)
-	embed.add_field(name="Flaws & Secrets:", value=flawsroll, inline=False)
-	embed.add_field(name="Mannerism:", value=mannerismroll, inline=False)
-	embed.add_field(name="Ideal:", value=idealsroll, inline=False)
-	embed.add_field(name="Talent:", value=talentsroll, inline=False)
-	embed.add_field(name="Background:", value=backgroundroll, inline=False)
-	embed.add_field(name="Hair:", value=hairroll + ", " + haircolourroll, inline=False)
-	embed.add_field(name="Size:", value=sizeroll, inline=False)
-	embed.add_field(name="Ability scores:", value=', '.join([str(v) for v in variabeles]), inline=False)
-
-	await bot.say(embed=embed)
 
 @bot.command(name="invite", brief="invite the bot to your discord server")
 async def invite():
