@@ -21,7 +21,8 @@ startup_extensions = ['cogs.taverncogs.thelp',
 		      'cogs.corecogs.classcommand',
 		      'cogs.taverncogs.rules',
 		      'cogs.corecogs.conditions',
-		      'cogs.corecogs.npcgen']
+		      'cogs.corecogs.npcgen',
+		      'cogs.corecogs.currency']
 
 BOT_PREFIX = (";", "/t", "!t")
 bot = commands.Bot(command_prefix=BOT_PREFIX)
@@ -168,26 +169,6 @@ async def stat(modifier=0):
 	rolls = [randint(1,6) for _ in range(4)]
 	await bot.say(f"the total of the best 3 of your 4 rolls was {sum(rolls)-min(rolls)}")			     
 	
-@bot.command(brief="calculate your total amount of pp gp sp cp respectively")
-async def currency(*coins):
-    cp = sum([int(coin[:-2]) for coin in coins if coin[-2:] == "cp"])
-    sp = sum([int(coin[:-2]) for coin in coins if coin[-2:] == "sp"])
-    ep = sum([int(coin[:-2]) for coin in coins if coin[-2:] == "ep"])
-    gp = sum([int(coin[:-2]) for coin in coins if coin[-2:] == "gp"])
-    pp = sum([int(coin[:-2]) for coin in coins if coin[-2:] == "pp"])
-    total = (cp * 1) + (sp * 10) + (ep * 50) + (gp * 100) + (pp * 1000)
-    cp = total%10
-    total = total//10
-    sp = total%10
-    total = total//10
-    gp = total%10
-    total = total//10
-    pp = total
-    embed = discord.Embed(
-    	colour = discord.Colour.blue()
-    )
-    embed.add_field(name="Currency", value="You have " + str(cp) + "cp "  + str(sp) + "sp " + str(gp) + "gp " + str(pp) + "pp ", inline=False)
-    await bot.say(embed=embed)
 
 @bot.command(brief="displays the amount of servers the bot is currently running in")
 async def status():
