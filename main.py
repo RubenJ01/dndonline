@@ -167,8 +167,12 @@ async def about():
 		
 @bot.command(brief="roll a certain stat for example: dexterity")
 async def stat(modifier=0):
+	embed = discord.Embed(
+		colour = discord.Colour.blue()
+	)
 	rolls = [randint(1,6) for _ in range(4)]
-	await bot.say(f"the total of the best 3 of your 4 rolls was {sum(rolls)-min(rolls)}")			     
+	embed.add_field(name="Randomly rolled ability score", value=f"the total of the best 3 of your 4 rolls was {sum(rolls)-min(rolls)}", inline=False)
+	await bot.say(embed=embed)			     
 	
 
 @bot.command(brief="roll 6 random ability scores")
