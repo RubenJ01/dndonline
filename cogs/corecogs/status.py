@@ -12,7 +12,7 @@ class status():
 	def __init__(self, bot):
         	self.bot = bot
 		
-	@bot.command(brief="displays the amount of servers the bot is currently running in")
+	@commands.command(brief="displays the amount of servers the bot is currently running in")
 	async def status(self):
 		servers = len(bot.servers)
 		members = len(list(bot.get_all_members()))
