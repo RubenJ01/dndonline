@@ -14,7 +14,7 @@ class npcgen():
         	self.bot = bot
 		
 	@commands.command(name="npc", brief="generate an npc that includes appearance, stats and traits" )
-	async def npc():
+	async def npc(self):
 		embed = discord.Embed(
 			colour = discord.Colour.blue()
 		)
