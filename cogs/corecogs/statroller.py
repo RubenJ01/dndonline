@@ -32,7 +32,7 @@ class statroller():
 		await self.bot.say(embed=embed)
 		
 	@commands.command(brief="roll 3 random ability scores")
-	async def rngstat3():
+	async def rngstat3(self):
 		number = 0				 
 		embed = discord.Embed(
 			colour = discord.Colour.blue()
@@ -51,7 +51,7 @@ class statroller():
 		await self.bot.say(embed=embed)
 		
 	@commands.command(brief="roll a certain stat for example: dexterity")
-	async def stat(modifier=0):
+	async def stat(self, modifier=0):
 		embed = discord.Embed(
 			colour = discord.Colour.blue()
 		)
