@@ -24,7 +24,8 @@ startup_extensions = ['cogs.taverncogs.thelp',
 		      'cogs.corecogs.npcgen',
 		      'cogs.corecogs.currency',
 		      'cogs.corecogs.status',
-		      'cogs.corecogs.statroller']
+		      'cogs.corecogs.statroller',
+		      'cogs.corecogs.others']
 
 BOT_PREFIX = (";", "/t", "!t")
 bot = commands.Bot(command_prefix=BOT_PREFIX)
