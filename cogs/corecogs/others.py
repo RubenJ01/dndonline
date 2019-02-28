@@ -12,7 +12,6 @@ class others():
 	def __init__(self, bot):
         	self.bot = bot
 
-
 	@commands.command(brief="information about the Tavern Bot")
 	async def about(self):
 		embed = discord.Embed(
