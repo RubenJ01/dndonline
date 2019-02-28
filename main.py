@@ -23,7 +23,8 @@ startup_extensions = ['cogs.taverncogs.thelp',
 		      'cogs.corecogs.conditions',
 		      'cogs.corecogs.npcgen',
 		      'cogs.corecogs.currency',
-		      'cogs.corecogs.status']
+		      'cogs.corecogs.status',
+		      'cogs.corecogs.statroller']
 
 BOT_PREFIX = (";", "/t", "!t")
 bot = commands.Bot(command_prefix=BOT_PREFIX)
@@ -163,55 +164,7 @@ async def about():
 	embed.add_field(name="Creators:", value="The Tavern Bot has been developed by: RubenJ01#0229 and Daan#2049")
 	embed.add_field(name="Contributors:", value="Thanks to: willdda117#2904 for contributing to The Tavern Bot")
 	embed.add_field(name="Source:", value="Since The Tavern Bot is open source you can check ouher repo: https://github.com/RubenJ01/dndonline", inline=False)
-	await bot.say(embed=embed)
-		
-@bot.command(brief="roll a certain stat for example: dexterity")
-async def stat(modifier=0):
-	embed = discord.Embed(
-		colour = discord.Colour.blue()
-	)
-	rolls = [randint(1,6) for _ in range(4)]
-	embed.add_field(name="Randomly rolled ability score", value=f"the total of the best 3 of your 4 rolls was {sum(rolls)-min(rolls)}", inline=False)
-	await bot.say(embed=embed)			     
-	
-
-@bot.command(brief="roll 6 random ability scores")
-async def rngstat():
-	number = 0				 
-	embed = discord.Embed(
-		colour = discord.Colour.blue()
-	)
-	embed.set_author(name=" Randomly generated ability scores")
-	for j in range(6):
-		roll1 = int(random.randint(1, 6))
-		roll2 = int(random.randint(1, 6))
-		roll3 = int(random.randint(1, 6))
-		roll4 = int(random.randint(1, 6))
-		lowest = min(roll1, roll2, roll3, roll4)
-		allrolls = [roll1, roll2, roll3, roll4]
-		ability = sum(allrolls) - lowest
-		number = number + 1			 
-		embed.add_field(name="Roll " + str(number), value=str(roll1) + ", " + str(roll2) + ", " + str(roll3) + ", " + str(roll4) + " = " + str(ability), inline=False)
-	await bot.say(embed=embed)
-
-@bot.command(brief="roll 3 random ability scores")
-async def rngstat3():
-	number = 0				 
-	embed = discord.Embed(
-		colour = discord.Colour.blue()
-	)
-	embed.set_author(name="3 randomly generated ability scores")
-	for j in range(3):
-		roll1 = int(random.randint(1, 6))
-		roll2 = int(random.randint(1, 6))
-		roll3 = int(random.randint(1, 6))
-		roll4 = int(random.randint(1, 6))
-		lowest = min(roll1, roll2, roll3, roll4)
-		allrolls = [roll1, roll2, roll3, roll4]
-		ability = sum(allrolls) - lowest
-		number = number + 1
-		embed.add_field(name="Roll " + str(number), value=str(roll1) + ", " + str(roll2) + ", " + str(roll3) + ", " + str(roll4) + " = " + str(ability), inline=False)
-	await bot.bot(embed=embed)
+	await bot.say(embed=embed)		     	
 			
 
 @bot.command(brief="link to the basic rules for d&d")
