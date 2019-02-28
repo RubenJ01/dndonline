@@ -60,4 +60,4 @@ class statroller():
 		await self.bot.say(embed=embed)	
 
 def setup(bot):
-	bot.add_cog(status(bot))
+	bot.add_cog(statroller(bot))
