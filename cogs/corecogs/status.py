@@ -14,8 +14,8 @@ class status():
 		
 	@commands.command(brief="displays the amount of servers the bot is currently running in")
 	async def status(self):
-		members = len(list(bot.get_all_members()))
-		servers = len(bot.servers)
+		members = len(list(self.bot.get_all_members()))
+		servers = len(self.bot.servers)
 		embed = discord.Embed(
 			colour = discord.Colour.blue()
 		)
