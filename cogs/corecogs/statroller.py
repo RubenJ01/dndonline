@@ -7,7 +7,7 @@ class statroller():
         	self.bot = bot
 		
 	@commands.command(brief="roll ability scores")
-	async def rngstat3(self, amount):
+	async def rngstat(self, amount):
 		number = 0				 
 		embed = discord.Embed(
 			colour = discord.Colour.blue()
