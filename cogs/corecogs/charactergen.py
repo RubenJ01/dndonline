@@ -1,6 +1,7 @@
 import random
 import discord
 from discord.ext import commands
+from random import randint
 
 class charactergen():
 	def __init__(self, bot):
