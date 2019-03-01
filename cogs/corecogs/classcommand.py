@@ -1,9 +1,3 @@
-import os
-import asyncio
-import operator
-import random
-from random import randint
-from random import sample
 import json
 import discord
 from discord.ext import commands
