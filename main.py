@@ -4,6 +4,7 @@ from discord.ext import commands
 from discord.ext.commands import Bot 
 from random import randint
 import os
+import asyncio
 
 
 startup_extensions = ['cogs.taverncogs.thelp', 
