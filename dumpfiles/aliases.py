@@ -10,17 +10,29 @@ advantagebrief = ""
 advantagealias = []
 advantagedescription = ""
 # basic
-
+basicbrief = ""
+basicealias = []
+basicdescription = ""
 # character
-
+characterbrief = ""
+characteralias = []
+characterdescription = ""
 # class
-
+classbrief = ""
+classalias = []
+classdescription = ""
 # condition
-
+conditionbrief = ""
+conditionalias = []
+conditiondescription = ""
 # currency
-
+currencybrief = ""
+currencyalias = []
+currencydescription = ""
 # disadvantage
-
+disadvantagebrief = ""
+disadvantagealias = []
+disadvantagdescription = ""
 # encounter
 
 # invite
