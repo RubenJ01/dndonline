@@ -26,13 +26,13 @@ class statroller():
 		await self.bot.say(embed=embed)
 		
 	@commands.command(brief="roll 3 random ability scores")
-	async def rngstat3(self):
+	async def rngstat3(self, amount):
 		number = 0				 
 		embed = discord.Embed(
 			colour = discord.Colour.blue()
 		)
-		embed.set_author(name="3 randomly generated ability scores")
-		for j in range(3):
+		embed.set_author(name=f'{amount} randomly generated ability scores')
+		for j in range(amount):
 			roll1 = int(random.randint(1, 6))
 			roll2 = int(random.randint(1, 6))
 			roll3 = int(random.randint(1, 6))
