@@ -32,7 +32,7 @@ class statroller():
 			colour = discord.Colour.blue()
 		)
 		embed.set_author(name=f'{amount} randomly generated ability scores')
-		for j in range(str(amount)):
+		for j in range(int(amount)):
 			roll1 = int(random.randint(1, 6))
 			roll2 = int(random.randint(1, 6))
 			roll3 = int(random.randint(1, 6))
