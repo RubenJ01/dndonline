@@ -2,9 +2,13 @@
 Make sure you add new aliases, descriptions or briefs in the correct place when adding to this file."
 
 # about
-
+aboutbrief = ""
+aboutalias = []
+aboutdescription = ""
 # advantage
-
+advantagebrief = ""
+advantagealias = []
+advantagedescription = ""
 # basic
 
 # character
