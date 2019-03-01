@@ -7,7 +7,7 @@ class encountergen():
 	def __init__(self, bot):
         	self.bot = bot
 
-	@commands.command(brief="an encounter generator for d&d 5e", aliases=['enc', 'encgen'])
+	@commands.command(brief="an encounter generator for d&d 5e")
 	async def encounter(self, level, size):
 		embed = discord.Embed(
 			colour = discord.Colour.blue()
