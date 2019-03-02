@@ -103,7 +103,7 @@ def create_roller_function(name, roller, good_roll_text="a fabulous", **command_
 create_roller_function(
 	"roll",
 	randint,
-	brief='roll normally (format like "4d6 2d8" default is "1d20")',
+	brief=rollbrief,
     	description="""roll dice with no advantage or disadvantage
 	when given no parameters 1d20 is rolled
 	parameters can be formatted like so "5d3 4d2 1d21" or simply "10" the latter only works for single dice
@@ -113,7 +113,7 @@ create_roller_function(
 	"advantage", 
 	lambda x, y: max(randint(x,y), randint(x,y)), 
 	good_roll_text="thanks to your advantage you managed to roll a(n)",
-	brief='roll with advantage (format like "4d6 2d8" default is "1d20")',
+	brief=advantagebrief,
     description="""roll dice with disadvantage
 	when given no parameters 1d20 is rolled
 	parameters can be formatted like so "5d3 4d2 1d21" or "10" the latter only works with single dice
@@ -123,7 +123,7 @@ create_roller_function(
 	"disadvantage",
 	lambda x, y: min(randint(x,y), randint(x,y)),
 	good_roll_text="despite your disadvantage you managed to roll a(n)",
-	brief='roll with disadvantage (format like "4d6 2d8" default is "1d20")',
+	brief=disadvantagebrief,
 	description="""roll dice with disadvantage
 	when given no parameters 1d20 is rolled
 	parameters can be formatted like so "5d3 4d2 1d21" or simply "10" the latter only works with single dice
@@ -133,13 +133,15 @@ create_roller_function(
 	"super-advantage",
 	lambda x, y: max(randint(x,y), randint(x,y), randint(x,y)), 
 	good_roll_text="with super advantage you were probably expecting something high and you were right because you rolled a(n)",
-	brief="Pick the best of 3 rolls, same format as ;roll",
+	brief=superadvantagebrief,
+	description=superadvantagedescription
 )
 create_roller_function(
 	"super-disadvantage",
 	lambda x, y: min(randint(x,y), randint(x,y), randint(x,y)), 
 	good_roll_text="despite your super-disadvantage you still managed to roll a(n)",
-	brief="Pick the worst of 3 rolls, same format as ;roll"
+	brief=superdisadvantagebrief,
+	description=superdisadvantagedescription
 )	     							 
 					 	
 if __name__ == "__main__":
