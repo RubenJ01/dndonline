@@ -1,11 +1,12 @@
 import discord
 from discord.ext import commands
+from dumpfiles.aliases import *
 
 class rules():
 	def __init__(self, bot):
         	self.bot = bot
 	
-	@commands.command(brief="reference 1 of the server rules")
+	@commands.command(brief=rulebrief, description=ruledescription)
 	async def rule(self, number):
 		embed = discord.Embed(
 			colour = discord.Colour.blue()
