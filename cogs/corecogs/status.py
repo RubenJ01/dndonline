@@ -1,11 +1,12 @@
 import discord
 from discord.ext import commands
+from dumpfiles.aliases import *
 
 class status():
 	def __init__(self, bot):
         	self.bot = bot
 		
-	@commands.command(brief="displays the amount of servers the bot is currently running in")
+	@commands.command(brief=statusbrief, description=statusdescription)
 	async def status(self):
 		members = len(list(self.bot.get_all_members()))
 		servers = len(self.bot.servers)
