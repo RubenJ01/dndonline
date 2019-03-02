@@ -34,9 +34,9 @@ disadvantagebrief = "Rolls dices with disadvantage"
 disadvantagealias = ['disadv']
 disadvantagdescription = "Rolls dices with disadvantage. Format like: ;disadvantage {dicetype}. Multiple dicetypes can be rolled."
 # encounter
-encounterbrief = ""
-encounteralias = []
-encounterdescription = ""
+encounterbrief = "Generates an encounter for a party level up to a size of 8 and a level of 20."
+encounteralias = ['enc', 'encgen']
+encounterdescription = "Generates an encounter for a party level up to a size of 8 and a level of 20. Format like: ;encounter {pclevel} {pcamount}"
 # invite
 invitebrief = ""
 invitealias = []
