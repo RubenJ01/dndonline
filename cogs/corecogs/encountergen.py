@@ -2,12 +2,13 @@ import random
 import discord
 from discord.ext import commands
 from dumpfiles.monsterscr import *
+from dumpfiles.aliases import *
 
 class encountergen():
 	def __init__(self, bot):
         	self.bot = bot
 
-	@commands.command(brief="an encounter generator for d&d 5e")
+	@commands.command(brief=encounterbrief, description=encounterdescription)
 	async def encounter(self, level, size):
 		embed = discord.Embed(
 			colour = discord.Colour.blue()
