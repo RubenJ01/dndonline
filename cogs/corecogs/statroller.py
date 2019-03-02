@@ -1,12 +1,13 @@
 import random
 import discord
 from discord.ext import commands
+from dumpfiles.aliases import *
 
 class statroller():
 	def __init__(self, bot):
         	self.bot = bot
 		
-	@commands.command(brief="roll ability scores")
+	@commands.command(brief=rngstatbrief, description=rngstatdescription)
 	async def rngstat(self, amount):
 		number = 0				 
 		embed = discord.Embed(
