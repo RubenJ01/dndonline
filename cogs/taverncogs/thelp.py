@@ -1,11 +1,12 @@
 import discord
 from discord.ext import commands
+from dumpfiles.aliases import *
 
 class thelp():
     def __init__(self, bot):
         self.bot = bot
     
-    @commands.command(brief="all the special commands used in the tavern")
+    @commands.command(brief=tavernhelpbrief, description=tavernhelpdescription)
     async def tavernhelp(self):
         embed = discord.Embed(
             colour = discord.Colour.blue()
