@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 from dumpfiles.aliases import *
+import json
 
 class conditions():
 	def __init__(self, bot):
