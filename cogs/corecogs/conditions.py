@@ -1,11 +1,12 @@
 import discord
 from discord.ext import commands
+from dumpfiles.aliases import *
 
 class conditions():
 	def __init__(self, bot):
         	self.bot = bot
 	
-	@commands.command(brief="the definitions of combat conditions (format like ;condition conditiontype)")
+	@commands.command(brief=conditionbrief, description=conditiondescription)
 	async def condition(self, type):
 		embed = discord.Embed(
 			colour = discord.Colour.blue()
