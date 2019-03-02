@@ -37,6 +37,10 @@ disadvantagdescription = "Rolls dices with disadvantage. Format like: ;disadvant
 encounterbrief = "Generates an encounter for a party level up to a size of 8 and a level of 20."
 encounteralias = ['enc', 'encgen']
 encounterdescription = "Generates an encounter for a party level up to a size of 8 and a level of 20. Format like: ;encounter {pclevel} {pcamount}."
+# help
+helpbrief = "Shows this list"
+helpalias = ['h']
+helpdescription = "List of all non-guild only commands"
 # invite
 invitebrief = "Sends you an up to date link to invite the bot to your server."
 invitealias = ['inv']
