@@ -1,11 +1,12 @@
 import discord
 from discord.ext import commands
+from dumpfiles.aliases import *
 
 class currency():
 	def __init__(self, bot):
         	self.bot = bot
 
-	@commands.command(brief="calculate your total amount of pp gp sp cp respectively")
+	@commands.command(brief=currencybrief, description=currencydescription)
 	async def currency(*coins):
 	    cp = sum([int(coin[:-2]) for coin in coins if coin[-2:] == "cp"])
 	    sp = sum([int(coin[:-2]) for coin in coins if coin[-2:] == "sp"])
