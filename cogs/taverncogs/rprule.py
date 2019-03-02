@@ -1,11 +1,12 @@
 import discord
 from discord.ext import commands
+from dumpfiles.aliases import *
 
 class rprule():
 	def __init__(self, bot):
         	self.bot = bot
 
-	@commands.command(brief="the rules for the rp-section")
+	@commands.command(brief=rprulebrief, description=rpruledescription)
 	async def rprule(self, number):
 		embed = discord.Embed(
 			colour = discord.Colour.blue()
