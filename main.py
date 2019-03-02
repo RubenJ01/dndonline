@@ -5,7 +5,7 @@ from discord.ext.commands import Bot
 from random import randint
 import os
 import asyncio
-
+from dumpfiles.aliases import *
 
 startup_extensions = ['cogs.taverncogs.thelp', 
 		      'cogs.taverncogs.faqcommand',
