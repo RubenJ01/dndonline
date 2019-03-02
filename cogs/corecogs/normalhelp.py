@@ -4,14 +4,14 @@ However, this does not seem too important as of right now."""
 
 from discord import Colour, Embed
 from discord.ext.commands import command
-
+from dumpfiles.aliases import *
 
 class HelpCommand:
 
     def __init__(self, bot):
         self.bot = bot
 
-    @command(name='help', brief="shows this message")
+    @command(name='help', brief=helpbrief, description=helpdescription)
     async def help_command(self, command_name=None):
         """Sends a formatted embed in order to help users understand the commands of the bot.
         This command relies on command.brief and command.description in order to provide users
