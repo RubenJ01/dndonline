@@ -2,12 +2,13 @@ import random
 import discord
 from discord.ext import commands
 from random import randint
+from dumpfiles.aliases import *
 
 class charactergen():
 	def __init__(self, bot):
         	self.bot = bot
 
-	@commands.command(brief="generate a level 1 character")
+	@commands.command(brief=characterbrief, description=characterdescription)
 	async def character(self):
 		alignment = ["Lawfull good", "Neutral good", "Chaotic good", "Lawful neutral", "Neutral", "Chaotic"]
 		alignmentroll = random.choice(alignment)
