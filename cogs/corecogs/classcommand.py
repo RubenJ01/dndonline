@@ -1,12 +1,13 @@
 import json
 import discord
 from discord.ext import commands
+from dumpfiles.aliases import *
 
 class classcommand():
 	def __init__(self, bot):
         	self.bot = bot
 
-	@commands.command(name='class', brief="get the details any 5e class")
+	@commands.command(name='class', brief=classbrief, description=classdescription)
 	async def class_command(self, *argument):
 		classrequest = " ".join(argument)
 		classfinal = str.casefold(classrequest)
