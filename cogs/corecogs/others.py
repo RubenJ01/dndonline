@@ -1,11 +1,12 @@
 import discord
 from discord.ext import commands
+from dumpfiles.aliases import *
 
 class others():
 	def __init__(self, bot):
         	self.bot = bot
 
-	@commands.command(brief="information about the Tavern Bot")
+	@commands.command(brief=aboutbrief, description=aboutdescription)
 	async def about(self):
 		embed = discord.Embed(
 			colour = discord.Colour.blue()
@@ -17,11 +18,11 @@ class others():
 		embed.add_field(name="Source:", value="Since The Tavern Bot is open source you can check ouher repo: https://github.com/RubenJ01/dndonline", inline=False)
 		await self.bot.say(embed=embed)
 
-	@commands.command(brief="link to the basic rules for d&d")
+	@commands.command(brief=basicbrief, description=basicdescription)
 	async def basic(self):
 		await self.bot.say("http://media.wizards.com/2018/dnd/downloads/DnD_BasicRules_2018.pdf")	
 
-	@commands.command(name="invite", brief="invite the bot to your discord server")
+	@commands.command(name="invite", brief=invitebrief, description=invitedescription)
 	async def invite(self):
 		embed = discord.Embed(
 			colour = discord.Colour.blue()
