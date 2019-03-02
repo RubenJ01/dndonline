@@ -1,12 +1,13 @@
 import json
 import discord
 from discord.ext import commands
+from dumpfiles.aliases import *
 
 class spellcommand():
 	def __init__(self, bot):
         	self.bot = bot
 
-	@commands.command(brief="get the details of any 5e spell")
+	@commands.command(brief=spellbrief, description=spelldescription)
 	async def spell(self, *argument):
 		spellrequest = " ".join(argument)
 		spellfinal = str.casefold(spellrequest)
