@@ -14,11 +14,11 @@ class conditions():
 			data = json.load(conditions_json)
 		if condition in data:
 			conditiondata = data[condition]
-			content = conditiondata[content]
+			conditioncontent = conditiondata[content]
 			embed = discord.Embed(
 				colour = discord.Colour.blue()
 			)
-			embed.add_field(name=f'Condition {condition}', value=content, inline=False)
+			embed.add_field(name=f'Condition {condition}', value=conditioncontent, inline=False)
 			await self.bot.say(embed=embed)
 		else:
 			await self.bot.say("Condition missing")
