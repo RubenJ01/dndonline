@@ -9,22 +9,18 @@ class statroller():
 		
 	@commands.command(brief=rngstatbrief, description=rngstatdescription)
 	async def rngstat(self, amount):
-		number = 0				 
 		embed = discord.Embed(
 			colour = discord.Colour.blue()
 		)
-		embed.set_author(name=f'{amount} randomly generated ability scores')
-		for j in range(int(amount)):
-			roll1 = int(random.randint(1, 6))
-			roll2 = int(random.randint(1, 6))
-			roll3 = int(random.randint(1, 6))
-			roll4 = int(random.randint(1, 6))
-			lowest = min(roll1, roll2, roll3, roll4)
-			allrolls = [roll1, roll2, roll3, roll4]
-			ability = sum(allrolls) - lowest
-			number = number + 1
-			embed.add_field(name="Roll " + str(number), value=str(roll1) + ", " + str(roll2) + ", " + str(roll3) + ", " + str(roll4) + " = " + str(ability), inline=False)
+		counter = 0
+		for j in range(amount):
+			rolls = random.choices(range(1, 7), k=4)
+			total = sum(rolls)
+			counter = counter + 1
+			for rank, (position, roll) in enumerate(sorted(enumerate(rolls), reverse=True, key=lambda item: item[1])):
+				rolls[position] = f"**{roll}**" if rank < 3 else f"{roll}"
+			embed.add_field(name=f'Roll {counter}', value="(" + ", ".join(rolls) + ") " + "= " + str(total), inline=False)
 		await self.bot.say(embed=embed)
-
+		
 def setup(bot):
 	bot.add_cog(statroller(bot))
