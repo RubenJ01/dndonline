@@ -13,7 +13,7 @@ class statroller():
 			colour = discord.Colour.blue()
 		)
 		counter = 0
-		for j in range(str(amount)):
+		for j in range(int(amount)):
 			rolls = random.choices(range(1, 7), k=4)
 			total = sum(rolls) - min(rolls)
 			counter = counter + 1
