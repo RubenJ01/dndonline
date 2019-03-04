@@ -7,19 +7,19 @@ import os
 import asyncio
 from dumpfiles.aliases import *
 
-startup_extensions = ['cogs.taverncogs.thelp', 
-		      'cogs.corecogs.normalhelp',
-		      'cogs.corecogs.encountergen',
-		      'cogs.corecogs.charactergen',
-		      'cogs.corecogs.spellcommand',
-		      'cogs.corecogs.classcommand',
-		      'cogs.corecogs.conditions',
-		      'cogs.corecogs.npcgen',
-		      'cogs.corecogs.currency',
-		      'cogs.corecogs.status',
-		      'cogs.corecogs.statroller',
-		      'cogs.corecogs.others',
-		      'cogs.corecogs.taverncog']
+startup_extensions = ['cogs.taverncog', 
+		      'cogs.snormalhelp',
+		      'cogs.encountergen',
+		      'cogs.charactergen',
+		      'cogs.spellcommand',
+		      'cogs.classcommand',
+		      'cogs.conditions',
+		      'cogs.npcgen',
+		      'cogs.currency',
+		      'cogs.costatus',
+		      'cogs.statroller',
+		      'cogs.others'
+		      ]
 
 BOT_PREFIX = (";", "/t", "!t")
 bot = commands.Bot(command_prefix=BOT_PREFIX)
