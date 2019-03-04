@@ -67,18 +67,5 @@ class taverncog():
 			embed.add_field(name="Rule 10 - #welcome-rules", value="No Impersonation" + "\n" + "Do not attempt to impersonate server Staff. The job is thankless and the Innkeeper pays us in Copper Pieces, if at all. Don’t make our lives harder.", inline=False)
 			await self.bot.say(embed=embed)
 
-    		@commands.command(brief=tavernhelpbrief, description=tavernhelpdescription)
-    		async def tavernhelp(self):
-			embed = discord.Embed(
-			    colour = discord.Colour.blue()
-			)
-
-			embed.set_author(name="Help menu")
-			embed.add_field(name=";faq", value="A list of the faq (format like: ;faq (number))", inline=False)
-			embed.add_field(name=";rule", value="A list of the rules (format like: ;rule (number))", inline=False)
-			embed.add_field(name=";rprule", value="A list of the rprules (format like: ;rprule (number))", inline=False)
-			embed.add_field(name="Support server", value="For any additional support join the official support server: https://discord.gg/GFJMyxu", inline=False)
-			await self.bot.say(embed=embed)
-
 def setup(bot):
     bot.add_cog(taverncog(bot))
