@@ -8,7 +8,7 @@ import asyncio
 from dumpfiles.aliases import *
 
 startup_extensions = ['cogs.taverncog', 
-		      'cogs.snormalhelp',
+		      'cogs.normalhelp',
 		      'cogs.encountergen',
 		      'cogs.charactergen',
 		      'cogs.spellcommand',
@@ -16,7 +16,7 @@ startup_extensions = ['cogs.taverncog',
 		      'cogs.conditions',
 		      'cogs.npcgen',
 		      'cogs.currency',
-		      'cogs.costatus',
+		      'cogs.status',
 		      'cogs.statroller',
 		      'cogs.others'
 		      ]
