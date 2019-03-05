@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 
 
-class faqcommand(brief="all the faq esutions listed in the tavern"):
+class faqcommand():
     def __init__(self, bot):
         self.bot = bot
 
