@@ -18,8 +18,7 @@ startup_extensions = ['cogs.taverncog',
                       'cogs.currencycommand',
                       'cogs.status',
                       'cogs.statroller',
-                      'cogs.others',
-                      'cogs.faq'
+                      'cogs.others'
                       ]
 
 BOT_PREFIX = (";", "/t", "!t")
