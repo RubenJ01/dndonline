@@ -34,6 +34,7 @@ class faqcommand(brief="all the faq esutions listed in the tavern"):
         if number == "5":
             embed.add_field(name="5. Where do I find [thing]? What is [channel] for? - #faq",
                             value="For a list of all the channels and their purpose, go to #tavern-menu.", inline=False)
+            from discord.ext.commands import bot
             await bot.say(embed=embed)
         if number == "6":
             embed.add_field(name="6. Can I run a game here? - #faq",

@@ -3,14 +3,15 @@ import discord
 from discord.ext import commands
 from dumpfiles.aliases import *
 
+
 class npcgen():
 	def __init__(self, bot):
-        	self.bot = bot
-		
+		self.bot = bot
+
 	@commands.command(name="npc", brief=npcbrief, description=npcdescription)
 	async def npc(self):
 		embed = discord.Embed(
-			colour = discord.Colour.blue()
+			colour=discord.Colour.blue()
 		)
 		embed.set_author(name="Randomly generated NPC:")
 		embed.add_field(name="Race:", value=raceroll, inline=False)
@@ -26,6 +27,7 @@ class npcgen():
 		embed.add_field(name="Size:", value=sizeroll, inline=False)
 		embed.add_field(name="Ability scores:", value=', '.join([str(v) for v in variabeles]), inline=False)
 		await self.bot.say(embed=embed)
-		
+
+
 def setup(bot):
 	bot.add_cog(npcgen(bot))
