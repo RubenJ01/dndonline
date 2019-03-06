@@ -2,7 +2,6 @@ import discord
 from discord.ext import commands
 from dumpfiles.aliases import *
 
-
 class currencycommand():
     def __init__(self, bot):
         self.bot = bot
