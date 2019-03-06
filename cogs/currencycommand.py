@@ -8,7 +8,7 @@ class currencycommand():
         self.bot = bot
 
     @commands.command(brief=currencybrief, description=currencydescription)
-    async def currency(*coins):
+    async def currency(self, *coins):
         cp = sum([int(coin[:-2]) for coin in coins if coin[-2:] == "cp"])
         sp = sum([int(coin[:-2]) for coin in coins if coin[-2:] == "sp"])
         ep = sum([int(coin[:-2]) for coin in coins if coin[-2:] == "ep"])
