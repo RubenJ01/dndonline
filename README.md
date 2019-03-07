@@ -10,4 +10,4 @@ Creating and saving characters with the bot is a function under development.
 
 Feel free to create a pull request we can alway check them out in our free time.
 
-For any questions hit us up in ouher discord server: https://discord.gg/rFP75WX
+For any questions hit us up in ouher discord server: https://discord.gg/PddKgmc
